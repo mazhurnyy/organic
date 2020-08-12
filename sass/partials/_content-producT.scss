@@ -1,0 +1,238 @@
+#content-product {
+  display: block;
+
+  .top {
+    display: block;
+    padding-top: 50px;
+
+    @media (max-width: 979px) {
+      padding-top: 30px;
+    }
+
+    @media (max-width: 565px) {
+      padding-top: 10px;
+    }
+
+    .layout {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      align-items: stretch;
+
+      @media (max-width: 979px) {
+        flex-direction: column;
+      }
+
+      @media (min-width: 566px) {
+        .photo-open {
+          cursor: zoom-in;
+        }
+      }
+
+      img {
+        max-height: 354px;
+        background-color: $color-white;
+      }
+
+      .left {
+        display: block;
+        flex-basis: 50%;
+        padding: 0 40px;
+        order: 1;
+
+        @media (max-width: 979px) {
+          display: none;
+        }
+      }
+
+      .right {
+        display: block;
+        flex-basis: 50%;
+        padding: 0 40px;
+        order: 2;
+
+        @media (max-width: 979px) {
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        h1 {
+          display: block;
+          margin-bottom: 60px;
+          font-size: 30px;
+          line-height: 42px;
+          color: $color-green-10;
+
+          @media (max-width: 979px) {
+            margin-bottom: 32px;
+            font-size: 24px;
+            line-height: 40px;
+            text-align: center;
+          }
+
+          @media (max-width: 565px) {
+            margin-bottom: 24px;
+            font-size: 20px;
+            line-height: 32px;
+          }
+        }
+
+        .photo {
+          display: none;
+          margin-bottom: 24px;
+
+          @media (max-width: 979px) {
+            display: block;
+          }
+        }
+
+        .info {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+          margin: 0 -12px;
+
+          @media (max-width: 979px) {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 566px;
+          }
+
+          @media (max-width: 565px) {
+            margin: 0 #{-$layout-padding};
+          }
+
+          .info-item {
+            margin: 0 12px;
+            flex-basis: 100px;
+            flex-grow: 1;
+
+            @media (max-width: 565px) {
+              margin: 0 $layout-padding;
+            }
+
+            &.price {
+              display: block;
+              font-size: 44px;
+              font-weight: 600;
+              line-height: 60px;
+              color: $color-black;
+
+              @media (max-width: 565px) {
+                font-size: 32px;
+              }
+            }
+          }
+        }
+
+        .available {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+          align-items: center;
+          height: 90px;
+          margin: 0 -12px;
+
+          @media (max-width: 979px) {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 566px;
+          }
+
+          @media (max-width: 565px) {
+            margin: 0 -$layout-padding;
+          }
+
+          span {
+            display: block;
+            margin: 0 12px;
+            font-size: 14px;
+            line-height: 20px;
+            color: $color-green-12;
+
+            @media (max-width: 565px) {
+              margin: 0 $layout-padding;
+            }
+          }
+        }
+
+        .buttons {
+          display: flex;
+          margin: 0 -12px;
+
+          @media (max-width: 979px) {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 566px;
+          }
+
+          @media (max-width: 565px) {
+            margin: 0 -$layout-padding;
+          }
+
+          .btn {
+            flex-basis: 100px;
+            flex-grow: 1;
+            margin: 0 12px;
+
+            @media (max-width: 565px) {
+              margin: 0 $layout-padding;
+            }
+
+            &.basket-add .bag,
+            &.added .basket,
+            &.favorite-add .in,
+            &.added .to,
+            &.modal .in {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .middle {
+    display: block;
+    padding: 40px 0 44px;
+
+    .properties {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: stretch;
+      margin: 0 #{-$layout-padding};
+
+      .property {
+        display: block;
+        min-width: 25%;
+        padding: 8px $layout-padding;
+        font-size: 14px;
+        line-height: 22px;
+        color: $color-black;
+
+        strong {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    display: block;
+    padding: 64px 0 72px;
+    background-color: $color-gray-4;
+
+    @media (max-width: 979px) {
+      padding: 40px 0 64px;
+    }
+
+    .tabs {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.grid.card-order .cell {
+  margin: 0 $layout-padding;
+
+  @media (max-width: 609px) {
+    &:first-child {
+      display: none;
+    }
+  }
+
+  &:nth-child(2n) {
+    background-color: $color-gray-4;
+  }
+
+  &:nth-child(2n + 1) {
+    background-color: $color-white;
+  }
+}
+
+.grid.card-order .cell .card {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 20px 0;
+  margin: 0 #{-$layout-padding};
+
+  @media (max-width: 415px) {
+    flex-direction: column;
+  }
+
+  .property {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    padding: 0 $layout-padding;
+    text-align: center;
+
+    @media (max-width: 609px) {
+      width: 50%;
+    }
+
+    @media (max-width: 415px) {
+      width: 100%;
+    }
+
+    span, a {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    span {
+      color: $color-gray-20;
+    }
+
+    a {
+      color: $color-green-2;
+
+      &:hover, &:active {
+        color: $color-green-4;
+      }
+    }
+  }
+}

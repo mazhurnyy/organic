@@ -1,0 +1,54 @@
+.btn {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+  padding: 8px;
+  font-size: 20px;
+  line-height: 26px;
+  border-width: 2px;
+  border-style: solid;
+
+  &.btn-primary-fill span {
+    font-weight: 600;
+  }
+
+  span {
+    text-align: center;
+  }
+
+  &.btn-primary-fill {
+    @include button(fill, $color-green-3);
+  }
+
+  &.btn-primary-stroke {
+    @include button(stroke, $color-green-3);
+  }
+
+  &.btn-secondary-fill {
+    @include button(fill, $color-yellow-1, $color-green-3);
+  }
+
+  &.btn-secondary-stroke {
+    @include button(stroke, $color-yellow-1, $color-green-3);
+  }
+
+  &.btn-tertiary-fill {
+    @include button(fill, $color-gray-3);
+  }
+
+  &.btn-danger-fill {
+    @include button(fill, $color-red);
+  }
+
+  &.btn-danger-stroke  {
+    @include button(stroke, $color-red);
+  }
+
+  &:disabled, &.disabled {
+    cursor: not-allowed;
+    border-color: $color-red;
+  }
+}

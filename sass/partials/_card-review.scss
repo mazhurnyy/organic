@@ -1,0 +1,94 @@
+.grid.card-review .cell .card {
+  display: block;
+  max-width: 250px;
+  height: 303px;
+  margin: 64px auto 48px;
+  padding-top: 74px;
+  padding-bottom: 40px;
+  position: relative;
+  z-index: 0;
+  background-color: $color-white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: -80px;
+    left: -30px;
+    width: 129px;
+    height: 188px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .avatar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 126px;
+    height: 126px;
+    margin: 0 auto;
+    border: 10px solid $color-green-7;
+    position: absolute;
+    top: -63px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  .title {
+    display: block;
+    margin-bottom: 22px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: center;
+    color: $color-green-3;
+  }
+
+  .rating {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto 26px;
+    max-width: 182px;
+
+    li {
+      display: block;
+      width: 26px;
+      height: 26px;
+      color: $color-yellow-1;
+
+      &.mark {
+        color: $color-yellow-2;
+      }
+    }
+  }
+
+  .text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+    margin: 0 auto;
+    font-size: 13px;
+    line-height: 18px;
+
+    color: $color-gray-6;
+    max-width: 206px;
+  }
+}
+
+.webp_on .grid.card-review .cell .card::before {
+  background-image: url(../images/reviews-leaf.webp);
+}
+
+.webp_off .grid.card-review .cell .card::before {
+  background-image: url(../images/reviews-leaf.png);
+}

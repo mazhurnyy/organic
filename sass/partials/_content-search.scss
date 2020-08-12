@@ -1,0 +1,9 @@
+#content-search {
+  display: block;
+  background-color: $color-white;
+  padding: 82px 0 90px;
+
+  @media (max-width: 767px) {
+    padding: 36px 0 42px;
+  }
+}

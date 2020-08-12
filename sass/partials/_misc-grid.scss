@@ -1,0 +1,95 @@
+.section-grid {
+  display: block;
+
+  .grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    margin: 0 #{-$layout-padding};
+
+    .cell {
+      display: block;
+      padding: 0 $layout-padding;
+      flex-grow: 1;
+    }
+
+    &.column-1 .cell {
+      flex-basis: 100%;
+    }
+
+    &.column-3 .cell {
+      flex-basis: 33%;
+
+      @media (max-width: 1111px) {
+        flex-basis: 50%;
+      }
+
+      @media (max-width: 535px) {
+        flex-basis: 100%;
+      }
+    }
+
+    &.column-4 .cell {
+      flex-basis: 25%;
+
+      @media (max-width: 1111px) {
+        flex-basis: 33%;
+      }
+
+      @media (max-width: 767px) {
+        flex-basis: 50%;
+      }
+
+      @media (max-width: 535px) {
+        flex-basis: 100%;
+      }
+    }
+
+    &.column-4.row-1 .cell {
+      @media (min-width: 768px) and (max-width: 1111px) {
+        &:nth-child(4n) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  h1 {
+    display: block;
+    margin-bottom: 40px;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: $heading-line_height;
+    color: $color-green-3;
+
+    @media (max-width: 565px) {
+      margin-bottom: 34px;
+      text-align: center;
+    }
+  }
+
+  h2 {
+    display: block;
+    margin-bottom: 42px;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: $heading-line_height;
+    color: $color-green-1;
+
+    @media (max-width: 565px) {
+      margin-bottom: 34px;
+      text-align: center;
+    }
+  }
+
+  .btn {
+    width: 240px;
+    margin: 42px auto 0;
+  }
+
+  .original-card {
+    display: none;
+  }
+}

@@ -1,0 +1,44 @@
+@import "global/reset";
+@import "global/var";
+@import "global/mixins";
+@import "global/styles";
+
+@import "partials/card-favorite";
+@import "partials/card-order";
+@import "partials/card-product";
+@import "partials/card-review";
+@import "partials/card-review-h";
+
+@import "partials/content-article";
+@import "partials/content-basket";
+@import "partials/content-catalog";
+@import "partials/content-contacts";
+@import "partials/content-order";
+@import "partials/content-ordering";
+@import "partials/content-personal";
+@import "partials/content-producT";
+@import "partials/content-product_reviews";
+@import "partials/content-error";
+@import "partials/content-reviews";
+@import "partials/content-search";
+
+@import "partials/general-cookie";
+@import "partials/general-footer";
+@import "partials/general-header";
+@import "partials/general-modal";
+
+@import "partials/misc-aside";
+@import "partials/misc-buttons";
+@import "partials/misc-grid";
+
+@import "partials/plugin-crop";
+@import "partials/plugin-datepicker";
+@import "partials/plugin-slider";
+
+@import "partials/section-products";
+@import "partials/section-profile";
+@import "partials/section-reviews";
+@import "partials/section-slider";
+@import "partials/section-slogan";
+@import "partials/section-subscribe";
+@import "partials/section-top";

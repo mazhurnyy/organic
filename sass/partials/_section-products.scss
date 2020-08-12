@@ -1,0 +1,21 @@
+#products {
+  display: block;
+  background-color: $color-white;
+  padding: 82px 0 90px;
+
+  @media (max-width: 767px) {
+    padding: 36px 0 42px;
+  }
+
+  .slider {
+    max-height: 517px;
+
+    @media (max-width: 767px) {
+      max-height: 1014px;
+    }
+
+    @media (max-width: 535px) {
+      max-height: 1988px;
+    }
+  }
+}

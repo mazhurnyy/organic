@@ -1,0 +1,149 @@
+.sidebar.order {
+
+  h2 {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 28px;
+    color: #3B3F3B;
+  }
+
+  p {
+    display: block;
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color-gray-19;
+  }
+
+  .positions {
+    display: block;
+
+    .position {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: stretch;
+      margin-bottom: 40px;
+
+      .photo {
+        display: block;
+        width: 140px;
+        height: 140px;
+        min-width: 140px;
+        padding: 10px;
+        margin-right: 40px;
+        background-color: $color-white;
+
+        @media (max-width: 565px) {
+          display: none;
+        }
+
+        img {
+          display: block;
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      .info {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+
+        .top {
+          display: block;
+          margin-bottom: 22px;
+
+          a {
+            display: block;
+            font-size: 18px;
+            line-height: 26px;
+            color: $color-green-2;
+
+            &:hover, &:active {
+              color: $color-green-4;
+            }
+          }
+        }
+
+        .bottom {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          align-items: center;
+
+          .item {
+            display: block;
+            width: 33%;
+            flex-grow: 1;
+
+            &.price {
+              text-align: left;
+            }
+
+            &.quantity {
+              text-align: center;
+              border: none;
+            }
+
+            &.sum {
+              text-align: right;
+            }
+
+            span {
+              display: block;
+              font-weight: 300;
+
+              &:first-child {
+                font-size: 16px;
+                line-height: 22px;
+                color: $color-gray-19;
+              }
+
+              &:last-child {
+                font-size: 18px;
+                line-height: 26px;
+                color: $color-green-3;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .summary {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 8px;
+
+    span {
+      display: block;
+      font-size: 18px;
+      line-height: 26px;
+
+      &:first-child {
+        color: $color-gray-19;
+        margin-right: 8px;
+      }
+
+      &:last-child {
+        color: $color-green-3;
+      }
+    }
+  }
+
+  .properties {
+    display: block;
+    margin-top: 32px;
+  }
+}

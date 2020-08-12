@@ -1,0 +1,41 @@
+#cookie {
+  display: block;
+  padding: 20px 20px 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 410;
+  background-color: $color-white;
+  border: 1px solid $color-gray-13;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+  .cookie-head {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-bottom: 10px;
+
+    a {
+      display: block;
+      width: 20px;
+      height: 20px;
+      color: $color-gray-13;
+
+      &:hover, &:active {
+        color: $color-black;
+      }
+    }
+  }
+
+  .cookie-body {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    color: $color-gray-5;
+  }
+}

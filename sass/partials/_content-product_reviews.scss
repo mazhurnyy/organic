@@ -1,0 +1,20 @@
+#content-product_reviews {
+  display: block;
+  padding: 40px 0 64px;
+
+  @media (max-width: 979px) {
+    padding-top: 24px;
+  }
+
+  .card-product {
+    padding-top: 40px;
+
+    @media (max-width: 979px) {
+      padding-top: 12px;
+    }
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+}

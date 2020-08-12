@@ -1,0 +1,760 @@
+#shadow {
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 600;
+  background-color: rgba(0, 0, 0, .7);
+
+  &.open {
+    display: block;
+  }
+
+  .modal {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 700;
+    transform: translate(-50%, -100%);
+    width: 100%;
+    max-height: 100vh;
+    padding: 30px 30PX 0;
+    background-color: $color-white;
+    overflow: auto;
+
+    transition-duration: 450ms;
+    transition-property: top, transform;
+    transition-timing-function: ease-in;
+
+    @media (max-width: 767px) {
+      padding-left: $layout-padding;
+      padding-right: $layout-padding;
+    }
+
+    &.open {
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .modal-head {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+      align-items: center;
+
+      a {
+        display: block;
+        width: 28px;
+        height: 28px;
+        color: $color-gray-13;
+
+        &:hover, &:active {
+          color: $color-black;
+        }
+      }
+    }
+
+    .leaf {
+      display: block;
+      position: relative;
+      z-index: 700;
+      max-width: 400px;
+      margin: 0 auto;
+
+      &.leaf-lg {
+        max-width: 400px;
+        padding: 32px 0;
+      }
+
+      &.leaf-sm {
+        max-width: 226px;
+      }
+
+      img {
+        display: block;
+      }
+    }
+
+    .modal-foot {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding-bottom: 30px;
+
+      a {
+        display: block;
+        margin: 0 $layout-padding $layout-padding;
+        font-size: 18px;
+        line-height: 33px;
+        color: $color-green-6;
+        border-bottom: 1px solid currentColor;
+
+        &:hover, &:active {
+          color: $color-green-2;
+        }
+      }
+    }
+
+    &.modal-buy {
+      max-width: 600px;
+
+      .title {
+        display: block;
+        margin-bottom: 48px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 28px;
+        text-align: center;
+        color: $color-green-6;
+
+        svg {
+          display: inline-block;
+          width: auto;
+          height: 28px;
+          margin-right: 8px;
+          vertical-align: -7px;
+        }
+      }
+
+      .photo {
+        max-width: 354px;
+        height: 354px;
+        margin: 0 auto 48px;
+      }
+
+      .buttons {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        max-width: 408px;
+        margin: 0 auto 20px;
+
+        .btn {
+          flex-grow: 1;
+          flex-basis: 188px;
+          margin: 0 8px 20px;
+        }
+      }
+    }
+
+    &.modal-one_click,
+    &.modal-avatar_save,
+    &.modal-avatar_del,
+    &.modal-favorite_del {
+      max-width: 600px;
+
+      .title {
+        display: block;
+        margin-bottom: 60px;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 38px;
+        text-align: center;
+      }
+
+      .form {
+        display: block;
+        max-width: 394px;
+        margin: 0 auto 60px;
+
+        .number {
+          display: block;
+          height: 60px;
+          width: 100%;
+          margin-bottom: 32px;
+          padding: 0 18px;
+          border: 2px solid $color-green-3;
+          font-size: 20px;
+          color: $color-gray-10;
+
+          &::placeholder {
+            color: $color-gray-10;
+            opacity: 0.5;
+          }
+        }
+
+        @include checkbox($color-gray-10, 14, $color-green-3);
+
+        .checkbox {
+          margin-bottom: 32px;
+        }
+
+        .submit {
+          width: 100%;
+        }
+      }
+    }
+
+    &.modal-one_click .title {
+      color: $color-green-3;
+    }
+
+    &.modal-favorite_del .title {
+      color: $color-gray-14;
+    }
+
+    &.modal-avatar_save .avatar {
+      width: 176px;
+      height: 176px;
+      margin: 20px auto 30px;
+    }
+
+    &.modal-avatar_edit {
+      width: 320px;
+
+      .modal-head {
+        justify-content: space-between;
+
+        label {
+          display: block;
+          font-size: 18px;
+          line-height: 33px;
+          color: $color-green-6;
+          border-bottom: 1px solid currentColor;
+          cursor: pointer;
+
+          &:hover, &:active {
+            color: $color-green-2;
+          }
+        }
+      }
+
+      .canvas {
+        display: block;
+        width: 320px;
+        min-height: 280px;
+        margin: 30px -30px 0;
+        overflow: hidden;
+
+
+        &.unload {
+          margin-bottom: 30px;
+          background-color: $color-gray-3;
+        }
+
+        @media (max-width: 767px) {
+          margin-left: #{-$layout-padding};
+          margin-right: #{-$layout-padding};
+        }
+      }
+
+      .modal-foot {
+        justify-content: space-between;
+        
+        a {
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+    }
+
+    &.modal-callback {
+      max-width: 968px;
+
+      .title {
+        display: block;
+        margin-bottom: 12px;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 54px;
+        text-align: center;
+        color: $color-gray-14;
+
+        @media (max-width: 767px) {
+          font-size: 24px;
+          line-height: 36px;
+        }
+      }
+
+      .subtitle {
+        display: block;
+        font-size: 25px;
+        line-height: 34px;
+        text-align: center;
+        color: $color-gray-10;
+
+        @media (max-width: 767px) {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      .form {
+        display: block;
+        max-width: 664px;
+        margin: 0 auto 38px;
+
+        @media (max-width: 767px) {
+          margin-bottom: 24px;
+        }
+
+        .time {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: center;
+          align-items: center;
+          padding: 40px 0;
+
+          @media (max-width: 565px) {
+            padding: 32px 0;
+          }
+
+          .label {
+            display: block;
+            flex-basis: 136px;
+            margin: 0 20px;
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 33px;
+            text-align: center;
+            color: $color-green-3;
+
+            @media (max-width: 565px) {
+              margin: 10px 0;
+            }
+
+            @media (max-width: 505px) {
+              flex-basis: 100%;
+              margin-bottom: 20px;
+            }
+          }
+
+          .timer {
+            display: block;
+            flex-basis: 136px;
+            margin: 0 20px;
+
+            @media (max-width: 565px) {
+              margin: 0 $layout-padding;
+            }
+
+            @media (max-width: 505px) {
+              flex-basis: 128px;
+            }
+
+            .change {
+              display: block;
+              width: 48px;
+              margin: 0 auto;
+              font-size: 35px;
+              font-weight: 600;
+              line-height: 48px;
+              text-align: center;
+              color: $color-gray-15;
+
+              &:hover, &:active {
+                color: $color-gray-3;
+              }
+            }
+
+            .input {
+              display: block;
+              width: 100%;
+              height: 72px;
+              margin: 24px 0;
+              font-size: 40px;
+              line-height: 54px;
+              text-align: center;
+              color: $color-green-3;
+              border: 1px solid $color-green-3;
+
+              @media (max-width: 505px) {
+                margin: 10px 0;
+              }
+            }
+          }
+        }
+
+        .phone {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-between;
+          align-items: stretch;
+          margin-bottom: 32px;
+
+          @media (max-width: 767px) {
+            margin-bottom: 20px;
+          }
+
+          @media (max-width: 609px) {
+            max-width: 490px;
+            margin-left: auto;
+            margin-right: auto;
+          }
+
+          .number {
+            flex-grow: 1;
+            display: block;
+            width: 100px;
+            height: 60px;
+            padding: 0 18px;
+            border: 2px solid $color-green-3;
+            border-right: none;
+            font-size: 20px;
+            color: $color-gray-10;
+
+            &::placeholder {
+              color: $color-gray-10;
+              opacity: 0.5;
+            }
+
+            @media (max-width: 609px) {
+              width: 100%;
+              margin-bottom: 20px;
+              border-right: 2px solid $color-green-3;
+            }
+          }
+
+          .submit {
+            width: 294px;
+
+            @media (max-width: 609px) {
+              width: 100%;
+            }
+          }
+        }
+
+        .checkbox-wrap {
+          display: block;
+          text-align: center;
+
+          @include checkbox($color-gray-10, 14, $color-green-3);
+        }
+      }
+    }
+
+    &.modal-auth {
+      max-width: 546px;
+
+      .title-wrap {
+        display: block;
+        position: relative;
+
+        .title {
+          display: block;
+          position: absolute;
+          z-index: 710;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 26px;
+          font-weight: 600;
+          line-height: 35px;
+          text-align: center;
+          color: $color-green-3;
+          text-transform: uppercase;
+        }
+      }
+
+      .form {
+        display: block;
+        max-width: 372px;
+        margin: 0 auto 58px;
+
+        .row {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: flex-end;
+          align-items: stretch;
+          position: relative;
+          height: 62px;
+          margin-bottom: 40px;
+
+          &::before {
+            content: attr(data-error);
+            position: absolute;
+            top: 100%;
+            left: 2px;
+            font-family: $font-family-secondary;
+            color: $color-red;
+            font-size: 12px;
+            line-height: 24px;
+          }
+
+          .btn-pwd {
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 8px;
+            width: 32px;
+            padding: 0;
+            border: none;
+            background: transparent;
+            color: $color-gray-14;
+
+            &:hover, &:active {
+              color: $color-green-2;
+            }
+
+            svg {
+              height: 25px;
+              margin: 0 auto;
+            }
+          }
+
+          .label {
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 14px;
+            font-size: 18px;
+            line-height: 25px;
+            color: $color-gray-14;
+            transition: all 50ms ease-out;
+          }
+
+          .input {
+            display: block;
+            padding-bottom: 8px;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 25px;
+            color: $color-black;
+            border: none;
+            border-bottom: 2px solid $color-green-13;
+
+            &::placeholder {
+              color: transparent;
+            }
+
+            &.pwd-input {
+              padding-right: 32px;
+            }
+          }
+
+          .input.focus + .label {
+            bottom: 40px;
+            font-size: 14px;
+            line-height: 19px;
+            color: $color-green-3;
+            transition: all 50ms ease-out;
+          }
+        }
+
+        &.form-password .submit {
+          margin-top: 64px;
+        }
+
+        @include checkbox($color-gray-14, 14, $color-green-13);
+
+        .checkbox {
+          margin-bottom: 40px;
+        }
+
+        .submit {
+          width: 100%;
+        }
+      }
+
+      &.modal-password .form {
+        margin-bottom: 40px;
+      }
+    }
+
+    &.modal-message {
+      max-width: 600px;
+
+      .title {
+        display: block;
+        margin-bottom: 16px;
+        font-size: 36px;
+        font-weight: bold;
+        line-height: 50px;
+        text-align: center;
+        color: $color-green-3;
+
+        @media (max-width: 767px) {
+          font-size: 24px;
+          line-height: 36px;
+        }
+      }
+
+      .subtitle {
+        display: block;
+        margin-bottom: 16px;
+        font-size: 24px;
+        line-height: 33px;
+        text-align: center;
+        color: $color-green-4;
+
+        @media (max-width: 767px) {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      &.modal-error .title,
+      &.modal-error .subtitle {
+        color: $color-red;
+      }
+    }
+
+    &.modal-picture {
+      max-width: 760px;
+
+      @media (max-width: 767px) {
+        max-width: 720px;
+      }
+
+      @media (max-height: 788px) and (min-width: 768px) and (min-aspect-ratio: 760 / 790) {
+        max-width: calc(100vh - 28px);
+      }
+
+      @media (max-height: 788px) and (max-width: 767px) and (min-aspect-ratio: 720 / 790) {
+        max-width: calc(100vh - 68px);
+      }
+    }
+
+    &.modal-review {
+      max-width: 940px;
+
+      @media (max-width: 979px) {
+        max-width: 880px;
+      }
+
+      @media (max-width: 811px) {
+        max-width: 552px;
+      }
+
+      .review-wrap {
+        display: block;
+        position: relative;
+        margin: 0 -30px -30px 0;
+        overflow: hidden;
+
+        @media (max-width: 811px) {
+          margin: 0;
+        }
+
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          z-index: 701;
+          width: 323px;
+          height: 416px;
+          background-position: center;
+          background-repeat: no-repeat;
+
+          @media (max-width: 811px) {
+            display: none;
+          }
+        }
+
+        .title {
+          display: block;
+          margin-bottom: 32px;
+          margin-left: 62px;
+          font-weight: 600;
+          font-size: 34px;
+          line-height: 46px;
+          color: $color-gray-14;
+
+          @media (max-width: 979px) {
+            margin-left: 0;
+          }
+        }
+
+        .form {
+          display: block;
+          position: relative;
+          z-index: 702;
+          max-width: 492px;
+          margin-left: 62px;
+          padding-bottom: 120px;
+
+          @media (max-width: 979px) {
+            margin-left: 0;
+          }
+
+          @media (max-width: 811px) {
+            max-width: 100%;
+            padding-bottom: 10px;
+          }
+
+          .row {
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            padding-bottom: 24px;
+            margin-bottom: 16px;
+
+            &::after {
+              content: attr(data-error);
+              display: block;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              color: $color-red;
+            }
+
+            .rating {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: nowrap;
+              justify-content: space-between;
+              align-items: flex-start;
+              width: 170px;
+              margin-right: 16px;
+
+              li {
+                display: block;
+                width: 26px;
+                height: 26px;
+                color: $color-yellow-1;
+
+                label {
+                  display: block;
+                  cursor: pointer;
+
+                  &.mark {
+                    color: $color-yellow-2;
+                  }
+
+                  .star {
+                    display: none;
+                  }
+                }
+              }
+            }
+
+            .text {
+              display: block;
+              color: $color-gray-10;
+            }
+          }
+
+          .textarea {
+            margin-bottom: 0;
+          }
+
+          .btn {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.webp_on #shadow .modal.modal-review .review-wrap::after {
+  background-image: url(../images/modal-leaves.webp);
+}
+
+.webp_off #shadow .modal.modal-review .review-wrap::after {
+  background-image: url(../images/modal-leaves.png);
+}

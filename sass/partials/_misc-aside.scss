@@ -1,0 +1,74 @@
+.sidebar-wrap {
+  display: block;
+
+  .layout {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    .sidebar {
+      display: block;
+      flex-grow: 1;
+
+      &.lg {
+        flex-basis: 75%;
+
+        @media (max-width: 1111px) {
+          flex-basis: 66%;
+        }
+
+        @media (max-width: 767px) {
+          flex-basis: 100%;
+        }
+      }
+
+      &.md {
+        flex-basis: 66%;
+
+        @media (max-width: 1023px) {
+          flex-basis: 100%;
+        }
+      }
+
+      &.sm {
+        flex-basis: 33%;
+
+        @media (max-width: 1023px) {
+          flex-basis: 100%;
+        }
+      }
+
+      &.xs {
+        flex-basis: 25%;
+
+        @media (max-width: 1111px) {
+          flex-basis: 33%;
+        }
+
+        @media (max-width: 767px) {
+          flex-basis: 100%;
+        }
+      }
+
+      &.left {
+        padding-right: 20px;
+
+        &.lg, &.xs {
+          @media (max-width: 767px) {
+            padding-right: 0;
+            margin-bottom: 20px;
+          }
+        }
+
+        &.md, &.sm {
+          @media (max-width: 1023px) {
+            padding-right: 0;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,146 @@
+.grid.card-review-h .cell .card {
+  display: flex;
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  border-bottom: 1px solid $color-gray-7;
+
+  @media (max-width: 767px) {
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+  }
+
+  .avatar {
+    width: 176px;
+    height: 176px;
+    margin-right: 40px;
+
+    @media (max-width: 811px) {
+      width: 128px;
+      height: 128px;
+    }
+
+    @media (max-width: 565px) {
+      margin: 0 auto 26px;
+    }
+  }
+
+  .info {
+    display: block;
+    padding-right: 230px;
+    max-width: 818px;
+    position: relative;
+    flex-basis: 300px;
+    flex-grow: 1;
+
+    @media (max-width: 1023px) {
+      padding-right: 180px;
+    }
+
+    @media (max-width: 767px) {
+      padding-right: 0;
+    }
+
+    @media (max-width: 565px) {
+      flex-basis: 100%;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 1;
+      top: 25px;
+      right: 0;
+      width: 129px;
+      height: 188px;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    .title {
+      display: block;
+      margin-bottom: 16px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 25px;
+
+      color: $color-green-3;
+
+      @media (max-width: 565px) {
+        text-align: center;
+      }
+    }
+
+    .block {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 26px;
+
+      @media (max-width: 565px) {
+        justify-content: center;
+      }
+
+      .rating {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 162px;
+
+        li {
+          display: block;
+          width: 26px;
+          height: 26px;
+          color: $color-yellow-1;
+
+          &.mark {
+            color: $color-yellow-2;
+          }
+        }
+      }
+
+      .date {
+        display: inline;
+        padding-left: 20px;
+        font-size: 12px;
+        line-height: 15px;
+
+        color: $color-gray-8;
+      }
+    }
+
+    .text {
+      display: block;
+      font-weight: 600;
+      font-size: 14px;
+      text-align: left;
+      line-height: 150%;
+
+      color: $color-gray-6;
+
+      @media (max-width: 565px) {
+        text-align: justify;
+      }
+    }
+  }
+}
+
+.webp_on .grid.card-review-h .cell .card .info::after {
+  background-image: url(../images/reviews-leaf.webp);
+}
+
+.webp_off .grid.card-review-h .cell .card .info::after {
+  background-image: url(../images/reviews-leaf.png);
+}

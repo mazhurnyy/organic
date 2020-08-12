@@ -1,0 +1,281 @@
+#content-catalog {
+  display: block;
+  background-color: $color-white;
+  padding: 64px 0 90px;
+
+  @media (max-width: 767px) {
+    padding: 24px 0 42px;
+  }
+
+  .filters {
+
+    .details-categories {
+      display: block;
+
+      &[open] {
+        margin-bottom: 40px;
+      }
+
+      .summary-categories {
+        display: inline-block;
+        position: relative;
+        margin-bottom: 40px;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 34px;
+        color: $color-green-6;
+
+        @media (max-width: 767px) {
+          font-size: 18px;
+          line-height: 1;
+          margin-bottom: 24px;
+        }
+
+        @include filter-dropdown('catalog-category.svg');
+      }
+
+      &[open] .summary-categories::after {
+        transform: translateY(-50%) rotate(180deg);
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        margin-left: -10px;
+        padding: 30px 0 10px;
+        background-color: $color-gray-4;
+
+        @media (max-width: 767px) {
+          margin-right: -10px;
+          padding: 14px 0 0;
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+
+        @media (max-width: 535px) {
+          flex-direction: column;
+          flex-wrap: nowrap;
+        }
+
+        li {
+          display: block;
+          margin-bottom: 20px;
+          padding: 0 $layout-padding;
+
+          @media (min-width: 536px) and (max-width: 767px) {
+            min-width: 50%;
+            max-width: 50%;
+          }
+
+          a {
+            display: inline;
+            font-size: 16px;
+            line-height: 20px;
+            text-transform: lowercase;
+            color: $color-black;
+
+            &:hover, &:active {
+              color: $color-green-2;
+            }
+          }
+        }
+      }
+    }
+
+    .details-filter {
+      display: block;
+      overflow: hidden;
+
+      .summary-filter {
+        display: block;
+        position: relative;
+        float: left;
+        margin-bottom: 24px;
+        font-size: 22px;
+        line-height: 28px;
+        color: $color-green-3;
+
+        @media (max-width: 767px) {
+          font-size: 18px;
+          line-height: 1;
+
+          @include filter-dropdown('catalog-filter.svg');
+        }
+      }
+
+      &[open] .summary-filter::after {
+        transform: translateY(-50%) rotate(180deg);
+      }
+
+      .reset {
+        display: block;
+        float: left;
+        margin-left: 56px;
+        font-size: 12px;
+        line-height: 28px;
+        color: $color-gray-19;
+
+        @media (max-width: 767px) {
+          line-height: 18px;
+        }
+      }
+
+      form {
+        clear: both;
+        display: block;
+
+        .details-sub_filter {
+          display: block;
+
+          .summary-sub_filter {
+            display: inline-block;
+            position: relative;
+            margin-bottom: 16px;
+            font-size: 18px;
+            line-height: 26px;
+            color: $color-green-6;
+
+            @media (max-width: 767px) {
+              font-size: 16px;
+            }
+
+            @include filter-dropdown('catalog-category.svg');
+          }
+
+          &[open] .summary-sub_filter::after {
+            transform: translateY(-50%) rotate(180deg);
+          }
+
+          .checkboxes {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: stretch;
+            margin-bottom: 20px;
+
+            @media (max-width: 767px) {
+              flex-direction: row;
+              flex-wrap: wrap;
+            }
+
+            @media (min-width: 536px) and (max-width: 767px) {
+              border-bottom: 1px solid $color-green-6;
+            }
+
+            @media (max-width: 535px) {
+              flex-direction: column;
+              flex-wrap: nowrap;
+            }
+
+            @include checkbox($color-green-3, 14, $color-green-3);
+
+            .checkbox {
+              display: block;
+              margin-bottom: 10px;
+
+              @media (min-width: 536px) and (max-width: 767px) {
+                min-width: 50%;
+                max-width: 50%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sort {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 64px;
+
+    @media (max-width: 767px) {
+      margin-bottom: 40px;
+    }
+
+    span {
+      display: block;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 20px;
+      color: $color-gray-5;
+    }
+
+    .details-sort {
+      display: block;
+      position: relative;
+      margin-left: 8px;
+
+      .summary-sort {
+        display: inline-flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        min-height: 28px;
+        padding: 3px 21px 3px 11px;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1;
+        color: $color-black;
+        background: $color-white;
+        border: 1px solid $color-green-12;
+
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          z-index: 1;
+          transform: translateY(-50%);
+          width: 6px;
+          height: 6px;
+          background-image: url(../images/catalog-sort.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+      }
+
+      ul {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        z-index: 400;
+        margin-top: 3px;
+        padding: 8px 0;
+        background-color: $color-white;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 6px 6px;
+
+        li {
+          display: block;
+
+          a {
+            display: block;
+            padding: 10px 12px;
+            white-space: nowrap;
+            font-size: 14px;
+            color: $color-black;
+
+            @media (max-width: 1023px) {
+              padding: 12px;
+            }
+
+            &:hover, &:active {
+              background-color: $color-gray-4;
+              color: $color-green-3;
+            }
+          }
+        }
+      }
+    }
+  }
+}

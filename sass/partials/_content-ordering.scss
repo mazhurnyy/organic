@@ -1,0 +1,203 @@
+#content-ordering {
+  display: block;
+  background-color: $color-white;
+  padding-bottom: 54px;
+
+  @media (max-width: 767px) {
+    padding-bottom: 40px;
+  }
+
+  .form {
+    display: block;
+
+    @media (max-width: 1023px) {
+      margin-left: -10px;
+      margin-right: -10px;
+      background-color: #F3FCF6;
+    }
+
+    .ordering-form {
+      display: block;
+      max-width: 380px;
+      padding: 16px 10px;
+      background-color: #F3FCF6;
+      margin-left: -10px;
+
+      @media (max-width: 1023px) {
+        margin: 0 auto;
+      }
+
+      fieldset {
+        display: block;
+        margin-bottom: 8px;
+
+        h2 {
+          display: block;
+          margin-bottom: 14px;
+          font-size: 16px;
+          line-height: 22px;
+          color: $color-gray-20;
+        }
+
+        label {
+          display: block;
+          margin-bottom: 6px;
+          font-size: 14px;
+          line-height: 19px;
+          color: $color-gray-12;
+        }
+
+        .input {
+          display: block;
+          width: 100%;
+          height: 50px;
+          padding: 0 16px;
+          margin-bottom: 17px;
+          border: 2px solid $color-green-3;
+          font-size: 16px;
+          color: $color-gray-10;
+        }
+
+        label[data-error]::after {
+          content: attr(data-error);
+          color: $color-red;
+        }
+      }
+
+      .btn {
+        width: 100%;
+        margin-top: 22px;
+      }
+    }
+  }
+
+  .positions {
+    display: block;
+
+    @media (max-width: 1023px) {
+      display: none;
+    }
+
+    .position {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: stretch;
+      margin-bottom: 48px;
+
+      .photo {
+        display: block;
+        width: 140px;
+        height: 140px;
+        min-width: 140px;
+        padding: 10px;
+        margin-right: 40px;
+        background-color: $color-white;
+
+        img {
+          display: block;
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      .info {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: stretch;
+
+        .top {
+          display: block;
+          margin-bottom: 28px;
+
+          a {
+            display: block;
+            font-size: 22px;
+            line-height: 30px;
+            color: $color-green-2;
+
+            &:hover, &:active {
+              color: $color-green-4;
+            }
+          }
+        }
+
+        .bottom {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          align-items: center;
+
+          .item {
+            display: block;
+            width: 33%;
+            flex-grow: 1;
+
+            &.price {
+              text-align: left;
+            }
+
+            &.quantity {
+              text-align: center;
+              border: none;
+            }
+
+            &.sum {
+              text-align: right;
+            }
+
+            span {
+              display: block;
+              font-weight: 300;
+
+              &:first-child {
+                font-size: 16px;
+                line-height: 22px;
+                color: $color-gray-19;
+              }
+
+              &:last-child {
+                font-size: 20px;
+                line-height: 30px;
+                color: $color-green-3;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .summary {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 16px;
+
+    @media (max-width: 1023px) {
+      display: none;
+    }
+
+    span {
+      display: block;
+      font-size: 24px;
+      line-height: 30px;
+
+      &:first-child {
+        color: $color-gray-19;
+        margin-right: 8px;
+      }
+
+      &:last-child {
+        color: $color-green-3;
+      }
+    }
+  }
+}

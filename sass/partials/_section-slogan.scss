@@ -1,0 +1,51 @@
+#slogan {
+  display: block;
+  padding-top: 44px;
+  background-color: $color-gray-2;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-items: center;
+      flex-basis: 245px;
+
+      .img-box {
+        display: block;
+        margin-bottom: 22px;
+
+        &.family {
+          width: 150px;
+          height: 130px;
+        }
+
+        &.heart {
+          width: 104px;
+          height: 141px;
+        }
+
+        &.hare {
+          width: 133px;
+          height: 135px;
+        }
+      }
+
+      .text {
+        display: block;
+        margin-bottom: 40px;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        color: $color-green-6;
+      }
+    }
+  }
+}

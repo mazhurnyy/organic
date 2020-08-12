@@ -1,0 +1,98 @@
+#content-personal {
+  display: block;
+  background-color: $color-white;
+  padding: 48px 0 80px;
+
+  @media (max-width: 767px) {
+    padding: 16px 0 48px;
+  }
+
+  .personal {
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: stretch;
+      min-height: 390px;
+      padding: 20px 0;
+      background-color: $color-gray-4;
+
+      @media (max-width: 767px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-height: 100%;
+        padding: 0;
+      }
+
+      li {
+        display: block;
+        flex-basis: 100%;
+
+        @media (max-width: 767px) {
+          flex-basis: 50%;
+        }
+
+        @media (max-width: 535px) {
+          flex-basis: 100%;
+        }
+
+        .icon {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: flex-start;
+          align-items: center;
+          min-height: 42px;
+          padding: 4px 10px 4px 50px;
+          position: relative;
+          font-size: 16px;
+          line-height: 22px;
+          color: $color-black;
+
+          &:hover, &:active {
+            background-color: $color-green-8;
+          }
+
+          &[href='#'] {
+            background-color: $color-green-7;
+            cursor: default;;
+          }
+
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 22px;
+            height: 20px;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+
+          &.icon-admin::before {
+            background-image: url(../images/personal-admin.svg);
+          }
+
+          &.icon-favorites::before {
+            background-image: url(../images/personal-favorites.svg);
+          }
+
+          &.icon-orders::before {
+            background-image: url(../images/personal-orders.svg);
+          }
+
+          &.icon-subscribe::before {
+            background-image: url(../images/personal-subscribe.svg);
+          }
+
+          &.icon-profile::before {
+            background-image: url(../images/personal-profile.svg);
+          }
+        }
+      }
+    }
+  }
+}
