@@ -87,7 +87,7 @@ $(function () {
                         .catch(function (error) {
                             $(".buy.added").removeClass("added").addClass("basket-add");
                             $("#header-bag").removeClass("added").addClass("basket-add");
-                            $(".modal-buy_done .subtitle span").text(response);
+                            $(".modal-buy_done .subtitle span").text("321");
                             modalOpen("buy_done");
                             return;
 
