@@ -102,3 +102,7 @@ picture {
   height: 0 !important;
   overflow: hidden !important;
 }
+
+*:disabled, *.disabled {
+  cursor: not-allowed !important;
+}

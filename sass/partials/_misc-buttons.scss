@@ -48,7 +48,6 @@
   }
 
   &:disabled, &.disabled {
-    cursor: not-allowed;
     border-color: $color-red;
   }
 }
