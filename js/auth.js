@@ -262,6 +262,9 @@ $(function () {
                 case 403:
                     window.location.assign("/403");
                     break;
+                case 405:
+                    modalOpen("error");
+                    break;
                 case 429:
                     txt = error.response.data.errors[field];
                     break;
