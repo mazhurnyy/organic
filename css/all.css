@@ -494,16 +494,23 @@ picture {
 
 @media (max-width: 767px) {
   .grid.card-favorite .cell .card {
-      margin-bottom: 40px; } }
-  .grid.card-favorite .cell .card .photo {
-    display: block;
-    width: 100%;
-    height: 245px;
-    margin: 0 auto 16px; }
-    .grid.card-favorite .cell .card .photo img {
-      background-color: #FFFFFF; }
-  .grid.card-favorite .cell .card .text {
-    display: -webkit-box;
+    margin-bottom: 40px;
+  }
+}
+
+.grid.card-favorite .cell .card .photo {
+  display: block;
+  width: 100%;
+  height: 245px;
+  margin: 0 auto 16px;
+}
+
+.grid.card-favorite .cell .card .photo img {
+  background-color: #FFFFFF;
+}
+
+.grid.card-favorite .cell .card .text {
+  display: -webkit-box;
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
     -webkit-line-clamp: 2;
@@ -646,7 +653,8 @@ picture {
     .grid.card-product .cell .card .like:hover, .grid.card-product .cell .card .like:active {
       color: #000000; }
     .grid.card-product .cell .card .like.added {
-      color: #E6D012; }
+      color: #EA2828;
+    }
       .grid.card-product .cell .card .like.added:hover, .grid.card-product .cell .card .like.added:active {
         color: #5DBC30; }
   .grid.card-product .cell .card .new {
@@ -1074,13 +1082,14 @@ picture {
                 flex-wrap: wrap; } }
             #content-basket .positions .position .layout .info .bottom .price {
               display: flex;
-              flex-basis: 130px;
+              flex-basis: 10px;
               margin-right: 16px;
               flex-grow: 1;
               font-weight: 300;
               font-size: 22px;
               line-height: 30px;
-              color: #116708; }
+              color: #116708;
+            }
               @media (max-width: 811px) {
                 #content-basket .positions .position .layout .info .bottom .price {
                   margin-right: 0;
@@ -1100,12 +1109,13 @@ picture {
             #content-basket .positions .position .layout .info .bottom .sum {
               display: flex;
               justify-content: flex-end;
-              flex-basis: 130px;
+              flex-basis: 10px;
               flex-grow: 1;
               margin-right: 16px;
               font-size: 24px;
               line-height: 32px;
-              color: #116708; }
+              color: #116708;
+            }
               @media (max-width: 811px) {
                 #content-basket .positions .position .layout .info .bottom .sum {
                   margin-right: 0;
@@ -3135,21 +3145,33 @@ picture {
           line-height: 35px;
           text-align: center;
           color: #116708;
-          text-transform: uppercase; }
-      #shadow .modal.modal-auth .form {
-        display: block;
-        max-width: 372px;
-        margin: 0 auto 58px; }
-        #shadow .modal.modal-auth .form .row {
-          display: flex;
-          flex-direction: column;
-          flex-wrap: nowrap;
-          justify-content: flex-end;
-          align-items: stretch;
-          position: relative;
-          height: 62px;
-          margin-bottom: 40px; }
-          #shadow .modal.modal-auth .form .row::before {
+          text-transform: uppercase;
+        }
+
+#shadow .modal.modal-auth .form {
+  display: block;
+  max-width: 372px;
+  margin: 0 auto 58px;
+}
+
+@media (max-width: 379px) {
+  #shadow .modal.modal-auth .form {
+    text-align: center;
+  }
+}
+
+#shadow .modal.modal-auth .form .row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: stretch;
+  position: relative;
+  height: 62px;
+  margin-bottom: 40px;
+}
+
+#shadow .modal.modal-auth .form .row::before {
             content: attr(data-error);
             position: absolute;
             top: 100%;

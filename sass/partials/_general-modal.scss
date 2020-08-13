@@ -459,6 +459,10 @@
         max-width: 372px;
         margin: 0 auto 58px;
 
+        @media (max-width: 379px) {
+          text-align: center;
+        }
+
         .row {
           display: flex;
           flex-direction: column;
