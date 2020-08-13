@@ -36,6 +36,8 @@ $(function () {
                     .post("cart/add", {
                         id: id,
                         quantity: quantity,
+                    }, {
+                        timeout: axiosTimeOut
                     })
                     .then(function (response) {
                         submit.removeClass("basket-add").addClass("added");
@@ -77,6 +79,8 @@ $(function () {
                     axios
                         .post("cart/one_click", {
                             tel: tel,
+                        }, {
+                            timeout: axiosTimeOut
                         })
                         .then(function (response) {
                             $(".buy.added").removeClass("added").addClass("basket-add");

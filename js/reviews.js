@@ -44,6 +44,8 @@ $(function () {
                         .post("/reviews/company", {
                             message: msg,
                             rating: rating
+                        }, {
+                            timeout: axiosTimeOut
                         })
                         .then(function (response) {
                             modalOpen("review_done");
