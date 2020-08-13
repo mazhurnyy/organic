@@ -11,7 +11,8 @@ projects.forEach(function (item) {
             .pipe(sass())
             .pipe(gulp.dest('./css/'))
             .on('end', function () {
-                filesWrite(item);
+                //filesWrite(item);
+                console.log(item + ' done');
             })
     });
     gulp.watch('./sass/**/*.scss', gulp.series(item));

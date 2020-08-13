@@ -15,7 +15,7 @@ $(function () {
         })
         .on("click", ".buy.basket-add", function (e) {
             e.preventDefault();
-            const submit = $(this);
+            const submit = $(".buy.basket-add"), that = this;
             if (submit.hasClass("disabled")) return false;
 
             const
@@ -40,12 +40,12 @@ $(function () {
                         timeout: axiosTimeOut
                     })
                     .then(function (response) {
-                        submit.removeClass("basket-add").addClass("added");
+                        $(that).removeClass("basket-add").addClass("added");
                         $("#header-bag").removeClass("basket-add").addClass("added");
                         modalOpen("buy");
                     })
                     .catch(function (error) {
-                        submit.removeClass("basket-add").addClass("added");
+                        $(that).removeClass("basket-add").addClass("added");
                         $("#header-bag").removeClass("basket-add").addClass("added");
                         modalOpen("buy");
                         return;
