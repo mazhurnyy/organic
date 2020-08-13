@@ -15,7 +15,7 @@ $(function () {
         })
         .on("click", ".buy.basket-add", function (e) {
             e.preventDefault();
-            const submit = $(".buy.basket-add");
+            const submit = $(this);
             if (submit.hasClass("disabled")) return false;
 
             const
