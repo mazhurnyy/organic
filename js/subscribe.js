@@ -27,42 +27,57 @@ $(function () {
                 if (email.length >= 5 && email.indexOf("@") > 0) {
                     submitOff(submit);
                     setTimeout(function () {
+                        axios
+                            .post("subscribe", {
+                                email: email,
+                            }, {
+                                timeout: axiosTimeOut
+                            })
+                            .then(function (response) {
+                                btn_s.addClass("d-none");
+                                btn_u.removeClass("d-none");
+                                modalOpen("subscribe_done");
+                            })
+                            .catch(function (error) {
+                                btn_s.addClass("d-none");
+                                btn_u.removeClass("d-none");
+                                modalOpen("subscribe_done");
+                                return;
 
-                        // todo AXIOS
-                        console.log("subscribe-form submit: email: " + email);
-
-                        // Успех
-                        btn_s.addClass("d-none");
-                        btn_u.removeClass("d-none");
-                        modalOpen("subscribe_done");
-
-                        // При неудаче без ответа
-                        // modalOpen("error");
-
-                        // В любом случае снимаем блокировку
-                        submitOn(submit);
-
+                                modalOpen("error");
+                            })
+                            .then(function () {
+                                submitOn(submit);
+                            })
+                        ;
                     }, 700);
                 }
             } else {
                 submitOff(submit);
                 setTimeout(function () {
+                    axios
+                        .post("subscribe/unsubscribe", {}, {
+                            timeout: axiosTimeOut
+                        })
+                        .then(function (response) {
+                            btn_u.addClass("d-none");
+                            btn_s.removeClass("d-none");
+                            input.attr("value", "").val("");
+                            modalOpen("unsubscribe_done");
+                        })
+                        .catch(function (error) {
+                            btn_u.addClass("d-none");
+                            btn_s.removeClass("d-none");
+                            input.attr("value", "").val("");
+                            modalOpen("unsubscribe_done");
+                            return;
 
-                    // todo AXIOS
-                    console.log("subscribe-form submit: unsubscribe");
-
-                    // Успех
-                    btn_u.addClass("d-none");
-                    btn_s.removeClass("d-none");
-                    input.attr("value", "").val("");
-                    modalOpen("unsubscribe_done");
-
-                    // При неудаче без ответа
-                    // modalOpen("error");
-
-                    // В любом случае снимаем блокировку
-                    submitOn(submit);
-
+                            modalOpen("error");
+                        })
+                        .then(function () {
+                            submitOn(submit);
+                        })
+                    ;
                 }, 700);
             }
         })
