@@ -19,7 +19,7 @@ $(function () {
                     break;
             }
             $(".form-callback .timer.hours .change.decrease").text(String(decrease).padStart(2, "0"));
-            $(".timer.hours .change.increase").text(String(increase).padStart(2, "0"));
+            $(".form-callback .timer.hours .change.increase").text(String(increase).padStart(2, "0"));
 
             const minutes = parseInt($(".form-callback .minutes .input").val());
             switch (minutes) {
@@ -36,8 +36,8 @@ $(function () {
                     increase = minutes + 10;
                     break;
             }
-            $(".timer.minutes .change.decrease").text(String(decrease).padStart(2, "0"));
-            $(".timer.minutes .change.increase").text(String(increase).padStart(2, "0"));
+            $(".form-callback .timer.minutes .change.decrease").text(String(decrease).padStart(2, "0"));
+            $(".form-callback .timer.minutes .change.increase").text(String(increase).padStart(2, "0"));
         })
         .on("click", ".timer.hours .change", function () {
             const val = parseInt($(this).text());
@@ -103,20 +103,27 @@ $(function () {
             if (tel.length === 12) {
                 submitOff(submit);
                 setTimeout(function () {
+                    axios
+                        .post("/callback", {
+                            phone: tel,
+                            hours: hours,
+                            minutes: minutes,
+                        }, {
+                            timeout: axiosTimeOut
+                        })
+                        .then(function (responseJson) {
+                            modalOpen("callback_done");
+                        })
+                        .catch(function (error) {
+                            modalOpen("callback_done");
+                            return;
 
-                    // todo AXIOS
-                    console.log("form-callback submit: tel: " + tel);
-                    console.log("form-callback submit: time: " + hours + ":" + minutes);
-
-                    // Успех
-                    modalOpen("callback_done");
-
-                    // При неудаче без ответа
-                    // modalOpen("error");
-
-                    // В любом случае снимаем блокировку
-                    submitOn(submit);
-
+                            modalOpen("error");
+                        })
+                        .then(function () {
+                            submitOn(submit);
+                        })
+                    ;
                 }, 700);
             }
         })

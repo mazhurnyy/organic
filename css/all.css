@@ -511,16 +511,17 @@ picture {
 
 .grid.card-favorite .cell .card .text {
   display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-    margin-bottom: 12px;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 22px;
-    text-align: center;
-    color: #000000; }
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-bottom: 12px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  color: #000000;
+}
     .grid.card-favorite .cell .card .text:hover, .grid.card-favorite .cell .card .text:active {
       color: #4F4F4F; }
   .grid.card-favorite .cell .card .price {
@@ -3172,16 +3173,18 @@ picture {
 }
 
 #shadow .modal.modal-auth .form .row::before {
-            content: attr(data-error);
-            position: absolute;
-            top: 100%;
-            left: 2px;
-            font-family: Muli, sans-serif;
-            color: #EA2828;
-            font-size: 12px;
-            line-height: 24px; }
-          #shadow .modal.modal-auth .form .row .btn-pwd {
-            display: block;
+  content: attr(data-error);
+  position: absolute;
+  top: 100%;
+  left: 2px;
+  font-family: Muli, sans-serif;
+  color: #EA2828;
+  font-size: 12px;
+  line-height: 24px;
+}
+
+#shadow .modal.modal-auth .form .row .btn-pwd {
+  display: block;
             position: absolute;
             right: 0;
             bottom: 8px;

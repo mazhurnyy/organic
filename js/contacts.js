@@ -34,21 +34,27 @@ $(function () {
             if (msg.length >= 6 && (tel.length === 12 || tel.length === 0)) {
                 submitOff(submit);
                 setTimeout(function () {
+                    axios
+                        .post("/feedback/create", {
+                            name: name,
+                            phone: tel,
+                            message: msg,
+                        }, {
+                            timeout: axiosTimeOut
+                        })
+                        .then(function (responseJson) {
+                            modalOpen("feedback_done");
+                        })
+                        .catch(function (error) {
+                            modalOpen("feedback_done");
+                            return;
 
-                    // todo AXIOS
-                    console.log("feedback-form submit: name: " + name);
-                    console.log("feedback-form submit: tel: " + tel);
-                    console.log("feedback-form submit: msg: " + msg);
-
-                    // Успех
-                    modalOpen("feedback_done");
-
-                    // При неудаче без ответа
-                    // modalOpen("error");
-
-                    // В любом случае снимаем блокировку
-                    submitOn(submit);
-
+                            modalOpen("error");
+                        })
+                        .then(function () {
+                            submitOn(submit);
+                        })
+                    ;
                 }, 700);
             }
         })

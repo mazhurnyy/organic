@@ -48,34 +48,36 @@ $(function () {
             e.preventDefault();
             const submit = $(".form-avatar_save [type=submit]");
 
-            const file = canvas.croppie("get");
-            let fd = new FormData();
-            fd.append("file", $("#avatar-file").prop("files")[0]);
-            fd.append("points", file.points);
-            fd.append("zoom", file.zoom);
+            const file = $(".modal-avatar_save .avatar img").attr("src");
 
             submitOff(submit);
             setTimeout(function () {
+                axios
+                    .post("/profile/update/avatar", {
+                        file: file
+                    }, {
+                        timeout: axiosTimeOut
+                    })
+                    .then(function (response) {
+                        changeAvatar(response);
+                        modalClose();
+                    })
+                    .catch(function (error) {
+                        changeAvatar({
+                            data: {
+                                srcset: file,
+                                src: file
+                            }
+                        });
+                        modalClose();
+                        return;
 
-                // todo AXIOS
-                // передать на сервер файл, координаты, масштаб
-                console.log(fd);
-
-                // При успехе получаем пути к новым фото
-                const srcset = "./contents/reviews-9.webp";
-                const src = "./contents/reviews-9.png";
-
-                $(".avatar-wrap source").attr("srcset", srcset);
-                $(".avatar-wrap img").attr("src", src);
-                $(".avatar-wrap .delete").removeClass("d-none");
-                modalClose();
-
-                // При неудаче без ответа
-                // modalOpen("error");
-
-                // В любом случае снимаем блокировку
-                submitOn(submit);
-
+                        modalOpen("error");
+                    })
+                    .then(function () {
+                        submitOn(submit);
+                    })
+                ;
             }, 700);
         })
         .on("submit", ".form-avatar_del", function (e) {
@@ -84,26 +86,30 @@ $(function () {
 
             submitOff(submit);
             setTimeout(function () {
+                axios
+                    .post("/profile/delete/avatar", {}, {
+                        timeout: axiosTimeOut
+                    })
+                    .then(function (response) {
+                        changeAvatar(response);
+                        modalClose();
+                    })
+                    .catch(function (error) {
+                        changeAvatar({
+                            data: {
+                                srcset: "./images/plugs/avatar/lg.webp",
+                                src: "./images/plugs/avatar/lg.png"
+                            }
+                        });
+                        modalClose();
+                        return;
 
-                // todo AXIOS
-                // Запрос на удаление без данных
-                console.log("avatar delete");
-
-                // При успехе получаем пути к заглушкам кот / м / ж1 / ж2
-                const srcset = "./images/plugs/avatar/lg.webp";
-                const src = "./images/plugs/avatar/lg.png";
-
-                $(".avatar-wrap source").attr("srcset", srcset);
-                $(".avatar-wrap img").attr("src", src);
-                $(".avatar-wrap .delete").addClass("d-none");
-                modalClose();
-
-                // При неудаче без ответа
-                // modalOpen("error");
-
-                // В любом случае снимаем блокировку
-                submitOn(submit);
-
+                        modalOpen("error");
+                    })
+                    .then(function () {
+                        submitOn(submit);
+                    })
+                ;
             }, 700);
         })
         .on("submit", ".profile-form", function (e) {
@@ -117,12 +123,10 @@ $(function () {
                 last_name_label = $("[for=profile-last_name]"),
                 date_input = $("#profile-date"),
                 gender_input = $("#profile-gender"),
-                profession_input = $("#profile-profession"),
                 first_name = first_name_input.val().trim(),
                 last_name = last_name_input.val().trim(),
                 date = date_input.val(),
-                gender = gender_input.val(),
-                profession = profession_input.val()
+                gender = gender_input.val()
             ;
 
             if (first_name.length >= 2) {
@@ -144,23 +148,29 @@ $(function () {
             if (first_name.length >= 2 && last_name.length >= 2) {
                 submitOff(submit);
                 setTimeout(function () {
+                    axios
+                        .post("/profile/update", {
+                            first_name: first_name,
+                            last_name: last_name,
+                            birthday: date,
+                            gender: gender
+                        }, {
+                            timeout: axiosTimeOut
+                        })
+                        .then(function (response) {
+                            changeAvatar(response);
+                            modalOpen("profile_done");
+                        })
+                        .catch(function (error) {
+                            modalOpen("profile_done");
+                            return;
 
-                    // todo AXIOS
-                    console.log("profile submit: first_name: " + first_name);
-                    console.log("profile submit: last_name: " + last_name);
-                    console.log("profile submit: date: " + date);
-                    console.log("profile submit: gender: " + gender);  //       - / m / f
-                    console.log("profile submit: profession: " + profession);
-
-                    // Успех
-                    modalOpen("profile_done");
-
-                    // При неудаче без ответа
-                    // modalOpen("error");
-
-                    // В любом случае снимаем блокировку
-                    submitOn(submit);
-
+                            modalOpen("error");
+                        })
+                        .then(function () {
+                            submitOn(submit);
+                        })
+                    ;
                 }, 700);
             }
         })
@@ -171,4 +181,10 @@ $(function () {
             $("[for=profile-last_name]").attr("data-error", "");
         })
     ;
+
+    function changeAvatar(responseJson) {
+        $(".avatar-wrap source").attr("srcset", responseJson.data.srcset);
+        $(".avatar-wrap img").attr("src", responseJson.data.src);
+        $(".avatar-wrap .delete").removeClass("d-none");
+    }
 });
