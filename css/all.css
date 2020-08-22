@@ -397,11 +397,12 @@ button, summary {
   width: 100%;
   height: 100%;
   overflow: auto;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0; }
+  bottom: 0;
+}
 
 header {
   width: 100%;
@@ -423,9 +424,6 @@ footer {
   position: relative; }
 
 #sidebar {
-  position: relative; }
-
-aside {
   position: relative; }
 
 .layout {
@@ -522,16 +520,20 @@ picture {
   text-align: center;
   color: #000000;
 }
-    .grid.card-favorite .cell .card .text:hover, .grid.card-favorite .cell .card .text:active {
-      color: #4F4F4F; }
-  .grid.card-favorite .cell .card .price {
-    display: block;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 22px;
-    text-align: center;
-    color: #000000;
-    margin-bottom: 24px; }
+
+.grid.card-favorite .cell .card .text:hover, .grid.card-favorite .cell .card .text:active {
+  color: #4F4F4F;
+}
+
+.grid.card-favorite .cell .card .price {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 24px;
+}
     @media (max-width: 505px) {
       .grid.card-favorite .cell .card .price {
         margin-bottom: 16px; } }
@@ -2172,14 +2174,15 @@ picture {
 #cookie {
   display: block;
   padding: 20px 20px 0;
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 410;
   background-color: #FFFFFF;
   border: 1px solid #828282;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); }
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
   #cookie .cookie-head {
     display: flex;
     flex-flow: row nowrap;
@@ -2741,13 +2744,14 @@ picture {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 600;
-  background-color: rgba(0, 0, 0, 0.7); }
+  background-color: rgba(0, 0, 0, 0.7);
+}
   #shadow.open {
     display: block; }
   #shadow .modal {
@@ -3185,16 +3189,19 @@ picture {
 
 #shadow .modal.modal-auth .form .row .btn-pwd {
   display: block;
-            position: absolute;
-            right: 0;
-            bottom: 8px;
-            width: 32px;
-            padding: 0;
-            border: none;
-            background: transparent;
-            color: #393939; }
-            #shadow .modal.modal-auth .form .row .btn-pwd:hover, #shadow .modal.modal-auth .form .row .btn-pwd:active {
-              color: #00370C; }
+  position: absolute;
+  right: 0;
+  bottom: 8px;
+  width: 32px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #393939;
+}
+
+#shadow .modal.modal-auth .form .row .btn-pwd:hover, #shadow .modal.modal-auth .form .row .btn-pwd:active {
+  color: #00370C;
+}
             #shadow .modal.modal-auth .form .row .btn-pwd svg {
               height: 25px;
               margin: 0 auto; }
