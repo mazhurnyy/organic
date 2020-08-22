@@ -274,6 +274,7 @@
                     <form action="#" class="ordering-form" method="post" autocomplete="off">
                         <fieldset>
                             <h2>Контактные данные</h2>
+
                             <label for="ordering-first_name" data-txt="(минимум 2 символа)" data-error="">
                                 Имя *
                             </label>
@@ -290,15 +291,51 @@
                             <input type="tel" name="ordering-phone" class="input" id="ordering-phone"/>
                         </fieldset>
                         <fieldset>
-                            <h2>Способ доставки</h2>
-                            <label for="ordering-address" data-txt="(минимум 6 символов)" data-error="">
-                                Адрес *
-                            </label>
-                            <textarea class="textarea" name="ordering-address" id="ordering-address" rows="8"
-                            ></textarea>
+                            <h2>Оплата и доставка</h2>
+
+                            <label for="ordering-payment">Способ оплаты: *</label>
+                            <select class="input" id="ordering-payment" name="ordering-payment">
+                                <option disabled="disabled" selected="selected" value="">Выберите способ оплаты</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+
+                            <label for="ordering-delivery">Способ доставки: *</label>
+                            <select class="input" id="ordering-delivery" name="ordering-delivery">
+                                <option disabled="disabled" selected="selected" value="">Выберите способ доставки
+                                </option>
+                                <option value="novaposhta">Новая почта</option>
+                                <option value="justin">Justin</option>
+                                <option value="ukrposhta">Укрпочта</option>
+                            </select>
+
+                            <div class="d-none" id="services-delivery">
+                                <label data-error="" data-txt="(нет такого города в базе)"
+                                       for="services-delivery-city">Укажите город: *</label>
+                                <input class="input" id="services-delivery-city" list="services-delivery-city-list"
+                                       name="services-delivery-city" type="text"/>
+                                <datalist id="services-delivery-city-list">
+                                    <option value="Харьков">
+                                    <option value="Одесса">
+                                    <option value="Лисичанск">
+                                </datalist>
+
+                                <label data-error="" data-txt="(нет такого отделения в базе)"
+                                       for="services-delivery-number">Укажите отделение: *</label>
+                                <input class="input" id="services-delivery-number" list="services-delivery-number-list"
+                                       name="services-delivery-number" type="text"/>
+                                <datalist id="services-delivery-number-list">
+                                    <option value="Текст1">
+                                    <option value="Текст2">
+                                </datalist>
+                            </div>
                         </fieldset>
                         <fieldset>
-                            <h2>Способ оплаты</h2>
+                            <label for="ordering-note">
+                                Комментарий к заказу
+                            </label>
+                            <textarea class="textarea" id="ordering-note" name="ordering-note" rows="4"
+                            ></textarea>
                         </fieldset>
                         <button type="submit" class="btn btn-primary-fill">
                             <span>Оформить заказ</span>

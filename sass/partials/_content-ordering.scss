@@ -45,6 +45,23 @@
           font-size: 14px;
           line-height: 19px;
           color: $color-gray-12;
+
+          &[data-error]::after {
+            content: attr(data-error);
+            color: $color-red;
+          }
+        }
+
+        .textarea {
+          min-height: 101px;
+        }
+
+        select {
+          cursor: pointer;
+        }
+
+        datalist {
+          color: red;
         }
 
         .input {
@@ -56,11 +73,6 @@
           border: 2px solid $color-green-3;
           font-size: 16px;
           color: $color-gray-10;
-        }
-
-        label[data-error]::after {
-          content: attr(data-error);
-          color: $color-red;
         }
       }
 

@@ -553,16 +553,21 @@ picture {
 .grid.card-favorite .cell .card .btn.added .bag {
   display: block;
 }
-    .grid.card-favorite .cell .card .btn:not(.added) .basket {
-      display: block; }
-    .grid.card-favorite .cell .card .btn:not(.added) .bag {
-      display: none; }
-  .grid.card-favorite .cell .card .delete {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
+
+.grid.card-favorite .cell .card .btn:not(.added) .basket {
+  display: block;
+}
+
+.grid.card-favorite .cell .card .btn:not(.added) .bag {
+  display: none;
+}
+
+.grid.card-favorite .cell .card .delete {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
     color: #4F4F4F;
     max-width: 140px;
     margin: 0 auto; }
@@ -1730,26 +1735,46 @@ picture {
           margin-bottom: 14px;
           font-size: 16px;
           line-height: 22px;
-          color: #3B3F3B; }
-        #content-ordering .form .ordering-form fieldset label {
-          display: block;
-          margin-bottom: 6px;
-          font-size: 14px;
-          line-height: 19px;
-          color: #9FA7A2; }
-        #content-ordering .form .ordering-form fieldset .input {
-          display: block;
-          width: 100%;
-          height: 50px;
-          padding: 0 16px;
-          margin-bottom: 17px;
-          border: 2px solid #116708;
-          font-size: 16px;
-          color: #545454; }
-        #content-ordering .form .ordering-form fieldset label[data-error]::after {
-          content: attr(data-error);
-          color: #EA2828; }
-      #content-ordering .form .ordering-form .btn {
+          color: #3B3F3B;
+        }
+
+#content-ordering .form .ordering-form fieldset label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 19px;
+  color: #9FA7A2;
+}
+
+#content-ordering .form .ordering-form fieldset label[data-error]::after {
+  content: attr(data-error);
+  color: #EA2828;
+}
+
+#content-ordering .form .ordering-form fieldset .textarea {
+  min-height: 101px;
+}
+
+#content-ordering .form .ordering-form fieldset select {
+  cursor: pointer;
+}
+
+#content-ordering .form .ordering-form fieldset datalist {
+  color: red;
+}
+
+#content-ordering .form .ordering-form fieldset .input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 0 16px;
+  margin-bottom: 17px;
+  border: 2px solid #116708;
+  font-size: 16px;
+  color: #545454;
+}
+
+#content-ordering .form .ordering-form .btn {
         width: 100%;
         margin-top: 22px; }
   #content-ordering .positions {
@@ -3224,16 +3249,18 @@ picture {
   bottom: 14px;
   font-size: 18px;
   line-height: 25px;
-            color: #393939;
-            transition: all 50ms ease-out; }
-          #shadow .modal.modal-auth .form .row .input {
-            display: block;
-            padding-bottom: 8px;
-            font-weight: 600;
-            font-size: 18px;
-            line-height: 25px;
-            color: #000000;
-            border: none;
+  color: #393939;
+  transition: all 50ms ease-out;
+}
+
+#shadow .modal.modal-auth .form .row .input {
+  display: block;
+  padding-bottom: 8px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: #000000;
+  border: none;
             border-bottom: 2px solid #9BAF93; }
             #shadow .modal.modal-auth .form .row .input::placeholder {
               color: transparent; }

@@ -85,7 +85,7 @@ $(function () {
                         .then(function (response) {
                             $(".buy.added").removeClass("added").addClass("basket-add");
                             $("#header-bag").removeClass("added").addClass("basket-add");
-                            $(".modal-buy_done .subtitle span").text(response);
+                            $(".modal-buy_done .subtitle span").text(response.data);
                             modalOpen("buy_done");
                         })
                         .catch(function (error) {
@@ -139,9 +139,16 @@ $(function () {
                 tel_obj = $("#ordering-phone"),
                 tel_label = $("[for=ordering-phone]"),
                 tel = tel_obj.val().replace(/[^\d]/g, ''),
-                address_obj = $("#ordering-address"),
-                address_label = $("[for=ordering-address]"),
-                address = address_obj.val().trim()
+                payment_obj = $("#ordering-payment"),
+                payment_id = payment_obj.val(),
+                delivery_obj = $("#ordering-delivery"),
+                delivery_alias = delivery_obj.val(),
+                delivery_city_obj = $("#services-delivery-city"),
+                delivery_city_id = delivery_city_obj.val(),
+                delivery_number_obj = $("#services-delivery-number"),
+                delivery_number = delivery_number_obj.val(),
+                note_obj = $("#ordering-note"),
+                note = note_obj.val().trim()
             ;
 
             if (f_name.length >= 2) {
@@ -168,15 +175,13 @@ $(function () {
                 tel_label.attr("data-error", tel_label.data("txt"));
             }
 
-            if (address.length >= 6) {
-                address_obj.removeClass("error");
-                address_label.attr("data-error", "");
+            if (payment_id > 0) {
+                payment_obj.removeClass("error");
             } else {
-                address_obj.addClass("error");
-                address_label.attr("data-error", address_label.data("txt"));
+                payment_obj.addClass("error");
             }
 
-            if (f_name.length >= 2 && l_name.length >= 2 && tel.length === 12 && address.length >= 6) {
+            if (f_name.length >= 2 && l_name.length >= 2 && tel.length === 12 && payment_id > 0) {
                 submitOff(submit);
 
                 setTimeout(function () {
@@ -185,7 +190,8 @@ $(function () {
                     console.log("ordering-form submit: f name: " + f_name);
                     console.log("ordering-form submit: l name: " + l_name);
                     console.log("ordering-form submit: tel: " + tel);
-                    console.log("ordering-form submit: address: " + address);
+                    console.log("ordering-form submit: payment_id: " + payment_id);
+                    console.log("ordering-form submit: additionally: " + note);
 
                     // Успех
                     let response = 321;
@@ -202,6 +208,28 @@ $(function () {
                     submitOn(submit);
 
                 }, 700);
+            }
+        })
+        .on("change", "#ordering-delivery", function () {
+            const
+                delivery_alias = $("#ordering-delivery").val(),
+                delivery_obj = $("#services-delivery"),
+                delivery_city = $("#services-delivery-city"),
+                delivery_number = $("#services-delivery-number")
+            ;
+
+            // При подстановке адреса из профиля будет сбрасывыаться :(
+            delivery_city.val("");
+            delivery_number.val("");
+
+            if (delivery_alias === "novaposhta" || delivery_alias === "justin") {
+                delivery_number.attr("disabled", "disabled");
+                delivery_obj.removeClass("d-none");
+
+                //initSelectCity();
+                //getCity(delivery_alias, "");
+            } else {
+                delivery_obj.addClass("d-none");
             }
         })
     ;
@@ -236,29 +264,36 @@ $(function () {
         plus_minus_timout = setTimeout(function () {
             $(".position[data-id=" + position + "]").find(".quantity-btn").addClass("disabled");
             setTimeout(function () {
+                axios
+                    .post("/cart/quantity", {
+                        id: position,
+                        quantity: number_new,
+                    }, {
+                        timeout: axiosTimeOut
+                    })
+                    .then(function (response) {
+                        // position_obj.find(".price span").text(response.price);
+                        position_obj.find(".sum span").text(response.data.sum);
+                        $(".summary-total span").text(response.data.total);
+                    })
+                    .catch(function (error) {
+                        const response = {
+                            price: 100,
+                            sum: 100 * number_new,
+                            total: 100 * number_new + 1000
+                        };
+                        position_obj.find(".price span").text(response.price);
+                        position_obj.find(".sum span").text(response.sum);
+                        $(".summary-total span").text(response.total);
+                        return;
 
-                // todo AXIOS
-                // обновление позиции
-                console.log("position: id: " + position);
-                console.log("position: quantity: " + number_new);
-
-                // успех
-                const response = {  // Заглушка
-                    price: 100,
-                    sum: 100 * number_new,
-                    total: 100 * number_new + 1000
-                };
-                position_obj.find(".price span").text(response.price);
-                position_obj.find(".sum span").text(response.sum);
-                $(".summary-total span").text(response.total);
-
-                // При неудаче
-                // modalOpen("error");
-
-                // В любом случае снимаем блокировку
-                submitOn(position_obj.find(".sum"));
-                unBlockPositions();
-
+                        modalOpen("error");
+                    })
+                    .then(function () {
+                        submitOn(position_obj.find(".sum"));
+                        unBlockPositions();
+                    })
+                ;
             }, 700);
         }, 2000);
     }
@@ -273,21 +308,26 @@ $(function () {
         blockOtherPositions(position);
 
         setTimeout(function () {
+            axios
+                .post("/cart/delete", {
+                    id: position,
+                }, {
+                    timeout: axiosTimeOut
+                })
+                .then(function (response) {
+                    position_obj.remove();
+                })
+                .catch(function (error) {
+                    position_obj.remove();
+                    return;
 
-            // todo AXIOS
-            // удаление позиции
-            console.log("position: id: " + position);
-
-            // успех
-            position_obj.remove();
-
-            // При неудаче
-            // submitOn($(that));
-            // modalOpen("error");
-
-            // В любом случае снимаем блокировку
-            unBlockPositions();
-
+                    submitOn($(that));
+                    modalOpen("error");
+                })
+                .then(function () {
+                    unBlockPositions();
+                })
+            ;
         }, 700);
     }
 
