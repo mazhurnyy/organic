@@ -66,7 +66,7 @@ $(function () {
                 submitOff(submit);
                 setTimeout(function () {
                     axios
-                        .post("login", {
+                        .post("/login", {
                             phone: tel,
                             password: pwd,
                             remember: true
@@ -112,7 +112,7 @@ $(function () {
                 submitOff(submit);
                 setTimeout(function () {
                     axios
-                        .post("register", {
+                        .post("/register", {
                             phone: tel
                         }, {
                             timeout: axiosTimeOut
@@ -157,7 +157,7 @@ $(function () {
                 submitOff(submit);
                 setTimeout(function () {
                     axios
-                        .post("reset", {
+                        .post("/reset", {
                             phone: tel
                         }, {
                             timeout: axiosTimeOut
@@ -224,7 +224,7 @@ $(function () {
                 submitOff(submit);
                 setTimeout(function () {
                     axios
-                        .post($(".modal-password a[data-modal]").attr("data-modal") + "/code", {
+                        .post("/" + $(".modal-password a[data-modal]").attr("data-modal") + "/code", {
                             token: code,
                             password: password,
                             password_confirmation: confirm

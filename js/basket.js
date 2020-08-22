@@ -33,7 +33,7 @@ $(function () {
             submitOff(submit);
             setTimeout(function () {
                 axios
-                    .post("cart/add", {
+                    .post("/cart/add", {
                         id: id,
                         quantity: quantity,
                     }, {
@@ -77,7 +77,7 @@ $(function () {
                 submitOff(submit);
                 setTimeout(function () {
                     axios
-                        .post("cart/one_click", {
+                        .post("/cart/one_click", {
                             tel: tel,
                         }, {
                             timeout: axiosTimeOut

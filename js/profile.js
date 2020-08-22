@@ -17,7 +17,11 @@ $(function () {
             });
             $(".pickmeup").appendTo($("#profile-date").parent());
         })
+        .on("input", "#avatar-file", function () {
+            console.log("input");
+        })
         .on("change", "#avatar-file", function () {
+            console.log("change");
             $(".modal-avatar_edit .canvas").removeClass("unload");
 
             if (typeof canvas === "undefined") {

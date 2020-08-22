@@ -18,7 +18,7 @@ $(function () {
             submitOff(submit);
             setTimeout(function () {
                 axios
-                    .post("favorites/add", {
+                    .post("/favorites/add", {
                         product_id: id,
                     }, {
                         timeout: axiosTimeOut
@@ -47,7 +47,7 @@ $(function () {
             submitOff(submit);
             setTimeout(function () {
                 axios
-                    .post("favorites/delete", {
+                    .post("/favorites/delete", {
                         product_id: id,
                     }, {
                         timeout: axiosTimeOut
@@ -83,7 +83,7 @@ $(function () {
             submitOff(load_btn);
             setTimeout(function () {
                 axios
-                    .post("favorites/more", {
+                    .post("/favorites/more", {
                         page: favorite_page
                     }, {
                         timeout: axiosTimeOut

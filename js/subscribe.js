@@ -28,7 +28,7 @@ $(function () {
                     submitOff(submit);
                     setTimeout(function () {
                         axios
-                            .post("subscribe", {
+                            .post("/subscribe", {
                                 email: email,
                             }, {
                                 timeout: axiosTimeOut
@@ -56,7 +56,7 @@ $(function () {
                 submitOff(submit);
                 setTimeout(function () {
                     axios
-                        .post("subscribe/unsubscribe", {}, {
+                        .post("/subscribe/unsubscribe", {}, {
                             timeout: axiosTimeOut
                         })
                         .then(function (response) {
