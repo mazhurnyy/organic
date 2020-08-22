@@ -397,7 +397,7 @@ button, summary {
   width: 100%;
   height: 100%;
   overflow: auto;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -534,16 +534,25 @@ picture {
   color: #000000;
   margin-bottom: 24px;
 }
-    @media (max-width: 505px) {
-      .grid.card-favorite .cell .card .price {
-        margin-bottom: 16px; } }
-  .grid.card-favorite .cell .card .btn {
-    width: 140px;
-    margin-bottom: 12px; }
-    .grid.card-favorite .cell .card .btn.added .basket {
-      display: none; }
-    .grid.card-favorite .cell .card .btn.added .bag {
-      display: block; }
+
+@media (max-width: 505px) {
+  .grid.card-favorite .cell .card .price {
+    margin-bottom: 16px;
+  }
+}
+
+.grid.card-favorite .cell .card .btn {
+  width: 140px;
+  margin-bottom: 12px;
+}
+
+.grid.card-favorite .cell .card .btn.added .basket {
+  display: none;
+}
+
+.grid.card-favorite .cell .card .btn.added .bag {
+  display: block;
+}
     .grid.card-favorite .cell .card .btn:not(.added) .basket {
       display: block; }
     .grid.card-favorite .cell .card .btn:not(.added) .bag {
@@ -2174,7 +2183,7 @@ picture {
 #cookie {
   display: block;
   padding: 20px 20px 0;
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
@@ -2744,7 +2753,7 @@ picture {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -3202,16 +3211,19 @@ picture {
 #shadow .modal.modal-auth .form .row .btn-pwd:hover, #shadow .modal.modal-auth .form .row .btn-pwd:active {
   color: #00370C;
 }
-            #shadow .modal.modal-auth .form .row .btn-pwd svg {
-              height: 25px;
-              margin: 0 auto; }
-          #shadow .modal.modal-auth .form .row .label {
-            display: block;
-            position: absolute;
-            left: 0;
-            bottom: 14px;
-            font-size: 18px;
-            line-height: 25px;
+
+#shadow .modal.modal-auth .form .row .btn-pwd svg {
+  height: 25px;
+  margin: 0 auto;
+}
+
+#shadow .modal.modal-auth .form .row .label {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 14px;
+  font-size: 18px;
+  line-height: 25px;
             color: #393939;
             transition: all 50ms ease-out; }
           #shadow .modal.modal-auth .form .row .input {
