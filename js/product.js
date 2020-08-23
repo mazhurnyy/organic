@@ -69,20 +69,28 @@ $(function () {
             if (msg.length >= 6) {
                 submitOff(submit);
                 setTimeout(function () {
-
-                    // todo AXIOS
-                    // отзыв о товаре
-                    console.log("review_product submit: msg: " + msg);
-
-                    // успех
-                    modalOpen("review_done");
-
-                    // При неудаче без ответа
-                    // modalOpen("error");
-
-                    // В любом случае снимаем блокировку
-                    submitOn(submit);
-
+                    axios
+                        .post("/product/reviews", {
+                            message: msg,
+                        }, {
+                            timeout: axiosTimeOut
+                        })
+                        .then(function (response) {
+                            modalOpen("review_done");
+                        })
+                        .catch(function (error) {
+                            if (error.response) {
+                                const txt = error.response.status === 419 ? parent.data("txt") : error.response.status;
+                                msg_obj.addClass("error");
+                                parent.attr("data-error", txt);
+                            } else {
+                                modalOpen("error");
+                            }
+                        })
+                        .then(function () {
+                            submitOn(submit);
+                        })
+                    ;
                 }, 700);
             }
         })

@@ -568,16 +568,22 @@ picture {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
-    color: #4F4F4F;
-    max-width: 140px;
-    margin: 0 auto; }
-    .grid.card-favorite .cell .card .delete:hover, .grid.card-favorite .cell .card .delete:active {
-      color: #EA2828; }
-    .grid.card-favorite .cell .card .delete svg {
-      width: 11px;
-      height: 11px;
-      margin-right: 8px; }
-    .grid.card-favorite .cell .card .delete span {
+  color: #4F4F4F;
+  max-width: 140px;
+  margin: 0 auto;
+}
+
+.grid.card-favorite .cell .card .delete:hover, .grid.card-favorite .cell .card .delete:active {
+  color: #EA2828;
+}
+
+.grid.card-favorite .cell .card .delete svg {
+  width: 11px;
+  height: 11px;
+  margin-right: 8px;
+}
+
+.grid.card-favorite .cell .card .delete span {
       display: block;
       font-size: 14px;
       line-height: 19px; }
@@ -1726,17 +1732,22 @@ picture {
       margin-left: -10px; }
       @media (max-width: 1023px) {
         #content-ordering .form .ordering-form {
-          margin: 0 auto; } }
-      #content-ordering .form .ordering-form fieldset {
-        display: block;
-        margin-bottom: 8px; }
-        #content-ordering .form .ordering-form fieldset h2 {
-          display: block;
-          margin-bottom: 14px;
-          font-size: 16px;
-          line-height: 22px;
-          color: #3B3F3B;
+          margin: 0 auto;
         }
+      }
+
+#content-ordering .form .ordering-form fieldset {
+  display: block;
+  margin-bottom: 8px;
+}
+
+#content-ordering .form .ordering-form fieldset h2 {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #3B3F3B;
+}
 
 #content-ordering .form .ordering-form fieldset label {
   display: block;
@@ -1759,10 +1770,6 @@ picture {
   cursor: pointer;
 }
 
-#content-ordering .form .ordering-form fieldset datalist {
-  color: red;
-}
-
 #content-ordering .form .ordering-form fieldset .input {
   display: block;
   width: 100%;
@@ -1775,16 +1782,23 @@ picture {
 }
 
 #content-ordering .form .ordering-form .btn {
-        width: 100%;
-        margin-top: 22px; }
+  width: 100%;
+  margin-top: 22px;
+}
+
+#content-ordering .positions {
+  display: block;
+}
+
+@media (max-width: 1023px) {
   #content-ordering .positions {
-    display: block; }
-    @media (max-width: 1023px) {
-      #content-ordering .positions {
-        display: none; } }
-    #content-ordering .positions .position {
-      display: flex;
-      flex-direction: row;
+    display: none;
+  }
+}
+
+#content-ordering .positions .position {
+  display: flex;
+  flex-direction: row;
       flex-wrap: nowrap;
       justify-content: space-between;
       align-items: stretch;
@@ -3261,16 +3275,22 @@ picture {
   line-height: 25px;
   color: #000000;
   border: none;
-            border-bottom: 2px solid #9BAF93; }
-            #shadow .modal.modal-auth .form .row .input::placeholder {
-              color: transparent; }
-            #shadow .modal.modal-auth .form .row .input.pwd-input {
-              padding-right: 32px; }
-          #shadow .modal.modal-auth .form .row .input.focus + .label {
-            bottom: 40px;
-            font-size: 14px;
-            line-height: 19px;
-            color: #116708;
+  border-bottom: 2px solid #9BAF93;
+}
+
+#shadow .modal.modal-auth .form .row .input::placeholder {
+  color: transparent;
+}
+
+#shadow .modal.modal-auth .form .row .input.pwd-input {
+  padding-right: 32px;
+}
+
+#shadow .modal.modal-auth .form .row .input.focus + .label {
+  bottom: 40px;
+  font-size: 14px;
+  line-height: 19px;
+  color: #116708;
             transition: all 50ms ease-out; }
         #shadow .modal.modal-auth .form.form-password .submit {
           margin-top: 64px; }

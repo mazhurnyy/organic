@@ -302,7 +302,8 @@
 
                             <label for="ordering-delivery">Способ доставки: *</label>
                             <select class="input" id="ordering-delivery" name="ordering-delivery">
-                                <option disabled="disabled" selected="selected" value="">Выберите способ доставки
+                                <option disabled="disabled" selected="selected" value="">
+                                    Выберите способ доставки
                                 </option>
                                 <option value="novaposhta">Новая почта</option>
                                 <option value="justin">Justin</option>
@@ -311,31 +312,33 @@
 
                             <div class="d-none" id="services-delivery">
                                 <label data-error="" data-txt="(нет такого города в базе)"
-                                       for="services-delivery-city">Укажите город: *</label>
-                                <input class="input" id="services-delivery-city" list="services-delivery-city-list"
-                                       name="services-delivery-city" type="text"/>
-                                <datalist id="services-delivery-city-list">
-                                    <option value="Харьков">
-                                    <option value="Одесса">
-                                    <option value="Лисичанск">
-                                </datalist>
+                                       for="ordering-delivery-city">
+                                    Город: *
+                                </label>
+                                <select class="input" data-placeholder="Выберите город" id="ordering-delivery-city"
+                                        name="ordering-delivery-city">
+                                    <option disabled="disabled" selected="selected" value="">
+                                        Выберите город
+                                    </option>
+                                </select>
 
                                 <label data-error="" data-txt="(нет такого отделения в базе)"
-                                       for="services-delivery-number">Укажите отделение: *</label>
-                                <input class="input" id="services-delivery-number" list="services-delivery-number-list"
-                                       name="services-delivery-number" type="text"/>
-                                <datalist id="services-delivery-number-list">
-                                    <option value="Текст1">
-                                    <option value="Текст2">
-                                </datalist>
+                                       for="ordering-delivery-number">
+                                    Отделение: *
+                                </label>
+                                <select class="input" data-placeholder="Выберите отделение"
+                                        id="ordering-delivery-number"
+                                        name="ordering-delivery-number">
+                                    <option disabled="disabled" selected="selected" value="">
+                                        Выберите отделение
+                                    </option>
+                                </select>
                             </div>
                         </fieldset>
                         <fieldset>
-                            <label for="ordering-note">
-                                Комментарий к заказу
-                            </label>
+                            <h2>Комментарий к заказу</h2>
                             <textarea class="textarea" id="ordering-note" name="ordering-note" rows="4"
-                            ></textarea>
+                                      aria-label="Комментарий к заказу"></textarea>
                         </fieldset>
                         <button type="submit" class="btn btn-primary-fill">
                             <span>Оформить заказ</span>
@@ -1407,7 +1410,7 @@
 <script src="js/auth.js?ver=1597294270939"></script>
 <script src="js/navbar.js?ver=1597294270939"></script>
 <script src="js/modal.js?ver=1597294270939"></script>
-<script src="js/basket.js?ver=1597294270939"></script>
+<script src="js/cart.js?ver=1597294270939"></script>
 <script src="js/catalog.js?ver=1597294270939"></script>
 <script src="js/favorite.js?ver=1597294270939"></script>
 <script src="js/contacts.js?ver=1597294270939"></script>
@@ -1430,5 +1433,11 @@
         </div>
     </div>
 </div>
+
+<!-- todo -->
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/i18n/ru.js"></script>
+
 </body>
 </html>

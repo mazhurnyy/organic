@@ -1,5 +1,11 @@
 $(function () {
-    let plus_minus_timout;
+    let plus_minus_timout,
+        delivery_timout,
+        city_symbols = '',
+        delivery_alias_obj = $("#ordering-delivery"),
+        delivery_city_obj = $("#ordering-delivery-city"),
+        delivery_number_obj = $("#ordering-delivery-number")
+    ;
 
     $(document)
         .ready(function () {
@@ -8,6 +14,11 @@ $(function () {
                     $(this).find(".quantity-minus").addClass("disabled");
                 }
             });
+
+            if ($("#services-delivery").length > 0) {
+                initSelectCity();
+                initSelectNumber();
+            }
         })
         .on("click", "#header-bag.basket-add", function (e) {
             e.preventDefault();
@@ -122,8 +133,17 @@ $(function () {
         .on("input change focus paste", "#ordering-phone", function () {
             $("[for=ordering-phone]").attr("data-error", "");
         })
-        .on("input change focus paste", "#ordering-address", function () {
-            $("[for=ordering-address]").attr("data-error", "");
+        .on("input change focus paste", "#ordering-payment", function () {
+            $("[for=ordering-payment]").attr("data-error", "");
+        })
+        .on("input change focus paste", "#ordering-delivery", function () {
+            $("[for=ordering-delivery]").attr("data-error", "");
+        })
+        .on("input change focus paste", "#ordering-delivery-city", function () {
+            $("[for=ordering-delivery-city]").attr("data-error", "");
+        })
+        .on("input change focus paste", "#ordering-delivery-number", function () {
+            $("[for=ordering-delivery-number]").attr("data-error", "");
         })
         .on("submit", ".ordering-form", function (e) {
             e.preventDefault();
@@ -143,9 +163,11 @@ $(function () {
                 payment_id = payment_obj.val(),
                 delivery_obj = $("#ordering-delivery"),
                 delivery_alias = delivery_obj.val(),
-                delivery_city_obj = $("#services-delivery-city"),
+                delivery_city_obj = $("#ordering-delivery-city"),
+                delivery_city_label = $("[for=ordering-delivery-city]"),
                 delivery_city_id = delivery_city_obj.val(),
-                delivery_number_obj = $("#services-delivery-number"),
+                delivery_number_obj = $("#ordering-delivery-number"),
+                delivery_number_label = $("[for=ordering-delivery-number]"),
                 delivery_number = delivery_number_obj.val(),
                 note_obj = $("#ordering-note"),
                 note = note_obj.val().trim()
@@ -181,56 +203,102 @@ $(function () {
                 payment_obj.addClass("error");
             }
 
-            if (f_name.length >= 2 && l_name.length >= 2 && tel.length === 12 && payment_id > 0) {
+            if (delivery_alias !== null) {
+                delivery_obj.removeClass("error");
+            } else {
+                delivery_obj.addClass("error");
+            }
+
+            if (delivery_city_id !== null) {
+                delivery_city_obj.removeClass("error");
+                delivery_city_label.attr("data-error", "");
+            } else {
+                delivery_city_obj.addClass("error");
+                delivery_city_label.attr("data-error", delivery_city_label.data("txt"));
+            }
+
+            if (delivery_number !== null) {
+                delivery_number_obj.removeClass("error");
+                delivery_number_label.attr("data-error", "");
+            } else {
+                delivery_number_obj.addClass("error");
+                delivery_number_label.attr("data-error", delivery_number_label.data("txt"));
+            }
+
+            if (
+                f_name.length >= 2 && l_name.length >= 2 && tel.length === 12 && payment_id > 0 &&
+                delivery_alias !== null && delivery_city_id !== null && delivery_number !== null
+            ) {
                 submitOff(submit);
 
                 setTimeout(function () {
+                    axios
+                        .post("/ordering", {
+                            last_name: l_name,
+                            first_name: f_name,
+                            phone: tel,
+                            payment_id: payment_id,
+                            delivery: delivery_alias,
+                            delivery_city_id: delivery_city_id,
+                            delivery_number: delivery_number,
+                            additionally: note,
+                        }, {
+                            timeout: axiosTimeOut
+                        })
+                        .then(function (response) {
+                            cleanBasket();
+                            $("#header-bag").removeClass("added").addClass("basket-add");
+                            $(".modal-buy_done .subtitle span").text(response.data);
+                            modalOpen("buy_done");
+                        })
+                        .catch(function (error) {
+                            cleanBasket();
+                            $("#header-bag").removeClass("added").addClass("basket-add");
+                            $(".modal-buy_done .subtitle span").text("321");
+                            modalOpen("buy_done");
+                            return;
 
-                    // todo AXIOS
-                    console.log("ordering-form submit: f name: " + f_name);
-                    console.log("ordering-form submit: l name: " + l_name);
-                    console.log("ordering-form submit: tel: " + tel);
-                    console.log("ordering-form submit: payment_id: " + payment_id);
-                    console.log("ordering-form submit: additionally: " + note);
-
-                    // Успех
-                    let response = 321;
-                    cleanBasket();
-
-                    $("#header-bag").removeClass("added").addClass("basket-add");
-                    $(".modal-buy_done .subtitle span").text(response);
-                    modalOpen("buy_done");
-
-                    // При неудаче без ответа
-                    // modalOpen("error");
-
-                    // В любом случае снимаем блокировку
-                    submitOn(submit);
-
+                            modalOpen("error");
+                        })
+                        .then(function () {
+                            submitOn(submit);
+                        })
+                    ;
                 }, 700);
             }
         })
         .on("change", "#ordering-delivery", function () {
             const
-                delivery_alias = $("#ordering-delivery").val(),
-                delivery_obj = $("#services-delivery"),
-                delivery_city = $("#services-delivery-city"),
-                delivery_number = $("#services-delivery-number")
+                delivery_alias = delivery_alias_obj.val(),
+                delivery_obj = $("#services-delivery")
             ;
 
-            // При подстановке адреса из профиля будет сбрасывыаться :(
-            delivery_city.val("");
-            delivery_number.val("");
-
             if (delivery_alias === "novaposhta" || delivery_alias === "justin") {
-                delivery_number.attr("disabled", "disabled");
                 delivery_obj.removeClass("d-none");
-
-                //initSelectCity();
-                //getCity(delivery_alias, "");
+                updateSelectCity();
             } else {
                 delivery_obj.addClass("d-none");
             }
+        })
+        .on("change", "#ordering-delivery-city", function () {
+            updateSelectNumber();
+        })
+        .on("input paste", ".select2-search__field", function () {
+            if ($(this).attr("aria-controls") !== 'select2-ordering-delivery-city-results') return;
+
+            const search = $(this).val();
+
+            // todo ищет по 2м буквам, а не по всему введённому
+
+            clearTimeout(delivery_timout);
+            delivery_timout = setTimeout(function () {
+                if (search.length >= 2 && search.slice(0, 2) !== city_symbols) {
+                    city_symbols = search.slice(0, 2);
+
+                    updateSelectCity();
+                    updateSelectNumber();
+                }
+            }, 1000);
         })
     ;
 
@@ -366,5 +434,162 @@ $(function () {
         $("#content-article").removeClass("d-none");
         $("#content-ordering").remove();
         $("#content-basket").remove();
+    }
+
+    function initSelectCity() {
+        const obj = delivery_city_obj;
+
+        obj.select2({
+            data: [],
+            placeholder: obj.data("placeholder"),
+            width: "100%",
+            language: $("html").attr("lang"),
+            minimumInputLength: 2
+        });
+    }
+
+    function initSelectNumber() {
+        const obj = delivery_number_obj;
+
+        obj.select2({
+            data: [],
+            placeholder: obj.data("placeholder"),
+            width: "100%",
+            language: $("html").attr("lang"),
+            disabled: true
+        });
+    }
+
+    function updateSelectCity() {
+        const
+            obj = delivery_city_obj,
+            alias = delivery_alias_obj.val()
+        ;
+
+        obj.html("").select2();
+
+        if (city_symbols.length !== 2) return false;
+
+        axios
+            .post("/ordering/delivery/city", {
+                delivery: alias,
+                search: city_symbols
+            }, {
+                timeout: axiosTimeOut
+            })
+            .then(function (response) {
+                obj.select2({data: response.data}).trigger('change');
+                obj.select2("open");
+            })
+            .catch(function (error) {
+                const data1 = [
+                    {
+                        id: 2020,
+                        text: 'Харьков 1'
+                    },
+                    {
+                        id: 2021,
+                        text: 'Харьков 2'
+                    },
+                    {
+                        id: 2022,
+                        text: 'Харьков 3'
+                    },
+                    {
+                        id: 2023,
+                        text: 'Хар-ьков 4'
+                    },
+                    {
+                        id: 2024,
+                        text: 'Хар-ьков 5'
+                    }
+                ];
+                const data2 = [
+                    {
+                        id: 3020,
+                        text: 'Херсон 1'
+                    },
+                    {
+                        id: 3021,
+                        text: 'Херсон 2'
+                    },
+                    {
+                        id: 3022,
+                        text: 'Хер-сон 3'
+                    },
+                    {
+                        id: 3023,
+                        text: 'Хер-сон 4'
+                    },
+                    {
+                        id: 3024,
+                        text: 'Хер-сон 5'
+                    }
+                ];
+                if (city_symbols.toLowerCase() === "ха") {
+                    obj.select2({data: data1}).trigger('change');
+                } else if (city_symbols.toLowerCase() === "хе") {
+                    obj.select2({data: data2}).trigger('change');
+                }
+                obj.select2("open");
+                return;
+
+                console.log(error);
+            })
+        ;
+    }
+
+    function updateSelectNumber() {
+        const
+            obj = delivery_number_obj,
+            alias = delivery_alias_obj.val(),
+            id = delivery_city_obj.val()
+        ;
+
+        obj.html("").select2();
+
+        obj.prop("disabled", id === null);
+
+        if (id === null) return false;
+
+        axios
+            .post("/ordering/delivery/number", {
+                delivery: alias,
+                delivery_city_id: id,
+            }, {
+                timeout: axiosTimeOut
+            })
+            .then(function (response) {
+                obj.select2({data: response.data});
+            })
+            .catch(function (error) {
+                const data = [
+                    {
+                        id: 2020,
+                        text: 'Отделение 1'
+                    },
+                    {
+                        id: 2021,
+                        text: 'Отделение 2'
+                    },
+                    {
+                        id: 2022,
+                        text: 'Отделение 3'
+                    },
+                    {
+                        id: 2023,
+                        text: 'Отд-еление 4'
+                    },
+                    {
+                        id: 2024,
+                        text: 'Отд-еление 5'
+                    }
+                ];
+                obj.select2({data: data});
+                return;
+
+                console.log(error);
+            })
+        ;
     }
 });
