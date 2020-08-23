@@ -1,7 +1,9 @@
 $(function () {
     let plus_minus_timout,
         delivery_timout,
-        city_symbols = '',
+        delivery_city_symbols = '',
+        delivery_city_search = '',
+        delivery_city_input = '[aria-controls=select2-ordering-delivery-city-results]',
         delivery_alias_obj = $("#ordering-delivery"),
         delivery_city_obj = $("#ordering-delivery-city"),
         delivery_number_obj = $("#ordering-delivery-number")
@@ -283,17 +285,14 @@ $(function () {
         .on("change", "#ordering-delivery-city", function () {
             updateSelectNumber();
         })
-        .on("input paste", ".select2-search__field", function () {
-            if ($(this).attr("aria-controls") !== 'select2-ordering-delivery-city-results') return;
-
-            const search = $(this).val();
-
-            // todo ищет по 2м буквам, а не по всему введённому
+        .on("input paste", delivery_city_input, function () {
+            const search = $(this).val().trim();
 
             clearTimeout(delivery_timout);
             delivery_timout = setTimeout(function () {
-                if (search.length >= 2 && search.slice(0, 2) !== city_symbols) {
-                    city_symbols = search.slice(0, 2);
+                if (search.length >= 2 && search.slice(0, 2) !== delivery_city_symbols) {
+                    delivery_city_search = search;
+                    delivery_city_symbols = search.slice(0, 2);
 
                     updateSelectCity();
                     updateSelectNumber();
@@ -467,19 +466,19 @@ $(function () {
         ;
 
         obj.html("").select2();
-
-        if (city_symbols.length !== 2) return false;
+        if (delivery_city_symbols.length !== 2) return false;
 
         axios
             .post("/ordering/delivery/city", {
                 delivery: alias,
-                search: city_symbols
+                search: delivery_city_symbols
             }, {
                 timeout: axiosTimeOut
             })
             .then(function (response) {
-                obj.select2({data: response.data}).trigger('change');
+                obj.select2({data: response.data}).trigger("change");
                 obj.select2("open");
+                $(delivery_city_input).val(delivery_city_search).trigger("input");
             })
             .catch(function (error) {
                 const data1 = [
@@ -526,12 +525,13 @@ $(function () {
                         text: 'Хер-сон 5'
                     }
                 ];
-                if (city_symbols.toLowerCase() === "ха") {
-                    obj.select2({data: data1}).trigger('change');
-                } else if (city_symbols.toLowerCase() === "хе") {
-                    obj.select2({data: data2}).trigger('change');
+                if (delivery_city_symbols.toLowerCase() === 'ха') {
+                    obj.select2({data: data1}).trigger("change");
+                } else if (delivery_city_symbols.toLowerCase() === 'хе') {
+                    obj.select2({data: data2}).trigger("change");
                 }
                 obj.select2("open");
+                $(delivery_city_input).val(delivery_city_search).trigger("input");
                 return;
 
                 console.log(error);
@@ -546,10 +546,7 @@ $(function () {
             id = delivery_city_obj.val()
         ;
 
-        obj.html("").select2();
-
-        obj.prop("disabled", id === null);
-
+        obj.html("").select2().prop("disabled", id === null);
         if (id === null) return false;
 
         axios
