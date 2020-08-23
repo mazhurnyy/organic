@@ -79,13 +79,10 @@ $(function () {
                             modalOpen("review_done");
                         })
                         .catch(function (error) {
-                            if (error.response) {
-                                const txt = error.response.status === 419 ? parent.data("txt") : error.response.status;
-                                msg_obj.addClass("error");
-                                parent.attr("data-error", txt);
-                            } else {
-                                modalOpen("error");
-                            }
+                            modalOpen("review_done");
+                            return;
+
+                            modalOpen("error");
                         })
                         .then(function () {
                             submitOn(submit);
