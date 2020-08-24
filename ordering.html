@@ -295,14 +295,14 @@
 
                             <label for="ordering-payment">Способ оплаты: *</label>
                             <select class="input" id="ordering-payment" name="ordering-payment">
-                                <option disabled="disabled" selected="selected" value="">Выберите способ оплаты</option>
+                                <option selected="selected" value="">Выберите способ оплаты</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                             </select>
 
                             <label for="ordering-delivery">Способ доставки: *</label>
                             <select class="input" id="ordering-delivery" name="ordering-delivery">
-                                <option disabled="disabled" selected="selected" value="">
+                                <option selected="selected" value="">
                                     Выберите способ доставки
                                 </option>
                                 <option value="novaposhta">Новая почта</option>
@@ -333,6 +333,24 @@
                                         Выберите отделение
                                     </option>
                                 </select>
+                            </div>
+
+                            <div class="d-none" id="services-ukrposhta">
+                                <label data-error="" data-txt="(должно быть введено 5 цифр)"
+                                       for="ordering-delivery-index">
+                                    Почтовый индекс *
+                                </label>
+                                <input class="input" id="ordering-delivery-index" maxlength="5"
+                                       minlength="5" name="ordering-delivery-index" placeholder="Введите индекс"
+                                       type="text"/>
+                                <p class="locality" id="ordering-delivery-locality">Населенный пункт</p>
+                                <label data-error="" data-txt="(необходимо заполнить адрес)"
+                                       for="ordering-delivery-address">
+                                    Адрес: улица, номер дома, квартира *
+                                </label>
+                                <textarea class="textarea" id="ordering-delivery-address"
+                                          name="ordering-delivery-address"
+                                          rows="4"></textarea>
                             </div>
                         </fieldset>
                         <fieldset>
@@ -1405,6 +1423,7 @@
 <script src="js/plugins/slick.min.js"></script>
 <script src="js/plugins/jquery.inputmask.min.js"></script>
 <script src="js/plugins/axios.min.js"></script>
+<script src="js/plugins/lazysizes.min.js"></script>
 <script src="js/plugins/select2.min.js"></script>
 <script src="js/plugins/select2-ru.js"></script>
 <script src="js/general.js?ver=1597294270939"></script>

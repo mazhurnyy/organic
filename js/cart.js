@@ -199,13 +199,13 @@ $(function () {
                 tel_label.attr("data-error", tel_label.data("txt"));
             }
 
-            if (payment_id > 0) {
+            if (payment_id.length > 0) {
                 payment_obj.removeClass("error");
             } else {
                 payment_obj.addClass("error");
             }
 
-            if (delivery_alias !== null) {
+            if (delivery_alias.length > 0) {
                 delivery_obj.removeClass("error");
             } else {
                 delivery_obj.addClass("error");
@@ -228,8 +228,8 @@ $(function () {
             }
 
             if (
-                f_name.length >= 2 && l_name.length >= 2 && tel.length === 12 && payment_id > 0 &&
-                delivery_alias !== null && delivery_city_id !== null && delivery_number !== null
+                f_name.length >= 2 && l_name.length >= 2 && tel.length === 12 && payment_id.length > 0 &&
+                delivery_alias.length > 0 && delivery_city_id !== null && delivery_number !== null
             ) {
                 submitOff(submit);
 
@@ -272,14 +272,17 @@ $(function () {
         .on("change", "#ordering-delivery", function () {
             const
                 delivery_alias = delivery_alias_obj.val(),
-                delivery_obj = $("#services-delivery")
+                delivery_obj = $("#services-delivery"),
+                ukrposhta_obj = $("#services-ukrposhta")
             ;
 
             if (delivery_alias === "novaposhta" || delivery_alias === "justin") {
+                ukrposhta_obj.addClass("d-none");
                 delivery_obj.removeClass("d-none");
                 updateSelectCity();
             } else {
                 delivery_obj.addClass("d-none");
+                ukrposhta_obj.removeClass("d-none");
             }
         })
         .on("change", "#ordering-delivery-city", function () {

@@ -60,6 +60,14 @@
           cursor: pointer;
         }
 
+        .locality {
+          padding: 0 6px;
+          margin-bottom: 17px;
+          font-size: 16px;
+          color: $color-gray-10;
+          line-height: 20px;
+        }
+
         .input {
           display: block;
           width: 100%;
