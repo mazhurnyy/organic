@@ -1727,7 +1727,9 @@ picture {
           margin-bottom: 17px;
           border: 2px solid #116708;
           font-size: 16px;
-          color: #545454; }
+          color: #545454;
+          background-color: #FFFFFF;
+        }
       #content-ordering .form .ordering-form .btn {
         width: 100%;
         margin-top: 22px; }
