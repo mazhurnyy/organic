@@ -295,14 +295,14 @@
 
                             <label for="ordering-payment">Способ оплаты: *</label>
                             <select class="input" id="ordering-payment" name="ordering-payment">
-                                <option selected="selected" value="">Выберите способ оплаты</option>
+                                <option disabled="disabled" selected="selected" value="">Выберите способ оплаты</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                             </select>
 
                             <label for="ordering-delivery">Способ доставки: *</label>
                             <select class="input" id="ordering-delivery" name="ordering-delivery">
-                                <option selected="selected" value="">
+                                <option disabled="disabled" selected="selected" value="">
                                     Выберите способ доставки
                                 </option>
                                 <option value="novaposhta">Новая почта</option>
@@ -336,20 +336,20 @@
                             </div>
 
                             <div class="d-none" id="services-ukrposhta">
-                                <label data-error="" data-txt="(должно быть введено 5 цифр)"
-                                       for="ordering-delivery-index">
+                                <label data-error="" data-txt="(5 цифр)"
+                                       for="ordering-ukrposhta-index">
                                     Почтовый индекс *
                                 </label>
-                                <input class="input" id="ordering-delivery-index" maxlength="5"
-                                       minlength="5" name="ordering-delivery-index" placeholder="Введите индекс"
+                                <input class="input" id="ordering-ukrposhta-index" maxlength="5"
+                                       name="ordering-ukrposhta-index"
                                        type="text"/>
-                                <p class="locality" id="ordering-delivery-locality">Населенный пункт</p>
+                                <p class="locality" data-txt="(индекс не найден)" id="ordering-ukrposhta-locality"></p>
                                 <label data-error="" data-txt="(необходимо заполнить адрес)"
-                                       for="ordering-delivery-address">
+                                       for="ordering-ukrposhta-address">
                                     Адрес: улица, номер дома, квартира *
                                 </label>
-                                <textarea class="textarea" id="ordering-delivery-address"
-                                          name="ordering-delivery-address"
+                                <textarea class="textarea" id="ordering-ukrposhta-address"
+                                          name="ordering-ukrposhta-address"
                                           rows="4"></textarea>
                             </div>
                         </fieldset>

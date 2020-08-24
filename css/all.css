@@ -500,12 +500,14 @@ picture {
     -moz-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
+    height: 44px;
     margin-bottom: 12px;
     font-weight: normal;
     font-size: 14px;
     line-height: 22px;
     text-align: center;
-    color: #000000; }
+    color: #000000;
+  }
     .grid.card-favorite .cell .card .text:hover, .grid.card-favorite .cell .card .text:active {
       color: #4F4F4F; }
   .grid.card-favorite .cell .card .price {
@@ -676,12 +678,14 @@ picture {
     -moz-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
+    height: 44px;
     margin-bottom: 12px;
     font-weight: normal;
     font-size: 14px;
     line-height: 22px;
     text-align: center;
-    color: #000000; }
+    color: #000000;
+  }
   .grid.card-product .cell .card .price {
     display: block;
     font-size: 16px;

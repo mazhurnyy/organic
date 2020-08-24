@@ -1,6 +1,7 @@
 $(function () {
     let plus_minus_timout,
         delivery_timout,
+        index_timeout,
         delivery_city_symbols = '',
         delivery_city_search = '',
         delivery_city_input = '[aria-controls=select2-ordering-delivery-city-results]',
@@ -147,6 +148,12 @@ $(function () {
         .on("input change focus paste", "#ordering-delivery-number", function () {
             $("[for=ordering-delivery-number]").attr("data-error", "");
         })
+        .on("input change focus paste", "#ordering-ukrposhta-index", function () {
+            $("[for=ordering-ukrposhta-index]").attr("data-error", "");
+        })
+        .on("input change focus paste", "#ordering-ukrposhta-address", function () {
+            $("[for=ordering-ukrposhta-address]").attr("data-error", "");
+        })
         .on("submit", ".ordering-form", function (e) {
             e.preventDefault();
             const submit = $(".ordering-form [type=submit]");
@@ -171,6 +178,14 @@ $(function () {
                 delivery_number_obj = $("#ordering-delivery-number"),
                 delivery_number_label = $("[for=ordering-delivery-number]"),
                 delivery_number = delivery_number_obj.val(),
+                ukrposhta_index_obj = $("#ordering-ukrposhta-index"),
+                ukrposhta_index_label = $("[for=ordering-ukrposhta-index]"),
+                ukrposhta_index = ukrposhta_index_obj.val(),
+                ukrposhta_locality_obj = $("#ordering-ukrposhta-locality"),
+                ukrposhta_locality = ukrposhta_locality_obj.text(),
+                ukrposhta_address_obj = $("#ordering-ukrposhta-address"),
+                ukrposhta_address_label = $("[for=ordering-ukrposhta-address]"),
+                ukrposhta_address = ukrposhta_address_obj.val(),
                 note_obj = $("#ordering-note"),
                 note = note_obj.val().trim()
             ;
@@ -199,13 +214,13 @@ $(function () {
                 tel_label.attr("data-error", tel_label.data("txt"));
             }
 
-            if (payment_id.length > 0) {
+            if (payment_id !== null) {
                 payment_obj.removeClass("error");
             } else {
                 payment_obj.addClass("error");
             }
 
-            if (delivery_alias.length > 0) {
+            if (delivery_alias !== null) {
                 delivery_obj.removeClass("error");
             } else {
                 delivery_obj.addClass("error");
@@ -227,9 +242,34 @@ $(function () {
                 delivery_number_label.attr("data-error", delivery_number_label.data("txt"));
             }
 
+            if (ukrposhta_index.length === 5) {
+                ukrposhta_index_obj.removeClass("error");
+                ukrposhta_index_label.attr("data-error", "");
+            } else {
+                ukrposhta_index_obj.addClass("error");
+                ukrposhta_index_label.attr("data-error", ukrposhta_index_label.data("txt"));
+            }
+
+            if (ukrposhta_locality.length === 0 && !ukrposhta_index_obj.hasClass("error")) {
+                ukrposhta_index_obj.addClass("error");
+                ukrposhta_index_label.attr("data-error", ukrposhta_locality_obj.data("txt"));
+            }
+
+            if (ukrposhta_address >= 6) {
+                ukrposhta_address_obj.removeClass("error");
+                ukrposhta_address_label.attr("data-error", "");
+            } else {
+                ukrposhta_address_obj.addClass("error");
+                ukrposhta_address_label.attr("data-error", ukrposhta_address_label.data("txt"));
+            }
+
+// todo
+
             if (
-                f_name.length >= 2 && l_name.length >= 2 && tel.length === 12 && payment_id.length > 0 &&
-                delivery_alias.length > 0 && delivery_city_id !== null && delivery_number !== null
+                f_name.length >= 2 && l_name.length >= 2 && tel.length === 12 && payment_id !== null &&
+                (
+                    delivery_alias !== null && delivery_city_id !== null && delivery_number !== null
+                )
             ) {
                 submitOff(submit);
 
@@ -243,7 +283,9 @@ $(function () {
                             delivery: delivery_alias,
                             delivery_city_id: delivery_city_id,
                             delivery_number: delivery_number,
-                            additionally: note,
+                            delivery_index: ukrposhta_index,
+                            delivery_address: ukrposhta_address,
+                            additionally: note
                         }, {
                             timeout: axiosTimeOut
                         })
@@ -288,7 +330,7 @@ $(function () {
         .on("change", "#ordering-delivery-city", function () {
             updateSelectNumber();
         })
-        .on("input paste", delivery_city_input, function () {
+        .on("input change paste", delivery_city_input, function () {
             const search = $(this).val().trim();
 
             clearTimeout(delivery_timout);
@@ -301,6 +343,35 @@ $(function () {
                     updateSelectNumber();
                 }
             }, 1000);
+        })
+        .on("input change paste", "#ordering-ukrposhta-index", function () {
+            const
+                index_obj = $(this),
+                index = index_obj.val(),
+                locality_obj = $("#ordering-ukrposhta-locality")
+            ;
+
+            if (index.length !== 5) return false;
+
+            clearTimeout(index_timeout);
+            index_timeout = setTimeout(function () {
+                axios
+                    .post("/ordering/delivery/index", {
+                        index: index,
+                    }, {
+                        timeout: axiosTimeOut
+                    })
+                    .then(function (response) {
+                        locality_obj.text(response.data.city).removeClass("error");
+                    })
+                    .catch(function (error) {
+                        // todo
+                        // если нет ответа - модаль
+                        locality_obj.text(error.response.data.errors.index).addClass("error");
+                    })
+                ;
+            }, 1000);
+
         })
     ;
 
