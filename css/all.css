@@ -164,15 +164,17 @@ button, summary {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start; }
-  .pages .page {
-    display: block;
-    padding: 4px;
-    margin: 6px 8px;
-    font-size: 30px;
-    line-height: 32px;
-    color: #00370C;
-  }
+  align-items: flex-start;
+}
+
+.pages .page {
+  display: block;
+  padding: 4px;
+  margin: 6px 8px;
+  font-size: 30px;
+  line-height: 32px;
+  color: #00370C;
+}
 
 .pages .page:hover, .pages .page:active {
   color: #F9BAA9;
@@ -2790,7 +2792,9 @@ picture {
       margin: 0 auto; }
       #shadow .modal .leaf.leaf-lg {
         max-width: 400px;
-        padding: 32px 0; }
+        max-height: 344px;
+        padding: 32px 0;
+      }
       #shadow .modal .leaf.leaf-sm {
         max-width: 226px; }
       #shadow .modal .leaf img {
@@ -3544,18 +3548,21 @@ picture {
       background-color: #FFFFFF;
       color: #EA2828; }
   .btn:disabled, .btn.disabled {
-    border-color: #EA2828; }
+    border-color: #EA2828;
+  }
 
 .section-grid {
-  display: block; }
-  .section-grid .grid {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: stretch;
-    margin: 0 -10px;
-  }
+  display: block;
+}
+
+.section-grid .grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  margin: 0 -10px;
+}
 
 .section-grid .grid .cell {
   display: block;
@@ -3586,16 +3593,25 @@ picture {
     flex-basis: 100%;
   }
 }
-    .section-grid .grid.column-4 .cell {
-      flex-basis: 25%; }
-      @media (max-width: 1111px) {
-        .section-grid .grid.column-4 .cell {
-          flex-basis: 33%; } }
-      @media (max-width: 767px) {
-        .section-grid .grid.column-4 .cell {
-          flex-basis: 50%; } }
-      @media (max-width: 535px) {
-        .section-grid .grid.column-4 .cell {
+
+.section-grid .grid.column-4 .cell {
+  flex-basis: 25%;
+}
+
+@media (max-width: 1111px) {
+  .section-grid .grid.column-4 .cell {
+    flex-basis: 33%;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-grid .grid.column-4 .cell {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 535px) {
+  .section-grid .grid.column-4 .cell {
           flex-basis: 100%; } }
     @media (min-width: 768px) and (max-width: 1111px) {
       .section-grid .grid.column-4.row-1 .cell:nth-child(4n) {

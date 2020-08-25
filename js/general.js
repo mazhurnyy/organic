@@ -17,12 +17,15 @@ $(function () {
                 checkBoxAgree(this);
             });
 
+            // Slider
             $(".slider").slick({
                 dots: true,
                 arrows: true,
                 autoplay: true,
                 autoplaySpeed: 4000
             });
+
+            setModalMaxHeight();
         })
         //--------------------------------------------------------------------------------------------------------------
         // Misc
@@ -46,6 +49,13 @@ $(function () {
         })
     //--------------------------------------------------------------------------------------------------------------
     ;
+
+    $(window).resize(setModalMaxHeight);
+
+
+    function setModalMaxHeight() {
+        $(".modal:not(.modal-picture)").css("max-height", window.innerHeight + "px");
+    }
 
     function checkBoxAgree(that) {
         const
