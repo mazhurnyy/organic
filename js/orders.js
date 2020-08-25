@@ -9,14 +9,14 @@ $(function () {
                         link: "./order.html?id=100",
                         date: "01.01.2020",
                         status: "Выполнен",
-                        total: "100 грн"
+                        total: "100"
                     },
                     {
                         number: "Заказ №101",
                         link: "./order.html?id=101",
                         date: "11.08.2020",
                         status: "Ожидается оплата",
-                        total: "100 грн"
+                        total: "100"
                     }
                 ]
             ;

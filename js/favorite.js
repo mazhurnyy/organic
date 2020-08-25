@@ -122,7 +122,7 @@ $(function () {
                                 src_md: "./contents/product-0.png",
                                 srcset_md: "./contents/product-0.webp",
                                 text: "Сыворотка для шеи, декольте и бьюста",
-                                price: "100 грн",
+                                price: "100",
                                 in_cart: true
                             },
                             {
@@ -133,7 +133,7 @@ $(function () {
                                 src_md: "./contents/product-1.png",
                                 srcset_md: "./contents/product-1.webp",
                                 text: "Сыворотка для шеи, декольте и бьюста",
-                                price: "200 грн",
+                                price: "200",
                                 in_cart: false
                             },
                             {
@@ -144,7 +144,7 @@ $(function () {
                                 src_md: "./contents/product-2.png",
                                 srcset_md: "./contents/product-2.webp",
                                 text: "Сыворотка для шеи, декольте и бьюста",
-                                price: "120 грн",
+                                price: "120",
                                 in_cart: true
                             },
                             {
@@ -155,7 +155,7 @@ $(function () {
                                 src_md: "./contents/product-3.png",
                                 srcset_md: "./contents/product-3.webp",
                                 text: "Сыворотка для шеи, декольте и бьюста",
-                                price: "220 грн",
+                                price: "220",
                                 in_cart: false
                             },
                         ];

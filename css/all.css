@@ -171,13 +171,23 @@ button, summary {
     margin: 6px 8px;
     font-size: 30px;
     line-height: 32px;
-    color: #00370C; }
-    .pages .page:hover, .pages .page:active {
-      color: #F9BAA9; }
-    .pages .page[href='#'] {
-      color: #F9BAA9;
-      border-bottom: 1px solid #F9BAA9;
-      cursor: default; }
+    color: #00370C;
+  }
+
+.pages .page:hover, .pages .page:active {
+  color: #F9BAA9;
+}
+
+.pages .page[href='#'] {
+  color: #F9BAA9;
+  border-bottom: 1px solid #F9BAA9;
+  cursor: default;
+}
+
+[data-unit]::after {
+  content: attr(data-unit);
+  margin-left: 4px;
+}
 
 .textarea {
   display: block;
@@ -206,9 +216,6 @@ button, summary {
     line-height: 27px;
     text-align: center;
     color: #116708; }
-    .quantity .quantity-number::after {
-      content: attr(data-unit);
-      margin-left: 4px; }
   .quantity .quantity-buttons {
     display: flex;
     flex-direction: column;
@@ -1080,9 +1087,6 @@ picture {
                 #content-basket .positions .position .layout .info .bottom .price {
                   margin-right: 0;
                   margin-bottom: 20px; } }
-              #content-basket .positions .position .layout .info .bottom .price::after {
-                content: attr(data-unit);
-                margin-left: 4px; }
               #content-basket .positions .position .layout .info .bottom .price span {
                 font-weight: 300; }
             #content-basket .positions .position .layout .info .bottom .quantity {
@@ -1105,9 +1109,6 @@ picture {
                 #content-basket .positions .position .layout .info .bottom .sum {
                   margin-right: 0;
                   margin-bottom: 20px; } }
-              #content-basket .positions .position .layout .info .bottom .sum::after {
-                content: attr(data-unit);
-                margin-left: 4px; }
             #content-basket .positions .position .layout .info .bottom .delete {
               display: flex;
               width: 20px;
@@ -1146,9 +1147,6 @@ picture {
       #content-basket .summary .top .summary-total {
         display: flex;
         color: #116708; }
-        #content-basket .summary .top .summary-total::after {
-          content: attr(data-unit);
-          margin-left: 4px; }
     #content-basket .summary .bottom {
       display: flex;
       flex-direction: row;
@@ -3556,21 +3554,38 @@ picture {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: stretch;
-    margin: 0 -10px; }
-    .section-grid .grid .cell {
-      display: block;
-      padding: 0 10px;
-      flex-grow: 1; }
-    .section-grid .grid.column-1 .cell {
-      flex-basis: 100%; }
-    .section-grid .grid.column-3 .cell {
-      flex-basis: 33%; }
-      @media (max-width: 1111px) {
-        .section-grid .grid.column-3 .cell {
-          flex-basis: 50%; } }
-      @media (max-width: 535px) {
-        .section-grid .grid.column-3 .cell {
-          flex-basis: 100%; } }
+    margin: 0 -10px;
+  }
+
+.section-grid .grid .cell {
+  display: block;
+  padding: 0 10px;
+  flex-grow: 1;
+}
+
+.section-grid .grid .cell .btn {
+  margin-top: 32px;
+}
+
+.section-grid .grid.column-1 .cell {
+  flex-basis: 100%;
+}
+
+.section-grid .grid.column-3 .cell {
+  flex-basis: 33%;
+}
+
+@media (max-width: 1111px) {
+  .section-grid .grid.column-3 .cell {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 535px) {
+  .section-grid .grid.column-3 .cell {
+    flex-basis: 100%;
+  }
+}
     .section-grid .grid.column-4 .cell {
       flex-basis: 25%; }
       @media (max-width: 1111px) {
