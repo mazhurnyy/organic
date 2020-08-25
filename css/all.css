@@ -1718,11 +1718,15 @@ picture {
         #content-ordering .form .ordering-form fieldset select {
           cursor: pointer; }
         #content-ordering .form .ordering-form fieldset .locality {
-          padding: 0 6px;
+          padding: 0 6px 0 22px;
           margin-bottom: 17px;
           font-size: 16px;
           color: #545454;
-          line-height: 20px; }
+          line-height: 20px;
+          background-image: url(../images/ordering-check.svg);
+          background-position: 2px 2px;
+          background-repeat: no-repeat;
+        }
         #content-ordering .form .ordering-form fieldset .input {
           display: block;
           width: 100%;

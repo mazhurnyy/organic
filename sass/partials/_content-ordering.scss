@@ -61,11 +61,14 @@
         }
 
         .locality {
-          padding: 0 6px;
+          padding: 0 6px 0 22px;
           margin-bottom: 17px;
           font-size: 16px;
           color: $color-gray-10;
           line-height: 20px;
+          background-image: url(../images/ordering-check.svg);
+          background-position: 2px 2px;
+          background-repeat: no-repeat;
         }
 
         .input {
