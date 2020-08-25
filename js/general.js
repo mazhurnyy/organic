@@ -55,6 +55,7 @@ $(function () {
 
     function setModalMaxHeight() {
         $(".modal:not(.modal-picture)").css("max-height", window.innerHeight + "px");
+        $("html, body").css("height", window.innerHeight + "px");
     }
 
     function checkBoxAgree(that) {
