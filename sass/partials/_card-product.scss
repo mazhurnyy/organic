@@ -43,11 +43,14 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 30px;
+    // todo
+    top: 26px;
     left: 30px;
-    width: 22px;
-    height: 20px;
+    width: 28px;
+    height: 26px;
+    padding: 3px;
     color: $color-green-3;
+    background-color: $color-white;
     z-index: 1;
 
     &:hover, &:active {
@@ -63,30 +66,15 @@
     }
   }
 
+  // todo
   .new {
-    display: block;
-    position: absolute;
     top: 26px;
     right: 30px;
-    color: $color-green-4;
-    line-height: 27px;
-    font-size: 24px;
-    z-index: 1;
   }
 
   .sale {
-    display: block;
-    position: absolute;
     top: 26px;
     right: 30px;
-    z-index: 1;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 27px;
-    color: $color-gray-10;
-    width: 60px;
-    text-align: center;
-    background-color: $color-pink-1;
   }
 
   .photo {

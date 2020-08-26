@@ -14,6 +14,31 @@
       padding: 0 $layout-padding;
       flex-grow: 1;
 
+      // todo
+      .new {
+        display: block;
+        position: absolute;
+        color: $color-green-4;
+        line-height: 27px;
+        font-size: 24px;
+        background-color: $color-white;
+        z-index: 1;
+      }
+
+      .sale {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 27px;
+        color: $color-gray-10;
+        width: 60px;
+        text-align: center;
+        background-color: $color-pink-1;
+      }
+
+
       .btn {
         margin-top: 32px;
       }
