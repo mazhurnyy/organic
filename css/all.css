@@ -2753,31 +2753,40 @@ picture {
     padding: 10px 10px 0;
   }
 }
-    #shadow .modal.open {
-      top: 50%;
-      transform: translate(-50%, -50%); }
-    #shadow .modal .modal-head {
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: flex-end;
-      align-items: center; }
-      #shadow .modal .modal-head a {
-        display: block;
+
+#shadow .modal.open {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#shadow .modal .modal-head {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#shadow .modal .modal-head a {
+  display: block;
         width: 28px;
         height: 28px;
         color: #828282; }
         #shadow .modal .modal-head a:hover, #shadow .modal .modal-head a:active {
           color: #000000; }
-    #shadow .modal .leaf {
-      display: block;
-      position: relative;
-      z-index: 700;
-      max-width: 400px;
-      margin: 0 auto; }
-      #shadow .modal .leaf.leaf-lg {
-        max-width: 400px;
-        max-height: 344px;
-        padding: 32px 0; }
+
+#shadow .modal .leaf {
+  display: block;
+  position: relative;
+  z-index: 700;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#shadow .modal .leaf.leaf-lg {
+  max-width: 400px;
+  max-height: 344px;
+  padding: 32px 0;
+}
 
 #shadow .modal .leaf.leaf-sm {
   max-width: 226px;
@@ -2815,16 +2824,20 @@ picture {
 }
 
 #shadow .modal.modal-buy {
-      max-width: 600px; }
-      #shadow .modal.modal-buy .title {
-        display: block;
-        margin-bottom: 48px;
-        font-size: 18px;
-        font-weight: 600;
-        line-height: 28px;
-        text-align: center;
-        color: #53735E; }
-        #shadow .modal.modal-buy .title svg {
+  max-width: 600px;
+}
+
+#shadow .modal.modal-buy .title {
+  display: block;
+  margin-bottom: 48px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  text-align: center;
+  color: #53735E;
+}
+
+#shadow .modal.modal-buy .title svg {
           display: inline-block;
           width: auto;
           height: 28px;
@@ -3293,15 +3306,24 @@ picture {
         @media (max-width: 767px) {
           #shadow .modal.modal-message .subtitle {
             font-size: 16px;
-            line-height: 24px; } }
-      #shadow .modal.modal-message.modal-error .title,
-      #shadow .modal.modal-message.modal-error .subtitle {
-        color: #EA2828; }
-    #shadow .modal.modal-picture {
-      max-width: 760px; }
-      @media (max-width: 767px) {
-        #shadow .modal.modal-picture {
-          max-width: 720px; } }
+            line-height: 24px;
+          }
+        }
+
+#shadow .modal.modal-message.modal-error .title,
+#shadow .modal.modal-message.modal-error .subtitle {
+  color: #EA2828;
+}
+
+#shadow .modal.modal-picture {
+  max-width: 760px;
+}
+
+@media (max-width: 767px) {
+  #shadow .modal.modal-picture {
+    max-width: 720px;
+  }
+}
 
 @media (max-height: 788px) and (min-width: 768px) and (min-aspect-ratio: 760 / 790) {
   #shadow .modal.modal-picture {
@@ -3314,16 +3336,25 @@ picture {
     max-width: calc(100vh - 28px);
   }
 }
-    #shadow .modal.modal-review {
-      max-width: 940px; }
-      @media (max-width: 979px) {
-        #shadow .modal.modal-review {
-          max-width: 880px; } }
-      @media (max-width: 811px) {
-        #shadow .modal.modal-review {
-          max-width: 552px; } }
-      #shadow .modal.modal-review .review-wrap {
-        display: block;
+
+#shadow .modal.modal-review {
+  max-width: 940px;
+}
+
+@media (max-width: 979px) {
+  #shadow .modal.modal-review {
+    max-width: 880px;
+  }
+}
+
+@media (max-width: 811px) {
+  #shadow .modal.modal-review {
+    max-width: 552px;
+  }
+}
+
+#shadow .modal.modal-review .review-wrap {
+  display: block;
         position: relative;
         margin: 0 -30px -30px 0;
         overflow: hidden; }
