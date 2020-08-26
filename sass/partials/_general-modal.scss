@@ -24,7 +24,7 @@
     transform: translate(-50%, -100%);
     width: 100%;
     max-height: 100vh;
-    padding: 30px 30PX 0;
+    padding: 30px 30px 0;
     background-color: $color-white;
     overflow: auto;
 
@@ -36,7 +36,7 @@
     @media (max-width: 767px) {
       //  padding-left: $layout-padding;
       //  padding-right: $layout-padding;
-      padding: $layout-padding;
+      padding: $layout-padding $layout-padding 0;
     }
 
     &.open {
@@ -90,6 +90,10 @@
       justify-content: space-around;
       align-items: flex-start;
       padding-bottom: 30px;
+
+      @media (max-width: 767px) {
+        padding-bottom: $layout-padding;
+      }
 
       a {
         display: block;
@@ -612,12 +616,13 @@
         max-width: 720px;
       }
 
+      // todo
       @media (max-height: 788px) and (min-width: 768px) and (min-aspect-ratio: 760 / 790) {
         max-width: calc(100vh - 28px);
       }
 
-      @media (max-height: 788px) and (max-width: 767px) and (min-aspect-ratio: 720 / 790) {
-        max-width: calc(100vh - 68px);
+      @media (max-height: 748px) and (max-width: 767px) and (min-aspect-ratio: 720 / 790) {
+        max-width: calc(100vh - 28px);
       }
     }
 

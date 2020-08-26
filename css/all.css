@@ -2747,15 +2747,19 @@ picture {
     transform: translate(-50%, -100%);
     width: 100%;
     max-height: 100vh;
-    padding: 30px 30PX 0;
+    padding: 30px 30px 0;
     background-color: #FFFFFF;
     overflow: auto;
     transition-duration: 450ms;
     transition-property: top, transform;
-    transition-timing-function: ease-in; }
-    @media (max-width: 767px) {
-      #shadow .modal {
-        padding: 10px; } }
+    transition-timing-function: ease-in;
+  }
+
+@media (max-width: 767px) {
+  #shadow .modal {
+    padding: 10px 10px 0;
+  }
+}
     #shadow .modal.open {
       top: 50%;
       transform: translate(-50%, -50%); }
@@ -2781,26 +2785,43 @@ picture {
         max-width: 400px;
         max-height: 344px;
         padding: 32px 0; }
-      #shadow .modal .leaf.leaf-sm {
-        max-width: 226px; }
-      #shadow .modal .leaf img {
-        display: block; }
-    #shadow .modal .modal-foot {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-around;
-      align-items: flex-start;
-      padding-bottom: 30px; }
-      #shadow .modal .modal-foot a {
-        display: block;
-        margin: 0 10px 10px;
-        font-size: 18px;
-        line-height: 33px;
-        color: #53735E;
-        border-bottom: 1px solid currentColor; }
-        #shadow .modal .modal-foot a:hover, #shadow .modal .modal-foot a:active {
-          color: #00370C; }
-    #shadow .modal.modal-buy {
+
+#shadow .modal .leaf.leaf-sm {
+  max-width: 226px;
+}
+
+#shadow .modal .leaf img {
+  display: block;
+}
+
+#shadow .modal .modal-foot {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  #shadow .modal .modal-foot {
+    padding-bottom: 10px;
+  }
+}
+
+#shadow .modal .modal-foot a {
+  display: block;
+  margin: 0 10px 10px;
+  font-size: 18px;
+  line-height: 33px;
+  color: #53735E;
+  border-bottom: 1px solid currentColor;
+}
+
+#shadow .modal .modal-foot a:hover, #shadow .modal .modal-foot a:active {
+  color: #00370C;
+}
+
+#shadow .modal.modal-buy {
       max-width: 600px; }
       #shadow .modal.modal-buy .title {
         display: block;
@@ -3288,12 +3309,18 @@ picture {
       @media (max-width: 767px) {
         #shadow .modal.modal-picture {
           max-width: 720px; } }
-      @media (max-height: 788px) and (min-width: 768px) and (min-aspect-ratio: 760 / 790) {
-        #shadow .modal.modal-picture {
-          max-width: calc(100vh - 28px); } }
-      @media (max-height: 788px) and (max-width: 767px) and (min-aspect-ratio: 720 / 790) {
-        #shadow .modal.modal-picture {
-          max-width: calc(100vh - 68px); } }
+
+@media (max-height: 788px) and (min-width: 768px) and (min-aspect-ratio: 760 / 790) {
+  #shadow .modal.modal-picture {
+    max-width: calc(100vh - 28px);
+  }
+}
+
+@media (max-height: 748px) and (max-width: 767px) and (min-aspect-ratio: 720 / 790) {
+  #shadow .modal.modal-picture {
+    max-width: calc(100vh - 28px);
+  }
+}
     #shadow .modal.modal-review {
       max-width: 940px; }
       @media (max-width: 979px) {
