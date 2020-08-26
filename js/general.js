@@ -53,11 +53,10 @@ $(function () {
     //--------------------------------------------------------------------------------------------------------------
     ;
 
-    if (mobile) $(window).bind("orientationchange", setModalMaxHeight);
+    if (mobile) $(window).bind("resize", setModalMaxHeight);
 
     function setModalMaxHeight() {
         $(".modal:not(.modal-picture)").css("max-height", window.innerHeight + "px");
-        $("html, body, #wrapper, #shadow").css("height", window.innerHeight + "px");
     }
 
     function checkBoxAgree(that) {
