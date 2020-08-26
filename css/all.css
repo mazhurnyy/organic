@@ -492,7 +492,14 @@ picture {
     display: block;
     width: 100%;
     height: 245px;
-    margin: 0 auto 16px; }
+    margin: 0 auto 16px;
+    position: relative; }
+    .grid.card-favorite .cell .card .photo .new {
+      top: 0;
+      left: 0; }
+    .grid.card-favorite .cell .card .photo .sale {
+      top: 0;
+      right: 0; }
     .grid.card-favorite .cell .card .photo img {
       background-color: #FFFFFF; }
   .grid.card-favorite .cell .card .text {
@@ -631,11 +638,13 @@ picture {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 30px;
+    top: 26px;
     left: 30px;
-    width: 22px;
-    height: 20px;
+    width: 28px;
+    height: 26px;
+    padding: 3px;
     color: #116708;
+    background-color: #FFFFFF;
     z-index: 1; }
     .grid.card-product .cell .card .like:hover, .grid.card-product .cell .card .like:active {
       color: #000000; }
@@ -644,27 +653,11 @@ picture {
       .grid.card-product .cell .card .like.added:hover, .grid.card-product .cell .card .like.added:active {
         color: #5DBC30; }
   .grid.card-product .cell .card .new {
-    display: block;
-    position: absolute;
     top: 26px;
-    right: 30px;
-    color: #219653;
-    line-height: 27px;
-    font-size: 24px;
-    z-index: 1; }
+    right: 30px; }
   .grid.card-product .cell .card .sale {
-    display: block;
-    position: absolute;
     top: 26px;
-    right: 30px;
-    z-index: 1;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 27px;
-    color: #545454;
-    width: 60px;
-    text-align: center;
-    background-color: #FFEBE4; }
+    right: 30px; }
   .grid.card-product .cell .card .photo {
     display: block;
     width: 100%;
@@ -3576,6 +3569,25 @@ picture {
       display: block;
       padding: 0 10px;
       flex-grow: 1; }
+      .section-grid .grid .cell .new {
+        display: block;
+        position: absolute;
+        color: #219653;
+        line-height: 27px;
+        font-size: 24px;
+        background-color: #FFFFFF;
+        z-index: 1; }
+      .section-grid .grid .cell .sale {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 27px;
+        color: #545454;
+        width: 60px;
+        text-align: center;
+        background-color: #FFEBE4; }
       .section-grid .grid .cell .btn {
         margin-top: 32px; }
     .section-grid .grid.column-1 .cell {

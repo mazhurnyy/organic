@@ -123,7 +123,9 @@ $(function () {
                                 srcset_md: "./contents/product-0.webp",
                                 text: "Сыворотка для шеи, декольте и бьюста",
                                 price: "100",
-                                in_cart: true
+                                in_cart: true,
+                                is_new: true,
+                                sale: 0
                             },
                             {
                                 id: 101,
@@ -134,7 +136,9 @@ $(function () {
                                 srcset_md: "./contents/product-1.webp",
                                 text: "Сыворотка для шеи, декольте и бьюста",
                                 price: "200",
-                                in_cart: false
+                                in_cart: false,
+                                is_new: true,
+                                sale: 20
                             },
                             {
                                 id: 102,
@@ -145,7 +149,9 @@ $(function () {
                                 srcset_md: "./contents/product-2.webp",
                                 text: "Сыворотка для шеи, декольте и бьюста",
                                 price: "120",
-                                in_cart: true
+                                in_cart: true,
+                                is_new: false,
+                                sale: 0
                             },
                             {
                                 id: 103,
@@ -156,11 +162,23 @@ $(function () {
                                 srcset_md: "./contents/product-3.webp",
                                 text: "Сыворотка для шеи, декольте и бьюста",
                                 price: "220",
-                                in_cart: false
+                                in_cart: false,
+                                is_new: false,
+                                sale: 15
                             },
                         ];
                         data.forEach(function (obj) {
                             let card = load_btn.next().find(".cell").clone();
+
+                            if (!obj.is_new) {
+                                card.find(".new").remove();
+                            }
+
+                            if (parseInt(obj.sale) === 0) {
+                                card.find(".sale").remove();
+                            } else {
+                                card.find(".sale").text("-" + obj.sale + "%");
+                            }
 
                             card.find(".photo").attr("href", obj.link);
                             card.find(".photo source").attr("data-srcset", obj.srcset_sm).attr("data-source", obj.srcset_md);
