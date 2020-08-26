@@ -1,4 +1,7 @@
-const axiosTimeOut = 15000;
+const
+    axiosTimeOut = 15000,
+    mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+;
 let token = document.head.querySelector('meta[name="csrf-token"]');
 if (token !== null) {
     window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
@@ -25,7 +28,7 @@ $(function () {
                 autoplaySpeed: 4000
             });
 
-            setModalMaxHeight();
+            if (mobile) setModalMaxHeight();
         })
         //--------------------------------------------------------------------------------------------------------------
         // Misc
@@ -50,8 +53,7 @@ $(function () {
     //--------------------------------------------------------------------------------------------------------------
     ;
 
-    $(window).resize(setModalMaxHeight);
-
+    if (mobile) $(window).bind("orientationchange", setModalMaxHeight);
 
     function setModalMaxHeight() {
         $(".modal:not(.modal-picture)").css("max-height", window.innerHeight + "px");

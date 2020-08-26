@@ -10,20 +10,22 @@ $(function () {
         .ready(function () {
             window_width = $("#wrapper").outerWidth();
             spoilerInit();
+
+            const
+                obj = $(".top .photo-open"),
+                alt = obj.find("img").attr("alt"),
+                src = obj.find("img").data("source"),
+                srcset = obj.find("source").data("source")
+            ;
+
+            $(".modal-picture picture img").attr("src", src).attr("alt", alt);
+            $(".modal-picture picture source").attr("srcset", srcset);
         })
         .on("click", ".top .photo-open", function () {
-            if ($("#wrapper").outerWidth() > 565) {
+            const wrapper = $("#wrapper");
+            if (wrapper < 768 || wrapper.outerHeight() < 768 || mobile) return false;
 
-                let alt = $(this).find("img").attr("alt"),
-                    src = $(this).find("img").data("source"),
-                    srcset = $(this).find("source").data("source")
-                ;
-
-                $(".modal-picture picture img").attr("src", src).attr("alt", alt);
-                $(".modal-picture picture source").attr("srcset", srcset);
-
-                modalOpen("picture");
-            }
+            modalOpen("picture");
         })
         .on("click", ".show_description", function (e) {
             e.preventDefault();

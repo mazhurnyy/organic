@@ -32,9 +32,11 @@
     transition-property: top, transform;
     transition-timing-function: ease-in;
 
+    // todo
     @media (max-width: 767px) {
-      padding-left: $layout-padding;
-      padding-right: $layout-padding;
+      //  padding-left: $layout-padding;
+      //  padding-right: $layout-padding;
+      padding: $layout-padding;
     }
 
     &.open {
