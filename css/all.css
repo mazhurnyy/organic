@@ -2747,6 +2747,7 @@ picture {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  width: 100%;
   transform: translateY(-100%);
   transition-duration: 450ms;
   transition-property: transform;
@@ -3739,16 +3740,21 @@ picture {
 }
 
 .sidebar-wrap .layout {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: stretch; }
-    .sidebar-wrap .layout .sidebar {
-      display: block;
-      flex-grow: 1; }
-      .sidebar-wrap .layout .sidebar.lg {
-        flex-basis: 75%; }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.sidebar-wrap .layout .sidebar {
+  display: block;
+  flex-grow: 1;
+}
+
+.sidebar-wrap .layout .sidebar.lg {
+  flex-basis: 75%;
+}
         @media (max-width: 1111px) {
           .sidebar-wrap .layout .sidebar.lg {
             flex-basis: 66%; } }
