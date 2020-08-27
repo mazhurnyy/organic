@@ -1,7 +1,11 @@
 $(function () {
     $(document)
         .on("click", "#shadow", function (e) {
-            if (e.target === document.getElementById("shadow") && !$(".modal.open").hasClass("modal-important")) {
+            const
+                shadow = document.getElementById("shadow"),
+                wrapper = document.getElementsByClassName("modal-wrapper")
+            ;
+            if ((e.target === shadow || e.target === wrapper) && !$(".modal.open").hasClass("modal-important")) {
                 modalClose();
             }
         })
@@ -15,24 +19,33 @@ $(function () {
 });
 
 function modalClose() {
-    $(".modal").removeClass("open");
+    $(".modal-wrapper").removeClass("open");
     setTimeout(function () {
+        $(".modal").removeClass("open");
         $("#shadow").removeClass("open");
     }, 600);
 }
 
 function modalOpen(target) {
-    const m = $(".modal"),
-        timeout = m.hasClass("open") ? 500 : 10
+    const
+        wrap = $(".modal-wrapper"),
+        modal = $(".modal-" + target),
+        timeout = wrap.hasClass("open") ? 500 : 10
     ;
 
-    if (m.hasClass("open")) {
-        m.removeClass("open");
+    if (wrap.hasClass("open")) {
+        wrap.removeClass("open");
+
+        setTimeout(function () {
+            $(".modal").removeClass("open");
+            modal.addClass("open");
+        }, timeout);
     } else {
         $("#shadow").addClass("open");
+        modal.addClass("open");
     }
 
     setTimeout(function () {
-        $(".modal-" + target).addClass("open");
+        wrap.addClass("open");
     }, timeout);
 }

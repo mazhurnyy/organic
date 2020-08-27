@@ -25,10 +25,8 @@ $(function () {
                 dots: true,
                 arrows: true,
                 autoplay: true,
-                autoplaySpeed: 3000
+                autoplaySpeed: 3600
             });
-
-            if (mobile) setModalMaxHeight();
         })
         //--------------------------------------------------------------------------------------------------------------
         // Misc
@@ -52,12 +50,6 @@ $(function () {
         })
     //--------------------------------------------------------------------------------------------------------------
     ;
-
-    if (mobile) $(window).bind("resize", setModalMaxHeight);
-
-    function setModalMaxHeight() {
-        $(".modal:not(.modal-picture)").css("max-height", window.innerHeight + "px");
-    }
 
     function checkBoxAgree(that) {
         const

@@ -603,817 +603,819 @@
     </div>
 </div>
 <div id="shadow">
-    <section class="modal modal-auth modal-important modal-login">
-        <div class="modal-head">
-            <a href="#" class="modal-close">
-                <!-- SVG close-1 -->
-                <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                          fill="currentColor"></path>
-                </svg>
-            </a>
-        </div>
-        <div class="title-wrap">
-            <div class="title">Вход</div>
-            <div class="leaf leaf-sm">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                     data-src="./images/modal-leaf.svg"
-                     class="lazyload"
-                     alt=""
-                     width="226"
-                     height="158"
-                />
-            </div>
-        </div>
-        <form action="#" class="form form-login" method="post" autocomplete="off">
-            <div class="row" data-txt="Телефон должен иметь формат +380 ХХ ХХХ ХХ ХХ" data-error="">
-                <input type="tel" id="login-login" name="login-login" class="input"/>
-                <label for="login-login" class="label">Логин</label>
-            </div>
-            <div class="row" data-txt="Длина пароля минимум 6 символов" data-error="">
-                <input type="password" id="login-password" name="login-password" class="input pwd-input"/>
-                <label for="login-password" class="label">Пароль</label>
-                <button type="button" class="btn-pwd pwd-show">
-                    <!-- SVG eye -->
-                    <svg height="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                        <path d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"
+    <div class="modal-wrapper">
+        <section class="modal modal-auth modal-important modal-login">
+            <div class="modal-head">
+                <a href="#" class="modal-close">
+                    <!-- SVG close-1 -->
+                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
                               fill="currentColor"></path>
                     </svg>
-                </button>
-                <button type="button" class="btn-pwd pwd-hide d-none">
-                    <!-- SVG eye-slash -->
-                    <svg height="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-                        <path d="M634 471L36 3.51A16 16 0 0 0 13.51 6l-10 12.49A16 16 0 0 0 6 41l598 467.49a16 16 0 0 0 22.49-2.49l10-12.49A16 16 0 0 0 634 471zM296.79 146.47l134.79 105.38C429.36 191.91 380.48 144 320 144a112.26 112.26 0 0 0-23.21 2.47zm46.42 219.07L208.42 260.16C210.65 320.09 259.53 368 320 368a113 113 0 0 0 23.21-2.46zM320 112c98.65 0 189.09 55 237.93 144a285.53 285.53 0 0 1-44 60.2l37.74 29.5a333.7 333.7 0 0 0 52.9-75.11 32.35 32.35 0 0 0 0-29.19C550.29 135.59 442.93 64 320 64c-36.7 0-71.71 7-104.63 18.81l46.41 36.29c18.94-4.3 38.34-7.1 58.22-7.1zm0 288c-98.65 0-189.08-55-237.93-144a285.47 285.47 0 0 1 44.05-60.19l-37.74-29.5a333.6 333.6 0 0 0-52.89 75.1 32.35 32.35 0 0 0 0 29.19C89.72 376.41 197.08 448 320 448c36.7 0 71.71-7.05 104.63-18.81l-46.41-36.28C359.28 397.2 339.89 400 320 400z"
-                              fill="currentColor"></path>
-                    </svg>
-                </button>
+                </a>
             </div>
-            <button type="submit" class="btn btn-primary-fill submit">
-                <span>Войти</span>
-            </button>
-        </form>
-        <div class="modal-foot">
-            <a href="#" data-modal="register">Регистрация</a>
-            <a href="#" data-modal="reset">Забыли пароль?</a>
-        </div>
-    </section>
-    <section class="modal modal-auth modal-important modal-register">
-        <div class="modal-head">
-            <a href="#" class="modal-close">
-                <!-- SVG close-1 -->
-                <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                          fill="currentColor"></path>
-                </svg>
-            </a>
-        </div>
-        <div class="title-wrap">
-            <div class="title">Регистрация</div>
-            <div class="leaf leaf-sm">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                     data-src="./images/modal-leaf.svg"
-                     class="lazyload"
-                     alt=""
-                     width="226"
-                     height="158"
-                />
-            </div>
-        </div>
-        <form action="#" class="form form-register" method="post" autocomplete="off">
-            <div class="row" data-txt="Телефон должен иметь формат +380 ХХ ХХХ ХХ ХХ" data-error="">
-                <input type="tel" id="register-login" name="register-login" class="input"/>
-                <label for="register-login" class="label">Телефон</label>
-            </div>
-            <!-- Галочка для НЕ авторизированных, если авторизован - поле телефон заполнено блока checkbox-agree нету -->
-            <div class="checkbox checkbox-agree">
-                <input type="checkbox" id="register-agree" name="register-agree" checked="checked"/>
-                <label for="register-agree" class="non-select">Я согласен с&nbsp;</label>
-                <a href="#" target="_blank">политикой конфиденциальности</a>
-            </div>
-            <button type="submit" class="btn btn-primary-fill submit" disabled="disabled">
-                <span>Получить код</span>
-            </button>
-        </form>
-        <div class="modal-foot">
-            <a href="#" data-modal="reset">Забыли пароль?</a>
-            <a href="#" data-modal="login">Вход</a>
-        </div>
-    </section>
-    <section class="modal modal-auth modal-important modal-reset">
-        <div class="modal-head">
-            <a href="#" class="modal-close">
-                <!-- SVG close-1 -->
-                <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                          fill="currentColor"></path>
-                </svg>
-            </a>
-        </div>
-        <div class="title-wrap">
-            <div class="title">Сброс пароля</div>
-            <div class="leaf leaf-sm">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                     data-src="./images/modal-leaf.svg"
-                     class="lazyload"
-                     alt=""
-                     width="226"
-                     height="158"
-                />
-            </div>
-        </div>
-        <form action="#" class="form form-reset" method="post" autocomplete="off">
-            <div class="row" data-txt="Телефон должен иметь формат +380 ХХ ХХХ ХХ ХХ" data-error="">
-                <input type="tel" id="reset-login" name="reset-login" class="input"/>
-                <label for="reset-login" class="label">Телефон</label>
-            </div>
-            <!-- Галочка для НЕ авторизированных, если авторизован - поле телефон заполнено блока checkbox-agree нету -->
-            <div class="checkbox checkbox-agree">
-                <input type="checkbox" id="reset-agree" name="reset-agree" checked="checked"/>
-                <label for="reset-agree" class="non-select">Я согласен с&nbsp;</label>
-                <a href="#" target="_blank">политикой конфиденциальности</a>
-            </div>
-            <button type="submit" class="btn btn-primary-fill submit" disabled="disabled">
-                <span>Получить код</span>
-            </button>
-        </form>
-        <div class="modal-foot">
-            <a href="#" data-modal="register">Регистрация</a>
-            <a href="#" data-modal="login">Вход</a>
-        </div>
-    </section>
-    <section class="modal modal-auth modal-important modal-password">
-        <div class="modal-head">
-            <a href="#" class="modal-close">
-                <!-- SVG close-1 -->
-                <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                          fill="currentColor"></path>
-                </svg>
-            </a>
-        </div>
-        <div class="title-wrap">
-            <div class="title">Завершение</div>
-            <div class="leaf leaf-sm">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                     data-src="./images/modal-leaf.svg"
-                     class="lazyload"
-                     alt=""
-                     width="226"
-                     height="158"
-                />
-            </div>
-        </div>
-        <form action="#" class="form form-password" method="post" autocomplete="off">
-            <div class="row" data-txt="Код 6 цифр" data-error="">
-                <input type="number" id="password-code" name="password-code" class="input"/>
-                <label for="password-code" class="label">Код подтверждения из смс</label>
-            </div>
-            <div class="row" data-txt="Длина пароля минимум 6 символов" data-error="">
-                <input type="password" id="password-password" name="password-password" class="input pwd-input"/>
-                <label for="password-password" class="label">Пароль</label>
-                <button type="button" class="btn-pwd pwd-show">
-                    <!-- SVG eye -->
-                    <svg height="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                        <path d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"
-                              fill="currentColor"></path>
-                    </svg>
-                </button>
-                <button type="button" class="btn-pwd pwd-hide d-none">
-                    <!-- SVG eye-slash -->
-                    <svg height="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-                        <path d="M634 471L36 3.51A16 16 0 0 0 13.51 6l-10 12.49A16 16 0 0 0 6 41l598 467.49a16 16 0 0 0 22.49-2.49l10-12.49A16 16 0 0 0 634 471zM296.79 146.47l134.79 105.38C429.36 191.91 380.48 144 320 144a112.26 112.26 0 0 0-23.21 2.47zm46.42 219.07L208.42 260.16C210.65 320.09 259.53 368 320 368a113 113 0 0 0 23.21-2.46zM320 112c98.65 0 189.09 55 237.93 144a285.53 285.53 0 0 1-44 60.2l37.74 29.5a333.7 333.7 0 0 0 52.9-75.11 32.35 32.35 0 0 0 0-29.19C550.29 135.59 442.93 64 320 64c-36.7 0-71.71 7-104.63 18.81l46.41 36.29c18.94-4.3 38.34-7.1 58.22-7.1zm0 288c-98.65 0-189.08-55-237.93-144a285.47 285.47 0 0 1 44.05-60.19l-37.74-29.5a333.6 333.6 0 0 0-52.89 75.1 32.35 32.35 0 0 0 0 29.19C89.72 376.41 197.08 448 320 448c36.7 0 71.71-7.05 104.63-18.81l-46.41-36.28C359.28 397.2 339.89 400 320 400z"
-                              fill="currentColor"></path>
-                    </svg>
-                </button>
-            </div>
-            <div class="row" data-txt="Пароли не совпадают" data-error="">
-                <input type="password" id="password-confirm" name="password-confirm" class="input pwd-input"/>
-                <label for="password-confirm" class="label">Пароль</label>
-            </div>
-            <button type="submit" class="btn btn-primary-fill submit">
-                <span>Завершить</span>
-            </button>
-        </form>
-        <div class="modal-foot">
-            <a href="#" data-modal="register">Назад</a>
-        </div>
-    </section>
-
-    <section class="modal modal-important modal-one_click">
-        <div class="modal-head">
-            <a href="#" class="modal-close">
-                <!-- SVG close-1 -->
-                <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                          fill="currentColor"></path>
-                </svg>
-            </a>
-        </div>
-        <div class="title">
-            Быстрый заказ
-        </div>
-        <form action="#" class="form form-one_click" method="post" autocomplete="off">
-            <input type="tel" class="number" placeholder="+380 (99) 999 99 99" aria-label="Номер телефона"/>
-            <!-- Галочка для НЕ авторизированных, если авторизован - поле телефон заполнено блока checkbox-agree нету -->
-            <div class="checkbox checkbox-agree">
-                <input type="checkbox" id="one_click-agree" name="one_click-agree" checked="checked"/>
-                <label for="one_click-agree" class="non-select">Я согласен с&nbsp;</label>
-                <a href="#" target="_blank">политикой конфиденциальности</a>
-            </div>
-            <button type="submit" class="btn btn-primary-fill submit">
-                <span>Отправить заказ</span>
-            </button>
-        </form>
-        <div class="modal-foot">
-            <a href="#" class="modal-close">Вернуться к покупкам</a>
-        </div>
-    </section>
-    <section class="modal modal-important modal-buy">
-        <div class="modal-head">
-            <a href="#" class="modal-close">
-                <!-- SVG close-1 -->
-                <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                          fill="currentColor"></path>
-                </svg>
-            </a>
-        </div>
-        <div class="title">
-            <!-- SVG check -->
-            <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14.0004 0C6.267 0 0 6.26847 0 14C0 21.7324 6.26778 28 14.0004 28C21.7322 28 28 21.7324 28 14C28 6.26935 21.7322 0 14.0004 0ZM14.0004 25.375C7.71778 25.375 2.62513 20.2825 2.62513 14C2.62513 7.71754 7.71866 2.62504 14.0004 2.62504C20.2822 2.62504 25.3749 7.71754 25.3749 14C25.3749 20.2825 20.2823 25.375 14.0004 25.375ZM19.5026 8.04476C18.9076 7.68954 18.1472 7.90038 17.8051 8.51725L13.1106 16.9496L10.496 13.7672C10.0226 13.2221 9.3935 12.9395 8.79933 13.2947C8.20428 13.6508 7.95838 14.5075 8.34347 15.057L11.9818 19.4854C12.2539 19.8389 12.5645 20.0507 12.8892 20.1111L12.8919 20.1164L12.9252 20.1181C12.9987 20.1295 14.0977 20.3325 14.5711 19.4855L19.9596 9.80716C20.3015 9.18922 20.0977 8.40086 19.5026 8.04476Z"
-                      fill="currentColor"></path>
-            </svg>
-            Товар добавлен в корзину
-        </div>
-        <picture class="photo">
-            <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                    type="image/webp"
-            />
-            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                 alt="Товар"
-                 width="354"
-                 height="354"
-            />
-        </picture>
-        <div class="buttons">
-            <a href="#" class="btn btn-primary-fill" data-modal="one_click"><span>Быстрый заказ</span></a>
-            <a href="./basket.html" class="btn btn-secondary-stroke"><span>В корзину</span></a>
-        </div>
-        <div class="modal-foot">
-            <a href="#" class="modal-close">Вернуться к покупкам</a>
-        </div>
-    </section>
-
-    <section class="modal modal-important modal-callback">
-        <div class="modal-head">
-            <a href="#" class="modal-close">
-                <!-- SVG close-1 -->
-                <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                          fill="currentColor"></path>
-                </svg>
-            </a>
-        </div>
-        <div class="title">Хотите, мы перезвоним Вам?</div>
-        <div class="subtitle">Выберете удобное время и мы обязательно свяжемся с Вами</div>
-        <form action="#" class="form form-callback" method="post" autocomplete="off">
-            <div class="time">
-                <div class="label">Связаться в</div>
-                <div class="timer hours">
-                    <a href="#" class="change decrease" aria-label="Установить часы">10</a>
-                    <input type="text" name="hours" readonly="readonly" aria-label="Часы" class="input" value="11"/>
-                    <a href="#" class="change increase" aria-label="Установить часы">12</a>
-                </div>
-                <div class="timer minutes">
-                    <a href="#" class="change decrease" aria-label="Установить минуты">20</a>
-                    <input type="text" name="minutes" readonly="readonly" aria-label="Минуты" class="input" value="30"/>
-                    <a href="#" class="change increase" aria-label="Установить минуты">40</a>
+            <div class="title-wrap">
+                <div class="title">Вход</div>
+                <div class="leaf leaf-sm">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                         data-src="./images/modal-leaf.svg"
+                         class="lazyload"
+                         alt=""
+                         width="226"
+                         height="158"
+                    />
                 </div>
             </div>
-            <div class="phone">
-                <input type="tel" class="number" placeholder="+380 (99) 999 99 99" aria-label="Номер телефона"/>
+            <form action="#" class="form form-login" method="post" autocomplete="off">
+                <div class="row" data-txt="Телефон должен иметь формат +380 ХХ ХХХ ХХ ХХ" data-error="">
+                    <input type="tel" id="login-login" name="login-login" class="input"/>
+                    <label for="login-login" class="label">Логин</label>
+                </div>
+                <div class="row" data-txt="Длина пароля минимум 6 символов" data-error="">
+                    <input type="password" id="login-password" name="login-password" class="input pwd-input"/>
+                    <label for="login-password" class="label">Пароль</label>
+                    <button type="button" class="btn-pwd pwd-show">
+                        <!-- SVG eye -->
+                        <svg height="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"
+                                  fill="currentColor"></path>
+                        </svg>
+                    </button>
+                    <button type="button" class="btn-pwd pwd-hide d-none">
+                        <!-- SVG eye-slash -->
+                        <svg height="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                            <path d="M634 471L36 3.51A16 16 0 0 0 13.51 6l-10 12.49A16 16 0 0 0 6 41l598 467.49a16 16 0 0 0 22.49-2.49l10-12.49A16 16 0 0 0 634 471zM296.79 146.47l134.79 105.38C429.36 191.91 380.48 144 320 144a112.26 112.26 0 0 0-23.21 2.47zm46.42 219.07L208.42 260.16C210.65 320.09 259.53 368 320 368a113 113 0 0 0 23.21-2.46zM320 112c98.65 0 189.09 55 237.93 144a285.53 285.53 0 0 1-44 60.2l37.74 29.5a333.7 333.7 0 0 0 52.9-75.11 32.35 32.35 0 0 0 0-29.19C550.29 135.59 442.93 64 320 64c-36.7 0-71.71 7-104.63 18.81l46.41 36.29c18.94-4.3 38.34-7.1 58.22-7.1zm0 288c-98.65 0-189.08-55-237.93-144a285.47 285.47 0 0 1 44.05-60.19l-37.74-29.5a333.6 333.6 0 0 0-52.89 75.1 32.35 32.35 0 0 0 0 29.19C89.72 376.41 197.08 448 320 448c36.7 0 71.71-7.05 104.63-18.81l-46.41-36.28C359.28 397.2 339.89 400 320 400z"
+                                  fill="currentColor"></path>
+                        </svg>
+                    </button>
+                </div>
                 <button type="submit" class="btn btn-primary-fill submit">
-                    <span>Позвонить мне</span>
+                    <span>Войти</span>
                 </button>
+            </form>
+            <div class="modal-foot">
+                <a href="#" data-modal="register">Регистрация</a>
+                <a href="#" data-modal="reset">Забыли пароль?</a>
             </div>
-            <div class="checkbox-wrap">
+        </section>
+        <section class="modal modal-auth modal-important modal-register">
+            <div class="modal-head">
+                <a href="#" class="modal-close">
+                    <!-- SVG close-1 -->
+                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                              fill="currentColor"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="title-wrap">
+                <div class="title">Регистрация</div>
+                <div class="leaf leaf-sm">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                         data-src="./images/modal-leaf.svg"
+                         class="lazyload"
+                         alt=""
+                         width="226"
+                         height="158"
+                    />
+                </div>
+            </div>
+            <form action="#" class="form form-register" method="post" autocomplete="off">
+                <div class="row" data-txt="Телефон должен иметь формат +380 ХХ ХХХ ХХ ХХ" data-error="">
+                    <input type="tel" id="register-login" name="register-login" class="input"/>
+                    <label for="register-login" class="label">Телефон</label>
+                </div>
                 <!-- Галочка для НЕ авторизированных, если авторизован - поле телефон заполнено блока checkbox-agree нету -->
                 <div class="checkbox checkbox-agree">
-                    <input type="checkbox" id="callback-agree" name="callback-agree" checked="checked"/>
-                    <label for="callback-agree" class="non-select">Я согласен с&nbsp;</label>
+                    <input type="checkbox" id="register-agree" name="register-agree" checked="checked"/>
+                    <label for="register-agree" class="non-select">Я согласен с&nbsp;</label>
                     <a href="#" target="_blank">политикой конфиденциальности</a>
                 </div>
+                <button type="submit" class="btn btn-primary-fill submit" disabled="disabled">
+                    <span>Получить код</span>
+                </button>
+            </form>
+            <div class="modal-foot">
+                <a href="#" data-modal="reset">Забыли пароль?</a>
+                <a href="#" data-modal="login">Вход</a>
             </div>
-        </form>
-        <div class="modal-foot">
-            <a href="#" class="modal-close">Вернуться к покупкам</a>
-        </div>
-    </section>
+        </section>
+        <section class="modal modal-auth modal-important modal-reset">
+            <div class="modal-head">
+                <a href="#" class="modal-close">
+                    <!-- SVG close-1 -->
+                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                              fill="currentColor"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="title-wrap">
+                <div class="title">Сброс пароля</div>
+                <div class="leaf leaf-sm">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                         data-src="./images/modal-leaf.svg"
+                         class="lazyload"
+                         alt=""
+                         width="226"
+                         height="158"
+                    />
+                </div>
+            </div>
+            <form action="#" class="form form-reset" method="post" autocomplete="off">
+                <div class="row" data-txt="Телефон должен иметь формат +380 ХХ ХХХ ХХ ХХ" data-error="">
+                    <input type="tel" id="reset-login" name="reset-login" class="input"/>
+                    <label for="reset-login" class="label">Телефон</label>
+                </div>
+                <!-- Галочка для НЕ авторизированных, если авторизован - поле телефон заполнено блока checkbox-agree нету -->
+                <div class="checkbox checkbox-agree">
+                    <input type="checkbox" id="reset-agree" name="reset-agree" checked="checked"/>
+                    <label for="reset-agree" class="non-select">Я согласен с&nbsp;</label>
+                    <a href="#" target="_blank">политикой конфиденциальности</a>
+                </div>
+                <button type="submit" class="btn btn-primary-fill submit" disabled="disabled">
+                    <span>Получить код</span>
+                </button>
+            </form>
+            <div class="modal-foot">
+                <a href="#" data-modal="register">Регистрация</a>
+                <a href="#" data-modal="login">Вход</a>
+            </div>
+        </section>
+        <section class="modal modal-auth modal-important modal-password">
+            <div class="modal-head">
+                <a href="#" class="modal-close">
+                    <!-- SVG close-1 -->
+                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                              fill="currentColor"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="title-wrap">
+                <div class="title">Завершение</div>
+                <div class="leaf leaf-sm">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                         data-src="./images/modal-leaf.svg"
+                         class="lazyload"
+                         alt=""
+                         width="226"
+                         height="158"
+                    />
+                </div>
+            </div>
+            <form action="#" class="form form-password" method="post" autocomplete="off">
+                <div class="row" data-txt="Код 6 цифр" data-error="">
+                    <input type="number" id="password-code" name="password-code" class="input"/>
+                    <label for="password-code" class="label">Код подтверждения из смс</label>
+                </div>
+                <div class="row" data-txt="Длина пароля минимум 6 символов" data-error="">
+                    <input type="password" id="password-password" name="password-password" class="input pwd-input"/>
+                    <label for="password-password" class="label">Пароль</label>
+                    <button type="button" class="btn-pwd pwd-show">
+                        <!-- SVG eye -->
+                        <svg height="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"
+                                  fill="currentColor"></path>
+                        </svg>
+                    </button>
+                    <button type="button" class="btn-pwd pwd-hide d-none">
+                        <!-- SVG eye-slash -->
+                        <svg height="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                            <path d="M634 471L36 3.51A16 16 0 0 0 13.51 6l-10 12.49A16 16 0 0 0 6 41l598 467.49a16 16 0 0 0 22.49-2.49l10-12.49A16 16 0 0 0 634 471zM296.79 146.47l134.79 105.38C429.36 191.91 380.48 144 320 144a112.26 112.26 0 0 0-23.21 2.47zm46.42 219.07L208.42 260.16C210.65 320.09 259.53 368 320 368a113 113 0 0 0 23.21-2.46zM320 112c98.65 0 189.09 55 237.93 144a285.53 285.53 0 0 1-44 60.2l37.74 29.5a333.7 333.7 0 0 0 52.9-75.11 32.35 32.35 0 0 0 0-29.19C550.29 135.59 442.93 64 320 64c-36.7 0-71.71 7-104.63 18.81l46.41 36.29c18.94-4.3 38.34-7.1 58.22-7.1zm0 288c-98.65 0-189.08-55-237.93-144a285.47 285.47 0 0 1 44.05-60.19l-37.74-29.5a333.6 333.6 0 0 0-52.89 75.1 32.35 32.35 0 0 0 0 29.19C89.72 376.41 197.08 448 320 448c36.7 0 71.71-7.05 104.63-18.81l-46.41-36.28C359.28 397.2 339.89 400 320 400z"
+                                  fill="currentColor"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="row" data-txt="Пароли не совпадают" data-error="">
+                    <input type="password" id="password-confirm" name="password-confirm" class="input pwd-input"/>
+                    <label for="password-confirm" class="label">Пароль</label>
+                </div>
+                <button type="submit" class="btn btn-primary-fill submit">
+                    <span>Завершить</span>
+                </button>
+            </form>
+            <div class="modal-foot">
+                <a href="#" data-modal="register">Назад</a>
+            </div>
+        </section>
 
-    <section class="modal modal-favorite_del">
-        <div class="modal-head">
-            <a href="#" class="modal-close">
-                <!-- SVG close-1 -->
+        <section class="modal modal-important modal-one_click">
+            <div class="modal-head">
+                <a href="#" class="modal-close">
+                    <!-- SVG close-1 -->
+                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                              fill="currentColor"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="title">
+                Быстрый заказ
+            </div>
+            <form action="#" class="form form-one_click" method="post" autocomplete="off">
+                <input type="tel" class="number" placeholder="+380 (99) 999 99 99" aria-label="Номер телефона"/>
+                <!-- Галочка для НЕ авторизированных, если авторизован - поле телефон заполнено блока checkbox-agree нету -->
+                <div class="checkbox checkbox-agree">
+                    <input type="checkbox" id="one_click-agree" name="one_click-agree" checked="checked"/>
+                    <label for="one_click-agree" class="non-select">Я согласен с&nbsp;</label>
+                    <a href="#" target="_blank">политикой конфиденциальности</a>
+                </div>
+                <button type="submit" class="btn btn-primary-fill submit">
+                    <span>Отправить заказ</span>
+                </button>
+            </form>
+            <div class="modal-foot">
+                <a href="#" class="modal-close">Вернуться к покупкам</a>
+            </div>
+        </section>
+        <section class="modal modal-important modal-buy">
+            <div class="modal-head">
+                <a href="#" class="modal-close">
+                    <!-- SVG close-1 -->
+                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                              fill="currentColor"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="title">
+                <!-- SVG check -->
                 <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                    <path d="M14.0004 0C6.267 0 0 6.26847 0 14C0 21.7324 6.26778 28 14.0004 28C21.7322 28 28 21.7324 28 14C28 6.26935 21.7322 0 14.0004 0ZM14.0004 25.375C7.71778 25.375 2.62513 20.2825 2.62513 14C2.62513 7.71754 7.71866 2.62504 14.0004 2.62504C20.2822 2.62504 25.3749 7.71754 25.3749 14C25.3749 20.2825 20.2823 25.375 14.0004 25.375ZM19.5026 8.04476C18.9076 7.68954 18.1472 7.90038 17.8051 8.51725L13.1106 16.9496L10.496 13.7672C10.0226 13.2221 9.3935 12.9395 8.79933 13.2947C8.20428 13.6508 7.95838 14.5075 8.34347 15.057L11.9818 19.4854C12.2539 19.8389 12.5645 20.0507 12.8892 20.1111L12.8919 20.1164L12.9252 20.1181C12.9987 20.1295 14.0977 20.3325 14.5711 19.4855L19.9596 9.80716C20.3015 9.18922 20.0977 8.40086 19.5026 8.04476Z"
                           fill="currentColor"></path>
                 </svg>
-            </a>
-        </div>
-        <div class="title">
-            Вы уверены?
-        </div>
-        <form action="#" class="form form-favorite_del" method="post" autocomplete="off">
-            <input type="hidden" name="id" value="#"/>
-            <button type="submit" class="btn btn-danger-fill submit">
-                <span>Удалить</span>
-            </button>
-        </form>
-        <div class="modal-foot">
-            <a href="#" class="modal-close">Отмена</a>
-        </div>
-    </section>
+                Товар добавлен в корзину
+            </div>
+            <picture class="photo">
+                <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                        type="image/webp"
+                />
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     alt="Товар"
+                     width="354"
+                     height="354"
+                />
+            </picture>
+            <div class="buttons">
+                <a href="#" class="btn btn-primary-fill" data-modal="one_click"><span>Быстрый заказ</span></a>
+                <a href="./basket.html" class="btn btn-secondary-stroke"><span>В корзину</span></a>
+            </div>
+            <div class="modal-foot">
+                <a href="#" class="modal-close">Вернуться к покупкам</a>
+            </div>
+        </section>
 
-    <section class="modal modal-important modal-avatar_edit">
-        <div class="modal-head">
-            <label>
-                <span>Загрузить</span>
-                <input type="file" class="d-none" id="avatar-file"/>
-            </label>
-            <a href="#" class="modal-close">
-                <!-- SVG close-1 -->
-                <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                          fill="currentColor"></path>
-                </svg>
-            </a>
-        </div>
-        <div class="canvas unload">
-            <div id="avatar-upload"></div>
-        </div>
-        <div class="modal-foot">
-            <a href="#" class="avatar-save">Сохранить</a>
-            <a href="#" class="modal-close">Отмена</a>
-        </div>
-    </section>
-    <section class="modal modal-important modal-avatar_save">
-        <div class="modal-head">
-            <a href="#" class="modal-close">
-                <!-- SVG close-1 -->
-                <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                          fill="currentColor"></path>
-                </svg>
-            </a>
-        </div>
-        <div class="avatar">
-            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                 alt=""
-            />
-        </div>
-        <form action="#" class="form form-avatar_save" method="post" autocomplete="off">
-            <button type="submit" class="btn btn-primary-fill submit">
-                <span>Сохранить</span>
-            </button>
-        </form>
-        <div class="modal-foot">
-            <a href="#" data-modal="avatar_edit">Назад</a>
-        </div>
-    </section>
-    <section class="modal modal-avatar_del">
-        <div class="modal-head">
-            <a href="#" class="modal-close">
-                <!-- SVG close-1 -->
-                <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                          fill="currentColor"></path>
-                </svg>
-            </a>
-        </div>
-        <div class="title">
-            Вы уверены?
-        </div>
-        <form action="#" class="form form-avatar_del" method="post" autocomplete="off">
-            <button type="submit" class="btn btn-danger-fill submit">
-                <span>Удалить</span>
-            </button>
-        </form>
-        <div class="modal-foot">
-            <a href="#" class="modal-close">Отмена</a>
-        </div>
-    </section>
-
-    <section class="modal modal-picture">
-        <div class="modal-head">
-            <a href="#" class="modal-close">
-                <!-- SVG close-1 -->
-                <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                          fill="currentColor"></path>
-                </svg>
-            </a>
-        </div>
-        <picture>
-            <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                    type="image/webp"
-            />
-            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                 alt="Товар"
-                 width="700"
-                 height="700"
-            />
-        </picture>
-        <div class="modal-foot"></div>
-    </section>
-
-    <section class="modal modal-review modal-review_company">
-        <div class="modal-head">
-            <a href="#" class="modal-close">
-                <!-- SVG close-1 -->
-                <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                          fill="currentColor"></path>
-                </svg>
-            </a>
-        </div>
-        <div class="review-wrap">
-            <div class="title">Оставить отзыв</div>
-            <form action="#" method="post" class="form form-review_company">
-                <fieldset>
-                    <div class="row" data-txt="Укажите оценку" data-error="">
-                        <ul class="rating">
-                            <li>
-                                <label>
-                                    <input type="radio" name="rating" class="star" value="1"/>
-                                    <!-- SVG star -->
-                                    <svg height="16" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
-                                              fill="currentColor"></path>
-                                    </svg>
-                                </label>
-                            </li>
-                            <li>
-                                <label>
-                                    <input type="radio" name="rating" class="star" value="2"/>
-                                    <!-- SVG star -->
-                                    <svg height="16" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
-                                              fill="currentColor"></path>
-                                    </svg>
-                                </label>
-                            </li>
-                            <li>
-                                <label>
-                                    <input type="radio" name="rating" class="star" value="3"/>
-                                    <!-- SVG star -->
-                                    <svg height="16" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
-                                              fill="currentColor"></path>
-                                    </svg>
-                                </label>
-                            </li>
-                            <li>
-                                <label>
-                                    <input type="radio" name="rating" class="star" value="4"/>
-                                    <!-- SVG star -->
-                                    <svg height="16" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
-                                              fill="currentColor"></path>
-                                    </svg>
-                                </label>
-                            </li>
-                            <li>
-                                <label>
-                                    <input type="radio" name="rating" class="star" value="5"/>
-                                    <!-- SVG star -->
-                                    <svg height="16" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
-                                              fill="currentColor"></path>
-                                    </svg>
-                                </label>
-                            </li>
-                        </ul>
-                        <div class="text">
-                            Ваша оценка
-                        </div>
+        <section class="modal modal-important modal-callback">
+            <div class="modal-head">
+                <a href="#" class="modal-close">
+                    <!-- SVG close-1 -->
+                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                              fill="currentColor"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="title">Хотите, мы перезвоним Вам?</div>
+            <div class="subtitle">Выберете удобное время и мы обязательно свяжемся с Вами</div>
+            <form action="#" class="form form-callback" method="post" autocomplete="off">
+                <div class="time">
+                    <div class="label">Связаться в</div>
+                    <div class="timer hours">
+                        <a href="#" class="change decrease" aria-label="Установить часы">10</a>
+                        <input type="text" name="hours" readonly="readonly" aria-label="Часы" class="input" value="11"/>
+                        <a href="#" class="change increase" aria-label="Установить часы">12</a>
                     </div>
-                    <div class="row" data-txt="Минимум 6 символов" data-error="">
+                    <div class="timer minutes">
+                        <a href="#" class="change decrease" aria-label="Установить минуты">20</a>
+                        <input type="text" name="minutes" readonly="readonly" aria-label="Минуты" class="input" value="30"/>
+                        <a href="#" class="change increase" aria-label="Установить минуты">40</a>
+                    </div>
+                </div>
+                <div class="phone">
+                    <input type="tel" class="number" placeholder="+380 (99) 999 99 99" aria-label="Номер телефона"/>
+                    <button type="submit" class="btn btn-primary-fill submit">
+                        <span>Позвонить мне</span>
+                    </button>
+                </div>
+                <div class="checkbox-wrap">
+                    <!-- Галочка для НЕ авторизированных, если авторизован - поле телефон заполнено блока checkbox-agree нету -->
+                    <div class="checkbox checkbox-agree">
+                        <input type="checkbox" id="callback-agree" name="callback-agree" checked="checked"/>
+                        <label for="callback-agree" class="non-select">Я согласен с&nbsp;</label>
+                        <a href="#" target="_blank">политикой конфиденциальности</a>
+                    </div>
+                </div>
+            </form>
+            <div class="modal-foot">
+                <a href="#" class="modal-close">Вернуться к покупкам</a>
+            </div>
+        </section>
+
+        <section class="modal modal-favorite_del">
+            <div class="modal-head">
+                <a href="#" class="modal-close">
+                    <!-- SVG close-1 -->
+                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                              fill="currentColor"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="title">
+                Вы уверены?
+            </div>
+            <form action="#" class="form form-favorite_del" method="post" autocomplete="off">
+                <input type="hidden" name="id" value="#"/>
+                <button type="submit" class="btn btn-danger-fill submit">
+                    <span>Удалить</span>
+                </button>
+            </form>
+            <div class="modal-foot">
+                <a href="#" class="modal-close">Отмена</a>
+            </div>
+        </section>
+
+        <section class="modal modal-important modal-avatar_edit">
+            <div class="modal-head">
+                <label>
+                    <span>Загрузить</span>
+                    <input type="file" class="d-none" id="avatar-file"/>
+                </label>
+                <a href="#" class="modal-close">
+                    <!-- SVG close-1 -->
+                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                              fill="currentColor"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="canvas unload">
+                <div id="avatar-upload"></div>
+            </div>
+            <div class="modal-foot">
+                <a href="#" class="avatar-save">Сохранить</a>
+                <a href="#" class="modal-close">Отмена</a>
+            </div>
+        </section>
+        <section class="modal modal-important modal-avatar_save">
+            <div class="modal-head">
+                <a href="#" class="modal-close">
+                    <!-- SVG close-1 -->
+                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                              fill="currentColor"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="avatar">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     alt=""
+                />
+            </div>
+            <form action="#" class="form form-avatar_save" method="post" autocomplete="off">
+                <button type="submit" class="btn btn-primary-fill submit">
+                    <span>Сохранить</span>
+                </button>
+            </form>
+            <div class="modal-foot">
+                <a href="#" data-modal="avatar_edit">Назад</a>
+            </div>
+        </section>
+        <section class="modal modal-avatar_del">
+            <div class="modal-head">
+                <a href="#" class="modal-close">
+                    <!-- SVG close-1 -->
+                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                              fill="currentColor"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="title">
+                Вы уверены?
+            </div>
+            <form action="#" class="form form-avatar_del" method="post" autocomplete="off">
+                <button type="submit" class="btn btn-danger-fill submit">
+                    <span>Удалить</span>
+                </button>
+            </form>
+            <div class="modal-foot">
+                <a href="#" class="modal-close">Отмена</a>
+            </div>
+        </section>
+
+        <section class="modal modal-picture">
+            <div class="modal-head">
+                <a href="#" class="modal-close">
+                    <!-- SVG close-1 -->
+                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                              fill="currentColor"></path>
+                    </svg>
+                </a>
+            </div>
+            <picture>
+                <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                        type="image/webp"
+                />
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     alt="Товар"
+                     width="700"
+                     height="700"
+                />
+            </picture>
+            <div class="modal-foot"></div>
+        </section>
+
+        <section class="modal modal-review modal-review_company">
+            <div class="modal-head">
+                <a href="#" class="modal-close">
+                    <!-- SVG close-1 -->
+                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                              fill="currentColor"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="review-wrap">
+                <div class="title">Оставить отзыв</div>
+                <form action="#" method="post" class="form form-review_company">
+                    <fieldset>
+                        <div class="row" data-txt="Укажите оценку" data-error="">
+                            <ul class="rating">
+                                <li>
+                                    <label>
+                                        <input type="radio" name="rating" class="star" value="1"/>
+                                        <!-- SVG star -->
+                                        <svg height="16" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                                  fill="currentColor"></path>
+                                        </svg>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="rating" class="star" value="2"/>
+                                        <!-- SVG star -->
+                                        <svg height="16" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                                  fill="currentColor"></path>
+                                        </svg>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="rating" class="star" value="3"/>
+                                        <!-- SVG star -->
+                                        <svg height="16" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                                  fill="currentColor"></path>
+                                        </svg>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="rating" class="star" value="4"/>
+                                        <!-- SVG star -->
+                                        <svg height="16" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                                  fill="currentColor"></path>
+                                        </svg>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="rating" class="star" value="5"/>
+                                        <!-- SVG star -->
+                                        <svg height="16" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                                                  fill="currentColor"></path>
+                                        </svg>
+                                    </label>
+                                </li>
+                            </ul>
+                            <div class="text">
+                                Ваша оценка
+                            </div>
+                        </div>
+                        <div class="row" data-txt="Минимум 6 символов" data-error="">
                         <textarea class="textarea" name="review_company-message" id="review_company-message" rows="8"
                                   placeholder="Ваш отзыв" aria-label="Ваш отзыв"
                         ></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary-fill">
-                        <span>Оставить отзыв</span>
-                    </button>
-                </fieldset>
-            </form>
-        </div>
-        <div class="modal-foot"></div>
-    </section>
-    <section class="modal modal-review modal-review_product">
-        <div class="modal-head">
-            <a href="#" class="modal-close">
-                <!-- SVG close-1 -->
-                <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                          fill="currentColor"></path>
-                </svg>
-            </a>
-        </div>
-        <div class="review-wrap">
-            <div class="title">Оставить отзыв</div>
-            <form action="#" method="post" class="form form-review_product">
-                <fieldset>
-                    <div class="row" data-txt="Минимум 6 символов" data-error="">
+                        </div>
+                        <button type="submit" class="btn btn-primary-fill">
+                            <span>Оставить отзыв</span>
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="modal-foot"></div>
+        </section>
+        <section class="modal modal-review modal-review_product">
+            <div class="modal-head">
+                <a href="#" class="modal-close">
+                    <!-- SVG close-1 -->
+                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                              fill="currentColor"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="review-wrap">
+                <div class="title">Оставить отзыв</div>
+                <form action="#" method="post" class="form form-review_product">
+                    <fieldset>
+                        <div class="row" data-txt="Минимум 6 символов" data-error="">
                         <textarea class="textarea" name="review_product-message" id="review_product-message" rows="8"
                                   placeholder="Ваш отзыв" aria-label="Ваш отзыв"
                         ></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary-fill">
-                        <span>Оставить отзыв</span>
-                    </button>
-                </fieldset>
-            </form>
-        </div>
-        <div class="modal-foot"></div>
-    </section>
+                        </div>
+                        <button type="submit" class="btn btn-primary-fill">
+                            <span>Оставить отзыв</span>
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="modal-foot"></div>
+        </section>
 
-    <section class="modal modal-message modal-review_auth">
-        <div class="modal-head">
-            <a href="#" class="modal-close">
-                <!-- SVG close-1 -->
-                <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                          fill="currentColor"></path>
-                </svg>
-            </a>
-        </div>
-        <div class="title">Авторизуйтесь!</div>
-        <div class="subtitle">Чтобы оставить отзыв</div>
-        <div class="leaf leaf-lg">
-            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                 data-src="./images/modal-leaf.svg"
-                 class="lazyload"
-                 alt=""
-                 width="400"
-                 height="280"
-            />
-        </div>
-        <div class="modal-foot">
-            <a href="#" data-modal="register">Регистрация</a>
-            <a href="#" data-modal="login">Вход</a>
-        </div>
-    </section>
-    <section class="modal modal-message modal-important modal-buy_done">
-        <div class="modal-head">
-            <a href="#" class="modal-close">
-                <!-- SVG close-1 -->
-                <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                          fill="currentColor"></path>
-                </svg>
-            </a>
-        </div>
-        <div class="title">Спасибо за покупку! :)</div>
-        <div class="subtitle">Ваш заказ №<span></span> уже обрабатывается</div>
-        <div class="leaf leaf-lg">
-            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                 data-src="./images/modal-leaf.svg"
-                 class="lazyload"
-                 alt=""
-                 width="400"
-                 height="280"
-            />
-        </div>
-        <div class="modal-foot">
-            <a href="./promotions.html">Посмотреть акции</a>
-            <a href="./subscribe.html">Подписаться</a>
-        </div>
-    </section>
-    <section class="modal modal-message modal-review_done">
-        <div class="modal-head">
-            <a href="#" class="modal-close">
-                <!-- SVG close-1 -->
-                <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                          fill="currentColor"></path>
-                </svg>
-            </a>
-        </div>
-        <div class="title">Спасибо! :)</div>
-        <div class="subtitle">Ваш отзыв появится после проверки модератором</div>
-        <div class="leaf leaf-lg">
-            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                 data-src="./images/modal-leaf.svg"
-                 class="lazyload"
-                 alt=""
-                 width="400"
-                 height="280"
-            />
-        </div>
-        <div class="modal-foot">
-            <a href="#" class="modal-close">Вернуться к покупкам</a>
-        </div>
-    </section>
-    <section class="modal modal-message modal-callback_done">
-        <div class="modal-head">
-            <a href="#" class="modal-close">
-                <!-- SVG close-1 -->
-                <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                          fill="currentColor"></path>
-                </svg>
-            </a>
-        </div>
-        <div class="title">Спасибо за обращение! :)</div>
-        <div class="leaf leaf-lg">
-            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                 data-src="./images/modal-leaf.svg"
-                 class="lazyload"
-                 alt=""
-                 width="400"
-                 height="280"
-            />
-        </div>
-        <div class="modal-foot">
-            <a href="#" class="modal-close">Вернуться к покупкам</a>
-        </div>
-    </section>
-    <section class="modal modal-message modal-feedback_done">
-        <div class="modal-head">
-            <a href="#" class="modal-close">
-                <!-- SVG close-1 -->
-                <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                          fill="currentColor"></path>
-                </svg>
-            </a>
-        </div>
-        <div class="title">Спасибо за сообщение! :)</div>
-        <div class="leaf leaf-lg">
-            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                 data-src="./images/modal-leaf.svg"
-                 class="lazyload"
-                 alt=""
-                 width="400"
-                 height="280"
-            />
-        </div>
-        <div class="modal-foot">
-            <a href="index.html" class="modal-close">Вернуться к покупкам</a>
-        </div>
-    </section>
-    <section class="modal modal-message modal-basket_empty">
-        <div class="modal-head">
-            <a href="#" class="modal-close">
-                <!-- SVG close-1 -->
-                <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                          fill="currentColor"></path>
-                </svg>
-            </a>
-        </div>
-        <div class="title">Ваша корзина пуста :(</div>
-        <div class="leaf leaf-lg">
-            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                 data-src="./images/modal-leaf.svg"
-                 class="lazyload"
-                 alt=""
-                 width="400"
-                 height="280"
-            />
-        </div>
-        <div class="modal-foot">
-            <a href="#" class="modal-close">Вернуться к покупкам</a>
-        </div>
-    </section>
-    <section class="modal modal-message modal-favorites">
-        <div class="modal-head">
-            <a href="#" class="modal-close">
-                <!-- SVG close-1 -->
-                <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                          fill="currentColor"></path>
-                </svg>
-            </a>
-        </div>
-        <div class="title">Авторизуйтесь</div>
-        <div class="subtitle">Чтобы получить доступ к списку желаний</div>
-        <div class="leaf leaf-lg">
-            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                 data-src="./images/modal-leaf.svg"
-                 class="lazyload"
-                 alt=""
-                 width="400"
-                 height="280"
-            />
-        </div>
-        <div class="modal-foot">
-            <a href="#" data-modal="register">Регистрация</a>
-            <a href="#" data-modal="login">Вход</a>
-        </div>
-    </section>
-    <section class="modal modal-message modal-subscribe_done">
-        <div class="modal-head">
-            <a href="#" class="modal-close">
-                <!-- SVG close-1 -->
-                <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                          fill="currentColor"></path>
-                </svg>
-            </a>
-        </div>
-        <div class="title">Поздравляем! :)</div>
-        <div class="subtitle">Вы успешно подписались на рассылки</div>
-        <div class="leaf leaf-lg">
-            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                 data-src="./images/modal-leaf.svg"
-                 class="lazyload"
-                 alt=""
-                 width="400"
-                 height="280"
-            />
-        </div>
-        <div class="modal-foot">
-            <a href="#" class="modal-close">Назад</a>
-        </div>
-    </section>
-    <section class="modal modal-message modal-unsubscribe_done">
-        <div class="modal-head">
-            <a href="#" class="modal-close">
-                <!-- SVG close-1 -->
-                <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                          fill="currentColor"></path>
-                </svg>
-            </a>
-        </div>
-        <div class="title">Поздравляем! :)</div>
-        <div class="subtitle">Вы успешно отписались от рассылки</div>
-        <div class="leaf leaf-lg">
-            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                 data-src="./images/modal-leaf.svg"
-                 class="lazyload"
-                 alt=""
-                 width="400"
-                 height="280"
-            />
-        </div>
-        <div class="modal-foot">
-            <a href="#" class="modal-close">Назад</a>
-        </div>
-    </section>
-    <section class="modal modal-message modal-profile_done">
-        <div class="modal-head">
-            <a href="#" class="modal-close">
-                <!-- SVG close-1 -->
-                <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                          fill="currentColor"></path>
-                </svg>
-            </a>
-        </div>
-        <div class="title">Поздравляем! :)</div>
-        <div class="subtitle">Вы успешно изменили профиль</div>
-        <div class="leaf leaf-lg">
-            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                 data-src="./images/modal-leaf.svg"
-                 class="lazyload"
-                 alt=""
-                 width="400"
-                 height="280"
-            />
-        </div>
-        <div class="modal-foot">
-            <a href="#" class="modal-close">Назад</a>
-        </div>
-    </section>
-    <section class="modal modal-message modal-error">
-        <div class="modal-head">
-            <a href="#" class="modal-close">
-                <!-- SVG close-1 -->
-                <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                          fill="currentColor"></path>
-                </svg>
-            </a>
-        </div>
-        <div class="title">Ошибка соединения :(</div>
-        <div class="leaf leaf-lg">
-            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                 data-src="./images/modal-leaf-error.svg"
-                 class="lazyload"
-                 alt=""
-                 width="400"
-                 height="280"
-            />
-        </div>
-        <div class="subtitle">Попробуйте позже</div>
-        <div class="modal-foot">
-            <a href="#" class="modal-close">Закрыть</a>
-        </div>
-    </section>
+        <section class="modal modal-message modal-review_auth">
+            <div class="modal-head">
+                <a href="#" class="modal-close">
+                    <!-- SVG close-1 -->
+                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                              fill="currentColor"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="title">Авторизуйтесь!</div>
+            <div class="subtitle">Чтобы оставить отзыв</div>
+            <div class="leaf leaf-lg">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     data-src="./images/modal-leaf.svg"
+                     class="lazyload"
+                     alt=""
+                     width="400"
+                     height="280"
+                />
+            </div>
+            <div class="modal-foot">
+                <a href="#" data-modal="register">Регистрация</a>
+                <a href="#" data-modal="login">Вход</a>
+            </div>
+        </section>
+        <section class="modal modal-message modal-important modal-buy_done">
+            <div class="modal-head">
+                <a href="#" class="modal-close">
+                    <!-- SVG close-1 -->
+                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                              fill="currentColor"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="title">Спасибо за покупку! :)</div>
+            <div class="subtitle">Ваш заказ №<span></span> уже обрабатывается</div>
+            <div class="leaf leaf-lg">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     data-src="./images/modal-leaf.svg"
+                     class="lazyload"
+                     alt=""
+                     width="400"
+                     height="280"
+                />
+            </div>
+            <div class="modal-foot">
+                <a href="./promotions.html">Посмотреть акции</a>
+                <a href="./subscribe.html">Подписаться</a>
+            </div>
+        </section>
+        <section class="modal modal-message modal-review_done">
+            <div class="modal-head">
+                <a href="#" class="modal-close">
+                    <!-- SVG close-1 -->
+                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                              fill="currentColor"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="title">Спасибо! :)</div>
+            <div class="subtitle">Ваш отзыв появится после проверки модератором</div>
+            <div class="leaf leaf-lg">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     data-src="./images/modal-leaf.svg"
+                     class="lazyload"
+                     alt=""
+                     width="400"
+                     height="280"
+                />
+            </div>
+            <div class="modal-foot">
+                <a href="#" class="modal-close">Вернуться к покупкам</a>
+            </div>
+        </section>
+        <section class="modal modal-message modal-callback_done">
+            <div class="modal-head">
+                <a href="#" class="modal-close">
+                    <!-- SVG close-1 -->
+                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                              fill="currentColor"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="title">Спасибо за обращение! :)</div>
+            <div class="leaf leaf-lg">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     data-src="./images/modal-leaf.svg"
+                     class="lazyload"
+                     alt=""
+                     width="400"
+                     height="280"
+                />
+            </div>
+            <div class="modal-foot">
+                <a href="#" class="modal-close">Вернуться к покупкам</a>
+            </div>
+        </section>
+        <section class="modal modal-message modal-feedback_done">
+            <div class="modal-head">
+                <a href="#" class="modal-close">
+                    <!-- SVG close-1 -->
+                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                              fill="currentColor"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="title">Спасибо за сообщение! :)</div>
+            <div class="leaf leaf-lg">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     data-src="./images/modal-leaf.svg"
+                     class="lazyload"
+                     alt=""
+                     width="400"
+                     height="280"
+                />
+            </div>
+            <div class="modal-foot">
+                <a href="index.html" class="modal-close">Вернуться к покупкам</a>
+            </div>
+        </section>
+        <section class="modal modal-message modal-basket_empty">
+            <div class="modal-head">
+                <a href="#" class="modal-close">
+                    <!-- SVG close-1 -->
+                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                              fill="currentColor"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="title">Ваша корзина пуста :(</div>
+            <div class="leaf leaf-lg">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     data-src="./images/modal-leaf.svg"
+                     class="lazyload"
+                     alt=""
+                     width="400"
+                     height="280"
+                />
+            </div>
+            <div class="modal-foot">
+                <a href="#" class="modal-close">Вернуться к покупкам</a>
+            </div>
+        </section>
+        <section class="modal modal-message modal-favorites">
+            <div class="modal-head">
+                <a href="#" class="modal-close">
+                    <!-- SVG close-1 -->
+                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                              fill="currentColor"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="title">Авторизуйтесь</div>
+            <div class="subtitle">Чтобы получить доступ к списку желаний</div>
+            <div class="leaf leaf-lg">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     data-src="./images/modal-leaf.svg"
+                     class="lazyload"
+                     alt=""
+                     width="400"
+                     height="280"
+                />
+            </div>
+            <div class="modal-foot">
+                <a href="#" data-modal="register">Регистрация</a>
+                <a href="#" data-modal="login">Вход</a>
+            </div>
+        </section>
+        <section class="modal modal-message modal-subscribe_done">
+            <div class="modal-head">
+                <a href="#" class="modal-close">
+                    <!-- SVG close-1 -->
+                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                              fill="currentColor"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="title">Поздравляем! :)</div>
+            <div class="subtitle">Вы успешно подписались на рассылки</div>
+            <div class="leaf leaf-lg">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     data-src="./images/modal-leaf.svg"
+                     class="lazyload"
+                     alt=""
+                     width="400"
+                     height="280"
+                />
+            </div>
+            <div class="modal-foot">
+                <a href="#" class="modal-close">Назад</a>
+            </div>
+        </section>
+        <section class="modal modal-message modal-unsubscribe_done">
+            <div class="modal-head">
+                <a href="#" class="modal-close">
+                    <!-- SVG close-1 -->
+                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                              fill="currentColor"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="title">Поздравляем! :)</div>
+            <div class="subtitle">Вы успешно отписались от рассылки</div>
+            <div class="leaf leaf-lg">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     data-src="./images/modal-leaf.svg"
+                     class="lazyload"
+                     alt=""
+                     width="400"
+                     height="280"
+                />
+            </div>
+            <div class="modal-foot">
+                <a href="#" class="modal-close">Назад</a>
+            </div>
+        </section>
+        <section class="modal modal-message modal-profile_done">
+            <div class="modal-head">
+                <a href="#" class="modal-close">
+                    <!-- SVG close-1 -->
+                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                              fill="currentColor"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="title">Поздравляем! :)</div>
+            <div class="subtitle">Вы успешно изменили профиль</div>
+            <div class="leaf leaf-lg">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     data-src="./images/modal-leaf.svg"
+                     class="lazyload"
+                     alt=""
+                     width="400"
+                     height="280"
+                />
+            </div>
+            <div class="modal-foot">
+                <a href="#" class="modal-close">Назад</a>
+            </div>
+        </section>
+        <section class="modal modal-message modal-error">
+            <div class="modal-head">
+                <a href="#" class="modal-close">
+                    <!-- SVG close-1 -->
+                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                              fill="currentColor"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="title">Ошибка соединения :(</div>
+            <div class="leaf leaf-lg">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     data-src="./images/modal-leaf-error.svg"
+                     class="lazyload"
+                     alt=""
+                     width="400"
+                     height="280"
+                />
+            </div>
+            <div class="subtitle">Попробуйте позже</div>
+            <div class="modal-foot">
+                <a href="#" class="modal-close">Закрыть</a>
+            </div>
+        </section>
+    </div>
 </div>
 <script src="js/plugins/jquery-3.5.1.slim.min.js"></script>
 <script src="js/plugins/croppie.min.js"></script>
