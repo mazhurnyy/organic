@@ -196,9 +196,11 @@ $(function () {
                 })
                 .then(function (response) {
                     position_obj.remove();
+                    $(".summary-total span").text(response.data);
                 })
                 .catch(function (error) {
                     position_obj.remove();
+                    $(".summary-total span").text(500);
                     return;
 
                     submitOn($(that));
