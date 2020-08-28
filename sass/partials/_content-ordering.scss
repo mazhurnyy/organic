@@ -56,8 +56,41 @@
           min-height: 101px;
         }
 
-        select {
-          cursor: pointer;
+        .row {
+          display: block;
+          position: relative;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 25px;
+            right: 0;
+            height: 50px;
+            left: 0;
+            background-color: $color-white;
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 25px;
+            right: 18px;
+            width: 10px;
+            height: 50px;
+            background-color: $color-white;
+            background-image: url(../images/select-dropdown.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+
+          select {
+            position: relative;
+            background-color: transparent;
+            cursor: pointer;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            z-index: 1;
+          }
         }
 
         .locality {

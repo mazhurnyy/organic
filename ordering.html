@@ -293,22 +293,27 @@
                         <fieldset>
                             <h2>Оплата и доставка</h2>
 
-                            <label for="ordering-payment">Способ оплаты: *</label>
-                            <select class="input" id="ordering-payment" name="ordering-payment">
-                                <option disabled="disabled" selected="selected" value="">Выберите способ оплаты</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                            </select>
+                            <div class="row">
+                                <label for="ordering-payment">Способ оплаты: *</label>
+                                <select class="input" id="ordering-payment" name="ordering-payment">
+                                    <option disabled="disabled" selected="selected" value="">Выберите способ оплаты
+                                    </option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                </select>
+                            </div>
 
-                            <label for="ordering-delivery">Способ доставки: *</label>
-                            <select class="input" id="ordering-delivery" name="ordering-delivery">
-                                <option disabled="disabled" selected="selected" value="">
-                                    Выберите способ доставки
-                                </option>
-                                <option value="novaposhta">Новая почта</option>
-                                <option value="justin">Justin</option>
-                                <option value="ukrposhta">Укрпочта</option>
-                            </select>
+                            <div class="row">
+                                <label for="ordering-delivery">Способ доставки: *</label>
+                                <select class="input" id="ordering-delivery" name="ordering-delivery">
+                                    <option disabled="disabled" selected="selected" value="">
+                                        Выберите способ доставки
+                                    </option>
+                                    <option value="novaposhta">Новая почта</option>
+                                    <option value="justin">Justin</option>
+                                    <option value="ukrposhta">Укрпочта</option>
+                                </select>
+                            </div>
 
                             <div class="d-none" id="services-delivery">
                                 <label data-error="" data-txt="(нет такого города в базе)"
@@ -888,7 +893,8 @@
                     </div>
                     <div class="timer minutes">
                         <a href="#" class="change decrease" aria-label="Установить минуты">20</a>
-                        <input type="text" name="minutes" readonly="readonly" aria-label="Минуты" class="input" value="30"/>
+                        <input type="text" name="minutes" readonly="readonly" aria-label="Минуты" class="input"
+                               value="30"/>
                         <a href="#" class="change increase" aria-label="Установить минуты">40</a>
                     </div>
                 </div>

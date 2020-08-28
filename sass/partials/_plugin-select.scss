@@ -19,8 +19,8 @@
 
 .select2-container .select2-selection--single .select2-selection__rendered {
   display: block;
-  padding-left: 16px;
-  padding-right: 20px;
+  padding-left: 18px;
+  padding-right: 40px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -198,7 +198,7 @@
   position: absolute;
   top: 1px;
   right: 1px;
-  width: 20px;
+  width: 40px;
 }
 
 .select2-container--default[dir="rtl"] .select2-selection--single .select2-selection__clear {
@@ -453,16 +453,14 @@
 
 .select2-container--classic .select2-selection--single .select2-selection__arrow b,
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
-  border-color: #888 transparent transparent transparent;
-  border-style: solid;
-  border-width: 5px 4px 0 4px;
-  height: 0;
-  left: 50%;
-  margin-left: -4px;
-  margin-top: -2px;
   position: absolute;
-  top: 50%;
-  width: 0;
+  top: 0;
+  bottom: 0;
+  right: 2px;
+  left: 0;
+  background-image: url(../images/select-dropdown.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .select2-container--classic[dir="rtl"] .select2-selection--single .select2-selection__clear {
