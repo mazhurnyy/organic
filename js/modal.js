@@ -3,7 +3,7 @@ $(function () {
         .on("click", "#shadow", function (e) {
             const
                 shadow = document.getElementById("shadow"),
-                wrapper = document.getElementsByClassName("modal-wrapper")
+                wrapper = document.getElementsByClassName("modal-wrapper")[0]
             ;
             if ((e.target === shadow || e.target === wrapper) && !$(".modal.open").hasClass("modal-important")) {
                 modalClose();

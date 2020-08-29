@@ -196,7 +196,7 @@ $(function () {
                 })
                 .then(function (response) {
                     position_obj.remove();
-                    $(".summary-total span").text(response.data);
+                    $(".summary-total span").text(response.data.total);
                 })
                 .catch(function (error) {
                     position_obj.remove();

@@ -619,17 +619,17 @@
 
       &.modal-picture {
         max-width: 760px;
+        overflow: hidden;
 
         @media (max-width: 767px) {
           max-width: 720px;
         }
 
-        // todo
-        @media (max-height: 788px) and (min-width: 768px) and (min-aspect-ratio: 760 / 790) {
+        @media (max-height: 787px) and (min-width: 768px) and (min-aspect-ratio: 760 / 788) {
           max-width: calc(100vh - 28px);
         }
 
-        @media (max-height: 748px) and (max-width: 767px) and (min-aspect-ratio: 720 / 790) {
+        @media (max-height: 747px) and (max-width: 767px) and (min-aspect-ratio: 720 / 748) {
           max-width: calc(100vh - 28px);
         }
       }

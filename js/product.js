@@ -23,7 +23,7 @@ $(function () {
         })
         .on("click", ".top .photo-open", function () {
             const wrapper = $("#wrapper");
-            if (wrapper.outerWidth() < 768 || wrapper.outerHeight() < 768) return false;
+            if (wrapper.outerWidth() < 768 || wrapper.outerHeight() < 560 || mobile) return false;
 
             modalOpen("picture");
         })
