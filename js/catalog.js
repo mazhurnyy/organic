@@ -34,6 +34,7 @@ $(function () {
                         src_md: "./contents/product-0.png",
                         srcset_md: "./contents/product-0.webp",
                         text: "Сыворотка для шеи, декольте и бьюста",
+                        old_price: "100",
                         price: "100",
                         in_basket: true,
                         in_favorites: false,
@@ -48,6 +49,7 @@ $(function () {
                         src_md: "./contents/product-1.png",
                         srcset_md: "./contents/product-1.webp",
                         text: "Сыворотка для шеи, декольте и бьюста",
+                        old_price: "250",
                         price: "200",
                         in_basket: false,
                         in_favorites: true,
@@ -62,6 +64,7 @@ $(function () {
                         src_md: "./contents/product-2.png",
                         srcset_md: "./contents/product-2.webp",
                         text: "Сыворотка для шеи, декольте и бьюста",
+                        old_price: "120",
                         price: "120",
                         in_basket: true,
                         in_favorites: false,
@@ -76,6 +79,7 @@ $(function () {
                         src_md: "./contents/product-3.png",
                         srcset_md: "./contents/product-3.webp",
                         text: "Сыворотка для шеи, декольте и бьюста",
+                        old_price: "280",
                         price: "220",
                         in_basket: false,
                         in_favorites: true,
@@ -90,6 +94,7 @@ $(function () {
                         src_md: "./contents/product-4.png",
                         srcset_md: "./contents/product-4.webp",
                         text: "Сыворотка для шеи, декольте и бьюста",
+                        old_price: "270",
                         price: "270",
                         in_basket: true,
                         in_favorites: false,
@@ -104,6 +109,7 @@ $(function () {
                         src_md: "./contents/product-5.png",
                         srcset_md: "./contents/product-5.webp",
                         text: "Сыворотка для шеи, декольте и бьюста",
+                        old_price: "330",
                         price: "300",
                         in_basket: false,
                         in_favorites: true,
@@ -118,6 +124,7 @@ $(function () {
                         src_md: "./contents/product-0.png",
                         srcset_md: "./contents/product-0.webp",
                         text: "Сыворотка для шеи, декольте и бьюста",
+                        old_price: "100",
                         price: "100",
                         in_basket: true,
                         in_favorites: false,
@@ -132,6 +139,7 @@ $(function () {
                         src_md: "./contents/product-1.png",
                         srcset_md: "./contents/product-1.webp",
                         text: "Сыворотка для шеи, декольте и бьюста",
+                        old_price: "250",
                         price: "200",
                         in_basket: false,
                         in_favorites: true,
@@ -146,6 +154,7 @@ $(function () {
                         src_md: "./contents/product-2.png",
                         srcset_md: "./contents/product-2.webp",
                         text: "Сыворотка для шеи, декольте и бьюста",
+                        old_price: "120",
                         price: "120",
                         in_basket: true,
                         in_favorites: false,
@@ -160,6 +169,7 @@ $(function () {
                         src_md: "./contents/product-3.png",
                         srcset_md: "./contents/product-3.webp",
                         text: "Сыворотка для шеи, декольте и бьюста",
+                        old_price: "270",
                         price: "220",
                         in_basket: false,
                         in_favorites: true,
@@ -174,6 +184,7 @@ $(function () {
                         src_md: "./contents/product-4.png",
                         srcset_md: "./contents/product-4.webp",
                         text: "Сыворотка для шеи, декольте и бьюста",
+                        old_price: "270",
                         price: "270",
                         in_basket: true,
                         in_favorites: false,
@@ -188,6 +199,7 @@ $(function () {
                         src_md: "./contents/product-5.png",
                         srcset_md: "./contents/product-5.webp",
                         text: "Сыворотка для шеи, декольте и бьюста",
+                        old_price: "360",
                         price: "300",
                         in_basket: false,
                         in_favorites: true,
@@ -207,18 +219,21 @@ $(function () {
 
                     if (parseInt(obj.sale) === 0) {
                         card.find(".sale").remove();
+                        card.find(".old-price").remove();
                     } else {
                         card.find(".sale").text("-" + obj.sale + "%");
+                        card.find(".old-price").text(obj.old_price);
                         card.find(".new").remove();
                     }
 
+                    card.find(".card").removeClass(obj.in_basket ? "basket-add" : "added");
                     card.find(".like").removeClass(obj.in_favorites ? "favorite-add" : "added").attr("data-id", obj.id);
                     card.find(".photo").attr("href", obj.link);
                     card.find(".photo source").attr("data-srcset", obj.srcset_sm).attr("data-source", obj.srcset_md);
                     card.find(".photo img").attr("data-src", obj.src_sm).attr("data-source", obj.src_md)
                         .attr("alt", obj.text).attr("data-id", obj.id);
                     card.find(".text").text(obj.text).attr("title", obj.text).attr("href", obj.link);
-                    card.find(".buy").removeClass(obj.in_basket ? "basket-add" : "added").attr("data-id", obj.id);
+                    card.find(".buy").attr("data-id", obj.id);
                     card.find(".price").text(obj.price);
 
                     card.appendTo("#content-catalog .grid");

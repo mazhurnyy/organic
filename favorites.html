@@ -115,7 +115,8 @@
                         </li>
                         <li>
                             <!-- Если корзина пуста - basket-add, если не пустая - added -->
-                            <a href="./basket.html" class="bag basket-add" aria-label="Корзина" id="header-bag">
+                            <a aria-label="Корзина" class="bag basket-add" data-quantity="0" href="./basket.html"
+                               id="header-bag">
                                 <!-- SVG bag-1 -->
                                 <svg height="25" viewBox="0 0 21 26" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M19.9955 22.1104L18.6363 5.9908C18.6072 5.63292 18.3208 5.36196 17.9858 5.36196H15.1897C15.1509 2.6728 13.0635 0.5 10.5004 0.5C7.93727 0.5 5.84989 2.6728 5.81106 5.36196H3.01494C2.67514 5.36196 2.38835 5.69427 2.35922 6.05215L1 22.1718C1 22.1513 1 22.1922 1 22.1718C1 24.0072 2.59747 25.5 4.56349 25.5H16.4373C18.4033 25.5 20.0004 24.0072 20.0004 22.1718C20.0004 22.1513 20.0004 22.1309 19.9955 22.1104ZM10.5004 1.88037C12.3402 1.88037 13.8402 3.43456 13.879 5.36196H7.12174C7.16057 3.43456 8.66057 1.88037 10.5004 1.88037ZM16.4373 24.1196H4.56349C3.33048 24.1196 2.33048 23.2607 2.31106 22.2025L3.61203 6.74744H5.80621V8.84356C5.80621 9.22699 6.09747 9.53374 6.46155 9.53374C6.82562 9.53374 7.11689 9.22699 7.11689 8.84356V6.74744H13.879V8.84356C13.879 9.22699 14.1703 9.53374 14.5344 9.53374C14.8984 9.53374 15.1897 9.22699 15.1897 8.84356V6.74744H17.3839L18.6897 22.2025C18.6703 23.2607 17.6654 24.1196 16.4373 24.1196Z"
@@ -287,7 +288,8 @@
                     <!-- Если избранное не пусто -->
                     <ul class="grid column-3 card-favorite" data-amount="10">
                         <li class="cell">
-                            <div class="card">
+                            <!-- Если в корзине, то класс added, иначе basket-add -->
+                            <div class="card added">
                                 <a href="./product.html" class="photo">
                                     <!-- Метка новинки -->
                                     <div class="new">
@@ -318,9 +320,12 @@
                                 <a href="./product.html" class="text" title="Сыворотка для шеи, декольте и бьюста">
                                     Сыворотка для шеи, декольте и бьюста
                                 </a>
-                                <div class="price" data-unit="грн">114</div>
-                                <!-- Если в корзине, то класс added, data-id -->
-                                <a href="./basket.html" class="btn btn-primary-fill buy added" data-id="1"
+                                <div class="prices">
+                                    <div class="old-price" data-unit="грн">200</div>
+                                    <div class="price" data-unit="грн">114</div>
+                                </div>
+                                <!-- data-id -->
+                                <a class="btn btn-primary-fill buy" data-id="1" href="./basket.html"
                                    data-quantity="1">
                                     <span class="basket">Купить</span>
                                     <span class="bag">В корзине</span>
@@ -337,7 +342,7 @@
                             </div>
                         </li>
                         <li class="cell">
-                            <div class="card">
+                            <div class="card basket-add">
                                 <a href="./product.html" class="photo">
                                     <picture>
                                         <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
@@ -361,9 +366,11 @@
                                    title="Шампунь тонизирующий для всех типов волос">
                                     Шампунь тонизирующий для всех типов волос
                                 </a>
-                                <div class="price" data-unit="грн">89</div>
-                                <!-- Модальное окно, если не в корзине, basket-add, data-id -->
-                                <a href="./basket.html" class="btn btn-primary-fill buy basket-add" data-id="2"
+                                <div class="prices">
+                                    <div class="price" data-unit="грн">89</div>
+                                </div>
+                                <!-- data-id -->
+                                <a class="btn btn-primary-fill buy" data-id="2" href="./basket.html"
                                    data-quantity="1">
                                     <span class="basket">Купить</span>
                                     <span class="bag">В корзине</span>
@@ -380,7 +387,7 @@
                             </div>
                         </li>
                         <li class="cell">
-                            <div class="card">
+                            <div class="card basket-add">
                                 <a href="./product.html" class="photo">
                                     <picture>
                                         <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
@@ -403,9 +410,11 @@
                                 <a href="./product.html" class="text" title="Для интимной гигиены “Деликат”">
                                     Для интимной гигиены “Деликат”
                                 </a>
-                                <div class="price" data-unit="грн">135</div>
-                                <!-- Модальное окно, если не в корзине, data-id -->
-                                <a href="./basket.html" class="btn btn-primary-fill buy basket-add" data-id="3"
+                                <div class="prices">
+                                    <div class="price" data-unit="грн">135</div>
+                                </div>
+                                <!-- data-id -->
+                                <a class="btn btn-primary-fill buy" data-id="3" href="./basket.html"
                                    data-quantity="1">
                                     <span class="basket">Купить</span>
                                     <span class="bag">В корзине</span>
@@ -422,7 +431,7 @@
                             </div>
                         </li>
                         <li class="cell">
-                            <div class="card">
+                            <div class="card basket-add">
                                 <a href="./product.html" class="photo">
                                     <picture>
                                         <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
@@ -445,9 +454,11 @@
                                 <a href="./product.html" class="text" title="Сыворотка для шеи, декольте и бьюста">
                                     Сыворотка для шеи, декольте и бьюста
                                 </a>
-                                <div class="price" data-unit="грн">114</div>
-                                <!-- Модальное окно, если не в корзине, data-id -->
-                                <a href="./basket.html" class="btn btn-primary-fill buy basket-add" data-id="4"
+                                <div class="prices">
+                                    <div class="price" data-unit="грн">114</div>
+                                </div>
+                                <!-- data-id -->
+                                <a class="btn btn-primary-fill buy" data-id="4" href="./basket.html"
                                    data-quantity="1">
                                     <span class="basket">Купить</span>
                                     <span class="bag">В корзине</span>
@@ -464,7 +475,7 @@
                             </div>
                         </li>
                         <li class="cell">
-                            <div class="card">
+                            <div class="card basket-add">
                                 <a href="./product.html" class="photo">
                                     <picture>
                                         <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
@@ -487,9 +498,11 @@
                                 <a href="./product.html" class="text" title="Сыворотка для шеи, декольте и бьюста">
                                     Сыворотка для шеи, декольте и бьюста
                                 </a>
-                                <div class="price" data-unit="грн">114</div>
-                                <!-- Модальное окно, если не в корзине, data-id -->
-                                <a href="./basket.html" class="btn btn-primary-fill buy basket-add" data-id="5"
+                                <div class="prices">
+                                    <div class="price" data-unit="грн">114</div>
+                                </div>
+                                <!-- data-id -->
+                                <a class="btn btn-primary-fill buy" data-id="5" href="./basket.html"
                                    data-quantity="1">
                                     <span class="basket">Купить</span>
                                     <span class="bag">В корзине</span>
@@ -506,7 +519,7 @@
                             </div>
                         </li>
                         <li class="cell">
-                            <div class="card">
+                            <div class="card basket-add">
                                 <a href="./product.html" class="photo">
                                     <picture>
                                         <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
@@ -529,9 +542,11 @@
                                 <a href="./product.html" class="text" title="Сыворотка для шеи, декольте и бьюста">
                                     Сыворотка для шеи, декольте и бьюста
                                 </a>
-                                <div class="price" data-unit="грн">114</div>
-                                <!-- Модальное окно, если не в корзине, data-id -->
-                                <a href="./basket.html" class="btn btn-primary-fill buy basket-add" data-id="6"
+                                <div class="prices">
+                                    <div class="price" data-unit="грн">114</div>
+                                </div>
+                                <!-- data-id -->
+                                <a class="btn btn-primary-fill buy" data-id="6" href="./basket.html"
                                    data-quantity="1">
                                     <span class="basket">Купить</span>
                                     <span class="bag">В корзине</span>
@@ -553,7 +568,7 @@
                     <!-- Первозданная карточка -->
                     <ul class="original-card">
                         <li class="cell">
-                            <div class="card">
+                            <div class="card basket-add added">
                                 <a href="#" class="photo">
                                     <!-- Метка новинки -->
                                     <div class="new">NEW</div>
@@ -577,8 +592,11 @@
                                     </picture>
                                 </a>
                                 <a href="#" class="text" title="#">#</a>
-                                <div class="price" data-unit="грн">#</div>
-                                <a href="./basket.html" class="btn btn-primary-fill added buy basket-add" data-id="#"
+                                <div class="prices">
+                                    <div class="old-price" data-unit="грн">#</div>
+                                    <div class="price" data-unit="грн">#</div>
+                                </div>
+                                <a class="btn btn-primary-fill buy" data-id="#" href="./basket.html"
                                    data-quantity="1">
                                     <span class="basket">Купить</span>
                                     <span class="bag">В корзине</span>
@@ -995,7 +1013,8 @@
                     </div>
                     <div class="timer minutes">
                         <a href="#" class="change decrease" aria-label="Установить минуты">20</a>
-                        <input type="text" name="minutes" readonly="readonly" aria-label="Минуты" class="input" value="30"/>
+                        <input aria-label="Минуты" class="input" name="minutes" readonly="readonly" type="text"
+                               value="30"/>
                         <a href="#" class="change increase" aria-label="Установить минуты">40</a>
                     </div>
                 </div>

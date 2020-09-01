@@ -94,6 +94,18 @@ $(function () {
                         response.forEach(function (obj) {
                             let card = load_btn.next().find(".cell").clone();
 
+                            if (!obj.is_new) {
+                                card.find(".new").remove();
+                            }
+
+                            if (parseInt(obj.sale) === 0) {
+                                card.find(".sale").remove();
+                                card.find(".old-price").remove();
+                            } else {
+                                card.find(".sale").text("-" + obj.sale + "%");
+                                card.find(".old-price").text(obj.old_price);
+                            }
+
                             card.find(".photo").attr("href", obj.link);
                             card.find(".photo source").attr("data-srcset", obj.srcset_sm).attr("data-source", obj.srcset_md);
                             card.find(".photo img").attr("data-src", obj.src_sm).attr("data-source", obj.src_md)
@@ -122,6 +134,7 @@ $(function () {
                                 src_md: "./contents/product-0.png",
                                 srcset_md: "./contents/product-0.webp",
                                 text: "Сыворотка для шеи, декольте и бьюста",
+                                old_price: "100",
                                 price: "100",
                                 in_cart: true,
                                 is_new: true,
@@ -135,6 +148,7 @@ $(function () {
                                 src_md: "./contents/product-1.png",
                                 srcset_md: "./contents/product-1.webp",
                                 text: "Сыворотка для шеи, декольте и бьюста",
+                                old_price: "260",
                                 price: "200",
                                 in_cart: false,
                                 is_new: true,
@@ -148,6 +162,7 @@ $(function () {
                                 src_md: "./contents/product-2.png",
                                 srcset_md: "./contents/product-2.webp",
                                 text: "Сыворотка для шеи, декольте и бьюста",
+                                old_price: "120",
                                 price: "120",
                                 in_cart: true,
                                 is_new: false,
@@ -161,6 +176,7 @@ $(function () {
                                 src_md: "./contents/product-3.png",
                                 srcset_md: "./contents/product-3.webp",
                                 text: "Сыворотка для шеи, декольте и бьюста",
+                                old_price: "300",
                                 price: "220",
                                 in_cart: false,
                                 is_new: false,
@@ -176,8 +192,10 @@ $(function () {
 
                             if (parseInt(obj.sale) === 0) {
                                 card.find(".sale").remove();
+                                card.find(".old-price").remove();
                             } else {
                                 card.find(".sale").text("-" + obj.sale + "%");
+                                card.find(".old-price").text(obj.old_price);
                             }
 
                             card.find(".photo").attr("href", obj.link);

@@ -10,6 +10,26 @@
     margin-bottom: 40px;
   }
 
+  &.added .buy {
+    .basket {
+      display: none;
+    }
+
+    .bag {
+      display: block;
+    }
+  }
+
+  &:not(.added) .buy {
+    .basket {
+      display: block;
+    }
+
+    .bag {
+      display: none;
+    }
+  }
+
   .photo {
     display: block;
     width: 100%;
@@ -51,43 +71,47 @@
     }
   }
 
-  .price {
-    display: block;
+  .prices {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 180px;
+    margin: 0 auto 24px;
     font-size: 16px;
-    font-weight: 600;
     line-height: 22px;
-    text-align: center;
-    color: $color-black;
-    margin-bottom: 24px;
 
     @media (max-width: 505px) {
       margin-bottom: 16px;
+    }
+
+    .old-price {
+      display: block;
+      position: relative;
+      color: $color-red-2;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 12px;
+        left: -2px;
+        right: -2px;
+        height: 1px;
+        background-color: $color-red-2;
+      }
+    }
+
+    .price {
+      display: block;
+      font-weight: 600;
+      color: $color-black;
     }
   }
 
   .btn {
     width: 140px;
     margin-bottom: 12px;
-
-    &.added {
-      .basket {
-        display: none;
-      }
-
-      .bag {
-        display: block;
-      }
-    }
-
-    &:not(.added) {
-      .basket {
-        display: block;
-      }
-
-      .bag {
-        display: none;
-      }
-    }
   }
 
   .delete {

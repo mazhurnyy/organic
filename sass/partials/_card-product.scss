@@ -10,7 +10,7 @@
     margin-bottom: 32px;
   }
 
-  &:hover, &:active {
+  &.added {
     background-color: $color-pink-1;
 
     .buy {
@@ -52,15 +52,31 @@
     background-color: $color-white;
     z-index: 1;
 
-    &:hover, &:active {
+    &:not(.added):hover, &:not(.added):active {
       color: $color-black;
     }
 
-    &.added {
-      color: $color-red;
+    &.added:hover, &.added:active {
+      color: $color-yellow-1;
+    }
 
-      &:hover, &:active {
-        color: $color-yellow-3;
+    &.added {
+      .in-like {
+        display: block;
+      }
+
+      .to-like {
+        display: none;
+      }
+    }
+
+    &:not(.added) {
+      .in-like {
+        display: none;
+      }
+
+      .to-like {
+        display: block;
       }
     }
   }
@@ -99,19 +115,47 @@
     line-height: 22px;
     text-align: center;
     color: $color-black;
+
+    &:hover, &:active {
+      color: $color-gray-9;
+    }
   }
 
-  .price {
-    display: block;
+  .prices {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 180px;
+    margin: 0 auto 24px;
     font-size: 16px;
-    font-weight: 600;
     line-height: 22px;
-    text-align: center;
-    color: $color-black;
-    margin-bottom: 22px;
 
     @media (max-width: 505px) {
-      margin-bottom: 12px;
+      margin-bottom: 16px;
+    }
+
+    .old-price {
+      display: block;
+      position: relative;
+      color: $color-red-2;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 12px;
+        left: -2px;
+        right: -2px;
+        height: 1px;
+        background-color: $color-red-2;
+      }
+    }
+
+    .price {
+      display: block;
+      font-weight: 600;
+      color: $color-black;
     }
   }
 
@@ -131,34 +175,13 @@
     position: relative;
     z-index: 2;
 
+    &:hover, &:active {
+      background-color: $color-green-3;
+    }
+
     .basket {
       width: 24px;
       height: 24px;
-    }
-
-    .bag {
-      width: 24px;
-      height: 30px;
-    }
-
-    &.added {
-      .basket {
-        display: none;
-      }
-
-      .bag {
-        display: block;
-      }
-    }
-
-    &:not(.added) {
-      .basket {
-        display: block;
-      }
-
-      .bag {
-        display: none;
-      }
     }
   }
 }

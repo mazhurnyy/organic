@@ -13,12 +13,13 @@ $(function () {
             e.preventDefault();
             modalOpen("basket_empty");
         })
-        .on("click", ".buy.basket-add", function (e) {
+        .on("click", ".card.basket-add .buy", function (e) {
             e.preventDefault();
-            const submit = $(".buy.basket-add"), that = this;
+            const submit = $(".card.basket-add .buy");
             if (submit.hasClass("disabled")) return false;
 
             const
+                card = $(this).closest(".card"),
                 id = $(this).attr("data-id"),
                 quantity = $(this).attr("data-quantity"),
                 img = $(".photo img[data-id=" + id + "]"),
@@ -40,12 +41,12 @@ $(function () {
                         timeout: axiosTimeOut
                     })
                     .then(function (response) {
-                        $(that).removeClass("basket-add").addClass("added");
+                        card.removeClass("basket-add").addClass("added");
                         $("#header-bag").removeClass("basket-add").addClass("added");
                         modalOpen("buy");
                     })
                     .catch(function (error) {
-                        $(that).removeClass("basket-add").addClass("added");
+                        card.removeClass("basket-add").addClass("added");
                         $("#header-bag").removeClass("basket-add").addClass("added");
                         modalOpen("buy");
                         return;
@@ -83,13 +84,13 @@ $(function () {
                             timeout: axiosTimeOut
                         })
                         .then(function (response) {
-                            $(".buy.added").removeClass("added").addClass("basket-add");
+                            $(".card.added").removeClass("added").addClass("basket-add");
                             $("#header-bag").removeClass("added").addClass("basket-add");
                             $(".modal-buy_done .subtitle span").text(response.data);
                             modalOpen("buy_done");
                         })
                         .catch(function (error) {
-                            $(".buy.added").removeClass("added").addClass("basket-add");
+                            $(".card.added").removeClass("added").addClass("basket-add");
                             $("#header-bag").removeClass("added").addClass("basket-add");
                             $(".modal-buy_done .subtitle span").text("321");
                             modalOpen("buy_done");

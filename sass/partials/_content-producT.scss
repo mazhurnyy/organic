@@ -58,7 +58,7 @@
 
         h1 {
           display: block;
-          margin-bottom: 60px;
+          margin-bottom: 28px;
           font-size: 30px;
           line-height: 42px;
           color: $color-green-10;
@@ -83,6 +83,31 @@
 
           @media (max-width: 979px) {
             display: block;
+          }
+        }
+
+        .old-price {
+          display: block;
+          height: 32px;
+
+          span {
+            display: inline;
+            position: relative;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+            color: $color-gray-12;
+
+            &::before {
+              content: '';
+              display: block;
+              position: absolute;
+              top: 18px;
+              left: -2px;
+              right: -2px;
+              height: 1px;
+              background-color: $color-gray-12;
+            }
           }
         }
 
@@ -173,6 +198,11 @@
             margin: 0 -$layout-padding;
           }
 
+          &.basket-add .bag,
+          &.added .basket {
+            display: none;
+          }
+
           .btn {
             flex-basis: 100px;
             flex-grow: 1;
@@ -182,8 +212,6 @@
               margin: 0 $layout-padding;
             }
 
-            &.basket-add .bag,
-            &.added .basket,
             &.favorite-add .in,
             &.added .to,
             &.modal .in {

@@ -296,6 +296,30 @@
         &.bag {
           width: 20px;
           height: 26px;
+
+
+          &.added {
+            position: relative;
+
+            &::after {
+              content: attr(data-quantity);
+              display: block;
+              position: absolute;
+              bottom: -2px;
+              left: 50%;
+              box-sizing: border-box;
+              min-width: 18px;
+              height: 18px;
+              padding-left: 3px;
+              padding-right: 2px;
+              border-radius: 9px;
+              background-color: $color-green-3;
+              font-size: 11px;
+              line-height: 17px;
+              text-align: center;
+              color: $color-white;
+            }
+          }
         }
 
         &.like {
