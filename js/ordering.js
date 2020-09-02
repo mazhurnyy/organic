@@ -189,13 +189,13 @@ $(function () {
                         })
                         .then(function (response) {
                             cleanOrdering();
-                            $("#header-bag").removeClass("added").addClass("basket-add");
+                            $("#header-bag").removeClass("added").addClass("basket-add").attr("data-quantity", "0");
                             $(".modal-buy_done .subtitle span").text(response.data);
                             modalOpen("buy_done");
                         })
                         .catch(function (error) {
                             cleanOrdering();
-                            $("#header-bag").removeClass("added").addClass("basket-add");
+                            $("#header-bag").removeClass("added").addClass("basket-add").attr("data-quantity", "0");
                             $(".modal-buy_done .subtitle span").text("321");
                             modalOpen("buy_done");
                             return;

@@ -42,12 +42,16 @@ $(function () {
                     })
                     .then(function (response) {
                         card.removeClass("basket-add").addClass("added");
-                        $("#header-bag").removeClass("basket-add").addClass("added");
+                        const bag = $("#header-bag");
+                        bag.attr("data-quantity", +bag.attr("data-quantity") + 1);
+                        bag.removeClass("basket-add").addClass("added");
                         modalOpen("buy");
                     })
                     .catch(function (error) {
                         card.removeClass("basket-add").addClass("added");
-                        $("#header-bag").removeClass("basket-add").addClass("added");
+                        const bag = $("#header-bag");
+                        bag.attr("data-quantity", +bag.attr("data-quantity") + 1);
+                        bag.removeClass("basket-add").addClass("added");
                         modalOpen("buy");
                         return;
 
@@ -85,13 +89,13 @@ $(function () {
                         })
                         .then(function (response) {
                             $(".card.added").removeClass("added").addClass("basket-add");
-                            $("#header-bag").removeClass("added").addClass("basket-add");
+                            $("#header-bag").removeClass("added").addClass("basket-add").attr("data-quantity", "0");
                             $(".modal-buy_done .subtitle span").text(response.data);
                             modalOpen("buy_done");
                         })
                         .catch(function (error) {
                             $(".card.added").removeClass("added").addClass("basket-add");
-                            $("#header-bag").removeClass("added").addClass("basket-add");
+                            $("#header-bag").removeClass("added").addClass("basket-add").attr("data-quantity", "0");
                             $(".modal-buy_done .subtitle span").text("321");
                             modalOpen("buy_done");
                             return;

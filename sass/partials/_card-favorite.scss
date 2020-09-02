@@ -30,83 +30,14 @@
     }
   }
 
-  .photo {
-    display: block;
-    width: 100%;
-    height: 245px;
-    margin: 0 auto 16px;
-    position: relative;
-
-    .new {
-      top: 0;
-      left: 0;
-    }
-
-    .sale {
-      top: 0;
-      right: 0;
-    }
-
-    img {
-      background-color: $color-white;
-    }
+  .new {
+    top: 0;
+    left: 20px;
   }
 
-  .text {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-    height: 44px;
-    margin-bottom: 12px;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 22px;
-    text-align: center;
-    color: $color-black;
-
-    &:hover, &:active {
-      color: $color-gray-9;
-    }
-  }
-
-  .prices {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
-    width: 180px;
-    margin: 0 auto 24px;
-    font-size: 16px;
-    line-height: 22px;
-
-    @media (max-width: 505px) {
-      margin-bottom: 16px;
-    }
-
-    .old-price {
-      display: block;
-      position: relative;
-      color: $color-red-2;
-
-      &::before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 12px;
-        left: -2px;
-        right: -2px;
-        height: 1px;
-        background-color: $color-red-2;
-      }
-    }
-
-    .price {
-      display: block;
-      font-weight: 600;
-      color: $color-black;
-    }
+  .sale {
+    top: 0;
+    right: 20px;
   }
 
   .btn {

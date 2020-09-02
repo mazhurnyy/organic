@@ -54,13 +54,7 @@ $(function () {
                             modalOpen("review_done");
                             return;
 
-                            if (error.response) {
-                                const txt = error.response.status === 419 ? msg_parent.data("txt") : error.response.status;
-                                msg_obj.addClass("error");
-                                msg_parent.attr("data-error", txt);
-                            } else {
-                                modalOpen("error");
-                            }
+                            modalOpen("error");
                         })
                         .then(function () {
                             submitOn(submit);
