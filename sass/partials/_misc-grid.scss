@@ -14,20 +14,21 @@
       padding: 0 $layout-padding;
       flex-grow: 1;
 
-      .new {
+      .new, .sale {
         display: block;
         position: absolute;
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      .new {
         color: $color-green-4;
         line-height: 27px;
         font-size: 24px;
         background-color: $color-white;
-        z-index: 1;
       }
 
       .sale {
-        display: block;
-        position: absolute;
-        z-index: 1;
         font-weight: 600;
         font-size: 14px;
         line-height: 27px;
