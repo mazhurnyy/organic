@@ -132,6 +132,11 @@
           max-width: 542px;
           height: 32px;
 
+
+          @media (max-width: 979px) {
+            height: auto;
+          }
+
           span {
             display: inline;
             position: relative;
