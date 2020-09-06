@@ -340,13 +340,8 @@
         -webkit-line-clamp: 7;
         overflow: hidden;
 
-        p {
-          display: block;
-          margin: 0;
-          font-size: 20px;
-          line-height: 32px;
-          color: $color-gray-9;
-        }
+        font-size: 20px;
+        line-height: 32px;
 
         .show_description {
           display: block;

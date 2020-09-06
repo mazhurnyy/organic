@@ -1,6 +1,4 @@
 $(function () {
-    let window_width = 0;
-
     $(window)
         .bind("resize", function () {
             spoilerInit();
@@ -8,7 +6,6 @@ $(function () {
     ;
     $(document)
         .ready(function () {
-            window_width = $("#wrapper").outerWidth();
             spoilerInit();
 
             const
@@ -116,11 +113,6 @@ $(function () {
     function spoilerInit() {
         const btn = $(".show_description");
         if (btn.length > 0) {
-            const new_width = $("#wrapper").outerWidth();
-
-            if (new_width === window_width) return false;
-            window_width = new_width;
-
             const
                 texts = $(".description-inner").children(),
                 height1 = parseInt($(".description-outer").outerHeight())

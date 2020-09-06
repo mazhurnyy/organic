@@ -309,13 +309,10 @@ button, summary {
         -webkit-box-orient: vertical;
         -moz-box-orient: vertical;
         -webkit-line-clamp: 7;
-        overflow: hidden; }
-        .tabs-content-wrap .tabs-content.description .description-outer p {
-          display: block;
-          margin: 0;
-          font-size: 20px;
-          line-height: 32px;
-          color: #4F4F4F; }
+        overflow: hidden;
+        font-size: 20px;
+        line-height: 32px;
+      }
         .tabs-content-wrap .tabs-content.description .description-outer .show_description {
           display: block;
           padding-left: 10px;
@@ -836,78 +833,118 @@ picture {
           text-align: justify; } }
 
 .webp_on .grid.card-review-h .cell .card .info::after {
-  background-image: url(../images/reviews-leaf.webp); }
+  background-image: url(../images/reviews-leaf.webp);
+}
 
 .webp_off .grid.card-review-h .cell .card .info::after {
-  background-image: url(../images/reviews-leaf.png); }
+  background-image: url(../images/reviews-leaf.png);
+}
 
 #content-article {
   display: block;
   max-width: 900px;
-  padding: 16px 0 30px; }
-  #content-article h2, #content-article h3, #content-article h4, #content-article h5 {
-    display: block;
-    margin: 40px 0 24px; }
-  #content-article h2 {
-    color: #00370C;
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 34px; }
-  #content-article h3 {
-    color: #116708;
-    font-size: 22px;
-    line-height: 34px; }
-  #content-article h4 {
-    color: #00370C;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 28px; }
-  #content-article h5 {
-    color: #116708;
-    font-size: 18px;
-    line-height: 28px; }
-  #content-article a {
-    color: #219653; }
-    #content-article a:hover, #content-article a:active {
-      text-decoration: underline; }
-  #content-article img {
-    display: block;
-    margin: 0 auto 24px; }
-  #content-article p, #content-article ul, #content-article ol {
-    display: block;
-    margin: 0 0 24px;
-    font-size: 16px;
-    line-height: 24px;
-    color: #4F4F4F;
-    overflow: visible; }
-  #content-article ul ol, #content-article ol ul, #content-article ul ul, #content-article ol ol {
-    margin: 8px 0; }
-  #content-article ul, #content-article ol {
-    padding-left: 32px; }
-    #content-article ul li, #content-article ol li {
-      display: list-item;
-      margin-bottom: 8px;
-      padding-left: 8px; }
-      #content-article ul li:last-child, #content-article ol li:last-child {
-        margin-bottom: 0; }
-  #content-article ul {
-    list-style-type: disc; }
-  #content-article ul ul {
-    list-style-type: circle; }
-  #content-article ul ul ul {
-    list-style-type: square; }
-  #content-article ol {
-    list-style-type: decimal; }
+  padding: 16px 0 30px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+#content-article h2, #content-article h3, #content-article h4, #content-article h5, .content-article h2, .content-article h3, .content-article h4, .content-article h5 {
+  display: block;
+  margin: 40px 0 24px;
+}
+
+#content-article h2, .content-article h2 {
+  color: #00370C;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 34px;
+}
+
+#content-article h3, .content-article h3 {
+  color: #116708;
+  font-size: 22px;
+  line-height: 34px;
+}
+
+#content-article h4, .content-article h4 {
+  color: #00370C;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+#content-article h5, .content-article h5 {
+  color: #116708;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+#content-article img, .content-article img {
+  display: block;
+  margin: 0 auto 24px;
+}
+
+#content-article a, .content-article a {
+  color: #219653;
+}
+
+#content-article a:hover, #content-article a:active, .content-article a:hover, .content-article a:active {
+  text-decoration: underline;
+}
+
+#content-article p, #content-article ul, #content-article ol, .content-article p, .content-article ul, .content-article ol {
+  display: block;
+  margin: 0 0 24px;
+  color: #4F4F4F;
+  overflow: visible;
+}
+
+#content-article ul ol, #content-article ol ul, #content-article ul ul, #content-article ol ol, .content-article ul ol, .content-article ol ul, .content-article ul ul, .content-article ol ol {
+  margin: 8px 0;
+}
+
+#content-article ul, #content-article ol, .content-article ul, .content-article ol {
+  padding-left: 32px;
+}
+
+#content-article ul li, #content-article ol li, .content-article ul li, .content-article ol li {
+  display: list-item;
+  margin-bottom: 8px;
+  padding-left: 8px;
+}
+
+#content-article ul li:last-child, #content-article ol li:last-child, .content-article ul li:last-child, .content-article ol li:last-child {
+  margin-bottom: 0;
+}
+
+#content-article ul, .content-article ul {
+  list-style-type: disc;
+}
+
+#content-article ul ul, .content-article ul ul {
+  list-style-type: circle;
+}
+
+#content-article ul ul ul, .content-article ul ul ul {
+  list-style-type: square;
+}
+
+#content-article ol, .content-article ol {
+  list-style-type: decimal;
+}
 
 #content-basket {
   display: block;
-  padding: 16px 0 30px; }
-  #content-basket .positions {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: stretch; }
+  padding: 16px 0 30px;
+}
+
+#content-basket .positions {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
     @media (min-width: 566px) and (max-width: 811px) {
       #content-basket .positions {
         flex-direction: row;
