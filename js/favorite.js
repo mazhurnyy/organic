@@ -89,9 +89,7 @@ $(function () {
                         timeout: axiosTimeOut
                     })
                     .then(function (response) {
-                        // todo response...
-
-                        response.forEach(function (obj) {
+                        response.data.forEach(function (obj) {
                             let card = load_btn.next().find(".cell").clone();
 
                             if (!obj.is_new) {
