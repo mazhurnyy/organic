@@ -27,7 +27,7 @@ $(function () {
         .on("click", ".show_description", function (e) {
             e.preventDefault();
 
-            $(".description-outer").css("-webkit-line-clamp", "none");
+            $(".description-outer").css("-webkit-line-clamp", "unset");
             $(this).addClass("d-none");
         })
         .on("click", "#content-product .quantity-plus:not(.disabled)", function () {
