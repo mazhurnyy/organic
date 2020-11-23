@@ -153,7 +153,7 @@ $(function () {
                 ukrposhta_index_label.attr("data-error", ukrposhta_locality_obj.data("txt"));
             }
 
-            if (ukrposhta_address >= 6) {
+            if (ukrposhta_address.length >= 6) {
                 ukrposhta_address_obj.removeClass("error");
                 ukrposhta_address_label.attr("data-error", "");
             } else {
@@ -161,7 +161,7 @@ $(function () {
                 ukrposhta_address_label.attr("data-error", ukrposhta_address_label.data("txt"));
             }
 
-            if (ukrposhta_index.length === 5 && ukrposhta_locality.length > 0 && ukrposhta_address >= 6) {
+            if (ukrposhta_index.length === 5 && ukrposhta_locality.length > 0 && ukrposhta_address.length >= 6) {
                 ukrposhta_flag = true;
             }
 
