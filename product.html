@@ -432,15 +432,13 @@
         <section id="products" class="section-grid">
             <div class="layout">
                 <h2>Новинки</h2>
-            </div>
-            <div class="slider">
-                <div>
-                    <div class="layout">
-                        <ul class="grid column-4 row-1 card-product">
-                            <li class="cell">
-                                <div class="card basket-add">
-                                    <!-- Если авторизован и товар в избранном -->
-                                    <a href="./favorites.html" class="like added" aria-label="В список желаний">
+                <!-- Слайдер -->
+                <div class="slider-bottom grid card-product">
+                    <div>
+                        <div class="cell">
+                            <div class="card basket-add">
+                                <!-- Если авторизован и товар в избранном -->
+                                <a href="./favorites.html" class="like added" aria-label="В список желаний">
                                         <span class="to-like">
                                     <!-- SVG like-1 -->
                                     <svg height="19" viewBox="0 0 512 512" width="21"
@@ -450,7 +448,7 @@
                                             ></path>
                                         </svg>
                                 </span>
-                                        <span class="in-like">
+                                    <span class="in-like">
                                     <!-- SVG like-2 -->
                                     <svg height="19" viewBox="0 0 512 512" width="21"
                                          xmlns="http://www.w3.org/2000/svg">
@@ -459,36 +457,36 @@
                                             ></path>
                                         </svg>
                                 </span>
-                                    </a>
-                                    <a href="./product.html" class="photo">
-                                        <picture>
-                                            <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                    data-srcset="./contents/product-3.webp"
-                                                    data-source="./contents/product-md.webp"
-                                                    type="image/webp"
-                                            />
-                                            <!-- data-id, путь к размеру md в data-source -->
-                                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                 data-src="./contents/product-3.png"
-                                                 data-id="0"
-                                                 class="lazyload"
-                                                 alt="шампунь"
-                                                 width="216"
-                                                 height="216"
-                                                 data-source="./contents/product-md.png"
-                                            />
-                                        </picture>
-                                    </a>
-                                    <a href="./product.html" class="text"
-                                       title="Шампунь тонизирующий для всех типов волос">
-                                        Шампунь тонизирующий для всех типов волос
-                                    </a>
-                                    <div class="prices">
-                                        <div class="price" data-unit="грн">89</div>
-                                    </div>
-                                    <!-- Если в корзине - класс added, data-id -->
-                                    <a aria-label="В корзину" class="buy" data-id="0" data-quantity="1"
-                                       href="./basket.html">
+                                </a>
+                                <a href="./product.html" class="photo">
+                                    <picture>
+                                        <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-srcset="./contents/product-3.webp"
+                                                data-source="./contents/product-md.webp"
+                                                type="image/webp"
+                                        />
+                                        <!-- data-id, путь к размеру md в data-source -->
+                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                             data-src="./contents/product-3.png"
+                                             data-id="0"
+                                             class="lazyload"
+                                             alt="шампунь"
+                                             width="216"
+                                             height="216"
+                                             data-source="./contents/product-md.png"
+                                        />
+                                    </picture>
+                                </a>
+                                <a href="./product.html" class="text"
+                                   title="Шампунь тонизирующий для всех типов волос">
+                                    Шампунь тонизирующий для всех типов волос
+                                </a>
+                                <div class="prices">
+                                    <div class="price" data-unit="грн">89</div>
+                                </div>
+                                <!-- Если в корзине - класс added, data-id -->
+                                <a aria-label="В корзину" class="buy" data-id="0" data-quantity="1"
+                                   href="./basket.html">
                                         <span class="basket">
                                             <!-- SVG basket -->
                                             <svg height="16" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
@@ -496,14 +494,16 @@
                                                       fill="currentColor"></path>
                                             </svg>
                                         </span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="cell">
-                                <div class="card basket-add">
-                                    <!-- Если авторизован и товар не в избранном, data-id -->
-                                    <a href="./favorites.html" class="like favorite-add" data-id="1"
-                                       aria-label="В список желаний">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="cell">
+                            <div class="card basket-add">
+                                <!-- Если авторизован и товар не в избранном, data-id -->
+                                <a href="./favorites.html" class="like favorite-add" data-id="1"
+                                   aria-label="В список желаний">
                                         <span class="to-like">
                                         <!-- SVG like-1 -->
                                         <svg height="19" viewBox="0 0 512 512" width="21"
@@ -513,7 +513,7 @@
                                                 ></path>
                                             </svg>
                                         </span>
-                                        <span class="in-like">
+                                    <span class="in-like">
                                     <!-- SVG like-2 -->
                                     <svg height="19" viewBox="0 0 512 512" width="21"
                                          xmlns="http://www.w3.org/2000/svg">
@@ -522,35 +522,35 @@
                                             ></path>
                                         </svg>
                                 </span>
-                                    </a>
-                                    <a href="./product.html" class="photo">
-                                        <picture>
-                                            <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                    data-srcset="./contents/product-4.webp"
-                                                    data-source="./contents/product-4.webp"
-                                                    type="image/webp"
-                                            />
-                                            <!-- data-id, путь к размеру md в data-source -->
-                                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                 data-src="./contents/product-4.png"
-                                                 data-id="1"
-                                                 class="lazyload"
-                                                 alt="тоник"
-                                                 width="216"
-                                                 height="216"
-                                                 data-source="./contents/product-4.png"
-                                            />
-                                        </picture>
-                                    </a>
-                                    <a href="./product.html" class="text" title="Тоник для лица очищающий Dr. Green">
-                                        Тоник для лица очищающий Dr. Green
-                                    </a>
-                                    <div class="prices">
-                                        <div class="price" data-unit="грн">75</div>
-                                    </div>
-                                    <!-- Модальное окно, если не в корзине, data-id -->
-                                    <a aria-label="В корзину" class="buy" data-id="1" data-quantity="1"
-                                       href="./basket.html">
+                                </a>
+                                <a href="./product.html" class="photo">
+                                    <picture>
+                                        <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-srcset="./contents/product-4.webp"
+                                                data-source="./contents/product-4.webp"
+                                                type="image/webp"
+                                        />
+                                        <!-- data-id, путь к размеру md в data-source -->
+                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                             data-src="./contents/product-4.png"
+                                             data-id="1"
+                                             class="lazyload"
+                                             alt="тоник"
+                                             width="216"
+                                             height="216"
+                                             data-source="./contents/product-4.png"
+                                        />
+                                    </picture>
+                                </a>
+                                <a href="./product.html" class="text" title="Тоник для лица очищающий Dr. Green">
+                                    Тоник для лица очищающий Dr. Green
+                                </a>
+                                <div class="prices">
+                                    <div class="price" data-unit="грн">75</div>
+                                </div>
+                                <!-- Модальное окно, если не в корзине, data-id -->
+                                <a aria-label="В корзину" class="buy" data-id="1" data-quantity="1"
+                                   href="./basket.html">
                                         <span class="basket">
                                             <!-- SVG basket -->
                                             <svg height="16" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
@@ -558,141 +558,15 @@
                                                       fill="currentColor"></path>
                                             </svg>
                                         </span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="cell">
-                                <div class="card basket-add">
-                                    <!-- Если не авторизован - модальное окно -->
-                                    <a href="#" class="like" data-modal="favorites" aria-label="В список желаний">
-                                        <span class="to-like">
-                                    <!-- SVG like-1 -->
-                                    <svg height="19" viewBox="0 0 512 512" width="21"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"
-                                                  fill="currentColor"
-                                            ></path>
-                                        </svg>
-                                </span>
-                                        <span class="in-like">
-                                    <!-- SVG like-2 -->
-                                    <svg height="19" viewBox="0 0 512 512" width="21"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
-                                                  fill="currentColor"
-                                            ></path>
-                                        </svg>
-                                </span>
-                                    </a>
-                                    <a href="./product.html" class="photo">
-                                        <picture>
-                                            <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                    data-srcset="./contents/product-2.webp"
-                                                    data-source="./contents/product-2.webp"
-                                                    type="image/webp"
-                                            />
-                                            <!-- data-id, путь к размеру md в data-source -->
-                                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                 data-src="./contents/product-2.png"
-                                                 data-id="2"
-                                                 class="lazyload"
-                                                 alt="сыворотка"
-                                                 width="216"
-                                                 height="216"
-                                                 data-source="./contents/product-2.png"
-                                            />
-                                        </picture>
-                                    </a>
-                                    <a href="./product.html" class="text" title="Сыворотка для шеи, декольте и бьюста">
-                                        Сыворотка для шеи, декольте и бьюста
-                                    </a>
-                                    <div class="prices">
-                                        <div class="price" data-unit="грн">114</div>
-                                    </div>
-                                    <!-- Модальное окно, если не в корзине, data-id -->
-                                    <a aria-label="В корзину" class="buy" data-id="2" data-quantity="1"
-                                       href="./basket.html">
-                                        <span class="basket">
-                                            <!-- SVG basket -->
-                                            <svg height="16" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M8.4 22.4C6.86 22.4 5.6 23.66 5.6 25.2C5.6 26.74 6.86 28 8.4 28C9.94 28 11.2 26.74 11.2 25.2C11.2 23.66 9.94 22.4 8.4 22.4ZM0 0V2.8H2.8L7.84 13.44L5.88 16.8C5.74 17.22 5.6 17.78 5.6 18.2C5.6 19.74 6.86 21 8.4 21H25.2V18.2H8.96C8.82 18.2 8.68 18.06 8.68 17.92V17.7799L9.94 15.3999H20.3C21.42 15.3999 22.26 14.8399 22.68 13.9999L27.72 4.9C28 4.62 28 4.48 28 4.2C28 3.36 27.44 2.8 26.6 2.8H5.88L4.62 0H0ZM22.4 22.4C20.86 22.4 19.6 23.66 19.6 25.2C19.6 26.74 20.86 28 22.4 28C23.94 28 25.2 26.74 25.2 25.2C25.2 23.66 23.94 22.4 22.4 22.4Z"
-                                                      fill="currentColor"></path>
-                                            </svg>
-                                        </span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="cell">
-                                <div class="card basket-add">
-                                    <!-- Если не авторизован - модальное окно -->
-                                    <a href="#" class="like" data-modal="favorites" aria-label="В список желаний">
-                                        <span class="to-like">
-                                    <!-- SVG like-1 -->
-                                    <svg height="19" viewBox="0 0 512 512" width="21"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"
-                                                  fill="currentColor"
-                                            ></path>
-                                        </svg>
-                                </span>
-                                        <span class="in-like">
-                                    <!-- SVG like-2 -->
-                                    <svg height="19" viewBox="0 0 512 512" width="21"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
-                                                  fill="currentColor"
-                                            ></path>
-                                        </svg>
-                                </span>
-                                    </a>
-                                    <a href="./product.html" class="photo">
-                                        <picture>
-                                            <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                    data-srcset="./contents/product-1.webp"
-                                                    data-source="./contents/product-1.webp"
-                                                    type="image/webp"
-                                            />
-                                            <!-- data-id, путь к размеру md в data-source -->
-                                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                 data-src="./contents/product-1.png"
-                                                 data-id="3"
-                                                 class="lazyload"
-                                                 alt="деликат"
-                                                 width="216"
-                                                 height="216"
-                                                 data-source="./contents/product-1.png"
-                                            />
-                                        </picture>
-                                    </a>
-                                    <a href="./product.html" class="text" title="Для интимной гигиены “Деликат”">
-                                        Для интимной гигиены “Деликат”
-                                    </a>
-                                    <div class="prices">
-                                        <div class="price" data-unit="грн">135</div>
-                                    </div>
-                                    <!-- Модальное окно, если не в корзине, data-id -->
-                                    <a aria-label="В корзину" class="buy" data-id="3" data-quantity="1"
-                                       href="./basket.html">
-                                        <span class="basket">
-                                            <!-- SVG basket -->
-                                            <svg height="16" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M8.4 22.4C6.86 22.4 5.6 23.66 5.6 25.2C5.6 26.74 6.86 28 8.4 28C9.94 28 11.2 26.74 11.2 25.2C11.2 23.66 9.94 22.4 8.4 22.4ZM0 0V2.8H2.8L7.84 13.44L5.88 16.8C5.74 17.22 5.6 17.78 5.6 18.2C5.6 19.74 6.86 21 8.4 21H25.2V18.2H8.96C8.82 18.2 8.68 18.06 8.68 17.92V17.7799L9.94 15.3999H20.3C21.42 15.3999 22.26 14.8399 22.68 13.9999L27.72 4.9C28 4.62 28 4.48 28 4.2C28 3.36 27.44 2.8 26.6 2.8H5.88L4.62 0H0ZM22.4 22.4C20.86 22.4 19.6 23.66 19.6 25.2C19.6 26.74 20.86 28 22.4 28C23.94 28 25.2 26.74 25.2 25.2C25.2 23.66 23.94 22.4 22.4 22.4Z"
-                                                      fill="currentColor"></path>
-                                            </svg>
-                                        </span>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <div class="layout">
-                        <ul class="grid column-4 row-1 card-product">
-                            <li class="cell">
-                                <div class="card basket-add">
-                                    <!-- Если авторизован и товар в избранном -->
-                                    <a href="./favorites.html" class="like added" aria-label="В список желаний">
+                    <div>
+                        <div class="cell">
+                            <div class="card basket-add">
+                                <!-- Если не авторизован - модальное окно -->
+                                <a href="#" class="like" data-modal="favorites" aria-label="В список желаний">
                                         <span class="to-like">
                                     <!-- SVG like-1 -->
                                     <svg height="19" viewBox="0 0 512 512" width="21"
@@ -702,7 +576,7 @@
                                             ></path>
                                         </svg>
                                 </span>
-                                        <span class="in-like">
+                                    <span class="in-like">
                                     <!-- SVG like-2 -->
                                     <svg height="19" viewBox="0 0 512 512" width="21"
                                          xmlns="http://www.w3.org/2000/svg">
@@ -711,36 +585,35 @@
                                             ></path>
                                         </svg>
                                 </span>
-                                    </a>
-                                    <a href="./product.html" class="photo">
-                                        <picture>
-                                            <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                    data-srcset="./contents/product-3.webp"
-                                                    data-source="./contents/product-md.webp"
-                                                    type="image/webp"
-                                            />
-                                            <!-- data-id, путь к размеру md в data-source -->
-                                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                 data-src="./contents/product-3.png"
-                                                 data-id="0"
-                                                 class="lazyload"
-                                                 alt="шампунь"
-                                                 width="216"
-                                                 height="216"
-                                                 data-source="./contents/product-md.png"
-                                            />
-                                        </picture>
-                                    </a>
-                                    <a href="./product.html" class="text"
-                                       title="Шампунь тонизирующий для всех типов волос">
-                                        Шампунь тонизирующий для всех типов волос
-                                    </a>
-                                    <div class="prices">
-                                        <div class="price" data-unit="грн">89</div>
-                                    </div>
-                                    <!-- Если в корзине - класс added, data-id -->
-                                    <a aria-label="В корзину" class="buy" data-id="0" data-quantity="1"
-                                       href="./basket.html">
+                                </a>
+                                <a href="./product.html" class="photo">
+                                    <picture>
+                                        <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-srcset="./contents/product-2.webp"
+                                                data-source="./contents/product-2.webp"
+                                                type="image/webp"
+                                        />
+                                        <!-- data-id, путь к размеру md в data-source -->
+                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                             data-src="./contents/product-2.png"
+                                             data-id="2"
+                                             class="lazyload"
+                                             alt="сыворотка"
+                                             width="216"
+                                             height="216"
+                                             data-source="./contents/product-2.png"
+                                        />
+                                    </picture>
+                                </a>
+                                <a href="./product.html" class="text" title="Сыворотка для шеи, декольте и бьюста">
+                                    Сыворотка для шеи, декольте и бьюста
+                                </a>
+                                <div class="prices">
+                                    <div class="price" data-unit="грн">114</div>
+                                </div>
+                                <!-- Модальное окно, если не в корзине, data-id -->
+                                <a aria-label="В корзину" class="buy" data-id="2" data-quantity="1"
+                                   href="./basket.html">
                                         <span class="basket">
                                             <!-- SVG basket -->
                                             <svg height="16" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
@@ -748,203 +621,15 @@
                                                       fill="currentColor"></path>
                                             </svg>
                                         </span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="cell">
-                                <div class="card basket-add">
-                                    <!-- Если авторизован и товар не в избранном, data-id -->
-                                    <a href="./favorites.html" class="like favorite-add" data-id="1"
-                                       aria-label="В список желаний">
-                                        <span class="to-like">
-                                    <!-- SVG like-1 -->
-                                    <svg height="19" viewBox="0 0 512 512" width="21"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"
-                                                  fill="currentColor"
-                                            ></path>
-                                        </svg>
-                                </span>
-                                        <span class="in-like">
-                                    <!-- SVG like-2 -->
-                                    <svg height="19" viewBox="0 0 512 512" width="21"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
-                                                  fill="currentColor"
-                                            ></path>
-                                        </svg>
-                                </span>
-                                    </a>
-                                    <a href="./product.html" class="photo">
-                                        <picture>
-                                            <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                    data-srcset="./contents/product-4.webp"
-                                                    data-source="./contents/product-4.webp"
-                                                    type="image/webp"
-                                            />
-                                            <!-- data-id, путь к размеру md в data-source -->
-                                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                 data-src="./contents/product-4.png"
-                                                 data-id="1"
-                                                 class="lazyload"
-                                                 alt="тоник"
-                                                 width="216"
-                                                 height="216"
-                                                 data-source="./contents/product-4.png"
-                                            />
-                                        </picture>
-                                    </a>
-                                    <a href="./product.html" class="text" title="Тоник для лица очищающий Dr. Green">
-                                        Тоник для лица очищающий Dr. Green
-                                    </a>
-                                    <div class="prices">
-                                        <div class="price" data-unit="грн">75</div>
-                                    </div>
-                                    <!-- Модальное окно, если не в корзине, data-id -->
-                                    <a aria-label="В корзину" class="buy" data-id="1" data-quantity="1"
-                                       href="./basket.html">
-                                        <span class="basket">
-                                            <!-- SVG basket -->
-                                            <svg height="16" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M8.4 22.4C6.86 22.4 5.6 23.66 5.6 25.2C5.6 26.74 6.86 28 8.4 28C9.94 28 11.2 26.74 11.2 25.2C11.2 23.66 9.94 22.4 8.4 22.4ZM0 0V2.8H2.8L7.84 13.44L5.88 16.8C5.74 17.22 5.6 17.78 5.6 18.2C5.6 19.74 6.86 21 8.4 21H25.2V18.2H8.96C8.82 18.2 8.68 18.06 8.68 17.92V17.7799L9.94 15.3999H20.3C21.42 15.3999 22.26 14.8399 22.68 13.9999L27.72 4.9C28 4.62 28 4.48 28 4.2C28 3.36 27.44 2.8 26.6 2.8H5.88L4.62 0H0ZM22.4 22.4C20.86 22.4 19.6 23.66 19.6 25.2C19.6 26.74 20.86 28 22.4 28C23.94 28 25.2 26.74 25.2 25.2C25.2 23.66 23.94 22.4 22.4 22.4Z"
-                                                      fill="currentColor"></path>
-                                            </svg>
-                                        </span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="cell">
-                                <div class="card basket-add">
-                                    <!-- Если не авторизован - модальное окно -->
-                                    <a href="#" class="like" data-modal="favorites" aria-label="В список желаний">
-                                        <span class="to-like">
-                                    <!-- SVG like-1 -->
-                                    <svg height="19" viewBox="0 0 512 512" width="21"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"
-                                                  fill="currentColor"
-                                            ></path>
-                                        </svg>
-                                </span>
-                                        <span class="in-like">
-                                    <!-- SVG like-2 -->
-                                    <svg height="19" viewBox="0 0 512 512" width="21"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
-                                                  fill="currentColor"
-                                            ></path>
-                                        </svg>
-                                </span>
-                                    </a>
-                                    <a href="./product.html" class="photo">
-                                        <picture>
-                                            <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                    data-srcset="./contents/product-2.webp"
-                                                    data-source="./contents/product-2.webp"
-                                                    type="image/webp"
-                                            />
-                                            <!-- data-id, путь к размеру md в data-source -->
-                                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                 data-src="./contents/product-2.png"
-                                                 data-id="2"
-                                                 class="lazyload"
-                                                 alt="сыворотка"
-                                                 width="216"
-                                                 height="216"
-                                                 data-source="./contents/product-2.png"
-                                            />
-                                        </picture>
-                                    </a>
-                                    <a href="./product.html" class="text" title="Сыворотка для шеи, декольте и бьюста">
-                                        Сыворотка для шеи, декольте и бьюста
-                                    </a>
-                                    <div class="prices">
-                                        <div class="price" data-unit="грн">114</div>
-                                    </div>
-                                    <!-- Модальное окно, если не в корзине, data-id -->
-                                    <a aria-label="В корзину" class="buy" data-id="2" data-quantity="1"
-                                       href="./basket.html">
-                                        <span class="basket">
-                                            <!-- SVG basket -->
-                                            <svg height="16" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M8.4 22.4C6.86 22.4 5.6 23.66 5.6 25.2C5.6 26.74 6.86 28 8.4 28C9.94 28 11.2 26.74 11.2 25.2C11.2 23.66 9.94 22.4 8.4 22.4ZM0 0V2.8H2.8L7.84 13.44L5.88 16.8C5.74 17.22 5.6 17.78 5.6 18.2C5.6 19.74 6.86 21 8.4 21H25.2V18.2H8.96C8.82 18.2 8.68 18.06 8.68 17.92V17.7799L9.94 15.3999H20.3C21.42 15.3999 22.26 14.8399 22.68 13.9999L27.72 4.9C28 4.62 28 4.48 28 4.2C28 3.36 27.44 2.8 26.6 2.8H5.88L4.62 0H0ZM22.4 22.4C20.86 22.4 19.6 23.66 19.6 25.2C19.6 26.74 20.86 28 22.4 28C23.94 28 25.2 26.74 25.2 25.2C25.2 23.66 23.94 22.4 22.4 22.4Z"
-                                                      fill="currentColor"></path>
-                                            </svg>
-                                        </span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="cell">
-                                <div class="card basket-add">
-                                    <!-- Если не авторизован - модальное окно -->
-                                    <a href="#" class="like" data-modal="favorites" aria-label="В список желаний">
-                                        <span class="to-like">
-                                    <!-- SVG like-1 -->
-                                    <svg height="19" viewBox="0 0 512 512" width="21"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"
-                                                  fill="currentColor"
-                                            ></path>
-                                        </svg>
-                                </span>
-                                        <span class="in-like">
-                                    <!-- SVG like-2 -->
-                                    <svg height="19" viewBox="0 0 512 512" width="21"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
-                                                  fill="currentColor"
-                                            ></path>
-                                        </svg>
-                                </span>
-                                    </a>
-                                    <a href="./product.html" class="photo">
-                                        <picture>
-                                            <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                    data-srcset="./contents/product-1.webp"
-                                                    data-source="./contents/product-1.webp"
-                                                    type="image/webp"
-                                            />
-                                            <!-- data-id, путь к размеру md в data-source -->
-                                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                 data-src="./contents/product-1.png"
-                                                 data-id="3"
-                                                 class="lazyload"
-                                                 alt="деликат"
-                                                 width="216"
-                                                 height="216"
-                                                 data-source="./contents/product-1.png"
-                                            />
-                                        </picture>
-                                    </a>
-                                    <a href="./product.html" class="text" title="Для интимной гигиены “Деликат”">
-                                        Для интимной гигиены “Деликат”
-                                    </a>
-                                    <div class="prices">
-                                        <div class="price" data-unit="грн">135</div>
-                                    </div>
-                                    <!-- Модальное окно, если не в корзине, data-id -->
-                                    <a aria-label="В корзину" class="buy" data-id="3" data-quantity="1"
-                                       href="./basket.html">
-                                        <span class="basket">
-                                            <!-- SVG basket -->
-                                            <svg height="16" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M8.4 22.4C6.86 22.4 5.6 23.66 5.6 25.2C5.6 26.74 6.86 28 8.4 28C9.94 28 11.2 26.74 11.2 25.2C11.2 23.66 9.94 22.4 8.4 22.4ZM0 0V2.8H2.8L7.84 13.44L5.88 16.8C5.74 17.22 5.6 17.78 5.6 18.2C5.6 19.74 6.86 21 8.4 21H25.2V18.2H8.96C8.82 18.2 8.68 18.06 8.68 17.92V17.7799L9.94 15.3999H20.3C21.42 15.3999 22.26 14.8399 22.68 13.9999L27.72 4.9C28 4.62 28 4.48 28 4.2C28 3.36 27.44 2.8 26.6 2.8H5.88L4.62 0H0ZM22.4 22.4C20.86 22.4 19.6 23.66 19.6 25.2C19.6 26.74 20.86 28 22.4 28C23.94 28 25.2 26.74 25.2 25.2C25.2 23.66 23.94 22.4 22.4 22.4Z"
-                                                      fill="currentColor"></path>
-                                            </svg>
-                                        </span>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <div class="layout">
-                        <ul class="grid column-4 row-1 card-product">
-                            <li class="cell">
-                                <div class="card basket-add">
-                                    <!-- Если авторизован и товар в избранном -->
-                                    <a href="./favorites.html" class="like added" aria-label="В список желаний">
+                    <div>
+                        <div class="cell">
+                            <div class="card basket-add">
+                                <!-- Если не авторизован - модальное окно -->
+                                <a href="#" class="like" data-modal="favorites" aria-label="В список желаний">
                                         <span class="to-like">
                                     <!-- SVG like-1 -->
                                     <svg height="19" viewBox="0 0 512 512" width="21"
@@ -954,7 +639,7 @@
                                             ></path>
                                         </svg>
                                 </span>
-                                        <span class="in-like">
+                                    <span class="in-like">
                                     <!-- SVG like-2 -->
                                     <svg height="19" viewBox="0 0 512 512" width="21"
                                          xmlns="http://www.w3.org/2000/svg">
@@ -963,36 +648,35 @@
                                             ></path>
                                         </svg>
                                 </span>
-                                    </a>
-                                    <a href="./product.html" class="photo">
-                                        <picture>
-                                            <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                    data-srcset="./contents/product-3.webp"
-                                                    data-source="./contents/product-md.webp"
-                                                    type="image/webp"
-                                            />
-                                            <!-- data-id, путь к размеру md в data-source -->
-                                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                 data-src="./contents/product-3.png"
-                                                 data-id="0"
-                                                 class="lazyload"
-                                                 alt="шампунь"
-                                                 width="216"
-                                                 height="216"
-                                                 data-source="./contents/product-md.png"
-                                            />
-                                        </picture>
-                                    </a>
-                                    <a href="./product.html" class="text"
-                                       title="Шампунь тонизирующий для всех типов волос">
-                                        Шампунь тонизирующий для всех типов волос
-                                    </a>
-                                    <div class="prices">
-                                        <div class="price" data-unit="грн">89</div>
-                                    </div>
-                                    <!-- Если в корзине - класс added, data-id -->
-                                    <a aria-label="В корзину" class="buy" data-id="0" data-quantity="1"
-                                       href="./basket.html">
+                                </a>
+                                <a href="./product.html" class="photo">
+                                    <picture>
+                                        <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-srcset="./contents/product-1.webp"
+                                                data-source="./contents/product-1.webp"
+                                                type="image/webp"
+                                        />
+                                        <!-- data-id, путь к размеру md в data-source -->
+                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                             data-src="./contents/product-1.png"
+                                             data-id="3"
+                                             class="lazyload"
+                                             alt="деликат"
+                                             width="216"
+                                             height="216"
+                                             data-source="./contents/product-1.png"
+                                        />
+                                    </picture>
+                                </a>
+                                <a href="./product.html" class="text" title="Для интимной гигиены “Деликат”">
+                                    Для интимной гигиены “Деликат”
+                                </a>
+                                <div class="prices">
+                                    <div class="price" data-unit="грн">135</div>
+                                </div>
+                                <!-- Модальное окно, если не в корзине, data-id -->
+                                <a aria-label="В корзину" class="buy" data-id="3" data-quantity="1"
+                                   href="./basket.html">
                                         <span class="basket">
                                             <!-- SVG basket -->
                                             <svg height="16" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
@@ -1000,14 +684,15 @@
                                                       fill="currentColor"></path>
                                             </svg>
                                         </span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="cell">
-                                <div class="card basket-add">
-                                    <!-- Если авторизован и товар не в избранном, data-id -->
-                                    <a href="./favorites.html" class="like favorite-add" data-id="1"
-                                       aria-label="В список желаний">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="cell">
+                            <div class="card basket-add">
+                                <!-- Если авторизован и товар в избранном -->
+                                <a href="./favorites.html" class="like added" aria-label="В список желаний">
                                         <span class="to-like">
                                     <!-- SVG like-1 -->
                                     <svg height="19" viewBox="0 0 512 512" width="21"
@@ -1017,7 +702,7 @@
                                             ></path>
                                         </svg>
                                 </span>
-                                        <span class="in-like">
+                                    <span class="in-like">
                                     <!-- SVG like-2 -->
                                     <svg height="19" viewBox="0 0 512 512" width="21"
                                          xmlns="http://www.w3.org/2000/svg">
@@ -1026,35 +711,36 @@
                                             ></path>
                                         </svg>
                                 </span>
-                                    </a>
-                                    <a href="./product.html" class="photo">
-                                        <picture>
-                                            <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                    data-srcset="./contents/product-4.webp"
-                                                    data-source="./contents/product-4.webp"
-                                                    type="image/webp"
-                                            />
-                                            <!-- data-id, путь к размеру md в data-source -->
-                                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                 data-src="./contents/product-4.png"
-                                                 data-id="1"
-                                                 class="lazyload"
-                                                 alt="тоник"
-                                                 width="216"
-                                                 height="216"
-                                                 data-source="./contents/product-4.png"
-                                            />
-                                        </picture>
-                                    </a>
-                                    <a href="./product.html" class="text" title="Тоник для лица очищающий Dr. Green">
-                                        Тоник для лица очищающий Dr. Green
-                                    </a>
-                                    <div class="prices">
-                                        <div class="price" data-unit="грн">75</div>
-                                    </div>
-                                    <!-- Модальное окно, если не в корзине, data-id -->
-                                    <a aria-label="В корзину" class="buy" data-id="1" data-quantity="1"
-                                       href="./basket.html">
+                                </a>
+                                <a href="./product.html" class="photo">
+                                    <picture>
+                                        <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-srcset="./contents/product-3.webp"
+                                                data-source="./contents/product-md.webp"
+                                                type="image/webp"
+                                        />
+                                        <!-- data-id, путь к размеру md в data-source -->
+                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                             data-src="./contents/product-3.png"
+                                             data-id="0"
+                                             class="lazyload"
+                                             alt="шампунь"
+                                             width="216"
+                                             height="216"
+                                             data-source="./contents/product-md.png"
+                                        />
+                                    </picture>
+                                </a>
+                                <a href="./product.html" class="text"
+                                   title="Шампунь тонизирующий для всех типов волос">
+                                    Шампунь тонизирующий для всех типов волос
+                                </a>
+                                <div class="prices">
+                                    <div class="price" data-unit="грн">89</div>
+                                </div>
+                                <!-- Если в корзине - класс added, data-id -->
+                                <a aria-label="В корзину" class="buy" data-id="0" data-quantity="1"
+                                   href="./basket.html">
                                         <span class="basket">
                                             <!-- SVG basket -->
                                             <svg height="16" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
@@ -1062,13 +748,16 @@
                                                       fill="currentColor"></path>
                                             </svg>
                                         </span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="cell">
-                                <div class="card basket-add">
-                                    <!-- Если не авторизован - модальное окно -->
-                                    <a href="#" class="like" data-modal="favorites" aria-label="В список желаний">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="cell">
+                            <div class="card basket-add">
+                                <!-- Если авторизован и товар не в избранном, data-id -->
+                                <a href="./favorites.html" class="like favorite-add" data-id="1"
+                                   aria-label="В список желаний">
                                         <span class="to-like">
                                     <!-- SVG like-1 -->
                                     <svg height="19" viewBox="0 0 512 512" width="21"
@@ -1078,7 +767,7 @@
                                             ></path>
                                         </svg>
                                 </span>
-                                        <span class="in-like">
+                                    <span class="in-like">
                                     <!-- SVG like-2 -->
                                     <svg height="19" viewBox="0 0 512 512" width="21"
                                          xmlns="http://www.w3.org/2000/svg">
@@ -1087,35 +776,35 @@
                                             ></path>
                                         </svg>
                                 </span>
-                                    </a>
-                                    <a href="./product.html" class="photo">
-                                        <picture>
-                                            <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                    data-srcset="./contents/product-2.webp"
-                                                    data-source="./contents/product-2.webp"
-                                                    type="image/webp"
-                                            />
-                                            <!-- data-id, путь к размеру md в data-source -->
-                                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                 data-src="./contents/product-2.png"
-                                                 data-id="2"
-                                                 class="lazyload"
-                                                 alt="сыворотка"
-                                                 width="216"
-                                                 height="216"
-                                                 data-source="./contents/product-2.png"
-                                            />
-                                        </picture>
-                                    </a>
-                                    <a href="./product.html" class="text" title="Сыворотка для шеи, декольте и бьюста">
-                                        Сыворотка для шеи, декольте и бьюста
-                                    </a>
-                                    <div class="prices">
-                                        <div class="price" data-unit="грн">114</div>
-                                    </div>
-                                    <!-- Модальное окно, если не в корзине, data-id -->
-                                    <a aria-label="В корзину" class="buy" data-id="2" data-quantity="1"
-                                       href="./basket.html">
+                                </a>
+                                <a href="./product.html" class="photo">
+                                    <picture>
+                                        <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-srcset="./contents/product-4.webp"
+                                                data-source="./contents/product-4.webp"
+                                                type="image/webp"
+                                        />
+                                        <!-- data-id, путь к размеру md в data-source -->
+                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                             data-src="./contents/product-4.png"
+                                             data-id="1"
+                                             class="lazyload"
+                                             alt="тоник"
+                                             width="216"
+                                             height="216"
+                                             data-source="./contents/product-4.png"
+                                        />
+                                    </picture>
+                                </a>
+                                <a href="./product.html" class="text" title="Тоник для лица очищающий Dr. Green">
+                                    Тоник для лица очищающий Dr. Green
+                                </a>
+                                <div class="prices">
+                                    <div class="price" data-unit="грн">75</div>
+                                </div>
+                                <!-- Модальное окно, если не в корзине, data-id -->
+                                <a aria-label="В корзину" class="buy" data-id="1" data-quantity="1"
+                                   href="./basket.html">
                                         <span class="basket">
                                             <!-- SVG basket -->
                                             <svg height="16" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
@@ -1123,13 +812,15 @@
                                                       fill="currentColor"></path>
                                             </svg>
                                         </span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="cell">
-                                <div class="card basket-add">
-                                    <!-- Если не авторизован - модальное окно -->
-                                    <a href="#" class="like" data-modal="favorites" aria-label="В список желаний">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="cell">
+                            <div class="card basket-add">
+                                <!-- Если не авторизован - модальное окно -->
+                                <a href="#" class="like" data-modal="favorites" aria-label="В список желаний">
                                         <span class="to-like">
                                     <!-- SVG like-1 -->
                                     <svg height="19" viewBox="0 0 512 512" width="21"
@@ -1139,7 +830,7 @@
                                             ></path>
                                         </svg>
                                 </span>
-                                        <span class="in-like">
+                                    <span class="in-like">
                                     <!-- SVG like-2 -->
                                     <svg height="19" viewBox="0 0 512 512" width="21"
                                          xmlns="http://www.w3.org/2000/svg">
@@ -1148,35 +839,35 @@
                                             ></path>
                                         </svg>
                                 </span>
-                                    </a>
-                                    <a href="./product.html" class="photo">
-                                        <picture>
-                                            <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                    data-srcset="./contents/product-1.webp"
-                                                    data-source="./contents/product-1.webp"
-                                                    type="image/webp"
-                                            />
-                                            <!-- data-id, путь к размеру md в data-source -->
-                                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                                 data-src="./contents/product-1.png"
-                                                 data-id="3"
-                                                 class="lazyload"
-                                                 alt="деликат"
-                                                 width="216"
-                                                 height="216"
-                                                 data-source="./contents/product-1.png"
-                                            />
-                                        </picture>
-                                    </a>
-                                    <a href="./product.html" class="text" title="Для интимной гигиены “Деликат”">
-                                        Для интимной гигиены “Деликат”
-                                    </a>
-                                    <div class="prices">
-                                        <div class="price" data-unit="грн">135</div>
-                                    </div>
-                                    <!-- Модальное окно, если не в корзине, data-id -->
-                                    <a aria-label="В корзину" class="buy" data-id="3" data-quantity="1"
-                                       href="./basket.html">
+                                </a>
+                                <a href="./product.html" class="photo">
+                                    <picture>
+                                        <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-srcset="./contents/product-2.webp"
+                                                data-source="./contents/product-2.webp"
+                                                type="image/webp"
+                                        />
+                                        <!-- data-id, путь к размеру md в data-source -->
+                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                             data-src="./contents/product-2.png"
+                                             data-id="2"
+                                             class="lazyload"
+                                             alt="сыворотка"
+                                             width="216"
+                                             height="216"
+                                             data-source="./contents/product-2.png"
+                                        />
+                                    </picture>
+                                </a>
+                                <a href="./product.html" class="text" title="Сыворотка для шеи, декольте и бьюста">
+                                    Сыворотка для шеи, декольте и бьюста
+                                </a>
+                                <div class="prices">
+                                    <div class="price" data-unit="грн">114</div>
+                                </div>
+                                <!-- Модальное окно, если не в корзине, data-id -->
+                                <a aria-label="В корзину" class="buy" data-id="2" data-quantity="1"
+                                   href="./basket.html">
                                         <span class="basket">
                                             <!-- SVG basket -->
                                             <svg height="16" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
@@ -1184,10 +875,326 @@
                                                       fill="currentColor"></path>
                                             </svg>
                                         </span>
-                                    </a>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="cell">
+                            <div class="card basket-add">
+                                <!-- Если не авторизован - модальное окно -->
+                                <a href="#" class="like" data-modal="favorites" aria-label="В список желаний">
+                                        <span class="to-like">
+                                    <!-- SVG like-1 -->
+                                    <svg height="19" viewBox="0 0 512 512" width="21"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"
+                                                  fill="currentColor"
+                                            ></path>
+                                        </svg>
+                                </span>
+                                    <span class="in-like">
+                                    <!-- SVG like-2 -->
+                                    <svg height="19" viewBox="0 0 512 512" width="21"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
+                                                  fill="currentColor"
+                                            ></path>
+                                        </svg>
+                                </span>
+                                </a>
+                                <a href="./product.html" class="photo">
+                                    <picture>
+                                        <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-srcset="./contents/product-1.webp"
+                                                data-source="./contents/product-1.webp"
+                                                type="image/webp"
+                                        />
+                                        <!-- data-id, путь к размеру md в data-source -->
+                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                             data-src="./contents/product-1.png"
+                                             data-id="3"
+                                             class="lazyload"
+                                             alt="деликат"
+                                             width="216"
+                                             height="216"
+                                             data-source="./contents/product-1.png"
+                                        />
+                                    </picture>
+                                </a>
+                                <a href="./product.html" class="text" title="Для интимной гигиены “Деликат”">
+                                    Для интимной гигиены “Деликат”
+                                </a>
+                                <div class="prices">
+                                    <div class="price" data-unit="грн">135</div>
                                 </div>
-                            </li>
-                        </ul>
+                                <!-- Модальное окно, если не в корзине, data-id -->
+                                <a aria-label="В корзину" class="buy" data-id="3" data-quantity="1"
+                                   href="./basket.html">
+                                        <span class="basket">
+                                            <!-- SVG basket -->
+                                            <svg height="16" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.4 22.4C6.86 22.4 5.6 23.66 5.6 25.2C5.6 26.74 6.86 28 8.4 28C9.94 28 11.2 26.74 11.2 25.2C11.2 23.66 9.94 22.4 8.4 22.4ZM0 0V2.8H2.8L7.84 13.44L5.88 16.8C5.74 17.22 5.6 17.78 5.6 18.2C5.6 19.74 6.86 21 8.4 21H25.2V18.2H8.96C8.82 18.2 8.68 18.06 8.68 17.92V17.7799L9.94 15.3999H20.3C21.42 15.3999 22.26 14.8399 22.68 13.9999L27.72 4.9C28 4.62 28 4.48 28 4.2C28 3.36 27.44 2.8 26.6 2.8H5.88L4.62 0H0ZM22.4 22.4C20.86 22.4 19.6 23.66 19.6 25.2C19.6 26.74 20.86 28 22.4 28C23.94 28 25.2 26.74 25.2 25.2C25.2 23.66 23.94 22.4 22.4 22.4Z"
+                                                      fill="currentColor"></path>
+                                            </svg>
+                                        </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="cell">
+                            <div class="card basket-add">
+                                <!-- Если авторизован и товар в избранном -->
+                                <a href="./favorites.html" class="like added" aria-label="В список желаний">
+                                        <span class="to-like">
+                                    <!-- SVG like-1 -->
+                                    <svg height="19" viewBox="0 0 512 512" width="21"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"
+                                                  fill="currentColor"
+                                            ></path>
+                                        </svg>
+                                </span>
+                                    <span class="in-like">
+                                    <!-- SVG like-2 -->
+                                    <svg height="19" viewBox="0 0 512 512" width="21"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
+                                                  fill="currentColor"
+                                            ></path>
+                                        </svg>
+                                </span>
+                                </a>
+                                <a href="./product.html" class="photo">
+                                    <picture>
+                                        <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-srcset="./contents/product-3.webp"
+                                                data-source="./contents/product-md.webp"
+                                                type="image/webp"
+                                        />
+                                        <!-- data-id, путь к размеру md в data-source -->
+                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                             data-src="./contents/product-3.png"
+                                             data-id="0"
+                                             class="lazyload"
+                                             alt="шампунь"
+                                             width="216"
+                                             height="216"
+                                             data-source="./contents/product-md.png"
+                                        />
+                                    </picture>
+                                </a>
+                                <a href="./product.html" class="text"
+                                   title="Шампунь тонизирующий для всех типов волос">
+                                    Шампунь тонизирующий для всех типов волос
+                                </a>
+                                <div class="prices">
+                                    <div class="price" data-unit="грн">89</div>
+                                </div>
+                                <!-- Если в корзине - класс added, data-id -->
+                                <a aria-label="В корзину" class="buy" data-id="0" data-quantity="1"
+                                   href="./basket.html">
+                                        <span class="basket">
+                                            <!-- SVG basket -->
+                                            <svg height="16" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.4 22.4C6.86 22.4 5.6 23.66 5.6 25.2C5.6 26.74 6.86 28 8.4 28C9.94 28 11.2 26.74 11.2 25.2C11.2 23.66 9.94 22.4 8.4 22.4ZM0 0V2.8H2.8L7.84 13.44L5.88 16.8C5.74 17.22 5.6 17.78 5.6 18.2C5.6 19.74 6.86 21 8.4 21H25.2V18.2H8.96C8.82 18.2 8.68 18.06 8.68 17.92V17.7799L9.94 15.3999H20.3C21.42 15.3999 22.26 14.8399 22.68 13.9999L27.72 4.9C28 4.62 28 4.48 28 4.2C28 3.36 27.44 2.8 26.6 2.8H5.88L4.62 0H0ZM22.4 22.4C20.86 22.4 19.6 23.66 19.6 25.2C19.6 26.74 20.86 28 22.4 28C23.94 28 25.2 26.74 25.2 25.2C25.2 23.66 23.94 22.4 22.4 22.4Z"
+                                                      fill="currentColor"></path>
+                                            </svg>
+                                        </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="cell">
+                            <div class="card basket-add">
+                                <!-- Если авторизован и товар не в избранном, data-id -->
+                                <a href="./favorites.html" class="like favorite-add" data-id="1"
+                                   aria-label="В список желаний">
+                                        <span class="to-like">
+                                    <!-- SVG like-1 -->
+                                    <svg height="19" viewBox="0 0 512 512" width="21"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"
+                                                  fill="currentColor"
+                                            ></path>
+                                        </svg>
+                                </span>
+                                    <span class="in-like">
+                                    <!-- SVG like-2 -->
+                                    <svg height="19" viewBox="0 0 512 512" width="21"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
+                                                  fill="currentColor"
+                                            ></path>
+                                        </svg>
+                                </span>
+                                </a>
+                                <a href="./product.html" class="photo">
+                                    <picture>
+                                        <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-srcset="./contents/product-4.webp"
+                                                data-source="./contents/product-4.webp"
+                                                type="image/webp"
+                                        />
+                                        <!-- data-id, путь к размеру md в data-source -->
+                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                             data-src="./contents/product-4.png"
+                                             data-id="1"
+                                             class="lazyload"
+                                             alt="тоник"
+                                             width="216"
+                                             height="216"
+                                             data-source="./contents/product-4.png"
+                                        />
+                                    </picture>
+                                </a>
+                                <a href="./product.html" class="text" title="Тоник для лица очищающий Dr. Green">
+                                    Тоник для лица очищающий Dr. Green
+                                </a>
+                                <div class="prices">
+                                    <div class="price" data-unit="грн">75</div>
+                                </div>
+                                <!-- Модальное окно, если не в корзине, data-id -->
+                                <a aria-label="В корзину" class="buy" data-id="1" data-quantity="1"
+                                   href="./basket.html">
+                                        <span class="basket">
+                                            <!-- SVG basket -->
+                                            <svg height="16" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.4 22.4C6.86 22.4 5.6 23.66 5.6 25.2C5.6 26.74 6.86 28 8.4 28C9.94 28 11.2 26.74 11.2 25.2C11.2 23.66 9.94 22.4 8.4 22.4ZM0 0V2.8H2.8L7.84 13.44L5.88 16.8C5.74 17.22 5.6 17.78 5.6 18.2C5.6 19.74 6.86 21 8.4 21H25.2V18.2H8.96C8.82 18.2 8.68 18.06 8.68 17.92V17.7799L9.94 15.3999H20.3C21.42 15.3999 22.26 14.8399 22.68 13.9999L27.72 4.9C28 4.62 28 4.48 28 4.2C28 3.36 27.44 2.8 26.6 2.8H5.88L4.62 0H0ZM22.4 22.4C20.86 22.4 19.6 23.66 19.6 25.2C19.6 26.74 20.86 28 22.4 28C23.94 28 25.2 26.74 25.2 25.2C25.2 23.66 23.94 22.4 22.4 22.4Z"
+                                                      fill="currentColor"></path>
+                                            </svg>
+                                        </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="cell">
+                            <div class="card basket-add">
+                                <!-- Если не авторизован - модальное окно -->
+                                <a href="#" class="like" data-modal="favorites" aria-label="В список желаний">
+                                        <span class="to-like">
+                                    <!-- SVG like-1 -->
+                                    <svg height="19" viewBox="0 0 512 512" width="21"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"
+                                                  fill="currentColor"
+                                            ></path>
+                                        </svg>
+                                </span>
+                                    <span class="in-like">
+                                    <!-- SVG like-2 -->
+                                    <svg height="19" viewBox="0 0 512 512" width="21"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
+                                                  fill="currentColor"
+                                            ></path>
+                                        </svg>
+                                </span>
+                                </a>
+                                <a href="./product.html" class="photo">
+                                    <picture>
+                                        <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-srcset="./contents/product-2.webp"
+                                                data-source="./contents/product-2.webp"
+                                                type="image/webp"
+                                        />
+                                        <!-- data-id, путь к размеру md в data-source -->
+                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                             data-src="./contents/product-2.png"
+                                             data-id="2"
+                                             class="lazyload"
+                                             alt="сыворотка"
+                                             width="216"
+                                             height="216"
+                                             data-source="./contents/product-2.png"
+                                        />
+                                    </picture>
+                                </a>
+                                <a href="./product.html" class="text" title="Сыворотка для шеи, декольте и бьюста">
+                                    Сыворотка для шеи, декольте и бьюста
+                                </a>
+                                <div class="prices">
+                                    <div class="price" data-unit="грн">114</div>
+                                </div>
+                                <!-- Модальное окно, если не в корзине, data-id -->
+                                <a aria-label="В корзину" class="buy" data-id="2" data-quantity="1"
+                                   href="./basket.html">
+                                        <span class="basket">
+                                            <!-- SVG basket -->
+                                            <svg height="16" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.4 22.4C6.86 22.4 5.6 23.66 5.6 25.2C5.6 26.74 6.86 28 8.4 28C9.94 28 11.2 26.74 11.2 25.2C11.2 23.66 9.94 22.4 8.4 22.4ZM0 0V2.8H2.8L7.84 13.44L5.88 16.8C5.74 17.22 5.6 17.78 5.6 18.2C5.6 19.74 6.86 21 8.4 21H25.2V18.2H8.96C8.82 18.2 8.68 18.06 8.68 17.92V17.7799L9.94 15.3999H20.3C21.42 15.3999 22.26 14.8399 22.68 13.9999L27.72 4.9C28 4.62 28 4.48 28 4.2C28 3.36 27.44 2.8 26.6 2.8H5.88L4.62 0H0ZM22.4 22.4C20.86 22.4 19.6 23.66 19.6 25.2C19.6 26.74 20.86 28 22.4 28C23.94 28 25.2 26.74 25.2 25.2C25.2 23.66 23.94 22.4 22.4 22.4Z"
+                                                      fill="currentColor"></path>
+                                            </svg>
+                                        </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="cell">
+                            <div class="card basket-add">
+                                <!-- Если не авторизован - модальное окно -->
+                                <a href="#" class="like" data-modal="favorites" aria-label="В список желаний">
+                                        <span class="to-like">
+                                    <!-- SVG like-1 -->
+                                    <svg height="19" viewBox="0 0 512 512" width="21"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M458.4 64.3C400.6 15.7 311.3 23 256 79.3 200.7 23 111.4 15.6 53.6 64.3-21.6 127.6-10.6 230.8 43 285.5l175.4 178.7c10 10.2 23.4 15.9 37.6 15.9 14.3 0 27.6-5.6 37.6-15.8L469 285.6c53.5-54.7 64.7-157.9-10.6-221.3zm-23.6 187.5L259.4 430.5c-2.4 2.4-4.4 2.4-6.8 0L77.2 251.8c-36.5-37.2-43.9-107.6 7.3-150.7 38.9-32.7 98.9-27.8 136.5 10.5l35 35.7 35-35.7c37.8-38.5 97.8-43.2 136.5-10.6 51.1 43.1 43.5 113.9 7.3 150.8z"
+                                                  fill="currentColor"
+                                            ></path>
+                                        </svg>
+                                </span>
+                                    <span class="in-like">
+                                    <!-- SVG like-2 -->
+                                    <svg height="19" viewBox="0 0 512 512" width="21"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"
+                                                  fill="currentColor"
+                                            ></path>
+                                        </svg>
+                                </span>
+                                </a>
+                                <a href="./product.html" class="photo">
+                                    <picture>
+                                        <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                                data-srcset="./contents/product-1.webp"
+                                                data-source="./contents/product-1.webp"
+                                                type="image/webp"
+                                        />
+                                        <!-- data-id, путь к размеру md в data-source -->
+                                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                             data-src="./contents/product-1.png"
+                                             data-id="3"
+                                             class="lazyload"
+                                             alt="деликат"
+                                             width="216"
+                                             height="216"
+                                             data-source="./contents/product-1.png"
+                                        />
+                                    </picture>
+                                </a>
+                                <a href="./product.html" class="text" title="Для интимной гигиены “Деликат”">
+                                    Для интимной гигиены “Деликат”
+                                </a>
+                                <div class="prices">
+                                    <div class="price" data-unit="грн">135</div>
+                                </div>
+                                <!-- Модальное окно, если не в корзине, data-id -->
+                                <a aria-label="В корзину" class="buy" data-id="3" data-quantity="1"
+                                   href="./basket.html">
+                                        <span class="basket">
+                                            <!-- SVG basket -->
+                                            <svg height="16" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.4 22.4C6.86 22.4 5.6 23.66 5.6 25.2C5.6 26.74 6.86 28 8.4 28C9.94 28 11.2 26.74 11.2 25.2C11.2 23.66 9.94 22.4 8.4 22.4ZM0 0V2.8H2.8L7.84 13.44L5.88 16.8C5.74 17.22 5.6 17.78 5.6 18.2C5.6 19.74 6.86 21 8.4 21H25.2V18.2H8.96C8.82 18.2 8.68 18.06 8.68 17.92V17.7799L9.94 15.3999H20.3C21.42 15.3999 22.26 14.8399 22.68 13.9999L27.72 4.9C28 4.62 28 4.48 28 4.2C28 3.36 27.44 2.8 26.6 2.8H5.88L4.62 0H0ZM22.4 22.4C20.86 22.4 19.6 23.66 19.6 25.2C19.6 26.74 20.86 28 22.4 28C23.94 28 25.2 26.74 25.2 25.2C25.2 23.66 23.94 22.4 22.4 22.4Z"
+                                                      fill="currentColor"></path>
+                                            </svg>
+                                        </span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

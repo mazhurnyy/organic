@@ -649,8 +649,7 @@ picture {
       width: 24px;
       height: 24px; }
 
-.grid.card-review .cell .card,
-.slider-bottom .cell .card {
+.grid.card-review .cell .card {
   display: block;
   max-width: 250px;
   height: 303px;
@@ -661,8 +660,7 @@ picture {
   z-index: 0;
   background-color: #FFFFFF;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); }
-  .grid.card-review .cell .card::before,
-  .slider-bottom .cell .card::before {
+  .grid.card-review .cell .card::before {
     content: '';
     display: block;
     position: absolute;
@@ -673,8 +671,7 @@ picture {
     height: 188px;
     background-position: center;
     background-repeat: no-repeat; }
-  .grid.card-review .cell .card .avatar,
-  .slider-bottom .cell .card .avatar {
+  .grid.card-review .cell .card .avatar {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -688,8 +685,7 @@ picture {
     left: 50%;
     transform: translateX(-50%);
     z-index: 1; }
-  .grid.card-review .cell .card .title,
-  .slider-bottom .cell .card .title {
+  .grid.card-review .cell .card .title {
     display: block;
     margin-bottom: 22px;
     font-size: 18px;
@@ -697,8 +693,7 @@ picture {
     line-height: 25px;
     text-align: center;
     color: #116708; }
-  .grid.card-review .cell .card .rating,
-  .slider-bottom .cell .card .rating {
+  .grid.card-review .cell .card .rating {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -706,17 +701,14 @@ picture {
     align-items: flex-start;
     margin: 0 auto 26px;
     max-width: 182px; }
-    .grid.card-review .cell .card .rating li,
-    .slider-bottom .cell .card .rating li {
+    .grid.card-review .cell .card .rating li {
       display: block;
       width: 26px;
       height: 26px;
       color: #A4CC70; }
-      .grid.card-review .cell .card .rating li.mark,
-      .slider-bottom .cell .card .rating li.mark {
+      .grid.card-review .cell .card .rating li.mark {
         color: #E6D012; }
-  .grid.card-review .cell .card .text,
-  .slider-bottom .cell .card .text {
+  .grid.card-review .cell .card .text {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
@@ -3601,8 +3593,9 @@ picture {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: stretch;
-    margin: 0 -10px; }
+    align-items: stretch; }
+    .section-grid .grid:not(.slider-bottom) {
+      margin: 0 -10px; }
     .section-grid .grid .cell {
       display: block;
       padding: 0 10px;
@@ -4761,14 +4754,14 @@ background: #ccc;
   @media (max-width: 767px) {
     #products {
       padding: 36px 0 42px; } }
-  #products .slider {
+  #products .slider-bottom {
     max-height: 519px; }
     @media (max-width: 767px) {
-      #products .slider {
-        max-height: 1018px; } }
+      #products .slider-bottom {
+        max-height: 509px; } }
     @media (max-width: 535px) {
-      #products .slider {
-        max-height: 2004px; } }
+      #products .slider-bottom {
+        max-height: 501px; } }
 
 .profile {
   padding-left: 30px; }
@@ -4904,30 +4897,8 @@ background: #ccc;
   @media (max-width: 767px) {
     #reviews {
       padding: 36px 0 42px; } }
-  #reviews .slider {
+  #reviews .slider-bottom {
     max-height: 415px; }
-    @media (max-width: 767px) {
-      #reviews .slider {
-        max-height: 830px; } }
-    @media (max-width: 535px) {
-      #reviews .slider {
-        max-height: 1660px; } }
-
-#reviews-2 {
-  display: block;
-  background-color: #DFF4E6;
-  padding: 82px 0 90px; }
-  @media (max-width: 767px) {
-    #reviews-2 {
-      padding: 36px 0 42px; } }
-  #reviews-2 .slider-bottom {
-    max-height: 415px; }
-    @media (max-width: 767px) {
-      #reviews-2 .slider-bottom {
-        max-height: 830px; } }
-    @media (max-width: 535px) {
-      #reviews-2 .slider-bottom {
-        max-height: 1660px; } }
 
 #slider {
   display: block;

@@ -7,37 +7,7 @@
     padding: 36px 0 42px;
   }
 
-  .slider {
-    max-height: 415px;
-
-    @media (max-width: 767px) {
-      max-height: 830px;
-    }
-
-    @media (max-width: 535px) {
-      max-height: 1660px;
-    }
-  }
-}
-
-#reviews-2 {
-  display: block;
-  background-color: $color-green-7;
-  padding: 82px 0 90px;
-
-  @media (max-width: 767px) {
-    padding: 36px 0 42px;
-  }
-
   .slider-bottom {
     max-height: 415px;
-
-    @media (max-width: 767px) {
-      max-height: 830px;
-    }
-
-    @media (max-width: 535px) {
-      max-height: 1660px;
-    }
   }
 }
