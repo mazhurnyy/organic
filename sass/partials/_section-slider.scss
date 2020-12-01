@@ -12,7 +12,9 @@
 
   @media (max-width: 4 * $layout-padding + 2 * 40 + $layout-width - 1px) {
     .slick-dots {
+      top: auto;
       bottom: -48px;
+      transform: none;
     }
   }
 

@@ -7,15 +7,15 @@
     padding: 36px 0 42px;
   }
 
-  .slider {
+  .slider-bottom {
     max-height: 519px;
 
     @media (max-width: 767px) {
-      max-height: 1018px;
+      max-height: 509px;
     }
 
     @media (max-width: 535px) {
-      max-height: 2004px;
+      max-height: 501px;
     }
   }
 }
