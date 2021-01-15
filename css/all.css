@@ -1060,6 +1060,51 @@ picture {
     @media (min-width: 566px) and (max-width: 811px) {
       #content-basket .summary {
         border-top: none; } }
+    #content-basket .summary .promo-form {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-end;
+      align-items: flex-end;
+      margin-bottom: 40px; }
+      @media (max-width: 609px) {
+        #content-basket .summary .promo-form {
+          flex-direction: column;
+          align-items: stretch; } }
+      #content-basket .summary .promo-form .left {
+        display: block;
+        min-width: 320px; }
+        @media (max-width: 1023px) {
+          #content-basket .summary .promo-form .left {
+            flex-grow: 1;
+            min-width: auto; } }
+        #content-basket .summary .promo-form .left label {
+          display: block;
+          margin-bottom: 6px;
+          font-size: 14px;
+          line-height: 19px;
+          color: #888888; }
+          #content-basket .summary .promo-form .left label[data-error]::after {
+            content: attr(data-error);
+            color: #EA2828; }
+        #content-basket .summary .promo-form .left .input {
+          display: block;
+          width: 100%;
+          height: 50px;
+          padding: 0 16px;
+          border: 2px solid #116708;
+          font-size: 16px;
+          color: #545454;
+          background-color: #FFFFFF; }
+      #content-basket .summary .promo-form .right {
+        min-width: 240px;
+        margin-left: 17px; }
+        @media (max-width: 609px) {
+          #content-basket .summary .promo-form .right {
+            margin-left: 0;
+            margin-top: 17px; } }
+        #content-basket .summary .promo-form .right .btn-promo {
+          width: 100%;
+          min-height: 50px; }
     #content-basket .summary .top {
       display: flex;
       flex-direction: row;
@@ -1069,6 +1114,9 @@ picture {
       margin-bottom: 44px;
       font-size: 26px;
       line-height: 35px; }
+      @media (max-width: 565px) {
+        #content-basket .summary .top {
+          justify-content: center; } }
       #content-basket .summary .top .summary-text {
         display: block;
         color: #888888;

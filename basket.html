@@ -403,6 +403,19 @@
             </ul>
             <div class="summary">
                 <div class="layout">
+                    <form action="#" class="promo-form" method="post" autocomplete="off">
+                        <div class="left">
+                            <label for="ordering-promo" data-txt="(минимум X символа)" data-error="">
+                                Промо код
+                            </label>
+                            <input type="text" name="ordering-promo" class="input" id="ordering-promo"/>
+                        </div>
+                        <div class="right">
+                            <button type="submit" class="btn btn-primary-fill btn-promo">
+                                <span>Применить</span>
+                            </button>
+                        </div>
+                    </form>
                     <div class="top">
                         <span class="summary-text">К оплате:</span>
                         <span class="summary-total" data-unit="грн"><span>1560</span></span>
@@ -816,7 +829,8 @@
                     </div>
                     <div class="timer minutes">
                         <a href="#" class="change decrease" aria-label="Установить минуты">20</a>
-                        <input type="text" name="minutes" readonly="readonly" aria-label="Минуты" class="input" value="30"/>
+                        <input type="text" name="minutes" readonly="readonly" aria-label="Минуты" class="input"
+                               value="30"/>
                         <a href="#" class="change increase" aria-label="Установить минуты">40</a>
                     </div>
                 </div>
