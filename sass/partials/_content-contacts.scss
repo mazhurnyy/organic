@@ -2,56 +2,56 @@
   display: block;
   padding: 20px 0 50px;
 
-    h2 {
-      display: block;
-      margin-bottom: 30px;
-      font-size: 18px;
-      font-weight: 600;
-      line-height: 25px;
+  h2 {
+    display: block;
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px;
 
-      color: $color-black;
+    color: $color-black;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @media (max-width: 1023px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
     }
 
-    .info {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-start;
+    .card {
+      display: block;
 
       @media (max-width: 1023px) {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        padding: 0 $layout-padding 40px;
       }
 
-      .card {
+      @media (max-width: 565px) {
+        text-align: center;
+      }
+
+      .text {
         display: block;
+        font-size: 18px;
+        line-height: 25px;
+
+        color: $color-black;
 
         @media (max-width: 1023px) {
-          padding: 0 $layout-padding 40px;
+          font-size: 16px;
         }
 
-        @media (max-width: 565px) {
-          text-align: center;
-        }
-
-        .text {
-          display: block;
-          font-size: 18px;
-          line-height: 25px;
-
+        a {
           color: $color-black;
-
-          @media (max-width: 1023px) {
-            font-size: 16px;
-          }
-
-          a {
-            color: $color-black;
-          }
         }
       }
     }
+  }
 
   .feedback {
     display: block;

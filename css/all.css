@@ -1156,6 +1156,137 @@ picture {
           #content-basket .summary .bottom .btn {
             width: 100%; } }
 
+#content-brands {
+  display: block;
+  padding: 20px 0 50px; }
+  @media (max-width: 565px) {
+    #content-brands {
+      padding: 0 0 32px; } }
+  #content-brands .layout {
+    flex-wrap: nowrap; }
+    @media (max-width: 767px) {
+      #content-brands .layout {
+        flex-wrap: wrap; } }
+    @media (max-width: 767px) {
+      #content-brands .layout .sidebar {
+        flex-basis: 100%; } }
+    #content-brands .layout .sidebar.categories {
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 200px;
+      padding-right: 16px; }
+      @media (max-width: 767px) {
+        #content-brands .layout .sidebar.categories {
+          flex-grow: 1;
+          padding-right: 0;
+          margin-bottom: 16px; } }
+  #content-brands .brands-filter {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -2px; }
+    #content-brands .brands-filter li {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      min-width: 16px;
+      height: 32px;
+      padding: 0 2px;
+      font-size: 18px; }
+    #content-brands .brands-filter .active {
+      color: #5DBC30; }
+      #content-brands .brands-filter .active span {
+        position: relative; }
+        #content-brands .brands-filter .active span::after {
+          content: '';
+          display: block;
+          border: 1px solid currentColor;
+          position: absolute;
+          left: -2px;
+          right: -2px;
+          bottom: -4px; }
+    #content-brands .brands-filter .button {
+      color: #2F2C2C;
+      cursor: pointer; }
+      #content-brands .brands-filter .button:hover, #content-brands .brands-filter .button:active {
+        color: #5DBC30; }
+    #content-brands .brands-filter .disabled {
+      color: #A7A7A7; }
+  #content-brands .categories .brands-filter {
+    flex-flow: column nowrap;
+    align-items: flex-start; }
+    #content-brands .categories .brands-filter li {
+      margin-bottom: 20px; }
+  #content-brands .brands .brands-filter {
+    flex-flow: row wrap;
+    margin-bottom: 56px; }
+    @media (max-width: 1189px) {
+      #content-brands .brands .brands-filter {
+        justify-content: flex-start; } }
+    @media (max-width: 1023px) {
+      #content-brands .brands .brands-filter {
+        margin-bottom: 40px; } }
+    @media (max-width: 1189px) {
+      #content-brands .brands .brands-filter li {
+        width: 24px; } }
+    @media (max-width: 1023px) {
+      #content-brands .brands .brands-filter li {
+        width: 28px; } }
+    @media (max-width: 1189px) {
+      #content-brands .brands .brands-filter li.double {
+        width: 48px; } }
+    @media (max-width: 1023px) {
+      #content-brands .brands .brands-filter li.double {
+        width: 56px; } }
+    @media (max-width: 1189px) {
+      #content-brands .brands .brands-filter li.double span {
+        letter-spacing: 2px; } }
+    @media (max-width: 1023px) {
+      #content-brands .brands .brands-filter li.double span {
+        letter-spacing: 3px; } }
+  #content-brands .brands .brand-group {
+    margin-bottom: 56px; }
+    @media (max-width: 1023px) {
+      #content-brands .brands .brand-group {
+        margin-bottom: 40px; } }
+    #content-brands .brands .brand-group h2 {
+      display: block;
+      margin-bottom: 32px;
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 52px;
+      color: #323033; }
+    #content-brands .brands .brand-group ul {
+      display: block;
+      column-count: 6;
+      column-gap: 16px; }
+      @media (max-width: 1189px) {
+        #content-brands .brands .brand-group ul {
+          column-count: 5; } }
+      @media (max-width: 1111px) {
+        #content-brands .brands .brand-group ul {
+          column-count: 4; } }
+      @media (max-width: 895px) {
+        #content-brands .brands .brand-group ul {
+          column-count: 3; } }
+      @media (max-width: 565px) {
+        #content-brands .brands .brand-group ul {
+          column-count: 2; } }
+      @media (max-width: 415px) {
+        #content-brands .brands .brand-group ul {
+          column-count: unset; } }
+      #content-brands .brands .brand-group ul li {
+        display: inline-block;
+        width: 100%;
+        padding-bottom: 16px; }
+        #content-brands .brands .brand-group ul li a {
+          display: inline;
+          color: #2D2D2D;
+          font-size: 14px;
+          line-height: 20px; }
+          #content-brands .brands .brand-group ul li a:hover, #content-brands .brands .brand-group ul li a:active {
+            color: #5DBC30; }
+
 #content-catalog {
   display: block;
   background-color: #FFFFFF;
