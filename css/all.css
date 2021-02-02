@@ -1178,8 +1178,7 @@ picture {
       @media (max-width: 767px) {
         #content-brands .layout .sidebar.categories {
           flex-grow: 1;
-          padding-right: 0;
-          margin-bottom: 16px; } }
+          padding-right: 0; } }
   #content-brands .brands-filter {
     display: flex;
     justify-content: space-between;
@@ -1217,6 +1216,41 @@ picture {
     align-items: flex-start; }
     #content-brands .categories .brands-filter li {
       margin-bottom: 20px; }
+  #content-brands .categories .details-categories {
+    display: block; }
+    #content-brands .categories .details-categories .summary-categories {
+      margin-bottom: 56px;
+      display: inline-block;
+      position: relative;
+      font-size: 22px;
+      line-height: 32px;
+      color: #53735E; }
+      @media (max-width: 1189px) {
+        #content-brands .categories .details-categories .summary-categories {
+          margin-bottom: 46px; } }
+      @media (max-width: 979px) {
+        #content-brands .categories .details-categories .summary-categories {
+          margin-bottom: 32px; } }
+      @media (max-width: 767px) {
+        #content-brands .categories .details-categories .summary-categories {
+          margin-bottom: 24px; } }
+      @media (max-width: 767px) {
+        #content-brands .categories .details-categories .summary-categories::after {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 100%;
+          top: 50%;
+          z-index: 1;
+          transform: translateY(-50%);
+          width: 14px;
+          height: 12px;
+          margin: 0 4px;
+          background-image: url(../images/catalog-category.svg);
+          background-position: center;
+          background-repeat: no-repeat; } }
+    #content-brands .categories .details-categories[open] .summary-categories::after {
+      transform: translateY(-50%) rotate(180deg); }
   #content-brands .brands .brands-filter {
     flex-flow: row wrap;
     margin-bottom: 56px; }
@@ -1254,7 +1288,7 @@ picture {
       margin-bottom: 32px;
       font-size: 40px;
       font-weight: 600;
-      line-height: 52px;
+      line-height: 48px;
       color: #323033; }
     #content-brands .brands .brand-group ul {
       display: block;
@@ -1319,9 +1353,9 @@ picture {
         top: 50%;
         z-index: 1;
         transform: translateY(-50%);
-        width: 12px;
+        width: 14px;
         height: 12px;
-        padding-left: 8px;
+        margin: 0 4px;
         background-image: url(../images/catalog-category.svg);
         background-position: center;
         background-repeat: no-repeat; }
@@ -1385,9 +1419,9 @@ picture {
             top: 50%;
             z-index: 1;
             transform: translateY(-50%);
-            width: 12px;
+            width: 14px;
             height: 12px;
-            padding-left: 8px;
+            margin: 0 4px;
             background-image: url(../images/catalog-filter.svg);
             background-position: center;
             background-repeat: no-repeat; } }
@@ -1426,9 +1460,9 @@ picture {
             top: 50%;
             z-index: 1;
             transform: translateY(-50%);
-            width: 12px;
+            width: 14px;
             height: 12px;
-            padding-left: 8px;
+            margin: 0 4px;
             background-image: url(../images/catalog-category.svg);
             background-position: center;
             background-repeat: no-repeat; }

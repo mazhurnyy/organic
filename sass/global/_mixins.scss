@@ -103,9 +103,9 @@
     top: 50%;
     z-index: 1;
     transform: translateY(-50%);
-    width: 12px;
+    width: 14px;
     height: 12px;
-    padding-left: 8px;
+    margin: 0 4px;
     background-image: url(../images/#{$image});
     background-position: center;
     background-repeat: no-repeat;
