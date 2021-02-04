@@ -21,12 +21,14 @@ $(function () {
         .on("click", ".products-load", function () {
             const
                 load_btn = $(".products-load"),
-                filter = $(".grid.card-product").data("filter")
+                card_product = $(".grid.card-product"),
+                filter = card_product.data("filter"),
+                route = card_product.data("route")
             ;
             submitOff(load_btn);
             setTimeout(function () {
                 axios
-                    .post("/catalog", {
+                    .post("/" + route, {
                         page: favorite_page,
                         filter: filter
                     }, {
