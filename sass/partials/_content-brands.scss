@@ -34,7 +34,7 @@
 
   .brands-filter {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin: 0 -2px;
 
     li {
@@ -42,7 +42,7 @@
       flex-flow: row nowrap;
       justify-content: center;
       align-items: center;
-      min-width: 16px;
+      min-width: 24px;
       height: 32px;
       padding: 0 2px;
       font-size: 18px;
@@ -95,18 +95,14 @@
       display: block;
 
       .summary-categories {
-        margin-bottom: 56px;
+        margin-bottom: 46px;
         display: inline-block;
         position: relative;
         font-size: 22px;
         line-height: 32px;
         color: $color-green-6;
 
-        @media (max-width: 1189px) {
-          margin-bottom: 46px;
-        }
-
-        @media (max-width: 979px) {
+        @media (max-width: 1023px) {
           margin-bottom: 32px;
         }
 
@@ -131,27 +127,17 @@
       flex-flow: row wrap;
       margin-bottom: 56px;
 
-      @media (max-width: 1189px) {
-        justify-content: flex-start;
-      }
-
       @media (max-width: 1023px) {
         margin-bottom: 40px;
       }
 
       li {
-        @media (max-width: 1189px) {
-          width: 24px;
-        }
-
         @media (max-width: 1023px) {
           width: 28px;
         }
 
         &.double {
-          @media (max-width: 1189px) {
-            width: 48px;
-          }
+          width: 48px;
 
           @media (max-width: 1023px) {
             width: 56px;
