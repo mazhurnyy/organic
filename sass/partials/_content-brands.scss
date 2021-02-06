@@ -157,11 +157,6 @@
     }
 
     .brand-group {
-      margin-bottom: 56px;
-
-      @media (max-width: 1023px) {
-        margin-bottom: 40px;
-      }
 
       h2 {
         display: block;
@@ -176,6 +171,11 @@
         display: block;
         column-count: 6;
         column-gap: 16px;
+        margin-bottom: 56px;
+
+        @media (max-width: 1023px) {
+          margin-bottom: 40px;
+        }
 
         @media (max-width: 1189px) {
           column-count: 5;
