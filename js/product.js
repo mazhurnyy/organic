@@ -100,7 +100,7 @@ $(function () {
 
         if (number_new > 0) {
             number_obj.text(number_new);
-            $("#content-product .basket-add").attr("data-quantity", number_new);
+            $(".buttons.card.basket-add .buy").attr("data-quantity", number_new);
         }
 
         if (number_new > 1) {
