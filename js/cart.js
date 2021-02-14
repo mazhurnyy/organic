@@ -202,10 +202,15 @@ $(function () {
                 .then(function (response) {
                     position_obj.remove();
                     $(".summary-total span").text(response.data.total);
+
+                    const bag = $("#header-bag");
+                    bag.attr("data-quantity", +bag.attr("data-quantity") - 1);
                 })
                 .catch(function (error) {
                     position_obj.remove();
                     $(".summary-total span").text(500);
+                    const bag = $("#header-bag");
+                    bag.attr("data-quantity", +bag.attr("data-quantity") - 1);
                     return;
 
                     submitOn($(that));

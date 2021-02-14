@@ -2961,7 +2961,8 @@ picture {
                 cursor: default; }
               @media (max-width: 767px) {
                 #header .bottom nav ul .navbar-lvl-1 ul li a {
-                  justify-content: center; } }
+                  justify-content: center;
+                  text-align: center; } }
               #header .bottom nav ul .navbar-lvl-1 ul li a span {
                 font-weight: normal; }
 
