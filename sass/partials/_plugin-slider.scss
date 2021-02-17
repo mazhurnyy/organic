@@ -2,7 +2,7 @@
 
 $slick-arrow-width: 40px;
 
-.slider, .slider-bottom {
+.slider, .slider-bottom, .slider-modal, .slider-product {
   overflow: hidden;
 }
 
@@ -129,16 +129,11 @@ $slick-arrow-width: 40px;
     font-size: 0;
     line-height: 0;
     width: $slick-arrow-width;
-    height: 60px;
     padding: 0;
     opacity: .5;
 
     &:hover, &:active {
       opacity: 1;
-    }
-
-    @media (max-width: 4 * $layout-padding + 2 * 40 + $layout-width - 1px) {
-      display: none !important;
     }
 
     &.slick-hidden {
@@ -156,22 +151,12 @@ $slick-arrow-width: 40px;
       background-position: center;
       background-repeat: no-repeat;
     }
-
-    &.slick-prev::before {
-      background-image: url(../images/slider-prev.svg);
-    }
-
-    &.slick-next::before {
-      background-image: url(../images/slider-next.svg);
-    }
   }
 
   .slick-dots {
     position: absolute;
     top: 100%;
-    transform: translateY(-50%);
     list-style: none;
-    display: none !important;
     text-align: center;
     padding: 0;
     margin: 0;
@@ -181,10 +166,6 @@ $slick-arrow-width: 40px;
     grid-template-columns: repeat(auto-fit, 16px);
     grid-row-gap: 16px;
     grid-column-gap: 32px;
-
-    @media (max-width: 4 * $layout-padding + 2 * 40 + $layout-width - 1px) {
-      display: grid !important;
-    }
 
     li {
       position: relative;
@@ -231,7 +212,7 @@ $slick-arrow-width: 40px;
 
       &.slick-active button {
         &:hover, &:active {
-          cursor:default;
+          cursor: default;
 
           &:before {
             box-shadow: none;
@@ -242,20 +223,135 @@ $slick-arrow-width: 40px;
   }
 }
 
-.slick-arrow.slick-prev {
-  left: $layout-padding;
-}
+.slick-slider.slider {
+  .slick-arrow {
+    height: 60px;
 
-.slick-arrow.slick-next {
-  right: $layout-padding;
-}
+    @media (max-width: 4 * $layout-padding + 2 * 40 + $layout-width - 1px) {
+      display: none !important;
+    }
 
-.slider-bottom {
-  .slick-arrow.slick-prev {
-    left: #{-$layout-padding - $slick-arrow-width};
+    &.slick-prev {
+      left: $layout-padding;
+
+      &::before {
+        background-image: url(../images/slider-prev.svg);
+      }
+    }
+
+    &.slick-next {
+      right: $layout-padding;
+
+      &::before {
+        background-image: url(../images/slider-next.svg);
+      }
+    }
   }
 
-  .slick-arrow.slick-next {
-    right: #{-$layout-padding - $slick-arrow-width};
+  .slick-dots {
+    display: none !important;
+    transform: translateY(-50%);
+
+    @media (max-width: 4 * $layout-padding + 2 * 40 + $layout-width - 1px) {
+      display: grid !important;
+    }
+  }
+}
+
+.slick-slider.slider-bottom {
+  .slick-arrow {
+    height: 60px;
+
+    @media (max-width: 4 * $layout-padding + 2 * 40 + $layout-width - 1px) {
+      display: none !important;
+    }
+
+    &.slick-prev {
+      left: #{-$layout-padding - $slick-arrow-width};
+
+      &::before {
+        background-image: url(../images/slider-prev.svg);
+      }
+    }
+
+    &.slick-next {
+      right: #{-$layout-padding - $slick-arrow-width};
+
+      &::before {
+        background-image: url(../images/slider-next.svg);
+      }
+    }
+  }
+
+  .slick-dots {
+    display: none !important;
+    transform: translateY(-50%);
+
+    @media (max-width: 4 * $layout-padding + 2 * 40 + $layout-width - 1px) {
+      display: grid !important;
+    }
+  }
+}
+
+.slick-slider.slider-modal {
+  .slick-arrow {
+    height: 60px;
+
+    &.slick-prev {
+      right: 100%;
+      transform: translateX(-10px);
+
+      @media(max-width: 767px) {
+        transform: none;
+      }
+
+      &::before {
+        background-image: url(../images/slider-prev.svg);
+      }
+    }
+
+    &.slick-next {
+      left: 100%;
+      transform: translateX(10px);
+
+      @media(max-width: 767px) {
+        transform: none;
+      }
+
+      &::before {
+        background-image: url(../images/slider-next.svg);
+      }
+    }
+  }
+
+  .slick-dots {
+    display: grid !important;
+    transform: translateY(20px);
+
+    @media(max-width: 767px) {
+      transform: none;
+    }
+  }
+}
+
+.slick-slider.slider-product {
+  .slick-arrow {
+    height: 40px;
+
+    &.slick-prev {
+      right: 100%;
+
+      &::before {
+        background-image: url(../images/slider-prev-sm.svg);
+      }
+    }
+
+    &.slick-next {
+      left: 100%;
+
+      &::before {
+        background-image: url(../images/slider-next-sm.svg);
+      }
+    }
   }
 }

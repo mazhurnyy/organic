@@ -1,4 +1,6 @@
 $(function () {
+    let slide_index = 0;
+
     $(window)
         .bind("resize", function () {
             spoilerInit();
@@ -8,21 +10,64 @@ $(function () {
         .ready(function () {
             spoilerInit();
 
+            if (!document.querySelector(".product-slider")) return true;
+
+            $(".product-slider").slick({
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 4,
+                slidesToScroll: 4
+            });
+
+            $(".product-slider .slide[data-idx=0]").click();
+        })
+        .on("click", ".product-slider .slide", function () {
             const
-                obj = $(".top .photo-open"),
-                alt = obj.find("img").attr("alt"),
-                src = obj.find("img").data("source"),
-                srcset = obj.find("source").data("source")
+                webp = $(this).find("source").data("source"),
+                jpeg = $(this).find("img").data("source"),
+                left = $(".left > .photo"),
+                right = $(".right > .photo")
             ;
 
-            $(".modal-picture picture img").attr("src", src).attr("alt", alt);
-            $(".modal-picture picture source").attr("srcset", srcset);
+            slide_index = $(this).data("idx");
+
+            $(".product-slider").slick("slickGoTo", slide_index);
+
+            left.attr("data-idx", slide_index);
+            left.find("source").attr("srcset", webp);
+            left.find("img").attr("src", jpeg);
+            right.attr("data-idx", slide_index);
+            right.find("source").attr("srcset", webp);
+            right.find("img").attr("src", jpeg);
+
+            $(".product-slider .slide").removeClass("active");
+            $(".product-slider .slide[data-idx=" + slide_index + "]").addClass("active");
         })
         .on("click", ".top .photo-open", function () {
             const wrapper = $("#wrapper");
             if (wrapper.outerWidth() < 768 || wrapper.outerHeight() < 560 || mobile) return false;
 
             modalOpen("picture");
+
+            const modal_slider_obj = $(".modal-slider");
+            if (!modal_slider_obj) return true;
+
+            if (!modal_slider_obj.hasClass("slick-initialized")) {
+                modal_slider_obj.slick({
+                    dots: true,
+                    arrows: true,
+                    speed: 300
+                });
+            }
+
+            modal_slider_obj
+                .slick("slickGoTo", slide_index)
+                .on("afterChange", function (e, slick, index) {
+                    slide_index = index;
+                    $(".product-slider .slide[data-idx=" + index + "]").click();
+                })
+            ;
         })
         .on("click", ".show_description", function (e) {
             e.preventDefault();
