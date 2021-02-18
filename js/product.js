@@ -12,13 +12,20 @@ $(function () {
 
             if (!document.querySelector(".product-slider")) return true;
 
-            $(".product-slider").slick({
-                dots: false,
-                infinite: true,
-                speed: 300,
-                slidesToShow: 4,
-                slidesToScroll: 4
-            });
+            $(".product-slider")
+                .slick({
+                    dots: false,
+                    infinite: true,
+                    speed: 300,
+                    slidesToShow: 4,
+                    slidesToScroll: 1
+                })
+                .on("afterChange", function (e, slick, index) {
+                    console.log(index);
+                    slide_index = index;
+                    $(".product-slider .slide[data-idx=" + index + "]").click();
+                })
+            ;
 
             $(".product-slider .slide[data-idx=0]").click();
         })
@@ -30,9 +37,10 @@ $(function () {
                 right = $(".right > .photo")
             ;
 
-            slide_index = $(this).data("idx");
-
-            $(".product-slider").slick("slickGoTo", slide_index);
+            if (slide_index !== $(this).data("idx")) {
+                slide_index = $(this).data("idx");
+                $(".product-slider").slick("slickGoTo", slide_index);
+            }
 
             left.attr("data-idx", slide_index);
             left.find("source").attr("srcset", webp);
@@ -65,7 +73,7 @@ $(function () {
                 .slick("slickGoTo", slide_index)
                 .on("afterChange", function (e, slick, index) {
                     slide_index = index;
-                    $(".product-slider .slide[data-idx=" + index + "]").click();
+                    $(".product-slider").slick("slickGoTo", slide_index);
                 })
             ;
         })
