@@ -12,16 +12,16 @@ $(function () {
 
             if (!document.querySelector(".product-slider")) return true;
 
+            const slides = $(".product-slider .slide").length / 2;
+
             $(".product-slider")
                 .slick({
                     dots: false,
-                    infinite: true,
                     speed: 300,
-                    slidesToShow: 4,
+                    slidesToShow: slides > 4 ? 4 : slides - 1,
                     slidesToScroll: 1
                 })
                 .on("afterChange", function (e, slick, index) {
-                    console.log(index);
                     slide_index = index;
                     $(".product-slider .slide[data-idx=" + index + "]").click();
                 })
