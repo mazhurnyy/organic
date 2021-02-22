@@ -4331,7 +4331,8 @@ background: #ccc;
     position: relative;
     overflow: hidden;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    max-height: 100%; }
     .slick-slider .slick-list:focus {
       outline: none; }
     .slick-slider .slick-list.dragging {
