@@ -2452,8 +2452,8 @@ picture {
   bottom: 0;
   z-index: 410;
   background-color: #FFFFFF;
-  border: 1px solid #828282;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); }
+  border-top: 1px solid #828282;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1); }
   #cookie .cookie-head {
     display: flex;
     flex-flow: row nowrap;
