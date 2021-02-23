@@ -1,5 +1,6 @@
 $(function () {
     let slide_index = 0;
+    let slides_all = 1;
 
     $(window)
         .bind("resize", function () {
@@ -12,13 +13,13 @@ $(function () {
 
             if (!document.querySelector(".product-slider")) return true;
 
-            const slides = $(".product-slider .slide").length / 2;
+            slides_all = $(".product-slider .slide").length / 2;
 
             $(".product-slider")
                 .slick({
                     dots: false,
                     speed: 300,
-                    slidesToShow: slides > 4 ? 4 : slides - 1,
+                    slidesToShow: slides_all > 4 ? 4 : slides_all,
                     slidesToScroll: 1
                 })
                 .on("afterChange", function (e, slick, index) {
@@ -39,7 +40,7 @@ $(function () {
 
             if (slide_index !== $(this).data("idx")) {
                 slide_index = $(this).data("idx");
-                $(".product-slider").slick("slickGoTo", slide_index);
+                if (slides_all > 4) $(".product-slider").slick("slickGoTo", slide_index);
             }
 
             left.attr("data-idx", slide_index);
@@ -73,7 +74,11 @@ $(function () {
                 .slick("slickGoTo", slide_index)
                 .on("afterChange", function (e, slick, index) {
                     slide_index = index;
-                    $(".product-slider").slick("slickGoTo", slide_index);
+                    if (slides_all > 4) {
+                        $(".product-slider").slick("slickGoTo", slide_index);
+                    } else {
+                        $(".product-slider .slide[data-idx=" + slide_index + "]").click();
+                    }
                 })
             ;
         })
