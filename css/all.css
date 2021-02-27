@@ -2323,6 +2323,10 @@ picture {
         font-size: 14px;
         line-height: 22px;
         color: #000000; }
+        #content-product .middle .properties .property a {
+          color: #116708; }
+          #content-product .middle .properties .property a:hover, #content-product .middle .properties .property a:active {
+            color: #A4CC70; }
         #content-product .middle .properties .property strong {
           font-weight: 600; }
   #content-product .bottom {
