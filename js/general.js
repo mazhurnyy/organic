@@ -7,60 +7,79 @@ if (token !== null) {
     window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
 }
 
+{
+    //--------------------------------------------------------------------------------------------------------------
+    // Ready
+    document.addEventListener("DOMContentLoaded", function () {
+        // Checkbox-agree
+        const check_boxes_agree = document.querySelectorAll(".checkbox-agree input");
+
+        for (let check of check_boxes_agree) {
+            checkBoxAgree(check);
+        }
+
+        // Phone
+        $("[type=tel]").inputmask("+380 (99) 999 99 99");
+
+        // Slider
+        $(".slider").slick({
+            dots: true,
+            arrows: true,
+            autoplay: true,
+            autoplaySpeed: 3600
+        });
+        $(".slider-bottom").slick({
+            dots: true,
+            arrows: true,
+            autoplay: true,
+            autoplaySpeed: 3600,
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            responsive: [
+                {
+                    breakpoint: 1112,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 536,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+    });
+
+    function checkBoxAgree(elem) {
+        const btn = elem.closest("form").find("[type=submit]");
+
+        if (elem.checked) {
+            btn.removeAttribute("disabled");
+        } else {
+            btn.setAttribute("disabled", "disabled");
+        }
+    }
+}
+
 $(function () {
     $(document)
-        //--------------------------------------------------------------------------------------------------------------
-        // Ready
-        .ready(function () {
-            // Phone
-            $("[type=tel]").inputmask("+380 (99) 999 99 99");
-
-            // Checkbox-agree
-            $(".checkbox-agree input").each(function () {
-                checkBoxAgree(this);
-            });
-
-            // Slider
-            $(".slider").slick({
-                dots: true,
-                arrows: true,
-                autoplay: true,
-                autoplaySpeed: 3600
-            });
-            $(".slider-bottom").slick({
-                dots: true,
-                arrows: true,
-                autoplay: true,
-                autoplaySpeed: 3600,
-                infinite: true,
-                slidesToShow: 4,
-                slidesToScroll: 4,
-                responsive: [
-                    {
-                        breakpoint: 1112,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 3,
-                            infinite: true,
-                            dots: true
-                        }
-                    },
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 2
-                        }
-                    },
-                    {
-                        breakpoint: 536,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
-                        }
-                    }
-                ]
-            });
+        // Checkbox-agree
+        .on("change", ".checkbox-agree input", function () {
+            checkBoxAgree(this);
         })
         //--------------------------------------------------------------------------------------------------------------
         // Misc
@@ -77,10 +96,6 @@ $(function () {
         })
         .on("input change focus paste", "textarea", function () {
             $(this).removeClass("error").removeClass("success").parent().attr("data-error", "");
-        })
-        // Checkbox-agree
-        .on("change", ".checkbox-agree input", function () {
-            checkBoxAgree(this);
         })
     //--------------------------------------------------------------------------------------------------------------
     ;
