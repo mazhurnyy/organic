@@ -8,7 +8,6 @@ if (token !== null) {
 }
 
 {
-    //--------------------------------------------------------------------------------------------------------------
     // Ready
     document.addEventListener("DOMContentLoaded", function () {
         // Checkbox-agree
@@ -19,7 +18,10 @@ if (token !== null) {
         }
 
         // Phone
-        $("[type=tel]").inputmask("+380 (99) 999 99 99");
+        for (let selector of document.querySelectorAll("[type=tel]")) {
+            let im = new Inputmask("+380 (99) 999 99 99");
+            im.mask(selector);
+        }
 
         // Slider
         $(".slider").slick({
@@ -64,8 +66,50 @@ if (token !== null) {
         });
     });
 
+    // Checkbox-agree
+    document.addEventListener("change", function (e) {
+        const check = e.target;
+
+        if (check.closest(".checkbox-agree")) {
+            checkBoxAgree(check);
+        }
+    });
+
+    // Misc
+    document.addEventListener("click", function (e) {
+        if (e.target.href === "#" || e.target.closest(`[href="#"]`)) e.preventDefault();
+    });
+
+    // Cookie
+    document.querySelector(".cookie-close").addEventListener("click", function () {
+        document.querySelector("#cookie").remove();
+    });
+
+    // Input
+    document.addEventListener("input", formListener);
+
+    document.addEventListener("change", formListener);
+
+    document.addEventListener("focus", formListener); // todo, phone
+
+    document.addEventListener("paste", formListener);
+
+    function formListener(e) {
+        if (e.target.tagName !== "INPUT" && e.target.tagName !== "TEXTAREA") return true;
+
+        const elem = e.target;
+
+        elem.classList.remove("error");
+        elem.classList.remove("success");
+
+        const parent = elem.closest("[data-error]");
+        if (parent) {
+            parent.setAttribute("data-error", "");
+        }
+    }
+
     function checkBoxAgree(elem) {
-        const btn = elem.closest("form").find("[type=submit]");
+        const btn = elem.closest("form").querySelector("[type=submit]");
 
         if (elem.checked) {
             btn.removeAttribute("disabled");
@@ -74,45 +118,6 @@ if (token !== null) {
         }
     }
 }
-
-$(function () {
-    $(document)
-        // Checkbox-agree
-        .on("change", ".checkbox-agree input", function () {
-            checkBoxAgree(this);
-        })
-        //--------------------------------------------------------------------------------------------------------------
-        // Misc
-        .on("click", "a[href='#']", function (e) {
-            e.preventDefault();
-        })
-        .on("click", ".cookie-close", function () {
-            $("#cookie").remove();
-        })
-        //--------------------------------------------------------------------------------------------------------------
-        // Input
-        .on("input change focus paste", "input", function () {
-            $(this).removeClass("error").removeClass("success").parent().attr("data-error", "");
-        })
-        .on("input change focus paste", "textarea", function () {
-            $(this).removeClass("error").removeClass("success").parent().attr("data-error", "");
-        })
-    //--------------------------------------------------------------------------------------------------------------
-    ;
-
-    function checkBoxAgree(that) {
-        const
-            checkbox = $(that),
-            btn = checkbox.closest("form").find("[type=submit]")
-        ;
-
-        if (checkbox.is(':checked')) {
-            btn.removeAttr("disabled");
-        } else {
-            btn.attr("disabled", "disabled");
-        }
-    }
-});
 
 function submitOn(submit) {
     if (typeof submit.attr("type") === "undefined") {
