@@ -10,18 +10,6 @@ if (token !== null) {
 {
     // Ready
     document.addEventListener("DOMContentLoaded", function () {
-        // Checkbox-agree
-        const check_boxes_agree = document.querySelectorAll(".checkbox-agree input");
-
-        for (let check of check_boxes_agree) {
-            checkBoxAgree(check);
-        }
-
-        // Phone
-        for (let selector of document.querySelectorAll("[type=tel]")) {
-            let im = new Inputmask("+380 (99) 999 99 99");
-            im.mask(selector);
-        }
 
         // Slider
         $(".slider").slick({
@@ -64,6 +52,21 @@ if (token !== null) {
                 }
             ]
         });
+
+        // Phone
+        const phones = document.querySelectorAll("[type=tel]");
+
+        for (let selector of phones) {
+            let im = new Inputmask("+380 (99) 999 99 99");
+            im.mask(selector);
+        }
+
+        // Checkbox-agree
+        const check_boxes_agree = document.querySelectorAll(".checkbox-agree input");
+
+        for (let check of check_boxes_agree) {
+            checkBoxAgree(check);
+        }
     });
 
     // Checkbox-agree
@@ -75,6 +78,16 @@ if (token !== null) {
         }
     });
 
+    function checkBoxAgree(elem) {
+        const btn = elem.closest("form").querySelector("[type=submit]");
+
+        if (elem.checked) {
+            btn.removeAttribute("disabled");
+        } else {
+            btn.setAttribute("disabled", "disabled");
+        }
+    }
+
     // Misc
     document.addEventListener("click", function (e) {
         if (e.target.href === "#" || e.target.closest(`[href="#"]`)) e.preventDefault();
@@ -85,12 +98,12 @@ if (token !== null) {
         document.querySelector("#cookie").remove();
     });
 
-    // Input
+    // Input, Textarea
     document.addEventListener("input", formListener);
 
     document.addEventListener("change", formListener);
 
-    document.addEventListener("focus", formListener); // todo, phone
+    document.addEventListener("focusin", formListener);  // todo всплытие
 
     document.addEventListener("paste", formListener);
 
@@ -107,38 +120,40 @@ if (token !== null) {
             parent.setAttribute("data-error", "");
         }
     }
-
-    function checkBoxAgree(elem) {
-        const btn = elem.closest("form").querySelector("[type=submit]");
-
-        if (elem.checked) {
-            btn.removeAttribute("disabled");
-        } else {
-            btn.setAttribute("disabled", "disabled");
-        }
-    }
 }
 
 function submitOn(submit) {
-    if (typeof submit.attr("type") === "undefined") {
-        submit.removeClass("disabled");
-    } else {
-        submit.removeAttr("disabled");
+    if (submit.length > 0) {
+        submit = submit[0];
     }
 
-    submit.find(".spinner").remove();
-    submit.find("span").removeClass("hidden");
+    if (typeof submit.getAttribute("type") === "undefined") {
+        submit.classList.remove("disabled");
+    } else {
+        submit.removeAttribute("disabled");
+    }
+
+    const spinner = submit.querySelector(".spinner");
+    if (spinner) {
+        spinner.remove();
+    }
+
+    submit.querySelector("span").classList.remove("hidden");
 }
 
 function submitOff(submit) {
-    if (typeof submit.attr("type") === "undefined") {
-        submit.addClass("disabled");
-    } else {
-        submit.attr("disabled", "disabled");
+    if (submit.length > 0) {
+        submit = submit[0];
     }
 
-    if (submit.find(".spinner").length === 0) {
-        submit.append($("#spinner .spinner").clone());
-        submit.find("span").addClass("hidden");
+    if (typeof submit.getAttribute("type") === "undefined") {
+        submit.classList.add("disabled");
+    } else {
+        submit.setAttribute("disabled", "disabled");
     }
+
+    const spinner = document.querySelector("#spinner .spinner");
+    submit.append(spinner.cloneNode(true));
+
+    submit.querySelector("span").classList.add("hidden");
 }
