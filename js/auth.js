@@ -23,14 +23,12 @@ $(function () {
             form.find(".pwd-show").removeClass("d-none");
             form.find(".pwd-input").attr("type", "password");
         })
-        .on("focus", ".modal-auth .form .row .input", function () {
+        .on("input change focus paste", ".modal-auth .form .row .input", function () {
             $(this).addClass("focus");
         })
-        .on("input change blur paste", ".modal-auth .form .row .input", function () {
+        .on("blur", ".modal-auth .form .row .input", function () {
             if ($(this).val().length < 1) {
                 $(this).removeClass("focus");
-            } else {
-                $(this).addClass("focus");
             }
         })
         .on("submit", ".form-login", function (e) {
