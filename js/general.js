@@ -103,7 +103,7 @@ if (token !== null) {
 
     document.addEventListener("change", formListener);
 
-    document.addEventListener("focusin", formListener);  // todo всплытие
+    document.addEventListener("focusin", formListener);
 
     document.addEventListener("paste", formListener);
 

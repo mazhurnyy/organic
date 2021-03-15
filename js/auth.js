@@ -1,28 +1,61 @@
+{
+    document.addEventListener("DOMContentLoaded", function () {
+        const inputs = document.querySelectorAll(".modal-auth .form .row .input");
+
+        for (let input of inputs) {
+            if (input.value.length > 0) {
+                input.classList.add("focus");
+            }
+        }
+    });
+
+    // Show password
+    document.addEventListener("click", function (e) {
+        let button;
+
+        if (e.target.classList.contains("pwd-show")) {
+            button = e.target;
+        } else {
+            button = e.target.closest(".pwd-show");
+        }
+
+        if (!button) return true;
+
+        const form = button.closest("form");
+        form.querySelector(".pwd-show").classList.add("d-none");
+        form.querySelector(".pwd-hide").classList.remove("d-none");
+
+        const inputs = form.querySelectorAll(".pwd-input");
+        for (let input of inputs) {
+            input.setAttribute("type", "text");
+        }
+    });
+
+    // Hide password
+    document.addEventListener("click", function (e) {
+        let button;
+
+        if (e.target.classList.contains("pwd-hide")) {
+            button = e.target;
+        } else {
+            button = e.target.closest(".pwd-hide");
+        }
+
+        if (!button) return true;
+
+        const form = button.closest("form");
+        form.querySelector(".pwd-show").classList.remove("d-none");
+        form.querySelector(".pwd-hide").classList.add("d-none");
+
+        const inputs = form.querySelectorAll(".pwd-input");
+        for (let input of inputs) {
+            input.setAttribute("type", "password");
+        }
+    });
+}
+
 $(function () {
     $(document)
-        .ready(function () {
-            $(".modal-auth .form .row .input").each(function () {
-                const that = $(this);
-
-                if (that.val().length > 0) {
-                    that.addClass("focus");
-                }
-            });
-        })
-        .on("click", ".pwd-show", function () {
-            const form = $(this).closest("form");
-
-            form.find(".pwd-show").addClass("d-none");
-            form.find(".pwd-hide").removeClass("d-none");
-            form.find(".pwd-input").attr("type", "text");
-        })
-        .on("click", ".pwd-hide", function () {
-            const form = $(this).closest("form");
-
-            form.find(".pwd-hide").addClass("d-none");
-            form.find(".pwd-show").removeClass("d-none");
-            form.find(".pwd-input").attr("type", "password");
-        })
         .on("input change focus paste", ".modal-auth .form .row .input", function () {
             $(this).addClass("focus");
         })
