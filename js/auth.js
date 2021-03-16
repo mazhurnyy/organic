@@ -52,18 +52,33 @@
             input.setAttribute("type", "password");
         }
     });
+
+    // Inputs in modal auth
+    document.addEventListener("input", inputListener);
+
+    document.addEventListener("change", inputListener);
+
+    document.addEventListener("focusin", inputListener);
+
+    document.addEventListener("paste", inputListener);
+
+    function inputListener (e) {
+        if (e.target.classList.contains("input") && e.target.closest(".modal-auth")) {
+            e.target.classList.add("focus");
+        }
+    }
+
+    document.addEventListener("focusout", function (e) {
+        if (e.target.classList.contains("input") && e.target.closest(".modal-auth")) {
+            if (e.target.value.length === 0) {
+                e.target.classList.remove("focus");
+            }
+        }
+    });
 }
 
 $(function () {
     $(document)
-        .on("input change focus paste", ".modal-auth .form .row .input", function () {
-            $(this).addClass("focus");
-        })
-        .on("blur", ".modal-auth .form .row .input", function () {
-            if ($(this).val().length < 1) {
-                $(this).removeClass("focus");
-            }
-        })
         .on("submit", ".form-login", function (e) {
             e.preventDefault();
             const submit = $(".form-login [type=submit]");
