@@ -71,11 +71,9 @@ if (token !== null) {
 
     // Checkbox-agree
     document.addEventListener("change", function (e) {
-        const check = e.target;
+        if (!e.target.closest(".checkbox-agree")) return true;
 
-        if (check.closest(".checkbox-agree")) {
-            checkBoxAgree(check);
-        }
+        checkBoxAgree(e.target);
     });
 
     function checkBoxAgree(elem) {
@@ -90,11 +88,15 @@ if (token !== null) {
 
     // Misc
     document.addEventListener("click", function (e) {
-        if (e.target.href === "#" || e.target.closest(`[href="#"]`)) e.preventDefault();
+        if (e.target.href !== "#" && !e.target.closest(`[href="#"]`)) return true;
+
+        e.preventDefault();
     });
 
     // Cookie
-    document.querySelector(".cookie-close").addEventListener("click", function () {
+    document.addEventListener("click", function (e) {
+        if (!e.target.classList.contains("cookie-close") && !e.target.closest(".cookie-close")) return true;
+
         document.querySelector("#cookie").remove();
     });
 
@@ -127,10 +129,10 @@ function submitOn(submit) {
         submit = submit[0];
     }
 
-    if (typeof submit.getAttribute("type") === "undefined") {
-        submit.classList.remove("disabled");
-    } else {
+    if (submit.hasAttribute("type")) {
         submit.removeAttribute("disabled");
+    } else {
+        submit.classList.remove("disabled");
     }
 
     const spinner = submit.querySelector(".spinner");
@@ -146,10 +148,10 @@ function submitOff(submit) {
         submit = submit[0];
     }
 
-    if (typeof submit.getAttribute("type") === "undefined") {
-        submit.classList.add("disabled");
-    } else {
+    if (submit.hasAttribute("type")) {
         submit.setAttribute("disabled", "disabled");
+    } else {
+        submit.classList.add("disabled");
     }
 
     const spinner = document.querySelector("#spinner .spinner");

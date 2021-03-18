@@ -1,53 +1,70 @@
-$(function () {
-    $(document)
-        .on("click", "#shadow", function (e) {
-            const
-                shadow = document.querySelector("#shadow"),
-                wrapper = shadow.querySelector(".modal-wrapper")
-            ;
-            if (e.target === shadow || e.target === wrapper) {
-                if (!$(".modal.open").hasClass("modal-important")) {
-                    modalClose();
-                }
-            }
-        })
-        .on("click", ".modal-close", function () {
-            modalClose();
-        })
-        .on("click", "[data-modal]", function () {
-            modalOpen($(this).attr("data-modal"));
-        })
-    ;
-});
+{
+    document.addEventListener("click", function (e) {
+        const
+            shadow = document.querySelector("#shadow"),
+            wrapper = shadow.querySelector(".modal-wrapper"),
+            modal = wrapper.querySelector(".modal.open")
+        ;
+        if (e.target !== shadow && e.target !== wrapper) return true;
+
+        if (modal.classList.contains("modal-important")) return true;
+
+        modalClose();
+    });
+
+    document.addEventListener("click", function (e) {
+        if (!e.target.classList.contains("modal-close") && !e.target.closest(".modal-close")) return true;
+
+        modalClose();
+    });
+
+    document.addEventListener("click", function (e) {
+        const
+            t1 = e.target,
+            t2 = t1.closest("[data-modal]")
+        ;
+        if (!t1.dataset.modal && !t2) return true;
+
+        modalOpen(t1.dataset.modal ?? t2.dataset.modal);
+    });
+}
 
 function modalClose() {
-    $(".modal-wrapper").removeClass("open");
+    const
+        shadow = document.querySelector("#shadow"),
+        wrapper = shadow.querySelector(".modal-wrapper"),
+        modal = wrapper.querySelector(".modal.open")
+    ;
+    wrapper.classList.remove("open");
+
     setTimeout(function () {
-        $(".modal").removeClass("open");
-        $("#shadow").removeClass("open");
+        modal.classList.remove("open");
+        shadow.classList.remove("open");
     }, 600);
 }
 
 function modalOpen(target) {
     const
-        wrap = $(".modal-wrapper"),
-        modal = $(".modal-" + target),
-        timeout = wrap.hasClass("open") ? 500 : 10
+        shadow = document.querySelector("#shadow"),
+        wrapper = shadow.querySelector(".modal-wrapper"),
+        modal = wrapper.querySelector(".modal-" + target)
     ;
 
-    if (wrap.hasClass("open")) {
-        wrap.removeClass("open");
+    let timeout = wrapper.classList.contains("open") ? 500 : 10;
+
+    if (wrapper.classList.contains("open")) {
+        wrapper.classList.remove("open");
 
         setTimeout(function () {
-            $(".modal").removeClass("open");
-            modal.addClass("open");
+            wrapper.querySelector(".modal.open").classList.remove("open");
+            modal.classList.add("open");
         }, timeout);
     } else {
-        $("#shadow").addClass("open");
-        modal.addClass("open");
+        shadow.classList.add("open");
+        modal.classList.add("open");
     }
 
     setTimeout(function () {
-        wrap.addClass("open");
+        wrapper.classList.add("open");
     }, timeout);
 }
