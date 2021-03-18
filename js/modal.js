@@ -43,11 +43,12 @@ function modalClose() {
     }, 600);
 }
 
-function modalOpen(target) {
+function modalOpen(t) {
     const
         shadow = document.querySelector("#shadow"),
         wrapper = shadow.querySelector(".modal-wrapper"),
-        modal = wrapper.querySelector(".modal-" + target)
+        modal = wrapper.querySelector(".modal.open"),
+        target = wrapper.querySelector(".modal-" + t)
     ;
 
     let timeout = wrapper.classList.contains("open") ? 500 : 10;
@@ -56,12 +57,12 @@ function modalOpen(target) {
         wrapper.classList.remove("open");
 
         setTimeout(function () {
-            wrapper.querySelector(".modal.open").classList.remove("open");
-            modal.classList.add("open");
+            modal.classList.remove("open");
+            target.classList.add("open");
         }, timeout);
     } else {
         shadow.classList.add("open");
-        modal.classList.add("open");
+        target.classList.add("open");
     }
 
     setTimeout(function () {
