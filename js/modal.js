@@ -5,8 +5,10 @@ $(function () {
                 shadow = document.querySelector("#shadow"),
                 wrapper = shadow.querySelector(".modal-wrapper")
             ;
-            if ((e.target === shadow || e.target === wrapper) && !$(".modal.open").hasClass("modal-important")) {
-                modalClose();
+            if (e.target === shadow || e.target === wrapper) {
+                if (!$(".modal.open").hasClass("modal-important")) {
+                    modalClose();
+                }
             }
         })
         .on("click", ".modal-close", function () {

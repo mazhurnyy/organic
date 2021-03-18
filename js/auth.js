@@ -189,6 +189,7 @@
                     modalOpen("password");
                     return;
 
+                    // todo
                     //catchAuthError(error, tel_input, "phone");
                 })
                 .then(function () {
@@ -204,10 +205,10 @@
         // ---------------------
         // Сюда
 
-        const submit = document.querySelector(".form-register [type=submit]");
+        const submit = document.querySelector(".form-reset [type=submit]");
 
         const
-            tel_input = document.querySelector("#register-login"),
+            tel_input = document.querySelector("#reset-login"),
             tel = tel_input.value.replace(/[^\d]/g, ''),
             tel_row = tel_input.closest(".row")
         ;
@@ -230,19 +231,19 @@
         submitOff(submit);
         setTimeout(function () {
             axios
-                .post("/register", {
+                .post("/reset", {
                     phone: tel
                 }, {
                     timeout: axiosTimeOut
                 })
                 .then(function (response) {
                     const attribute = document.querySelector(".modal-password a[data-modal]");
-                    attribute.dataset.modal = "register";
+                    attribute.dataset.modal = "reset";
                     modalOpen("password");
                 })
                 .catch(function (error) {
                     const attribute = document.querySelector(".modal-password a[data-modal]");
-                    attribute.dataset.modal = "register";
+                    attribute.dataset.modal = "reset";
                     modalOpen("password");
                     return;
 
@@ -255,6 +256,7 @@
         }, 700);
     });
 
+    // todo
     document.querySelector(".form-password").addEventListener("submit", function (e) {
         e.preventDefault();
         const submit = $(".form-password [type=submit]");
@@ -328,54 +330,6 @@
             }, 700);
         }
     });
-
-    // -------------------------
-    //  Отсюда
-    $(document).on("submit", ".form-reset", function (e) {
-            e.preventDefault();
-            const submit = $(".form-reset [type=submit]");
-
-            const
-                tel_input = $("#reset-login"),
-                tel = tel_input.val().replace(/[^\d]/g, ''),
-                tel_row = tel_input.parent()
-            ;
-
-            if (tel.length === 12) {
-                tel_input.removeClass("error").addClass("success");
-                tel_row.attr("data-error", "");
-            } else {
-                tel_input.removeClass("success").addClass("error");
-                tel_row.attr("data-error", tel_row.data("txt"));
-            }
-
-            if (tel.length === 12) {
-                submitOff(submit);
-                setTimeout(function () {
-                    axios
-                        .post("/reset", {
-                            phone: tel
-                        }, {
-                            timeout: axiosTimeOut
-                        })
-                        .then(function (response) {
-                            $(".modal-password a[data-modal]").attr("data-modal", "reset");
-                            modalOpen("password");
-                        })
-                        .catch(function (error) {
-                            $(".modal-password a[data-modal]").attr("data-modal", "reset");
-                            modalOpen("password");
-                            return;
-
-                            catchAuthError(error, tel_input, "phone");
-                        })
-                        .then(function () {
-                            submitOn(submit);
-                        })
-                    ;
-                }, 700);
-            }
-        });
 
     function catchAuthError(error, tel_input, field) {
         if (error.response) {
