@@ -1,10 +1,7 @@
 {
     document.addEventListener("click", function (e) {
-        const
-            shadow = document.querySelector("#shadow"),
-            wrapper = shadow.querySelector(".modal-wrapper"),
-            modal = wrapper.querySelector(".modal.open")
-        ;
+        const [shadow, wrapper, modal] = getModalElements();
+
         if (e.target !== shadow && e.target !== wrapper) return true;
 
         if (modal.classList.contains("modal-important")) return true;
@@ -30,11 +27,8 @@
 }
 
 function modalClose() {
-    const
-        shadow = document.querySelector("#shadow"),
-        wrapper = shadow.querySelector(".modal-wrapper"),
-        modal = wrapper.querySelector(".modal.open")
-    ;
+    const [shadow, wrapper, modal] = getModalElements();
+
     wrapper.classList.remove("open");
 
     setTimeout(function () {
@@ -44,12 +38,8 @@ function modalClose() {
 }
 
 function modalOpen(t) {
-    const
-        shadow = document.querySelector("#shadow"),
-        wrapper = shadow.querySelector(".modal-wrapper"),
-        modal = wrapper.querySelector(".modal.open"),
-        target = wrapper.querySelector(".modal-" + t)
-    ;
+    const [shadow, wrapper, modal] = getModalElements();
+    const target = document.querySelector(".modal-" + t);
 
     let timeout = wrapper.classList.contains("open") ? 500 : 10;
 
@@ -68,4 +58,12 @@ function modalOpen(t) {
     setTimeout(function () {
         wrapper.classList.add("open");
     }, timeout);
+}
+
+function getModalElements() {
+    return [
+        document.querySelector("#shadow"),
+        document.querySelector(".modal-wrapper"),
+        document.querySelector(".modal.open")
+    ];
 }
