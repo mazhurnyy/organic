@@ -34,6 +34,8 @@ function modalClose() {
     setTimeout(function () {
         modal.classList.remove("open");
         shadow.classList.remove("open");
+
+        document.querySelector('#wrapper').focus();
     }, 600);
 }
 
@@ -58,6 +60,10 @@ function modalOpen(t) {
     setTimeout(function () {
         wrapper.classList.add("open");
     }, timeout);
+
+    setTimeout(function () {
+        target.focus();
+    }, timeout + 10);
 }
 
 function getModalElements() {

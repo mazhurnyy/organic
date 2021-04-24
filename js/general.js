@@ -88,10 +88,10 @@ if (token !== null) {
 
     // Misc
     document.addEventListener("click", function (e) {
-        if (e.target.href !== "#" && !e.target.closest(`[href="#"]`)) return true;
-
-        e.preventDefault();
+        if (e.target.closest(`[href="#"]`)) e.preventDefault();
     });
+
+    document.querySelector('#wrapper').focus();
 
     // Cookie
     document.addEventListener("click", function (e) {
