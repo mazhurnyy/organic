@@ -23,6 +23,7 @@ function modalClose() {
     setTimeout(function () {
         $(".modal").removeClass("open");
         $("#shadow").removeClass("open");
+        $("#wrapper").focus();
     }, 600);
 }
 
@@ -48,4 +49,8 @@ function modalOpen(target) {
     setTimeout(function () {
         wrap.addClass("open");
     }, timeout);
+
+    setTimeout(function () {
+        modal.focus();
+    }, timeout + 10);
 }
