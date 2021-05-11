@@ -196,6 +196,10 @@
             position: static;
             margin-left: 28px;
           }
+
+          @media (max-width: 329px) {
+            margin-left: 26px;
+          }
         }
       }
 
@@ -280,6 +284,11 @@
         &.user {
           width: 20px;
           height: 20px;
+        }
+
+        &.lang {
+          height: 24px;
+          width: 24px;
         }
 
         &.phone {

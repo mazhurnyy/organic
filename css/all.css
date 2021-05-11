@@ -2772,6 +2772,9 @@ picture {
           #header .middle > .layout .buttons .right li {
             position: static;
             margin-left: 28px; } }
+        @media (max-width: 329px) {
+          #header .middle > .layout .buttons .right li {
+            margin-left: 26px; } }
     #header .middle > .layout .buttons a {
       display: block;
       color: #116708; }
@@ -2822,6 +2825,9 @@ picture {
       #header .middle > .layout .buttons a.user {
         width: 20px;
         height: 20px; }
+      #header .middle > .layout .buttons a.lang {
+        height: 24px;
+        width: 24px; }
       #header .middle > .layout .buttons a.phone {
         width: 24px;
         height: 24px;
