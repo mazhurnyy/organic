@@ -45,7 +45,7 @@ $(function () {
             }
         })
         .on("click", ".navbar-lvl-2 > a", function (e) {
-            if ($("#wrapper").outerWidth() < 768 || mobile) {
+            if ($("#wrapper").outerWidth() >= 768 && mobile) {
                 if ($(this).next().length > 0) {
                     e.preventDefault();
                 }

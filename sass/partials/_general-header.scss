@@ -548,15 +548,14 @@
 
             &[href="#"]:hover,
             &[href="#"]:active {
-              background-color: transparent;
               color: $color-green-3;
               cursor: default;
             }
 
-            @media (max-width: 767px) {
-              justify-content: center;
-              text-align: center;
-            }
+            //@media (max-width: 767px) {
+            //  justify-content: center;
+            //  text-align: center;
+            //}
 
             span {
               font-weight: normal;
@@ -587,22 +586,16 @@
         .navbar-lvl-3-list {
           display: none;
           top: -2px;
-          min-height: 100%;
+          min-height: calc(100% + 2px);
 
           @media (max-width: 767px) {
             display: block;
-            padding: 0 0 16px;
+            padding: 0 0 0 20px;
             border-top: none;
           }
 
           .navbar-lvl-3 {
             display: block;
-
-            @media (max-width: 767px) {
-              & > a > span {
-                font-size: 13px;
-              }
-            }
           }
         }
       }
