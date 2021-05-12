@@ -429,7 +429,7 @@
     nav {
       display: block;
 
-      ul {
+      .navbar-lvl-1-list {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
@@ -459,8 +459,8 @@
             }
 
             @media (min-width: 1024px) {
-              &[href='#']:hover,
-              &[href='#']:active {
+              &[href="#"]:hover,
+              &[href="#"]:active {
                 color: $color-green-2;
                 cursor: default;
               }
@@ -483,82 +483,119 @@
             }
           }
 
-          &.open ul {
+          &.open .navbar-lvl-2-list {
             display: block;
           }
 
-          &:first-child ul {
+          &:first-child .navbar-lvl-2-list {
             left: -3px;
             transform: translateX(0);
           }
 
-          &:last-child ul {
+          &:last-child .navbar-lvl-2-list {
             left: auto;
             transform: translateX(0);
             right: -3px;
           }
 
-          ul {
-            display: none;
-            position: absolute;
-            z-index: 400;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            min-width: 272px;
-            padding: 10px 0;
-            background-color: $color-white;
-            border-top: 2px solid $color-green-5;
-            border-radius: 0 0 6px 6px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          &:nth-child(1) .navbar-lvl-3-list,
+          &:nth-child(2) .navbar-lvl-3-list,
+          &:nth-child(3) .navbar-lvl-3-list {
+            left: 100%;
+          }
 
-            @media (max-width: 767px) {
-              position: static;
-              transform: translateX(0);
-              border-bottom: 2px solid $color-green-5;
-              box-shadow: none;
-              border-radius: 0;
+          &:nth-child(4) .navbar-lvl-3-list,
+          &:nth-child(5) .navbar-lvl-3-list,
+          &:nth-child(6) .navbar-lvl-3-list {
+            right: 100%;
+          }
+        }
+
+        .navbar-lvl-2-list, .navbar-lvl-3-list {
+          position: absolute;
+          z-index: 400;
+          min-width: 272px;
+          padding: 10px 0;
+          background-color: $color-white;
+          border-top: 2px solid $color-green-5;
+          border-radius: 0 0 6px 6px;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+          @media (max-width: 767px) {
+            position: static;
+            box-shadow: none;
+            border-radius: 0;
+          }
+
+          a {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            min-height: 48px;
+            padding: 10px 20px;
+            font-size: 16px;
+            line-height: 20px;
+            color: $color-black;
+
+            &[href="#"] {
+              color: $color-green-3;
             }
 
-            li {
+            &:hover, &:active {
+              background-color: $color-gray-4;
+              color: $color-green-3;
+            }
+
+            &[href="#"]:hover,
+            &[href="#"]:active {
+              color: $color-green-3;
+              cursor: default;
+            }
+
+            //@media (max-width: 767px) {
+            //  justify-content: center;
+            //  text-align: center;
+            //}
+
+            span {
+              font-weight: normal;
+            }
+          }
+        }
+
+        .navbar-lvl-2-list {
+          display: none;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+
+          @media (max-width: 767px) {
+            transform: translateX(0);
+            border-bottom: 2px solid $color-green-5;
+          }
+
+          .navbar-lvl-2 {
+            display: block;
+
+            &.open .navbar-lvl-3-list {
               display: block;
-
-              a {
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                min-height: 48px;
-                padding: 10px 20px;
-                font-size: 16px;
-                line-height: 20px;
-                color: $color-black;
-
-                &[href='#'] {
-                  color: $color-green-3;
-                }
-
-                &:hover, &:active {
-                  background-color: $color-gray-4;
-                  color: $color-green-3;
-                }
-
-                &[href='#']:hover,
-                &[href='#']:active {
-                  background-color: transparent;
-                  color: $color-green-3;
-                  cursor: default;
-                }
-
-                @media (max-width: 767px) {
-                  justify-content: center;
-                  text-align: center;
-                }
-
-                span {
-                  font-weight: normal;
-                }
-              }
             }
+          }
+        }
+
+        .navbar-lvl-3-list {
+          display: none;
+          top: -2px;
+          min-height: calc(100% + 2px);
+
+          @media (max-width: 767px) {
+            display: block;
+            padding: 0 0 0 20px;
+            border-top: none;
+          }
+
+          .navbar-lvl-3 {
+            display: block;
           }
         }
       }
