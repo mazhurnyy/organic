@@ -2486,7 +2486,7 @@ picture {
   position: relative;
   background-color: #F3FCF6; }
   #footer::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     right: 0;
@@ -2560,6 +2560,22 @@ picture {
           #footer .top .left .social a.youtube {
             width: 22px;
             height: 17px; }
+      #footer .top .left .lang {
+        display: block;
+        margin-top: 50px;
+        width: 120px;
+        margin-left: auto;
+        text-align: center; }
+        @media (max-width: 895px) {
+          #footer .top .left .lang {
+            margin: 0 auto 16px; } }
+        #footer .top .left .lang a {
+          display: inline;
+          font-size: 16px;
+          line-height: 26px;
+          color: #53735E; }
+          #footer .top .left .lang a:hover, #footer .top .left .lang a:active {
+            color: #00370C; }
     #footer .top .center, #footer .top .right {
       display: block; }
       #footer .top .center h3, #footer .top .right h3 {
@@ -2588,7 +2604,7 @@ picture {
             color: #00370C; }
             #footer .top .center ul li a:hover, #footer .top .center ul li a:active, #footer .top .right ul li a:hover, #footer .top .right ul li a:active {
               color: #53735E; }
-            #footer .top .center ul li a[href='#']:hover, #footer .top .center ul li a[href='#']:active, #footer .top .right ul li a[href='#']:hover, #footer .top .right ul li a[href='#']:active {
+            #footer .top .center ul li a[href="#"]:hover, #footer .top .center ul li a[href="#"]:active, #footer .top .right ul li a[href="#"]:hover, #footer .top .right ul li a[href="#"]:active {
               color: #00370C;
               cursor: default; }
     #footer .top .center {

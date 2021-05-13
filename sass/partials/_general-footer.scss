@@ -5,7 +5,7 @@
   background-color: $color-gray-4;
 
   &::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     right: 0;
@@ -103,6 +103,30 @@
           }
         }
       }
+
+      .lang {
+        display: block;
+        margin-top: 50px;
+        width: 120px;
+        margin-left: auto;
+        text-align: center;
+
+        @media (max-width: 895px) {
+          margin: 0 auto 16px;
+        }
+
+        a {
+          display: inline;
+          font-size: 16px;
+          line-height: 26px;
+
+          color: $color-green-6;
+
+          &:hover, &:active {
+            color: $color-green-2;
+          }
+        }
+      }
     }
 
     .center, .right {
@@ -144,8 +168,8 @@
               color: $color-green-6;
             }
 
-            &[href='#']:hover,
-            &[href='#']:active {
+            &[href="#"]:hover,
+            &[href="#"]:active {
               color: $color-green-2;
               cursor: default;
             }
