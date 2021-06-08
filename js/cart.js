@@ -157,7 +157,7 @@ $(function () {
                         timeout: axiosTimeOut
                     })
                     .then(function (response) {
-                        // position_obj.find(".price span").text(response.price);
+                        position_obj.find(".price span").text(response.price);
                         position_obj.find(".sum span").text(response.data.sum);
                         $(".summary-total span").text(response.data.total);
                     })
