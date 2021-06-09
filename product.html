@@ -592,6 +592,10 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="wholesale-price">
+                            <!-- Если нет оптовой цены - нет span -->
+                            <span>от 5 шт - цена 100 грн/шт</span>
+                        </div>
                         <div class="available">
                             <span>В наличии</span>
                         </div>
@@ -613,6 +617,11 @@
                         </div>
                     </div>
                     <div class="left">
+                        <!-- Метки, если есть. обёртка пусть вегда будет -->
+                        <div class="labels">
+                            <div class="new"><span>NEW</span></div>
+                            <div class="sale"><span>-50%</span></div>
+                        </div>
                         <!-- todo -->
                         <!-- Если не фото, заглушка, то класс photo-open не добавлять -->
                         <picture class="photo photo-open" data-idx="0">
@@ -744,7 +753,7 @@
                 <div class="layout">
                     <ul class="properties">
                         <li class="property">Страна производитель: <strong>Италия</strong></li>
-                        <li class="property">Бренд: <strong>________________ ______________ _________</strong></li>
+                        <li class="property">Бренд: <a href="./brands.html"><strong>__________</strong></a></li>
                     </ul>
                 </div>
             </section>
