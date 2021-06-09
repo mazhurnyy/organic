@@ -30,6 +30,7 @@ $(function () {
                 axios
                     .post("/" + route, {
                         page: favorite_page,
+                        locale: document.documentElement.lang,
                         filter: filter
                     }, {
                         timeout: axiosTimeOut

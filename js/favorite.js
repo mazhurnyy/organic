@@ -84,7 +84,8 @@ $(function () {
             setTimeout(function () {
                 axios
                     .post("/favorites/more", {
-                        page: favorite_page
+                        page: favorite_page,
+                        locale: document.documentElement.lang
                     }, {
                         timeout: axiosTimeOut
                     })
