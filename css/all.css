@@ -2205,7 +2205,7 @@ picture {
             line-height: 32px;
             color: #9FA7A2; }
             #content-product .top .layout .right .old-price span::before {
-              content: '';
+              content: "";
               display: block;
               position: absolute;
               top: 18px;
