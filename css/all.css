@@ -2371,26 +2371,26 @@ picture {
             transform: translate(50%, -50%);
             background-repeat: no-repeat;
             background-position: 50% 50%; }
-        #content-product .middle .special_props .special_prop.vegan-1 span::after {
-          content: url(../images/ordering-check.svg); }
+        #content-product .middle .special_props .special_prop.vegan span::after {
+          content: url(../images/special-vegan.svg); }
         #content-product .middle .special_props .special_prop.kosher span::after {
-          content: url(../images/ordering-check.svg); }
+          content: url(../images/special-kosher.svg); }
         #content-product .middle .special_props .special_prop.no_tests span::after {
-          content: url(../images/ordering-check.svg); }
+          content: url(../images/special-no_tests.svg); }
         #content-product .middle .special_props .special_prop.vegan-2 span::after {
-          content: url(../images/ordering-check.svg); }
+          content: url(../images/special-vegan-2.svg); }
         #content-product .middle .special_props .special_prop.milk_free span::after {
-          content: url(../images/ordering-check.svg); }
+          content: url(../images/special-milk_free.svg); }
         #content-product .middle .special_props .special_prop.gluten_free span::after {
-          content: url(../images/ordering-check.svg); }
+          content: url(../images/special-gluten_free.svg); }
         #content-product .middle .special_props .special_prop.keto span::after {
-          content: url(../images/ordering-check.svg); }
+          content: url(../images/special-keto.svg); }
         #content-product .middle .special_props .special_prop.organic span::after {
-          content: url(../images/ordering-check.svg); }
+          content: url(../images/special-organic.svg); }
         #content-product .middle .special_props .special_prop.paleo span::after {
-          content: url(../images/ordering-check.svg); }
+          content: url(../images/special-paleo.svg); }
         #content-product .middle .special_props .special_prop.gmo_free span::after {
-          content: url(../images/ordering-check.svg); }
+          content: url(../images/special-gmo_free.svg); }
   #content-product .bottom {
     display: block;
     padding: 64px 0 72px;

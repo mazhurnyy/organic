@@ -417,44 +417,44 @@
                     }
                 }
 
-                &.vegan-1 span::after {
-                    content: url(../images/ordering-check.svg);
+                &.vegan span::after {
+                    content: url(../images/special-vegan.svg);
                 }
 
                 &.kosher span::after {
-                    content: url(../images/ordering-check.svg);
+                    content: url(../images/special-kosher.svg);
                 }
 
                 &.no_tests span::after {
-                    content: url(../images/ordering-check.svg);
+                    content: url(../images/special-no_tests.svg);
                 }
 
                 &.vegan-2 span::after {
-                    content: url(../images/ordering-check.svg);
+                    content: url(../images/special-vegan-2.svg);
                 }
 
                 &.milk_free span::after {
-                    content: url(../images/ordering-check.svg);
+                    content: url(../images/special-milk_free.svg);
                 }
 
                 &.gluten_free span::after {
-                    content: url(../images/ordering-check.svg);
+                    content: url(../images/special-gluten_free.svg);
                 }
 
                 &.keto span::after {
-                    content: url(../images/ordering-check.svg);
+                    content: url(../images/special-keto.svg);
                 }
 
                 &.organic span::after {
-                    content: url(../images/ordering-check.svg);
+                    content: url(../images/special-organic.svg);
                 }
 
                 &.paleo span::after {
-                    content: url(../images/ordering-check.svg);
+                    content: url(../images/special-paleo.svg);
                 }
 
                 &.gmo_free span::after {
-                    content: url(../images/ordering-check.svg);
+                    content: url(../images/special-gmo_free.svg);
                 }
             }
         }
