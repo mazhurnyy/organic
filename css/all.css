@@ -2377,8 +2377,8 @@ picture {
           content: url(../images/special-kosher.svg); }
         #content-product .middle .special_props .special_prop.no_tests span::after {
           content: url(../images/special-no_tests.svg); }
-        #content-product .middle .special_props .special_prop.vegan-2 span::after {
-          content: url(../images/special-vegan-2.svg); }
+        #content-product .middle .special_props .special_prop.vegetarian span::after {
+          content: url(../images/special-vegetarian.svg); }
         #content-product .middle .special_props .special_prop.milk_free span::after {
           content: url(../images/special-milk_free.svg); }
         #content-product .middle .special_props .special_prop.gluten_free span::after {
