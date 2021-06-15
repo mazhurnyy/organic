@@ -2346,46 +2346,51 @@ picture {
             color: #A4CC70; }
         #content-product .middle .properties .property strong {
           font-weight: 600; }
-    #content-product .middle .special_prop {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 44px;
-      text-decoration: none;
-      background-color: #DFF4E6; }
-      #content-product .middle .special_prop:hover {
-        background-color: #C7EDD4; }
-      #content-product .middle .special_prop span {
-        position: relative;
-        padding-right: 40px;
-        color: #000000; }
-        #content-product .middle .special_prop span::after {
-          position: absolute;
-          right: 20px;
-          top: 50%;
-          transform: translate(50%, -50%);
-          background-repeat: no-repeat;
-          background-position: 50% 50%; }
-      #content-product .middle .special_prop.vegan span::after {
-        content: url(../images/special-vegan.svg); }
-      #content-product .middle .special_prop.kosher span::after {
-        content: url(../images/special-kosher.svg); }
-      #content-product .middle .special_prop.no_tests span::after {
-        content: url(../images/special-no_tests.svg); }
-      #content-product .middle .special_prop.vegan-2 span::after {
-        content: url(../images/special-vegan-2.svg); }
-      #content-product .middle .special_prop.milk_free span::after {
-        content: url(../images/special-milk_free.svg); }
-      #content-product .middle .special_prop.gluten_free span::after {
-        content: url(../images/special-gluten_free.svg); }
-      #content-product .middle .special_prop.keto span::after {
-        content: url(../images/special-keto.svg); }
-      #content-product .middle .special_prop.organic span::after {
-        content: url(../images/special-organic.svg); }
-      #content-product .middle .special_prop.paleo span::after {
-        content: url(../images/special-paleo.svg); }
-      #content-product .middle .special_prop.gmo_free span::after {
-        content: url(../images/special-gmo_free.svg); }
+    #content-product .middle .special_props {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 24px; }
+      #content-product .middle .special_props .special_prop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 44px;
+        text-decoration: none;
+        background-color: #DFF4E6; }
+        #content-product .middle .special_props .special_prop:hover {
+          background-color: #C7EDD4; }
+        #content-product .middle .special_props .special_prop span {
+          position: relative;
+          padding-right: 40px;
+          color: #000000; }
+          #content-product .middle .special_props .special_prop span::after {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translate(50%, -50%);
+            background-repeat: no-repeat;
+            background-position: 50% 50%; }
+        #content-product .middle .special_props .special_prop.vegan span::after {
+          content: url(../images/special-vegan.svg); }
+        #content-product .middle .special_props .special_prop.kosher span::after {
+          content: url(../images/special-kosher.svg); }
+        #content-product .middle .special_props .special_prop.no_tests span::after {
+          content: url(../images/special-no_tests.svg); }
+        #content-product .middle .special_props .special_prop.vegan-2 span::after {
+          content: url(../images/special-vegan-2.svg); }
+        #content-product .middle .special_props .special_prop.milk_free span::after {
+          content: url(../images/special-milk_free.svg); }
+        #content-product .middle .special_props .special_prop.gluten_free span::after {
+          content: url(../images/special-gluten_free.svg); }
+        #content-product .middle .special_props .special_prop.keto span::after {
+          content: url(../images/special-keto.svg); }
+        #content-product .middle .special_props .special_prop.organic span::after {
+          content: url(../images/special-organic.svg); }
+        #content-product .middle .special_props .special_prop.paleo span::after {
+          content: url(../images/special-paleo.svg); }
+        #content-product .middle .special_props .special_prop.gmo_free span::after {
+          content: url(../images/special-gmo_free.svg); }
   #content-product .bottom {
     display: block;
     padding: 64px 0 72px;
