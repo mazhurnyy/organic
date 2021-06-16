@@ -142,10 +142,13 @@
               font-size: 16px;
             }
 
-            @include filter-dropdown('catalog-category.svg');
+            span {
+              position: relative;
+              @include filter-dropdown("catalog-category.svg");
+            }
           }
 
-          &[open] .summary-sub_filter::after {
+          &[open] .summary-sub_filter span::after {
             transform: translateY(-50%) rotate(180deg);
           }
 
@@ -180,6 +183,63 @@
               @media (min-width: 536px) and (max-width: 767px) {
                 min-width: 50%;
                 max-width: 50%;
+              }
+
+              .special_prop {
+                line-height: 30px;
+                position: relative;
+                padding-left: 40px;
+                display: inline-block;
+
+                &::after {
+                  position: absolute;
+                  left: 20px;
+                  top: 50%;
+                  transform: translate(-50%, -50%);
+                  background-repeat: no-repeat;
+                  background-position: 50% 50%;
+                  height: 30px;
+                }
+
+                &.vegan::after {
+                  content: url(../images/special-vegan.svg);
+                }
+
+                &.kosher::after {
+                  content: url(../images/special-kosher.svg);
+                }
+
+                &.no_tests::after {
+                  content: url(../images/special-no_tests.svg);
+                }
+
+                &.vegetarian::after {
+                  content: url(../images/special-vegetarian.svg);
+                }
+
+                &.milk_free::after {
+                  content: url(../images/special-milk_free.svg);
+                }
+
+                &.gluten_free::after {
+                  content: url(../images/special-gluten_free.svg);
+                }
+
+                &.keto::after {
+                  content: url(../images/special-keto.svg);
+                }
+
+                &.organic::after {
+                  content: url(../images/special-organic.svg);
+                }
+
+                &.paleo::after {
+                  content: url(../images/special-paleo.svg);
+                }
+
+                &.gmo_free::after {
+                  content: url(../images/special-gmo_free.svg);
+                }
               }
             }
           }

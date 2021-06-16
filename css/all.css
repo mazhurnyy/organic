@@ -1441,21 +1441,23 @@ picture {
           @media (max-width: 767px) {
             #content-catalog .filters .details-filter form .details-sub_filter .summary-sub_filter {
               font-size: 16px; } }
-          #content-catalog .filters .details-filter form .details-sub_filter .summary-sub_filter::after {
-            content: '';
-            display: block;
-            position: absolute;
-            left: 100%;
-            top: 50%;
-            z-index: 1;
-            transform: translateY(-50%);
-            width: 14px;
-            height: 12px;
-            margin: 0 4px;
-            background-image: url(../images/catalog-category.svg);
-            background-position: center;
-            background-repeat: no-repeat; }
-        #content-catalog .filters .details-filter form .details-sub_filter[open] .summary-sub_filter::after {
+          #content-catalog .filters .details-filter form .details-sub_filter .summary-sub_filter span {
+            position: relative; }
+            #content-catalog .filters .details-filter form .details-sub_filter .summary-sub_filter span::after {
+              content: '';
+              display: block;
+              position: absolute;
+              left: 100%;
+              top: 50%;
+              z-index: 1;
+              transform: translateY(-50%);
+              width: 14px;
+              height: 12px;
+              margin: 0 4px;
+              background-image: url(../images/catalog-category.svg);
+              background-position: center;
+              background-repeat: no-repeat; }
+        #content-catalog .filters .details-filter form .details-sub_filter[open] .summary-sub_filter span::after {
           transform: translateY(-50%) rotate(180deg); }
         #content-catalog .filters .details-filter form .details-sub_filter .checkboxes {
           display: flex;
@@ -1526,6 +1528,39 @@ picture {
               #content-catalog .filters .details-filter form .details-sub_filter .checkboxes .checkbox {
                 min-width: 50%;
                 max-width: 50%; } }
+            #content-catalog .filters .details-filter form .details-sub_filter .checkboxes .checkbox .special_prop {
+              line-height: 30px;
+              position: relative;
+              padding-left: 40px;
+              display: inline-block; }
+              #content-catalog .filters .details-filter form .details-sub_filter .checkboxes .checkbox .special_prop::after {
+                position: absolute;
+                left: 20px;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                height: 30px; }
+              #content-catalog .filters .details-filter form .details-sub_filter .checkboxes .checkbox .special_prop.vegan::after {
+                content: url(../images/special-vegan.svg); }
+              #content-catalog .filters .details-filter form .details-sub_filter .checkboxes .checkbox .special_prop.kosher::after {
+                content: url(../images/special-kosher.svg); }
+              #content-catalog .filters .details-filter form .details-sub_filter .checkboxes .checkbox .special_prop.no_tests::after {
+                content: url(../images/special-no_tests.svg); }
+              #content-catalog .filters .details-filter form .details-sub_filter .checkboxes .checkbox .special_prop.vegetarian::after {
+                content: url(../images/special-vegetarian.svg); }
+              #content-catalog .filters .details-filter form .details-sub_filter .checkboxes .checkbox .special_prop.milk_free::after {
+                content: url(../images/special-milk_free.svg); }
+              #content-catalog .filters .details-filter form .details-sub_filter .checkboxes .checkbox .special_prop.gluten_free::after {
+                content: url(../images/special-gluten_free.svg); }
+              #content-catalog .filters .details-filter form .details-sub_filter .checkboxes .checkbox .special_prop.keto::after {
+                content: url(../images/special-keto.svg); }
+              #content-catalog .filters .details-filter form .details-sub_filter .checkboxes .checkbox .special_prop.organic::after {
+                content: url(../images/special-organic.svg); }
+              #content-catalog .filters .details-filter form .details-sub_filter .checkboxes .checkbox .special_prop.paleo::after {
+                content: url(../images/special-paleo.svg); }
+              #content-catalog .filters .details-filter form .details-sub_filter .checkboxes .checkbox .special_prop.gmo_free::after {
+                content: url(../images/special-gmo_free.svg); }
   #content-catalog .sort {
     display: flex;
     flex-direction: row;
