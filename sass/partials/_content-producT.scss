@@ -418,43 +418,43 @@
         }
 
         &.vegan span::after {
-          content: url(../images/special-vegan.svg);
+          content: $svg-vegan;
         }
 
         &.kosher span::after {
-          content: url(../images/special-kosher.svg);
+          content: $svg-kosher;
         }
 
         &.no_tests span::after {
-          content: url(../images/special-no_tests.svg);
+          content: $svg-no_tests;
         }
 
         &.vegetarian span::after {
-          content: url(../images/special-vegetarian.svg);
+          content: $svg-vegetarian;
         }
 
         &.milk_free span::after {
-          content: url(../images/special-milk_free.svg);
+          content: $svg-milk_free;
         }
 
         &.gluten_free span::after {
-          content: url(../images/special-gluten_free.svg);
+          content: $svg-gluten_free;
         }
 
         &.keto span::after {
-          content: url(../images/special-keto.svg);
+          content: $svg-keto;
         }
 
         &.organic span::after {
-          content: url(../images/special-organic.svg);
+          content: $svg-organic;
         }
 
         &.paleo span::after {
-          content: url(../images/special-paleo.svg);
+          content: $svg-paleo;
         }
 
         &.gmo_free span::after {
-          content: url(../images/special-gmo_free.svg);
+          content: $svg-gmo_free;
         }
       }
     }
