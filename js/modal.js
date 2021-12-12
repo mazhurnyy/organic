@@ -1,75 +1,56 @@
-{
-    document.addEventListener("click", function (e) {
-        const [shadow, wrapper, modal] = getModalElements();
-
-        if (e.target !== shadow && e.target !== wrapper) return true;
-
-        if (modal.classList.contains("modal-important")) return true;
-
-        modalClose();
-    });
-
-    document.addEventListener("click", function (e) {
-        if (!e.target.classList.contains("modal-close") && !e.target.closest(".modal-close")) return true;
-
-        modalClose();
-    });
-
-    document.addEventListener("click", function (e) {
-        const
-            t1 = e.target,
-            t2 = t1.closest("[data-modal]")
-        ;
-        if (!t1.dataset.modal && !t2) return true;
-
-        modalOpen(t1.dataset.modal ?? t2.dataset.modal);
-    });
-}
+$(function () {
+    $(document)
+        .on("click", "#shadow", function (e) {
+            const
+                shadow = document.getElementById("shadow"),
+                wrapper = document.getElementsByClassName("modal-wrapper")[0]
+            ;
+            if ((e.target === shadow || e.target === wrapper) && !$(".modal.open").hasClass("modal-important")) {
+                modalClose();
+            }
+        })
+        .on("click", ".modal-close", function () {
+            modalClose();
+        })
+        .on("click", "[data-modal]", function () {
+            modalOpen($(this).attr("data-modal"));
+        })
+    ;
+});
 
 function modalClose() {
-    const [shadow, wrapper, modal] = getModalElements();
-
-    wrapper.classList.remove("open");
-
+    $(".modal-wrapper").removeClass("open");
     setTimeout(function () {
-        modal.classList.remove("open");
-        shadow.classList.remove("open");
-
-        document.querySelector('#wrapper').focus();
+        $(".modal").removeClass("open");
+        $("#shadow").removeClass("open");
+        $("#wrapper").focus();
     }, 600);
 }
 
-function modalOpen(t) {
-    const [shadow, wrapper, modal] = getModalElements();
-    const target = document.querySelector(".modal-" + t);
+function modalOpen(target) {
+    const
+        wrap = $(".modal-wrapper"),
+        modal = $(".modal-" + target),
+        timeout = wrap.hasClass("open") ? 500 : 10
+    ;
 
-    let timeout = wrapper.classList.contains("open") ? 500 : 10;
-
-    if (wrapper.classList.contains("open")) {
-        wrapper.classList.remove("open");
+    if (wrap.hasClass("open")) {
+        wrap.removeClass("open");
 
         setTimeout(function () {
-            modal.classList.remove("open");
-            target.classList.add("open");
+            $(".modal").removeClass("open");
+            modal.addClass("open");
         }, timeout);
     } else {
-        shadow.classList.add("open");
-        target.classList.add("open");
+        $("#shadow").addClass("open");
+        modal.addClass("open");
     }
 
     setTimeout(function () {
-        wrapper.classList.add("open");
+        wrap.addClass("open");
     }, timeout);
 
     setTimeout(function () {
-        target.focus();
+        modal.focus();
     }, timeout + 10);
-}
-
-function getModalElements() {
-    return [
-        document.querySelector("#shadow"),
-        document.querySelector(".modal-wrapper"),
-        document.querySelector(".modal.open")
-    ];
 }

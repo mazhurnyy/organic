@@ -44,8 +44,8 @@
             color: $color-green-2;
           }
 
-          &[href="#"]:not([data-modal]):hover,
-          &[href="#"]:not([data-modal]):active {
+          &[href='#']:not([data-modal]):hover,
+          &[href='#']:not([data-modal]):active {
             color: $color-green-3;
             cursor: default;
           }
@@ -286,15 +286,15 @@
           height: 20px;
         }
 
+        &.lang {
+          height: 24px;
+          width: 24px;
+        }
+
         &.phone {
           width: 24px;
           height: 24px;
           margin: 0 -3px;
-        }
-
-        &.lang {
-          height: 24px;
-          width: 24px;
         }
 
         &.search-open {
@@ -497,7 +497,7 @@
             transform: translateX(0);
             right: -3px;
           }
-          
+
           &:nth-child(1) .navbar-lvl-3-list,
           &:nth-child(2) .navbar-lvl-3-list,
           &:nth-child(3) .navbar-lvl-3-list {

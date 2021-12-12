@@ -1,345 +1,259 @@
-{
-    document.addEventListener("DOMContentLoaded", function () {
-        const inputs = document.querySelectorAll(".modal-auth .form .row .input");
+$(function () {
+    $(document)
+        .ready(function () {
+            $(".modal-auth .form .row .input").each(function () {
+                const that = $(this);
 
-        for (let input of inputs) {
-            if (input.value.length > 0) {
-                input.classList.add("focus");
+                if (that.val().length > 0) {
+                    that.addClass("focus");
+                }
+            });
+        })
+        .on("click", ".pwd-show", function () {
+            const form = $(this).closest("form");
+
+            form.find(".pwd-show").addClass("d-none");
+            form.find(".pwd-hide").removeClass("d-none");
+            form.find(".pwd-input").attr("type", "text");
+        })
+        .on("click", ".pwd-hide", function () {
+            const form = $(this).closest("form");
+
+            form.find(".pwd-hide").addClass("d-none");
+            form.find(".pwd-show").removeClass("d-none");
+            form.find(".pwd-input").attr("type", "password");
+        })
+        .on("input change focus paste", ".modal-auth .form .row .input", function () {
+            $(this).addClass("focus");
+        })
+        .on("blur", ".modal-auth .form .row .input", function () {
+            if ($(this).val().length < 1) {
+                $(this).removeClass("focus");
             }
-        }
-    });
+        })
+        .on("submit", ".form-login", function (e) {
+            e.preventDefault();
+            const submit = $(".form-login [type=submit]");
 
-    // Show password
-    document.addEventListener("click", function (e) {
-        let button;
+            const
+                tel_input = $("#login-login"),
+                pwd_input = $("#login-password"),
+                tel = tel_input.val().replace(/[^\d]/g, ''),
+                pwd = pwd_input.val().trim(),
+                tel_row = tel_input.parent(),
+                pwd_row = pwd_input.parent()
+            ;
 
-        if (e.target.classList.contains("pwd-show")) {
-            button = e.target;
-        } else {
-            button = e.target.closest(".pwd-show");
-        }
-
-        if (!button) return true;
-
-        const form = button.closest("form");
-        form.querySelector(".pwd-show").classList.add("d-none");
-        form.querySelector(".pwd-hide").classList.remove("d-none");
-
-        const inputs = form.querySelectorAll(".pwd-input");
-        for (let input of inputs) {
-            input.setAttribute("type", "text");
-        }
-    });
-
-    // Hide password
-    document.addEventListener("click", function (e) {
-        let button;
-
-        if (e.target.classList.contains("pwd-hide")) {
-            button = e.target;
-        } else {
-            button = e.target.closest(".pwd-hide");
-        }
-
-        if (!button) return true;
-
-        const form = button.closest("form");
-        form.querySelector(".pwd-show").classList.remove("d-none");
-        form.querySelector(".pwd-hide").classList.add("d-none");
-
-        const inputs = form.querySelectorAll(".pwd-input");
-        for (let input of inputs) {
-            input.setAttribute("type", "password");
-        }
-    });
-
-    // Inputs in modal auth
-    document.addEventListener("input", inputListener);
-
-    document.addEventListener("change", inputListener);
-
-    document.addEventListener("focusin", inputListener);
-
-    document.addEventListener("paste", inputListener);
-
-    function inputListener (e) {
-        if (e.target.classList.contains("input") && e.target.closest(".modal-auth")) {
-            e.target.classList.add("focus");
-        }
-    }
-
-    document.addEventListener("focusout", function (e) {
-        if (e.target.classList.contains("input") && e.target.closest(".modal-auth")) {
-            if (e.target.value.length === 0) {
-                e.target.classList.remove("focus");
+            if (tel.length === 12) {
+                tel_input.removeClass("error").addClass("success");
+                tel_row.attr("data-error", "");
+            } else {
+                tel_input.removeClass("success").addClass("error");
+                tel_row.attr("data-error", tel_row.data("txt"));
             }
-        }
-    });
 
-    // Submits
-    document.querySelector(".form-login").addEventListener("submit", function (e) {
-        e.preventDefault();
-        const submit = document.querySelector(".form-login [type=submit]");
+            if (pwd.length >= 6) {
+                pwd_input.removeClass("error").addClass("success");
+                pwd_row.attr("data-error", "");
+            } else {
+                pwd_input.removeClass("success").addClass("error");
+                pwd_row.attr("data-error", pwd_row.data("txt"));
+            }
 
-        const
-            tel_input = document.querySelector("#login-login"),
-            pwd_input = document.querySelector("#login-password"),
-            tel = tel_input.value.replace(/[^\d]/g, ''),
-            pwd = pwd_input.value.trim(),
-            tel_row = tel_input.closest(".row"),
-            pwd_row = pwd_input.closest(".row")
-        ;
+            if (tel.length === 12 && pwd.length >= 6) {
+                submitOff(submit);
+                setTimeout(function () {
+                    axios
+                        .post("/login", {
+                            phone: tel,
+                            password: pwd,
+                            remember: true
+                        }, {
+                            timeout: axiosTimeOut
+                        })
+                        .then(function (response) {
+                            window.location.reload();
+                        })
+                        .catch(function (error) {
+                            catchAuthError(error, tel_input, "phone");
 
-        let error = false;
+                            if (error.response) {
+                                pwd_input.removeClass("success").addClass("error");
+                            }
+                        })
+                        .then(function () {
+                            submitOn(submit);
+                        })
+                    ;
+                }, 700);
+            }
+        })
+        .on("submit", ".form-register", function (e) {
+            e.preventDefault();
+            const submit = $(".form-register [type=submit]");
 
-        if (tel.length === 12) {
-            tel_input.classList.remove("error");
-            tel_input.classList.add("success");
-            tel_row.dataset.error = "";
-        } else {
-            tel_input.classList.remove("success");
-            tel_input.classList.add("error");
-            tel_row.dataset.error = tel_row.dataset.txt;
-            error = true;
-        }
-
-        if (pwd.length >= 6) {
-            pwd_input.classList.remove("error");
-            pwd_input.classList.add("success");
-            pwd_row.dataset.error = "";
-        } else {
-            pwd_input.classList.remove("success");
-            pwd_input.classList.add("error");
-            pwd_row.dataset.error = pwd_row.dataset.txt;
-            error = true;
-        }
-
-        if (error) return;
-
-        submitOff(submit);
-        setTimeout(function () {
-            axios
-                .post("/login", {
-                    phone: tel,
-                    password: pwd,
-                    remember: true
-                }, {
-                    timeout: axiosTimeOut
-                })
-                .then(function (response) {
-                    window.location.reload();
-                })
-                .catch(function (error) {
-                    catchAuthError(error, tel_input, "phone");
-
-                    if (error.response) {
-                        pwd_input.classList.remove("success");
-                        pwd_input.classList.add("error");
-                    }
-                })
-                .then(function () {
-                    submitOn(submit);
-                })
+            const
+                tel_input = $("#register-login"),
+                tel = tel_input.val().replace(/[^\d]/g, ''),
+                tel_row = tel_input.parent()
             ;
-        }, 700);
-    });
 
-    document.querySelector(".form-register").addEventListener("submit", function (e) {
-        e.preventDefault();
-        const submit = document.querySelector(".form-register [type=submit]");
+            if (tel.length === 12) {
+                tel_input.removeClass("error").addClass("success");
+                tel_row.attr("data-error", "");
+            } else {
+                tel_input.removeClass("success").addClass("error");
+                tel_row.attr("data-error", tel_row.data("txt"));
+            }
 
-        const
-            tel_input = document.querySelector("#register-login"),
-            tel = tel_input.value.replace(/[^\d]/g, ''),
-            tel_row = tel_input.closest(".row")
-        ;
+            if (tel.length === 12) {
+                submitOff(submit);
+                setTimeout(function () {
+                    axios
+                        .post("/register", {
+                            phone: tel
+                        }, {
+                            timeout: axiosTimeOut
+                        })
+                        .then(function (response) {
+                            $(".modal-password a[data-modal]").attr("data-modal", "register");
+                            modalOpen("password");
+                        })
+                        .catch(function (error) {
+                            $(".modal-password a[data-modal]").attr("data-modal", "register");
+                            modalOpen("password");
+                            return;
 
-        let error = false;
+                            catchAuthError(error, tel_input, "phone");
+                        })
+                        .then(function () {
+                            submitOn(submit);
+                        })
+                    ;
+                }, 700);
+            }
+        })
+        .on("submit", ".form-reset", function (e) {
+            e.preventDefault();
+            const submit = $(".form-reset [type=submit]");
 
-        if (tel.length === 12) {
-            tel_input.classList.remove("error");
-            tel_input.classList.add("success");
-            tel_row.dataset.error = "";
-        } else {
-            tel_input.classList.remove("success");
-            tel_input.classList.add("error");
-            tel_row.dataset.error = tel_row.dataset.txt;
-            error = true;
-        }
-
-        if (error) return;
-
-        submitOff(submit);
-        setTimeout(function () {
-            axios
-                .post("/register", {
-                    phone: tel
-                }, {
-                    timeout: axiosTimeOut
-                })
-                .then(function (response) {
-                    const attribute = document.querySelector(".modal-password a[data-modal]");
-                    attribute.dataset.modal = "register";
-                    modalOpen("password");
-                })
-                .catch(function (error) {
-                    const attribute = document.querySelector(".modal-password a[data-modal]");
-                    attribute.dataset.modal = "register";
-                    modalOpen("password");
-                    return;
-
-                    catchAuthError(error, tel_input, "phone");
-                })
-                .then(function () {
-                    submitOn(submit);
-                })
+            const
+                tel_input = $("#reset-login"),
+                tel = tel_input.val().replace(/[^\d]/g, ''),
+                tel_row = tel_input.parent()
             ;
-        }, 700);
-    });
 
-    document.querySelector(".form-reset").addEventListener("submit", function (e) {
-        e.preventDefault();
+            if (tel.length === 12) {
+                tel_input.removeClass("error").addClass("success");
+                tel_row.attr("data-error", "");
+            } else {
+                tel_input.removeClass("success").addClass("error");
+                tel_row.attr("data-error", tel_row.data("txt"));
+            }
 
-        const submit = document.querySelector(".form-reset [type=submit]");
+            if (tel.length === 12) {
+                submitOff(submit);
+                setTimeout(function () {
+                    axios
+                        .post("/reset", {
+                            phone: tel
+                        }, {
+                            timeout: axiosTimeOut
+                        })
+                        .then(function (response) {
+                            $(".modal-password a[data-modal]").attr("data-modal", "reset");
+                            modalOpen("password");
+                        })
+                        .catch(function (error) {
+                            $(".modal-password a[data-modal]").attr("data-modal", "reset");
+                            modalOpen("password");
+                            return;
 
-        const
-            tel_input = document.querySelector("#reset-login"),
-            tel = tel_input.value.replace(/[^\d]/g, ''),
-            tel_row = tel_input.closest(".row")
-        ;
+                            catchAuthError(error, tel_input, "phone");
+                        })
+                        .then(function () {
+                            submitOn(submit);
+                        })
+                    ;
+                }, 700);
+            }
+        })
+        .on("submit", ".form-password", function (e) {
+            e.preventDefault();
+            const submit = $(".form-password [type=submit]");
 
-        let error = false;
-
-        if (tel.length === 12) {
-            tel_input.classList.remove("error");
-            tel_input.classList.add("success");
-            tel_row.dataset.error = "";
-        } else {
-            tel_input.classList.remove("success");
-            tel_input.classList.add("error");
-            tel_row.dataset.error = tel_row.dataset.txt;
-            error = true;
-        }
-
-        if (error) return;
-
-        submitOff(submit);
-        setTimeout(function () {
-            axios
-                .post("/reset", {
-                    phone: tel
-                }, {
-                    timeout: axiosTimeOut
-                })
-                .then(function (response) {
-                    const attribute = document.querySelector(".modal-password a[data-modal]");
-                    attribute.dataset.modal = "reset";
-                    modalOpen("password");
-                })
-                .catch(function (error) {
-                    const attribute = document.querySelector(".modal-password a[data-modal]");
-                    attribute.dataset.modal = "reset";
-                    modalOpen("password");
-                    return;
-
-                    catchAuthError(error, tel_input, "phone");
-                })
-                .then(function () {
-                    submitOn(submit);
-                })
+            const
+                code_input = $("#password-code"),
+                password_input = $("#password-password"),
+                confirm_input = $("#password-confirm"),
+                code = code_input.val().replace(/[^\d]/g, ''),
+                password = password_input.val().trim(),
+                confirm = confirm_input.val().trim(),
+                code_row = code_input.parent(),
+                password_row = password_input.parent(),
+                confirm_row = confirm_input.parent()
             ;
-        }, 700);
-    });
 
-    document.querySelector(".form-password").addEventListener("submit", function (e) {
-        e.preventDefault();
+            if (code.length === 6) {
+                code_input.removeClass("error").addClass("success");
+                code_row.attr("data-error", "");
+            } else {
+                code_input.removeClass("success").addClass("error");
+                code_row.attr("data-error", code_row.data("txt"));
+            }
 
-        const submit = document.querySelector(".form-password [type=submit]");
+            if (password.length >= 6) {
+                password_input.removeClass("error").addClass("success");
+                password_row.attr("data-error", "");
+            } else {
+                password_input.removeClass("success").addClass("error");
+                password_row.attr("data-error", password_row.data("txt"));
+            }
 
-        const
-            code_input = document.querySelector("#password-code"),
-            password_input = document.querySelector("#password-password"),
-            confirm_input = document.querySelector("#password-confirm"),
-            code = code_input.value.replace(/[^\d]/g, ''),
-            password = password_input.value.trim(),
-            confirm = confirm_input.value.trim(),
-            code_row = code_input.closest(".row"),
-            password_row = password_input.closest(".row"),
-            confirm_row = confirm_input.closest(".row")
-        ;
+            if (confirm === password) {
+                confirm_input.removeClass("error").addClass("success");
+                confirm_row.attr("data-error", "");
+            } else {
+                confirm_input.removeClass("success").addClass("error");
+                confirm_row.attr("data-error", confirm_row.data("txt"));
+            }
 
-        let error = false;
+            if (code.length === 6 && password.length >= 6 && confirm === password) {
+                submitOff(submit);
+                setTimeout(function () {
+                    axios
+                        .post("/" + $(".modal-password a[data-modal]").attr("data-modal") + "/code", {
+                            token: code,
+                            password: password,
+                            password_confirmation: confirm
+                        }, {
+                            timeout: axiosTimeOut
+                        })
+                        .then(function (response) {
+                            window.location.reload();
+                        })
+                        .catch(function (error) {
+                            catchAuthError(error, code_input, "token");
 
-        if (code.length === 6) {
-            code_input.classList.remove("error");
-            code_input.classList.add("success");
-            code_row.dataset.error = "";
-        } else {
-            code_input.classList.remove("success");
-            code_input.classList.add("error");
-            code_row.dataset.error = code_row.dataset.txt;
-            error = true;
-        }
+                            if (error.response) {
+                                if (error.response.status === 422) {
+                                    let password_txt = error.response.data.errors.password;
+                                    password_input.removeClass("success").addClass("error");
+                                    password_row.attr("data-error", password_txt);
+                                    confirm_input.removeClass("success").addClass("error");
+                                }
+                            }
+                        })
+                        .then(function () {
+                            submitOn(submit);
+                        })
+                    ;
+                }, 700);
+            }
+        })
+    ;
 
-        if (password.length >= 6) {
-            password_input.classList.remove("error");
-            password_input.classList.add("success");
-            password_row.dataset.error =  "";
-        } else {
-            password_input.classList.remove("success");
-            password_input.classList.add("error");
-            password_row.dataset.error = password_row.dataset.txt;
-            error = true;
-        }
-
-        if (confirm === password) {
-            confirm_input.classList.remove("error");
-            confirm_input.classList.add("success");
-            confirm_row.dataset.error = "";
-        } else {
-            confirm_input.classList.remove("success");
-            confirm_input.classList.add("error");
-            confirm_row.dataset.error = confirm_row.dataset.txt;
-            error = true;
-        }
-
-        if (error) return;
-
-        submitOff(submit);
-
-        setTimeout(function () {
-            axios
-                .post("/" + document.querySelector(".modal-password a[data-modal]").dataset.modal + "/code", {
-                    token: code,
-                    password: password,
-                    password_confirmation: confirm
-                }, {
-                    timeout: axiosTimeOut
-                })
-                .then(function (response) {
-                    window.location.reload();
-                })
-                .catch(function (error) {
-                    catchAuthError(error, code_input, "token");
-
-                    if (error.response) {
-                        if (error.response.status === 422) {
-                            password_row.dataset.error = error.response.data.errors.password;
-                            password_input.classList.remove("success");
-                            password_input.classList.add("error");
-                            confirm_input.classList.remove("success");
-                            confirm_input.classList.add("error");
-                        }
-                    }
-                })
-                .then(function () {
-                    submitOn(submit);
-                })
-            ;
-        }, 700);
-    });
-
-    function catchAuthError(error, input, field) {
+    function catchAuthError(error, tel_input, field) {
         if (error.response) {
             let txt;
             switch (error.response.status) {
@@ -358,11 +272,10 @@
                 default:
                     txt = error.response.status;
             }
-            input.classList.remove("success");
-            input.classList.add("error");
-            input.closest(".row").dataset.error = txt;
+            tel_input.removeClass("success").addClass("error")
+                .parent().attr("data-error", txt);
         } else {
             modalOpen("error");
         }
     }
-}
+});
