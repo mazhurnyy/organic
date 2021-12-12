@@ -2773,7 +2773,7 @@ picture {
             font-size: 14px; } }
         #header .top > .layout ul li a:hover, #header .top > .layout ul li a:active {
           color: #00370C; }
-        #header .top > .layout ul li a[href="#"]:not([data-modal]):hover, #header .top > .layout ul li a[href="#"]:not([data-modal]):active {
+        #header .top > .layout ul li a[href='#']:not([data-modal]):hover, #header .top > .layout ul li a[href='#']:not([data-modal]):active {
           color: #116708;
           cursor: default; }
         #header .top > .layout ul li a svg {
@@ -2945,9 +2945,6 @@ picture {
         width: 24px;
         height: 24px;
         margin: 0 -3px; }
-      #header .middle > .layout .buttons a.lang {
-        height: 24px;
-        width: 24px; }
       #header .middle > .layout .buttons a.search-open {
         width: 20px;
         height: 21px; }
