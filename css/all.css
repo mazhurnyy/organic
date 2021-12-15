@@ -239,14 +239,16 @@ button, summary {
   justify-content: flex-start;
   align-items: stretch;
   border-bottom: 2px solid #C4C4C4; }
-  @media (max-width: 565px) {
+  @media (max-width: 585px) {
     .tabs-header-wrap {
-      justify-content: space-around; } }
+      flex-direction: column;
+      align-items: flex-start; } }
   .tabs-header-wrap h2 {
-    margin-right: 140px; }
-    @media (max-width: 565px) {
+    margin-top: 10px;
+    margin-right: 54px; }
+    @media (max-width: 665px) {
       .tabs-header-wrap h2 {
-        margin-right: 0; } }
+        margin-right: 35px; } }
     .tabs-header-wrap h2:last-of-type {
       margin-right: 0; }
     .tabs-header-wrap h2 .tabs-header {
@@ -257,11 +259,11 @@ button, summary {
       line-height: 34px;
       color: #828282;
       padding: 8px 38px 8px 0; }
-      @media (max-width: 565px) {
+      @media (max-width: 665px) {
         .tabs-header-wrap h2 .tabs-header {
           font-size: 22px; } }
       .tabs-header-wrap h2 .tabs-header::before {
-        content: '';
+        content: "";
         display: block;
         position: absolute;
         z-index: 1;
@@ -277,7 +279,7 @@ button, summary {
       .tabs-header-wrap h2 .tabs-header.active, .tabs-header-wrap h2 .tabs-header:hover, .tabs-header-wrap h2 .tabs-header:active {
         color: #116708; }
         .tabs-header-wrap h2 .tabs-header.active::after, .tabs-header-wrap h2 .tabs-header:hover::after, .tabs-header-wrap h2 .tabs-header:active::after {
-          content: '';
+          content: "";
           display: block;
           position: absolute;
           left: 0;
@@ -333,6 +335,40 @@ button, summary {
             bottom: 0;
             background: linear-gradient(to right, transparent, #F3FCF6);
             width: 50px; }
+    .tabs-content-wrap .tabs-content.review .videos iframe {
+      display: block;
+      margin-bottom: 30px;
+      height: 315px;
+      max-width: 100%; }
+    .tabs-content-wrap .tabs-content.review .images {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-items: stretch; }
+      @media (max-width: 429px) {
+        .tabs-content-wrap .tabs-content.review .images {
+          flex-flow: column nowrap;
+          align-items: center; } }
+      .tabs-content-wrap .tabs-content.review .images picture {
+        cursor: pointer;
+        display: flex;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        width: auto; }
+        @media (max-width: 429px) {
+          .tabs-content-wrap .tabs-content.review .images picture {
+            margin-right: 0;
+            margin-bottom: 16px; } }
+      .tabs-content-wrap .tabs-content.review .images img {
+        display: block;
+        height: 315px;
+        width: auto;
+        max-width: 100%;
+        object-fit: cover; }
+        @media (max-width: 429px) {
+          .tabs-content-wrap .tabs-content.review .images img {
+            height: auto;
+            max-height: 400px; } }
     .tabs-content-wrap .tabs-content.reviews .link {
       display: inline;
       font-size: 18px;
@@ -2428,11 +2464,11 @@ picture {
           content: url(../images/special-gmo_free.svg); }
   #content-product .bottom {
     display: block;
-    padding: 64px 0 72px;
+    padding: 54px 0 72px;
     background-color: #F3FCF6; }
     @media (max-width: 979px) {
       #content-product .bottom {
-        padding: 40px 0 64px; } }
+        padding: 30px 0 64px; } }
     #content-product .bottom .tabs {
       display: block; }
 
@@ -3753,6 +3789,22 @@ picture {
         @media (max-height: 747px) and (max-width: 767px) {
           #shadow .modal-wrapper .modal.modal-picture {
             max-width: calc(100vh - 28px); } }
+      #shadow .modal-wrapper .modal.modal-product_tab_review {
+        max-width: 80vw;
+        width: auto;
+        height: auto; }
+        @media (max-width: 767px) {
+          #shadow .modal-wrapper .modal.modal-product_tab_review {
+            max-width: 100%; } }
+        #shadow .modal-wrapper .modal.modal-product_tab_review picture {
+          max-width: 100%;
+          max-height: 100%;
+          padding-top: 20px; }
+          #shadow .modal-wrapper .modal.modal-product_tab_review picture img {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain; }
       #shadow .modal-wrapper .modal.modal-review {
         max-width: 940px; }
         @media (max-width: 979px) {

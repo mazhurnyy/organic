@@ -462,11 +462,11 @@
 
   .bottom {
     display: block;
-    padding: 64px 0 72px;
+    padding: 54px 0 72px;
     background-color: $color-gray-4;
 
     @media (max-width: 979px) {
-      padding: 40px 0 64px;
+      padding: 30px 0 64px;
     }
 
     .tabs {

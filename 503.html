@@ -1,1336 +1,1513 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png"/>
-    <link rel="manifest" href="./site.webmanifest"/>
-    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#116708"/>
-    <meta name="msapplication-TileColor" content="#ffffff"/>
-    <meta name="theme-color" content="#ffffff"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png"/>
+  <link rel="manifest" href="./site.webmanifest"/>
+  <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#116708"/>
+  <meta name="msapplication-TileColor" content="#ffffff"/>
+  <meta name="theme-color" content="#ffffff"/>
 
-    <link href="css/all.css?ver=1597294270939" rel="stylesheet" type="text/css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,700;1,800&display=swap"
-          rel="stylesheet"/>
-    <title>Страница временно недоступна, проводятся технические работы | Organic Chest</title>
+  <link href="css/all.css?ver=1597294270939" rel="stylesheet" type="text/css"/>
+  <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,700;1,800&display=swap"
+      rel="stylesheet"/>
+  <title>Страница временно недоступна, проводятся технические работы | Organic Chest</title>
 </head>
 <!-- яблоко ? "webp_off" : "webp_on" -->
 <body class="webp_on">
 <div id="wrapper">
-    <header id="header">
-        <section class="top">
-            <div class="layout">
-                <nav>
-                    <!-- Верхнее меню, продублировано в основном меню для мальнькой диагонали -->
-                    <ul>
-                        <li>
-                            <a href="./promotions.html">Акции</a>
-                        </li>
-                        <li>
-                            <a href="./reviews.html">Отзывы</a>
-                        </li>
-                        <li>
-                            <a href="./shipping.html">Оплата и доставка</a>
-                        </li>
-                        <li>
-                            <a href="./contacts.html">Контакты</a>
-                        </li>
-                        <li>
-                            <a href="./brands.html">Бренды</a>
-                        </li>
-                    </ul>
-                </nav>
-                <nav>
-                    <!-- Если разлогинен - 2 ссылки на модальные окна, если залогинен - одна на Личный кабинет. Пример в Профиле / Избранном / Заказах -->
-                    <ul>
-                        <li>
-                            <a href="#" data-modal="login">
-                                <!-- SVG user -->
-                                <svg height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11.9533 10.0152C11.7125 9.06007 11.2352 8.17752 10.5635 7.44535C9.89181 6.71318 9.0463 6.15386 8.1015 5.81669C8.63961 5.39155 9.02973 4.81366 9.21812 4.16262C9.40651 3.51158 9.38391 2.81942 9.15343 2.18146C8.92294 1.54351 8.49592 0.991155 7.93116 0.600472C7.36641 0.209789 6.69171 0 6 0C5.30829 0 4.63359 0.209789 4.06884 0.600472C3.50408 0.991155 3.07706 1.54351 2.84657 2.18146C2.61609 2.81942 2.59349 3.51158 2.78188 4.16262C2.97027 4.81366 3.36039 5.39155 3.8985 5.81669C2.95371 6.15386 2.1082 6.71318 1.43649 7.44535C0.764776 8.17752 0.287489 9.06007 0.0466884 10.0152C-0.0120191 10.2473 -0.0154074 10.4894 0.0367857 10.7229C0.0889788 10.9565 0.195356 11.1751 0.347699 11.362C0.504632 11.5614 0.706486 11.7228 0.937555 11.8334C1.16862 11.9441 1.42268 12.0011 1.67995 12H10.3201C10.5773 12.0011 10.8314 11.9441 11.0624 11.8334C11.2935 11.7228 11.4954 11.5614 11.6523 11.362C11.8046 11.1751 11.911 10.9565 11.9632 10.7229C12.0154 10.4894 12.012 10.2473 11.9533 10.0152V10.0152ZM3.7703 3.27576C3.7703 2.84439 3.90107 2.42271 4.14607 2.06403C4.39107 1.70536 4.7393 1.42581 5.14673 1.26073C5.55415 1.09565 6.00247 1.05246 6.43499 1.13662C6.86751 1.22077 7.26481 1.4285 7.57664 1.73352C7.88847 2.03855 8.10083 2.42718 8.18686 2.85026C8.2729 3.27334 8.22874 3.71188 8.05998 4.11042C7.89122 4.50895 7.60543 4.84959 7.23876 5.08924C6.87208 5.3289 6.44099 5.45682 6 5.45682C5.40865 5.45682 4.84151 5.22703 4.42336 4.818C4.00521 4.40897 3.7703 3.85421 3.7703 3.27576ZM10.7716 10.6914C10.7191 10.7598 10.6509 10.8152 10.5724 10.8531C10.494 10.891 10.4075 10.9103 10.3201 10.9095H1.67995C1.59247 10.9103 1.50602 10.891 1.42758 10.8531C1.34914 10.8152 1.28092 10.7598 1.22843 10.6914C1.17906 10.6352 1.14418 10.5682 1.12672 10.4961C1.10927 10.424 1.10974 10.3488 1.1281 10.277C1.39591 9.21086 2.02142 8.2634 2.90462 7.58605C3.78783 6.90871 4.87771 6.54061 6 6.54061C7.12229 6.54061 8.21217 6.90871 9.09538 7.58605C9.97858 8.2634 10.6041 9.21086 10.8719 10.277C10.8903 10.3488 10.8907 10.424 10.8733 10.4961C10.8558 10.5682 10.8209 10.6352 10.7716 10.6914Z"
-                                          fill="currentColor"></path>
-                                </svg>
-                                Вход
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" data-modal="register">Регистрация</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </section>
-        <section class="middle">
-            <div class="layout">
-                <div class="contact">
-                    <div class="phone">
-                        <a href="tel:+380000000000">8000000000</a>
-                    </div>
-                    <div class="callback">
-                        <a href="#" data-modal="callback">Заказать обратный звонок</a>
-                    </div>
-                </div>
-
-                <a href="./index.html" class="logo">
-                    <picture>
-                        <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                data-srcset="./images/header-logo.webp"
-                                type="image/webp"
-                        />
-                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                             data-src="./images/header-logo.png"
-                             class="lazyload"
-                             alt="лого"
-                             width="181"
-                             height="68"
-                        />
-                    </picture>
-                </a>
-
-                <div class="buttons">
-                    <div class="left">
-                        <a href="#" class="navbar-toggle v-max-767" aria-label="Меню">
-                            <span></span>
-                        </a>
-                    </div>
-                    <ul class="right">
-                        <li>
-                            <a href="#" class="search-open" aria-label="Поиск">
-                                <!-- SVG lens -->
-                                <svg height="20" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.8254 19.5084L16.0814 14.7644C17.2531 13.3047 17.9571 11.4485 17.9571 9.42857C17.9571 4.72028 14.1369 0.9 9.42857 0.9C4.71617 0.9 0.9 4.72031 0.9 9.42857C0.9 14.1368 4.71617 17.9571 9.42857 17.9571C11.4485 17.9571 13.3007 17.2571 14.7604 16.0854L19.5048 20.8258C19.8703 21.1913 20.46 21.1914 20.8256 20.826C21.1914 20.4645 21.1915 19.8703 20.8257 19.5088C20.8256 19.5086 20.8255 19.5085 20.8254 19.5084ZM9.42857 16.0796C5.75723 16.0796 2.77347 13.0958 2.77347 9.42857C2.77347 5.76131 5.75731 2.77347 9.42857 2.77347C13.0958 2.77347 16.0837 5.76135 16.0837 9.42857C16.0837 13.0957 13.0959 16.0796 9.42857 16.0796Z"
-                                          fill="currentColor"></path>
-                                </svg>
-                            </a>
-                            <!-- Форма поиска -->
-                            <form action="./search.html" class="search-form" method="post" autocomplete="off">
-                                <button type="submit" class="search-submit" aria-label="Найти">
-                                    <!-- SVG lens -->
-                                    <svg height="20" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M20.8254 19.5084L16.0814 14.7644C17.2531 13.3047 17.9571 11.4485 17.9571 9.42857C17.9571 4.72028 14.1369 0.9 9.42857 0.9C4.71617 0.9 0.9 4.72031 0.9 9.42857C0.9 14.1368 4.71617 17.9571 9.42857 17.9571C11.4485 17.9571 13.3007 17.2571 14.7604 16.0854L19.5048 20.8258C19.8703 21.1913 20.46 21.1914 20.8256 20.826C21.1914 20.4645 21.1915 19.8703 20.8257 19.5088C20.8256 19.5086 20.8255 19.5085 20.8254 19.5084ZM9.42857 16.0796C5.75723 16.0796 2.77347 13.0958 2.77347 9.42857C2.77347 5.76131 5.75731 2.77347 9.42857 2.77347C13.0958 2.77347 16.0837 5.76135 16.0837 9.42857C16.0837 13.0957 13.0959 16.0796 9.42857 16.0796Z"
-                                              fill="currentColor"></path>
-                                    </svg>
-                                </button>
-                                <input type="search" name="search" class="search-input" aria-label="Поиск"
-                                       placeholder="Введите Ваш запрос" required="required" minlength="2"
-                                />
-                                <a href="#" class="search-close v-max-767" aria-hidden="true">&times;</a>
-                            </form>
-                        </li>
-                        <li>
-                            <a href="#" class="lang" aria-label="Переключить язык">
-                                <svg height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2s.07-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"
-                                          fill="currentColor"></path>
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <!-- Если корзина пуста - basket-add, если не пустая - added -->
-                            <a aria-label="Корзина" class="bag basket-add" data-quantity="0" href="./basket.html"
-                               id="header-bag">
-                                <!-- SVG bag-1 -->
-                                <svg height="25" viewBox="0 0 21 26" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M19.9955 22.1104L18.6363 5.9908C18.6072 5.63292 18.3208 5.36196 17.9858 5.36196H15.1897C15.1509 2.6728 13.0635 0.5 10.5004 0.5C7.93727 0.5 5.84989 2.6728 5.81106 5.36196H3.01494C2.67514 5.36196 2.38835 5.69427 2.35922 6.05215L1 22.1718C1 22.1513 1 22.1922 1 22.1718C1 24.0072 2.59747 25.5 4.56349 25.5H16.4373C18.4033 25.5 20.0004 24.0072 20.0004 22.1718C20.0004 22.1513 20.0004 22.1309 19.9955 22.1104ZM10.5004 1.88037C12.3402 1.88037 13.8402 3.43456 13.879 5.36196H7.12174C7.16057 3.43456 8.66057 1.88037 10.5004 1.88037ZM16.4373 24.1196H4.56349C3.33048 24.1196 2.33048 23.2607 2.31106 22.2025L3.61203 6.74744H5.80621V8.84356C5.80621 9.22699 6.09747 9.53374 6.46155 9.53374C6.82562 9.53374 7.11689 9.22699 7.11689 8.84356V6.74744H13.879V8.84356C13.879 9.22699 14.1703 9.53374 14.5344 9.53374C14.8984 9.53374 15.1897 9.22699 15.1897 8.84356V6.74744H17.3839L18.6897 22.2025C18.6703 23.2607 17.6654 24.1196 16.4373 24.1196Z"
-                                          fill="currentColor" stroke="currentColor" stroke-width="0.6"></path>
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <!-- Если разлогинен - модальное окно, если авторизован - ссылка -->
-                            <a href="#" class="like" data-modal="favorites" aria-label="Список желаний">
-                                <!-- SVG like -->
-                                <svg height="20" viewBox="0 0 21 19" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M6.21108 2.08791L6.00147 2.08791C3.80055 2.19231 2.01885 3.96703 2.12366 6.26373C2.12366 6.36813 2.12366 6.47253 2.12366 6.57692C2.43807 12.6319 9.14564 16.5989 10.6129 16.9121C12.185 16.4945 18.5782 12.0055 18.8926 6.89011C18.9974 5.63736 18.5782 4.38461 17.7397 3.44505C17.1109 2.71429 16.1676 2.2967 15.2244 2.2967C14.0715 2.4011 12.9187 2.92308 12.185 3.75824L10.5081 5.42857L9.04084 3.65385C8.3072 2.81868 7.36394 2.19231 6.21108 2.08791ZM6.21108 -6.46444e-07C7.99278 0.104395 9.56487 0.93956 10.7177 2.2967C11.8706 1.04396 13.5475 0.313186 15.2244 0.208791C16.7965 0.208791 18.2637 0.835165 19.3118 1.98352C20.4647 3.34066 21.0935 5.11539 20.9887 6.99451C20.5695 13.5714 12.6042 19 10.7177 19L10.5081 19C8.62161 19 0.446763 14.0934 0.0275399 6.68132C-0.286877 3.34066 2.12365 0.313186 5.58224 -6.73931e-07C5.68705 -6.6935e-07 5.79186 -6.64769e-07 5.79186 -6.64769e-07L6.21108 -6.46444e-07Z"
-                                          fill="currentColor"></path>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="v-max-565">
-                            <a href="#" class="phone" aria-label="Обратный звонок" data-modal="callback">
-                                <!-- SVG phone -->
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24">
-                                    <path d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"
-                                          fill="currentColor"></path>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="v-max-767">
-                            <!-- Если разлогинен - модальное окно, если залогинен - ссылка на Личный кабинет - заказы. Пример в Избранном -->
-                            <a href="#" class="user" aria-label="Вход" data-modal="login">
-                                <!-- SVG user -->
-                                <svg height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11.9533 10.0152C11.7125 9.06007 11.2352 8.17752 10.5635 7.44535C9.89181 6.71318 9.0463 6.15386 8.1015 5.81669C8.63961 5.39155 9.02973 4.81366 9.21812 4.16262C9.40651 3.51158 9.38391 2.81942 9.15343 2.18146C8.92294 1.54351 8.49592 0.991155 7.93116 0.600472C7.36641 0.209789 6.69171 0 6 0C5.30829 0 4.63359 0.209789 4.06884 0.600472C3.50408 0.991155 3.07706 1.54351 2.84657 2.18146C2.61609 2.81942 2.59349 3.51158 2.78188 4.16262C2.97027 4.81366 3.36039 5.39155 3.8985 5.81669C2.95371 6.15386 2.1082 6.71318 1.43649 7.44535C0.764776 8.17752 0.287489 9.06007 0.0466884 10.0152C-0.0120191 10.2473 -0.0154074 10.4894 0.0367857 10.7229C0.0889788 10.9565 0.195356 11.1751 0.347699 11.362C0.504632 11.5614 0.706486 11.7228 0.937555 11.8334C1.16862 11.9441 1.42268 12.0011 1.67995 12H10.3201C10.5773 12.0011 10.8314 11.9441 11.0624 11.8334C11.2935 11.7228 11.4954 11.5614 11.6523 11.362C11.8046 11.1751 11.911 10.9565 11.9632 10.7229C12.0154 10.4894 12.012 10.2473 11.9533 10.0152V10.0152ZM3.7703 3.27576C3.7703 2.84439 3.90107 2.42271 4.14607 2.06403C4.39107 1.70536 4.7393 1.42581 5.14673 1.26073C5.55415 1.09565 6.00247 1.05246 6.43499 1.13662C6.86751 1.22077 7.26481 1.4285 7.57664 1.73352C7.88847 2.03855 8.10083 2.42718 8.18686 2.85026C8.2729 3.27334 8.22874 3.71188 8.05998 4.11042C7.89122 4.50895 7.60543 4.84959 7.23876 5.08924C6.87208 5.3289 6.44099 5.45682 6 5.45682C5.40865 5.45682 4.84151 5.22703 4.42336 4.818C4.00521 4.40897 3.7703 3.85421 3.7703 3.27576ZM10.7716 10.6914C10.7191 10.7598 10.6509 10.8152 10.5724 10.8531C10.494 10.891 10.4075 10.9103 10.3201 10.9095H1.67995C1.59247 10.9103 1.50602 10.891 1.42758 10.8531C1.34914 10.8152 1.28092 10.7598 1.22843 10.6914C1.17906 10.6352 1.14418 10.5682 1.12672 10.4961C1.10927 10.424 1.10974 10.3488 1.1281 10.277C1.39591 9.21086 2.02142 8.2634 2.90462 7.58605C3.78783 6.90871 4.87771 6.54061 6 6.54061C7.12229 6.54061 8.21217 6.90871 9.09538 7.58605C9.97858 8.2634 10.6041 9.21086 10.8719 10.277C10.8903 10.3488 10.8907 10.424 10.8733 10.4961C10.8558 10.5682 10.8209 10.6352 10.7716 10.6914Z"
-                                          fill="currentColor"></path>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section class="bottom navbar">
-    <div class="layout">
+  <header id="header">
+    <section class="top">
+      <div class="layout">
         <nav>
-            <!-- Основное меню -->
-            <ul class="navbar-lvl-1-list">
-                <li class="navbar-lvl-1">
-                    <a href="./catalog.html"><span>БАДы</span></a>
-                    <ul class="navbar-lvl-2-list">
-                        <li class="navbar-lvl-2">
-                            <a href="./catalog.html"><span>Уход</span></a>
-                            <ul class="navbar-lvl-3-list">
-                                <li class="navbar-lvl-3">
-                                    <a href="#"><span>Для системы пищеварения</span></a>
-                                </li>
-                                <li class="navbar-lvl-3">
-                                    <a href="./catalog.html"><span>Для нервной системы</span></a>
-                                </li>
-                                <li class="navbar-lvl-3">
-                                    <a href="./catalog.html"><span>Для опорно-двигательной системы</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="navbar-lvl-2"><a href="./catalog.html"><span>Уход за кожей</span></a></li>
-                        <li class="navbar-lvl-2">
-                            <a href="./catalog.html"><span>Гели для душа</span></a>
-                            <ul class="navbar-lvl-3-list">
-                                <li class="navbar-lvl-3">
-                                    <a href="#"><span>Для системы пищеварения</span></a>
-                                </li>
-                                <li class="navbar-lvl-3">
-                                    <a href="./catalog.html"><span>Для нервной системы</span></a>
-                                </li>
-                                <li class="navbar-lvl-3">
-                                    <a href="./catalog.html"><span>Для опорно-двигательной системы</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="navbar-lvl-2">
-                            <a href="#"><span>Маски</span></a>
-                            <ul class="navbar-lvl-3-list">
-                                <li class="navbar-lvl-3">
-                                    <a href="#"><span>Для системы пищеварения</span></a>
-                                </li>
-                                <li class="navbar-lvl-3">
-                                    <a href="./catalog.html"><span>Для нервной системы</span></a>
-                                </li>
-                                <li class="navbar-lvl-3">
-                                    <a href="./catalog.html"><span>Для опорно-двигательной системы</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li class="navbar-lvl-1">
-                    <a href="./catalog.html"><span>Девушкам</span></a>
-                    <ul class="navbar-lvl-2-list">
-                        <li class="navbar-lvl-2">
-                            <a href="./catalog.html"><span>Уход за волосами</span></a>
-                            <ul class="navbar-lvl-3-list">
-                                <li class="navbar-lvl-3">
-                                    <a href="#"><span>Для системы пищеварения</span></a>
-                                </li>
-                                <li class="navbar-lvl-3">
-                                    <a href="./catalog.html"><span>Для нервной системы</span></a>
-                                </li>
-                                <li class="navbar-lvl-3">
-                                    <a href="./catalog.html"><span>Для опорно-двигательной системы</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="navbar-lvl-2"><a href="./catalog.html"><span>Уход за кожей</span></a></li>
-                        <li class="navbar-lvl-2"><a href="#"><span>Гели для душа</span></a></li>
-                        <li class="navbar-lvl-2"><a href="./catalog.html"><span>Маски</span></a></li>
-                    </ul>
-                </li>
-                <li class="navbar-lvl-1">
-                    <a href="./catalog.html"><span>Мужчинам</span></a>
-                    <ul class="navbar-lvl-2-list">
-                        <li class="navbar-lvl-2"><a href="./catalog.html"><span>Уход за волосами</span></a></li>
-                        <li class="navbar-lvl-2">
-                            <a href="#"><span>Уход за кожей</span></a>
-                            <ul class="navbar-lvl-3-list">
-                                <li class="navbar-lvl-3">
-                                    <a href="#"><span>Для системы пищеварения</span></a>
-                                </li>
-                                <li class="navbar-lvl-3">
-                                    <a href="./catalog.html"><span>Для нервной системы</span></a>
-                                </li>
-                                <li class="navbar-lvl-3">
-                                    <a href="./catalog.html"><span>Для опорно-двигательной системы</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="navbar-lvl-2"><a href="./catalog.html"><span>Гели для душа</span></a></li>
-                        <li class="navbar-lvl-2"><a href="./catalog.html"><span>Маски</span></a></li>
-                    </ul>
-                </li>
-                <li class="navbar-lvl-1">
-                    <a href="#"><span>Детям</span></a>
-                    <ul class="navbar-lvl-2-list">
-                        <li class="navbar-lvl-2"><a href="#"><span>Уход за волосами</span></a></li>
-                        <li class="navbar-lvl-2"><a href="./catalog.html"><span>Уход за кожей</span></a></li>
-                        <li class="navbar-lvl-2">
-                            <a href="./catalog.html"><span>Гели для душа</span></a>
-                            <ul class="navbar-lvl-3-list">
-                                <li class="navbar-lvl-3">
-                                    <a href="#"><span>Для системы пищеварения</span></a>
-                                </li>
-                                <li class="navbar-lvl-3">
-                                    <a href="./catalog.html"><span>Для нервной системы</span></a>
-                                </li>
-                                <li class="navbar-lvl-3">
-                                    <a href="./catalog.html"><span>Для опорно-двигательной системы</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="navbar-lvl-2"><a href="./catalog.html"><span>Маски</span></a></li>
-                    </ul>
-                </li>
-                <li class="navbar-lvl-1">
-                    <a href="./catalog.html"><span>Здоровое питание</span></a>
-                    <ul class="navbar-lvl-2-list">
-                        <li class="navbar-lvl-2"><a href="./catalog.html"><span>Уход за волосами</span></a></li>
-                        <li class="navbar-lvl-2"><a href="#"><span>Уход за кожей</span></a></li>
-                        <li class="navbar-lvl-2">
-                            <a href="./catalog.html"><span>Гели для душа</span></a>
-                            <ul class="navbar-lvl-3-list">
-                                <li class="navbar-lvl-3">
-                                    <a href="#"><span>Для системы пищеварения</span></a>
-                                </li>
-                                <li class="navbar-lvl-3">
-                                    <a href="./catalog.html"><span>Для нервной системы</span></a>
-                                </li>
-                                <li class="navbar-lvl-3">
-                                    <a href="./catalog.html"><span>Для опорно-двигательной системы</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="navbar-lvl-2">
-                            <a href="./catalog.html"><span>Маски</span></a>
-                            <ul class="navbar-lvl-3-list">
-                                <li class="navbar-lvl-3">
-                                    <a href="#"><span>Для системы пищеварения</span></a>
-                                </li>
-                                <li class="navbar-lvl-3">
-                                    <a href="./catalog.html"><span>Для нервной системы</span></a>
-                                </li>
-                                <li class="navbar-lvl-3">
-                                    <a href="./catalog.html"><span>Для опорно-двигательной системы</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li class="navbar-lvl-1">
-                    <a href="./catalog.html"><span>Дом</span></a>
-                    <ul class="navbar-lvl-2-list">
-                        <li class="navbar-lvl-2">
-                            <a href="./catalog.html"><span>Уход за волосами</span></a>
-                            <ul class="navbar-lvl-3-list">
-                                <li class="navbar-lvl-3">
-                                    <a href="#"><span>Для системы пищеварения</span></a>
-                                </li>
-                                <li class="navbar-lvl-3">
-                                    <a href="./catalog.html"><span>Для нервной системы</span></a>
-                                </li>
-                                <li class="navbar-lvl-3">
-                                    <a href="./catalog.html"><span>Для опорно-двигательной системы</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="navbar-lvl-2">
-                            <a href="./catalog.html"><span>Уход за кожей</span></a>
-                            <ul class="navbar-lvl-3-list">
-                                <li class="navbar-lvl-3">
-                                    <a href="#"><span>Для системы пищеварения</span></a>
-                                </li>
-                                <li class="navbar-lvl-3">
-                                    <a href="./catalog.html"><span>Для нервной системы</span></a>
-                                </li>
-                                <li class="navbar-lvl-3">
-                                    <a href="./catalog.html"><span>Для опорно-двигательной системы</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="navbar-lvl-2">
-                            <a href="#"><span>Гели для душа</span></a>
-                            <ul class="navbar-lvl-3-list">
-                                <li class="navbar-lvl-3">
-                                    <a href="#"><span>Для системы пищеварения</span></a>
-                                </li>
-                                <li class="navbar-lvl-3">
-                                    <a href="./catalog.html"><span>Для нервной системы</span></a>
-                                </li>
-                                <li class="navbar-lvl-3">
-                                    <a href="./catalog.html"><span>Для опорно-двигательной системы</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="navbar-lvl-2">
-                            <a href="./catalog.html"><span>Маски</span></a>
-                            <ul class="navbar-lvl-3-list">
-                                <li class="navbar-lvl-3">
-                                    <a href="#"><span>Для системы пищеварения</span></a>
-                                </li>
-                                <li class="navbar-lvl-3">
-                                    <a href="./catalog.html"><span>Для нервной системы</span></a>
-                                </li>
-                                <li class="navbar-lvl-3">
-                                    <a href="./catalog.html"><span>Для опорно-двигательной системы</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <!-- Дублирование верхнего меню для маленькой диагонали -->
-            <ul class="navbar-lvl-1-list v-max-767">
-                <li class="navbar-lvl-1">
-                    <a href="./promotions.html"><span>Акции</span></a>
-                </li>
-                <li class="navbar-lvl-1">
-                    <a href="./reviews.html"><span>Отзывы</span></a>
-                </li>
-                <li class="navbar-lvl-1">
-                    <a href="./shipping.html"><span>Оплата и доставка</span></a>
-                </li>
-                <li class="navbar-lvl-1">
-                    <a href="./contacts.html"><span>Контакты</span></a>
-                </li>
-                <li class="navbar-lvl-1">
-                    <a href="./brands.html"><span>Бренды</span></a>
-                </li>
-            </ul>
+          <!-- Верхнее меню, продублировано в основном меню для мальнькой диагонали -->
+          <ul>
+            <li>
+              <a href="./promotions.html">Акции</a>
+            </li>
+            <li>
+              <a href="./reviews.html">Отзывы</a>
+            </li>
+            <li>
+              <a href="./shipping.html">Оплата и доставка</a>
+            </li>
+            <li>
+              <a href="./contacts.html">Контакты</a>
+            </li>
+            <li>
+              <a href="./brands.html">Бренды</a>
+            </li>
+          </ul>
         </nav>
-    </div>
-</section>
-    </header>
-    <main>
-        <section id="content-error">
-            <div class="layout">
-                <h1>503</h1>
-                <h2>Страница временно недоступна :(</h2>
-                <h3>Проводятся технические работы</h3>
-            </div>
-        </section>
-    </main>
-    <footer id="footer">
-        <div class="layout">
-            <section class="top">
-                <div class="left">
-                    <a href="./index.html" class="logo">
-                        <picture>
-                            <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                    data-srcset="./images/footer-logo.webp"
-                                    type="image/webp"
-                            />
-                            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                                 data-src="./images/footer-logo.png"
-                                 class="lazyload"
-                                 alt="лого"
-                                 width="147"
-                                 height="64"
-                            />
-                        </picture>
-                    </a>
-                    <div class="social">
-                        <!-- Ссылки на соцсети -->
-                        <a href="#" class="facebook">
-                            <!-- SVG facebook -->
-                            <svg height="20" viewBox="0 0 12 20" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M3.47219 6.99288H1.87906C1.33973 6.99288 0.9 7.42868 0.9 7.96602V10.752C0.9 11.2892 1.33972 11.7252 1.87906 11.7252H3.47219V18.1269C3.47219 18.6642 3.91192 19.1 4.45125 19.1H7.35332C7.89263 19.1 8.33252 18.6642 8.33252 18.1269V11.725H10.302C10.8413 11.725 11.281 11.2893 11.2811 10.7522C11.2811 10.7522 11.2811 10.7522 11.2811 10.7522L11.2822 7.9662V7.96616C11.2822 7.61315 11.0887 7.28723 10.7784 7.11503L10.7784 7.11502C10.6336 7.03471 10.4664 6.99274 10.2949 6.99274H8.32737C8.32729 6.99103 8.32721 6.9893 8.32712 6.98755C8.32422 6.92466 8.32072 6.83546 8.31839 6.73047C8.31372 6.52001 8.31378 6.24806 8.33225 5.9979C8.3512 5.74115 8.36299 5.62553 8.37414 5.56827C8.37812 5.54782 8.38117 5.53979 8.38209 5.53767C8.38226 5.53747 8.38249 5.5372 8.3828 5.53686L8.38772 5.5315L8.39646 5.52194C8.39629 5.52213 8.3962 5.52222 8.3962 5.52223C8.3963 5.52233 8.48222 5.43713 8.91677 5.43713H8.9168L10.4069 5.43658C10.4069 5.43658 10.407 5.43658 10.407 5.43658C10.9462 5.43656 11.3857 5.00074 11.3857 4.46344V1.87671C11.3857 1.34026 10.9468 0.904488 10.4083 0.903571L10.4083 0.903571L8.19507 0.9H8.19491C6.79931 0.9 5.62182 1.50164 4.77225 2.21802C3.90382 2.9503 3.47219 4.29958 3.47219 5.69775V6.99288ZM7.06999 11.1527V17.8448H4.73458V11.1527C4.73458 10.7754 4.42594 10.4698 4.0478 10.4698H2.16239V8.24812H4.0478C4.42595 8.24812 4.73458 7.94234 4.73458 7.56516V5.69775C4.73458 4.59469 5.06912 3.71118 5.66262 3.10387C6.25584 2.49684 7.11801 2.15526 8.19399 2.15524C8.19402 2.15524 8.19405 2.15524 8.19408 2.15524L10.1233 2.15837V4.18138L8.91649 4.18189C8.91648 4.18189 8.91646 4.18189 8.91645 4.18189C8.50027 4.18189 7.86119 4.2287 7.45071 4.69062C7.11073 5.07304 7.06999 5.57619 7.06999 5.99054V7.56516C7.06999 7.94249 7.37863 8.24812 7.75677 8.24812H10.0196L10.0187 10.4698H7.7569C7.3788 10.4698 7.06999 10.7754 7.06999 11.1527Z"
-                                      fill="currentColor" stroke="currentColor" stroke-width="0.2"></path>
-                            </svg>
-                        </a>
-                        <a href="#" class="instagram">
-                            <!-- SVG instagram -->
-                            <svg height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M14.2276 0.90099V0.9H14.1276H5.87244C3.1305 0.9 0.9 3.1305 0.9 5.87244V14.1277C0.9 16.8695 3.1305 19.1 5.87244 19.1H14.1277C16.8695 19.1 19.1 16.8695 19.1 14.1277V5.87244C19.1 3.16391 16.9235 0.954433 14.2276 0.90099ZM17.8448 14.1277C17.8448 16.1772 16.1772 17.8448 14.1276 17.8448H5.87244C3.82282 17.8448 2.15524 16.1772 2.15524 14.1277V5.87244C2.15524 3.82282 3.82282 2.15524 5.87244 2.15524H14.1277C16.1772 2.15524 17.8448 3.82282 17.8448 5.87244V14.1277Z"
-                                      fill="currentColor" stroke="currentColor" stroke-width="0.2"></path>
-                                <path d="M9.99986 4.97812C7.23074 4.97812 4.97812 7.23074 4.97812 9.99986C4.97812 12.769 7.23074 15.0216 9.99986 15.0216C12.769 15.0216 15.0216 12.769 15.0216 9.99986C15.0216 7.23074 12.769 4.97812 9.99986 4.97812ZM9.99986 13.7664C7.92319 13.7664 6.23336 12.0767 6.23336 9.99986C6.23336 7.92319 7.92319 6.23336 9.99986 6.23336C12.0767 6.23336 13.7664 7.92319 13.7664 9.99986C13.7664 12.0767 12.0767 13.7664 9.99986 13.7664Z"
-                                      fill="currentColor" stroke="currentColor" stroke-width="0.2"></path>
-                                <path d="M15.0393 3.23057C14.182 3.23057 13.485 3.92779 13.485 4.78488C13.485 5.6421 14.182 6.33933 15.0393 6.33933C15.8965 6.33933 16.5937 5.64211 16.5937 4.78488C16.5937 3.92764 15.8965 3.23057 15.0393 3.23057ZM15.0393 5.08396C14.8745 5.08396 14.7402 4.94965 14.7402 4.78488C14.7402 4.61999 14.8745 4.4858 15.0393 4.4858C15.2042 4.4858 15.3385 4.62002 15.3385 4.78488C15.3385 4.94963 15.2042 5.08396 15.0393 5.08396Z"
-                                      fill="currentColor" stroke="currentColor" stroke-width="0.2"></path>
-                            </svg>
-                        </a>
-                        <a href="#" class="youtube">
-                            <!-- SVG youtube -->
-                            <svg height="17" viewBox="0 0 22 17" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M14.3857 7.34678L9.52538 4.68744C9.24592 4.53453 8.9156 4.54024 8.64167 4.70255C8.36758 4.86502 8.2041 5.15204 8.2041 5.47061V10.7436C8.2041 11.0607 8.36658 11.3472 8.63882 11.5099C8.78099 11.5948 8.93859 11.6374 9.09654 11.6374C9.24122 11.6374 9.38624 11.6017 9.51967 11.5298L14.3801 8.91631C14.6687 8.76105 14.8488 8.46111 14.8501 8.13331C14.8513 7.80551 14.6734 7.50422 14.3857 7.34678ZM9.49332 10.0803V6.1393L13.1258 8.12693L9.49332 10.0803Z"
-                                      fill="currentColor"></path>
-                                <path d="M21.838 3.93279L21.837 3.92271C21.8184 3.74564 21.6329 2.17058 20.8672 1.36945C19.9822 0.427167 18.9788 0.312696 18.4962 0.257811C18.4563 0.253279 18.4197 0.249083 18.387 0.244719L18.3485 0.24069C15.4401 0.0292051 11.0478 0.000335691 11.0038 0.000167845L10.9999 0L10.9961 0.000167845C10.9521 0.000335691 6.55973 0.0292051 3.62512 0.24069L3.58635 0.244719C3.55513 0.248915 3.52073 0.252775 3.4833 0.257139C3.00628 0.312192 2.01364 0.426831 1.12607 1.40319C0.396787 2.19575 0.185973 3.73708 0.164321 3.91029L0.161803 3.93279C0.155257 4.00647 0 5.76062 0 7.52166V9.16788C0 10.9289 0.155257 12.6831 0.161803 12.7569L0.162978 12.768C0.181609 12.9422 0.36691 14.4884 1.1291 15.2899C1.96127 16.2006 3.0135 16.3211 3.57947 16.3859C3.66893 16.3961 3.74597 16.4049 3.79851 16.4141L3.84937 16.4212C5.52866 16.5809 10.7938 16.6597 11.017 16.6629L11.0238 16.663L11.0305 16.6629C11.0744 16.6627 15.4666 16.6338 18.375 16.4223L18.4135 16.4183C18.4502 16.4134 18.4915 16.4091 18.5368 16.4044C19.0112 16.354 19.9984 16.2494 20.8738 15.2864C21.603 14.4936 21.814 12.9523 21.8355 12.7792L21.838 12.7568C21.8446 12.6829 22 10.9289 22 9.16788V7.52166C21.9998 5.76062 21.8446 4.00664 21.838 3.93279ZM20.7106 9.16788C20.7106 10.7978 20.5683 12.4765 20.5549 12.6305C20.5001 13.055 20.2777 14.0302 19.9224 14.4164C19.3746 15.0191 18.8118 15.0789 18.4009 15.1224C18.3512 15.1276 18.3052 15.1326 18.2636 15.1378C15.4505 15.3412 11.224 15.3725 11.0293 15.3736C10.8109 15.3704 5.62282 15.2911 3.99472 15.1398C3.9113 15.1262 3.82117 15.1158 3.72617 15.1051C3.24428 15.0499 2.58465 14.9743 2.07742 14.4164L2.06551 14.4037C1.71639 14.0399 1.50037 13.128 1.44548 12.6356C1.43525 12.5191 1.28922 10.8207 1.28922 9.16788V7.52166C1.28922 5.89356 1.43122 4.21678 1.44498 4.05951C1.51027 3.5595 1.73686 2.6434 2.07742 2.27313C2.64205 1.6521 3.2374 1.58329 3.63117 1.5378C3.66876 1.53344 3.70384 1.52941 3.73624 1.52521C6.59028 1.32078 10.8472 1.2904 10.9999 1.28922C11.1527 1.29023 15.408 1.32078 18.2367 1.52521C18.2715 1.52958 18.3094 1.53394 18.3502 1.53864C18.7552 1.5848 19.3673 1.65462 19.9291 2.25383L19.9343 2.25937C20.2834 2.62309 20.4995 3.55094 20.5543 4.0533C20.5641 4.16324 20.7106 5.86536 20.7106 7.52166V9.16788Z"
-                                      fill="currentColor"></path>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="lang">
-                        <a href="#">Українською</a>
-                    </div>
-                </div>
-                <!-- Нижнее меню -->
-                <div class="center">
-                    <h3>Категории</h3>
-                    <ul>
-                        <li>
-                            <a href="./catalog.html">Бады</a>
-                        </li>
-                        <li>
-                            <a href="./catalog.html">Девушкам</a>
-                        </li>
-                        <li>
-                            <a href="./catalog.html">Мужчинам</a>
-                        </li>
-                        <li>
-                            <a href="./catalog.html">Детям</a>
-                        </li>
-                        <li>
-                            <a href="./catalog.html">Здоровое питание</a>
-                        </li>
-                        <li>
-                            <a href="./catalog.html">Дом</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="right">
-                    <h3>Дополнительно</h3>
-                    <ul>
-                        <li>
-                            <a href="./reviews.html">Отзывы</a>
-                        </li>
-                        <li>
-                            <a href="./shipping.html">Оплата и доставка</a>
-                        </li>
-                        <li>
-                            <a href="./contacts.html">Контакты</a>
-                        </li>
-                        <li>
-                            <a href="./promotions.html">Акции</a>
-                        </li>
-                        <li>
-                            <a href="./brands.html">Бренды</a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section class="bottom">
-                &copy; 2020 Organic Chest
-            </section>
+        <nav>
+          <!-- Если разлогинен - 2 ссылки на модальные окна, если залогинен - одна на Личный кабинет. Пример в Профиле / Избранном / Заказах -->
+          <ul>
+            <li>
+              <a href="#" data-modal="login">
+                <!-- SVG user -->
+                <svg height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                      d="M11.9533 10.0152C11.7125 9.06007 11.2352 8.17752 10.5635 7.44535C9.89181 6.71318 9.0463 6.15386 8.1015 5.81669C8.63961 5.39155 9.02973 4.81366 9.21812 4.16262C9.40651 3.51158 9.38391 2.81942 9.15343 2.18146C8.92294 1.54351 8.49592 0.991155 7.93116 0.600472C7.36641 0.209789 6.69171 0 6 0C5.30829 0 4.63359 0.209789 4.06884 0.600472C3.50408 0.991155 3.07706 1.54351 2.84657 2.18146C2.61609 2.81942 2.59349 3.51158 2.78188 4.16262C2.97027 4.81366 3.36039 5.39155 3.8985 5.81669C2.95371 6.15386 2.1082 6.71318 1.43649 7.44535C0.764776 8.17752 0.287489 9.06007 0.0466884 10.0152C-0.0120191 10.2473 -0.0154074 10.4894 0.0367857 10.7229C0.0889788 10.9565 0.195356 11.1751 0.347699 11.362C0.504632 11.5614 0.706486 11.7228 0.937555 11.8334C1.16862 11.9441 1.42268 12.0011 1.67995 12H10.3201C10.5773 12.0011 10.8314 11.9441 11.0624 11.8334C11.2935 11.7228 11.4954 11.5614 11.6523 11.362C11.8046 11.1751 11.911 10.9565 11.9632 10.7229C12.0154 10.4894 12.012 10.2473 11.9533 10.0152V10.0152ZM3.7703 3.27576C3.7703 2.84439 3.90107 2.42271 4.14607 2.06403C4.39107 1.70536 4.7393 1.42581 5.14673 1.26073C5.55415 1.09565 6.00247 1.05246 6.43499 1.13662C6.86751 1.22077 7.26481 1.4285 7.57664 1.73352C7.88847 2.03855 8.10083 2.42718 8.18686 2.85026C8.2729 3.27334 8.22874 3.71188 8.05998 4.11042C7.89122 4.50895 7.60543 4.84959 7.23876 5.08924C6.87208 5.3289 6.44099 5.45682 6 5.45682C5.40865 5.45682 4.84151 5.22703 4.42336 4.818C4.00521 4.40897 3.7703 3.85421 3.7703 3.27576ZM10.7716 10.6914C10.7191 10.7598 10.6509 10.8152 10.5724 10.8531C10.494 10.891 10.4075 10.9103 10.3201 10.9095H1.67995C1.59247 10.9103 1.50602 10.891 1.42758 10.8531C1.34914 10.8152 1.28092 10.7598 1.22843 10.6914C1.17906 10.6352 1.14418 10.5682 1.12672 10.4961C1.10927 10.424 1.10974 10.3488 1.1281 10.277C1.39591 9.21086 2.02142 8.2634 2.90462 7.58605C3.78783 6.90871 4.87771 6.54061 6 6.54061C7.12229 6.54061 8.21217 6.90871 9.09538 7.58605C9.97858 8.2634 10.6041 9.21086 10.8719 10.277C10.8903 10.3488 10.8907 10.424 10.8733 10.4961C10.8558 10.5682 10.8209 10.6352 10.7716 10.6914Z"
+                      fill="currentColor"></path>
+                </svg>
+                Вход
+              </a>
+            </li>
+            <li>
+              <a href="#" data-modal="register">Регистрация</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+    <section class="middle">
+      <div class="layout">
+        <div class="contact">
+          <div class="phone">
+            <a href="tel:+380000000000">8000000000</a>
+          </div>
+          <div class="callback">
+            <a href="#" data-modal="callback">Заказать обратный звонок</a>
+          </div>
         </div>
-    </footer>
+
+        <a href="./index.html" class="logo">
+          <picture>
+            <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                    data-srcset="./images/header-logo.webp"
+                    type="image/webp"
+            />
+            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                 data-src="./images/header-logo.png"
+                 class="lazyload"
+                 alt="лого"
+                 width="181"
+                 height="68"
+            />
+          </picture>
+        </a>
+
+        <div class="buttons">
+          <div class="left">
+            <a href="#" class="navbar-toggle v-max-767" aria-label="Меню">
+              <span></span>
+            </a>
+          </div>
+          <ul class="right">
+            <li>
+              <a href="#" class="search-open" aria-label="Поиск">
+                <!-- SVG lens -->
+                <svg height="20" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                      d="M20.8254 19.5084L16.0814 14.7644C17.2531 13.3047 17.9571 11.4485 17.9571 9.42857C17.9571 4.72028 14.1369 0.9 9.42857 0.9C4.71617 0.9 0.9 4.72031 0.9 9.42857C0.9 14.1368 4.71617 17.9571 9.42857 17.9571C11.4485 17.9571 13.3007 17.2571 14.7604 16.0854L19.5048 20.8258C19.8703 21.1913 20.46 21.1914 20.8256 20.826C21.1914 20.4645 21.1915 19.8703 20.8257 19.5088C20.8256 19.5086 20.8255 19.5085 20.8254 19.5084ZM9.42857 16.0796C5.75723 16.0796 2.77347 13.0958 2.77347 9.42857C2.77347 5.76131 5.75731 2.77347 9.42857 2.77347C13.0958 2.77347 16.0837 5.76135 16.0837 9.42857C16.0837 13.0957 13.0959 16.0796 9.42857 16.0796Z"
+                      fill="currentColor"></path>
+                </svg>
+              </a>
+              <!-- Форма поиска -->
+              <form action="./search.html" class="search-form" method="post" autocomplete="off">
+                <button type="submit" class="search-submit" aria-label="Найти">
+                  <!-- SVG lens -->
+                  <svg height="20" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M20.8254 19.5084L16.0814 14.7644C17.2531 13.3047 17.9571 11.4485 17.9571 9.42857C17.9571 4.72028 14.1369 0.9 9.42857 0.9C4.71617 0.9 0.9 4.72031 0.9 9.42857C0.9 14.1368 4.71617 17.9571 9.42857 17.9571C11.4485 17.9571 13.3007 17.2571 14.7604 16.0854L19.5048 20.8258C19.8703 21.1913 20.46 21.1914 20.8256 20.826C21.1914 20.4645 21.1915 19.8703 20.8257 19.5088C20.8256 19.5086 20.8255 19.5085 20.8254 19.5084ZM9.42857 16.0796C5.75723 16.0796 2.77347 13.0958 2.77347 9.42857C2.77347 5.76131 5.75731 2.77347 9.42857 2.77347C13.0958 2.77347 16.0837 5.76135 16.0837 9.42857C16.0837 13.0957 13.0959 16.0796 9.42857 16.0796Z"
+                        fill="currentColor"></path>
+                  </svg>
+                </button>
+                <input type="search" name="search" class="search-input" aria-label="Поиск"
+                       placeholder="Введите Ваш запрос" required="required" minlength="2"
+                />
+                <a href="#" class="search-close v-max-767" aria-hidden="true">&times;</a>
+              </form>
+            </li>
+            <li>
+              <a href="#" class="lang" aria-label="Переключить язык">
+                <svg height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                      d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm6.93 6h-2.95c-.32-1.25-.78-2.45-1.38-3.56 1.84.63 3.37 1.91 4.33 3.56zM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96zM4.26 14C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2H4.26zm.82 2h2.95c.32 1.25.78 2.45 1.38 3.56-1.84-.63-3.37-1.9-4.33-3.56zm2.95-8H5.08c.96-1.66 2.49-2.93 4.33-3.56C8.81 5.55 8.35 6.75 8.03 8zM12 19.96c-.83-1.2-1.48-2.53-1.91-3.96h3.82c-.43 1.43-1.08 2.76-1.91 3.96zM14.34 14H9.66c-.09-.66-.16-1.32-.16-2s.07-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95c-.96 1.65-2.49 2.93-4.33 3.56zM16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2h-3.38z"
+                      fill="currentColor"></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <!-- Если корзина пуста - basket-add, если не пустая - added -->
+              <a aria-label="Корзина" class="bag basket-add" data-quantity="0" href="./basket.html"
+                 id="header-bag">
+                <!-- SVG bag-1 -->
+                <svg height="25" viewBox="0 0 21 26" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                      d="M19.9955 22.1104L18.6363 5.9908C18.6072 5.63292 18.3208 5.36196 17.9858 5.36196H15.1897C15.1509 2.6728 13.0635 0.5 10.5004 0.5C7.93727 0.5 5.84989 2.6728 5.81106 5.36196H3.01494C2.67514 5.36196 2.38835 5.69427 2.35922 6.05215L1 22.1718C1 22.1513 1 22.1922 1 22.1718C1 24.0072 2.59747 25.5 4.56349 25.5H16.4373C18.4033 25.5 20.0004 24.0072 20.0004 22.1718C20.0004 22.1513 20.0004 22.1309 19.9955 22.1104ZM10.5004 1.88037C12.3402 1.88037 13.8402 3.43456 13.879 5.36196H7.12174C7.16057 3.43456 8.66057 1.88037 10.5004 1.88037ZM16.4373 24.1196H4.56349C3.33048 24.1196 2.33048 23.2607 2.31106 22.2025L3.61203 6.74744H5.80621V8.84356C5.80621 9.22699 6.09747 9.53374 6.46155 9.53374C6.82562 9.53374 7.11689 9.22699 7.11689 8.84356V6.74744H13.879V8.84356C13.879 9.22699 14.1703 9.53374 14.5344 9.53374C14.8984 9.53374 15.1897 9.22699 15.1897 8.84356V6.74744H17.3839L18.6897 22.2025C18.6703 23.2607 17.6654 24.1196 16.4373 24.1196Z"
+                      fill="currentColor" stroke="currentColor" stroke-width="0.6"></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <!-- Если разлогинен - модальное окно, если авторизован - ссылка -->
+              <a href="#" class="like" data-modal="favorites" aria-label="Список желаний">
+                <!-- SVG like -->
+                <svg height="20" viewBox="0 0 21 19" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                      d="M6.21108 2.08791L6.00147 2.08791C3.80055 2.19231 2.01885 3.96703 2.12366 6.26373C2.12366 6.36813 2.12366 6.47253 2.12366 6.57692C2.43807 12.6319 9.14564 16.5989 10.6129 16.9121C12.185 16.4945 18.5782 12.0055 18.8926 6.89011C18.9974 5.63736 18.5782 4.38461 17.7397 3.44505C17.1109 2.71429 16.1676 2.2967 15.2244 2.2967C14.0715 2.4011 12.9187 2.92308 12.185 3.75824L10.5081 5.42857L9.04084 3.65385C8.3072 2.81868 7.36394 2.19231 6.21108 2.08791ZM6.21108 -6.46444e-07C7.99278 0.104395 9.56487 0.93956 10.7177 2.2967C11.8706 1.04396 13.5475 0.313186 15.2244 0.208791C16.7965 0.208791 18.2637 0.835165 19.3118 1.98352C20.4647 3.34066 21.0935 5.11539 20.9887 6.99451C20.5695 13.5714 12.6042 19 10.7177 19L10.5081 19C8.62161 19 0.446763 14.0934 0.0275399 6.68132C-0.286877 3.34066 2.12365 0.313186 5.58224 -6.73931e-07C5.68705 -6.6935e-07 5.79186 -6.64769e-07 5.79186 -6.64769e-07L6.21108 -6.46444e-07Z"
+                      fill="currentColor"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="v-max-565">
+              <a href="#" class="phone" aria-label="Обратный звонок" data-modal="callback">
+                <!-- SVG phone -->
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24">
+                  <path d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                      d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"
+                      fill="currentColor"></path>
+                </svg>
+              </a>
+            </li>
+            <li class="v-max-767">
+              <!-- Если разлогинен - модальное окно, если залогинен - ссылка на Личный кабинет - заказы. Пример в Избранном -->
+              <a href="#" class="user" aria-label="Вход" data-modal="login">
+                <!-- SVG user -->
+                <svg height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                      d="M11.9533 10.0152C11.7125 9.06007 11.2352 8.17752 10.5635 7.44535C9.89181 6.71318 9.0463 6.15386 8.1015 5.81669C8.63961 5.39155 9.02973 4.81366 9.21812 4.16262C9.40651 3.51158 9.38391 2.81942 9.15343 2.18146C8.92294 1.54351 8.49592 0.991155 7.93116 0.600472C7.36641 0.209789 6.69171 0 6 0C5.30829 0 4.63359 0.209789 4.06884 0.600472C3.50408 0.991155 3.07706 1.54351 2.84657 2.18146C2.61609 2.81942 2.59349 3.51158 2.78188 4.16262C2.97027 4.81366 3.36039 5.39155 3.8985 5.81669C2.95371 6.15386 2.1082 6.71318 1.43649 7.44535C0.764776 8.17752 0.287489 9.06007 0.0466884 10.0152C-0.0120191 10.2473 -0.0154074 10.4894 0.0367857 10.7229C0.0889788 10.9565 0.195356 11.1751 0.347699 11.362C0.504632 11.5614 0.706486 11.7228 0.937555 11.8334C1.16862 11.9441 1.42268 12.0011 1.67995 12H10.3201C10.5773 12.0011 10.8314 11.9441 11.0624 11.8334C11.2935 11.7228 11.4954 11.5614 11.6523 11.362C11.8046 11.1751 11.911 10.9565 11.9632 10.7229C12.0154 10.4894 12.012 10.2473 11.9533 10.0152V10.0152ZM3.7703 3.27576C3.7703 2.84439 3.90107 2.42271 4.14607 2.06403C4.39107 1.70536 4.7393 1.42581 5.14673 1.26073C5.55415 1.09565 6.00247 1.05246 6.43499 1.13662C6.86751 1.22077 7.26481 1.4285 7.57664 1.73352C7.88847 2.03855 8.10083 2.42718 8.18686 2.85026C8.2729 3.27334 8.22874 3.71188 8.05998 4.11042C7.89122 4.50895 7.60543 4.84959 7.23876 5.08924C6.87208 5.3289 6.44099 5.45682 6 5.45682C5.40865 5.45682 4.84151 5.22703 4.42336 4.818C4.00521 4.40897 3.7703 3.85421 3.7703 3.27576ZM10.7716 10.6914C10.7191 10.7598 10.6509 10.8152 10.5724 10.8531C10.494 10.891 10.4075 10.9103 10.3201 10.9095H1.67995C1.59247 10.9103 1.50602 10.891 1.42758 10.8531C1.34914 10.8152 1.28092 10.7598 1.22843 10.6914C1.17906 10.6352 1.14418 10.5682 1.12672 10.4961C1.10927 10.424 1.10974 10.3488 1.1281 10.277C1.39591 9.21086 2.02142 8.2634 2.90462 7.58605C3.78783 6.90871 4.87771 6.54061 6 6.54061C7.12229 6.54061 8.21217 6.90871 9.09538 7.58605C9.97858 8.2634 10.6041 9.21086 10.8719 10.277C10.8903 10.3488 10.8907 10.424 10.8733 10.4961C10.8558 10.5682 10.8209 10.6352 10.7716 10.6914Z"
+                      fill="currentColor"></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="bottom navbar">
+      <div class="layout">
+        <nav>
+          <!-- Основное меню -->
+          <ul class="navbar-lvl-1-list">
+            <li class="navbar-lvl-1">
+              <a href="./catalog.html"><span>БАДы</span></a>
+              <ul class="navbar-lvl-2-list">
+                <li class="navbar-lvl-2">
+                  <a href="./catalog.html"><span>Уход</span></a>
+                  <ul class="navbar-lvl-3-list">
+                    <li class="navbar-lvl-3">
+                      <a href="#"><span>Для системы пищеварения</span></a>
+                    </li>
+                    <li class="navbar-lvl-3">
+                      <a href="./catalog.html"><span>Для нервной системы</span></a>
+                    </li>
+                    <li class="navbar-lvl-3">
+                      <a href="./catalog.html"><span>Для опорно-двигательной системы</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="navbar-lvl-2"><a href="./catalog.html"><span>Уход за кожей</span></a></li>
+                <li class="navbar-lvl-2">
+                  <a href="./catalog.html"><span>Гели для душа</span></a>
+                  <ul class="navbar-lvl-3-list">
+                    <li class="navbar-lvl-3">
+                      <a href="#"><span>Для системы пищеварения</span></a>
+                    </li>
+                    <li class="navbar-lvl-3">
+                      <a href="./catalog.html"><span>Для нервной системы</span></a>
+                    </li>
+                    <li class="navbar-lvl-3">
+                      <a href="./catalog.html"><span>Для опорно-двигательной системы</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="navbar-lvl-2">
+                  <a href="#"><span>Маски</span></a>
+                  <ul class="navbar-lvl-3-list">
+                    <li class="navbar-lvl-3">
+                      <a href="#"><span>Для системы пищеварения</span></a>
+                    </li>
+                    <li class="navbar-lvl-3">
+                      <a href="./catalog.html"><span>Для нервной системы</span></a>
+                    </li>
+                    <li class="navbar-lvl-3">
+                      <a href="./catalog.html"><span>Для опорно-двигательной системы</span></a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="navbar-lvl-1">
+              <a href="./catalog.html"><span>Девушкам</span></a>
+              <ul class="navbar-lvl-2-list">
+                <li class="navbar-lvl-2">
+                  <a href="./catalog.html"><span>Уход за волосами</span></a>
+                  <ul class="navbar-lvl-3-list">
+                    <li class="navbar-lvl-3">
+                      <a href="#"><span>Для системы пищеварения</span></a>
+                    </li>
+                    <li class="navbar-lvl-3">
+                      <a href="./catalog.html"><span>Для нервной системы</span></a>
+                    </li>
+                    <li class="navbar-lvl-3">
+                      <a href="./catalog.html"><span>Для опорно-двигательной системы</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="navbar-lvl-2"><a href="./catalog.html"><span>Уход за кожей</span></a></li>
+                <li class="navbar-lvl-2"><a href="#"><span>Гели для душа</span></a></li>
+                <li class="navbar-lvl-2"><a href="./catalog.html"><span>Маски</span></a></li>
+              </ul>
+            </li>
+            <li class="navbar-lvl-1">
+              <a href="./catalog.html"><span>Мужчинам</span></a>
+              <ul class="navbar-lvl-2-list">
+                <li class="navbar-lvl-2"><a href="./catalog.html"><span>Уход за волосами</span></a></li>
+                <li class="navbar-lvl-2">
+                  <a href="#"><span>Уход за кожей</span></a>
+                  <ul class="navbar-lvl-3-list">
+                    <li class="navbar-lvl-3">
+                      <a href="#"><span>Для системы пищеварения</span></a>
+                    </li>
+                    <li class="navbar-lvl-3">
+                      <a href="./catalog.html"><span>Для нервной системы</span></a>
+                    </li>
+                    <li class="navbar-lvl-3">
+                      <a href="./catalog.html"><span>Для опорно-двигательной системы</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="navbar-lvl-2"><a href="./catalog.html"><span>Гели для душа</span></a></li>
+                <li class="navbar-lvl-2"><a href="./catalog.html"><span>Маски</span></a></li>
+              </ul>
+            </li>
+            <li class="navbar-lvl-1">
+              <a href="#"><span>Детям</span></a>
+              <ul class="navbar-lvl-2-list">
+                <li class="navbar-lvl-2"><a href="#"><span>Уход за волосами</span></a></li>
+                <li class="navbar-lvl-2"><a href="./catalog.html"><span>Уход за кожей</span></a></li>
+                <li class="navbar-lvl-2">
+                  <a href="./catalog.html"><span>Гели для душа</span></a>
+                  <ul class="navbar-lvl-3-list">
+                    <li class="navbar-lvl-3">
+                      <a href="#"><span>Для системы пищеварения</span></a>
+                    </li>
+                    <li class="navbar-lvl-3">
+                      <a href="./catalog.html"><span>Для нервной системы</span></a>
+                    </li>
+                    <li class="navbar-lvl-3">
+                      <a href="./catalog.html"><span>Для опорно-двигательной системы</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="navbar-lvl-2"><a href="./catalog.html"><span>Маски</span></a></li>
+              </ul>
+            </li>
+            <li class="navbar-lvl-1">
+              <a href="./catalog.html"><span>Здоровое питание</span></a>
+              <ul class="navbar-lvl-2-list">
+                <li class="navbar-lvl-2"><a href="./catalog.html"><span>Уход за волосами</span></a></li>
+                <li class="navbar-lvl-2"><a href="#"><span>Уход за кожей</span></a></li>
+                <li class="navbar-lvl-2">
+                  <a href="./catalog.html"><span>Гели для душа</span></a>
+                  <ul class="navbar-lvl-3-list">
+                    <li class="navbar-lvl-3">
+                      <a href="#"><span>Для системы пищеварения</span></a>
+                    </li>
+                    <li class="navbar-lvl-3">
+                      <a href="./catalog.html"><span>Для нервной системы</span></a>
+                    </li>
+                    <li class="navbar-lvl-3">
+                      <a href="./catalog.html"><span>Для опорно-двигательной системы</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="navbar-lvl-2">
+                  <a href="./catalog.html"><span>Маски</span></a>
+                  <ul class="navbar-lvl-3-list">
+                    <li class="navbar-lvl-3">
+                      <a href="#"><span>Для системы пищеварения</span></a>
+                    </li>
+                    <li class="navbar-lvl-3">
+                      <a href="./catalog.html"><span>Для нервной системы</span></a>
+                    </li>
+                    <li class="navbar-lvl-3">
+                      <a href="./catalog.html"><span>Для опорно-двигательной системы</span></a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="navbar-lvl-1">
+              <a href="./catalog.html"><span>Дом</span></a>
+              <ul class="navbar-lvl-2-list">
+                <li class="navbar-lvl-2">
+                  <a href="./catalog.html"><span>Уход за волосами</span></a>
+                  <ul class="navbar-lvl-3-list">
+                    <li class="navbar-lvl-3">
+                      <a href="#"><span>Для системы пищеварения</span></a>
+                    </li>
+                    <li class="navbar-lvl-3">
+                      <a href="./catalog.html"><span>Для нервной системы</span></a>
+                    </li>
+                    <li class="navbar-lvl-3">
+                      <a href="./catalog.html"><span>Для опорно-двигательной системы</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="navbar-lvl-2">
+                  <a href="./catalog.html"><span>Уход за кожей</span></a>
+                  <ul class="navbar-lvl-3-list">
+                    <li class="navbar-lvl-3">
+                      <a href="#"><span>Для системы пищеварения</span></a>
+                    </li>
+                    <li class="navbar-lvl-3">
+                      <a href="./catalog.html"><span>Для нервной системы</span></a>
+                    </li>
+                    <li class="navbar-lvl-3">
+                      <a href="./catalog.html"><span>Для опорно-двигательной системы</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="navbar-lvl-2">
+                  <a href="#"><span>Гели для душа</span></a>
+                  <ul class="navbar-lvl-3-list">
+                    <li class="navbar-lvl-3">
+                      <a href="#"><span>Для системы пищеварения</span></a>
+                    </li>
+                    <li class="navbar-lvl-3">
+                      <a href="./catalog.html"><span>Для нервной системы</span></a>
+                    </li>
+                    <li class="navbar-lvl-3">
+                      <a href="./catalog.html"><span>Для опорно-двигательной системы</span></a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="navbar-lvl-2">
+                  <a href="./catalog.html"><span>Маски</span></a>
+                  <ul class="navbar-lvl-3-list">
+                    <li class="navbar-lvl-3">
+                      <a href="#"><span>Для системы пищеварения</span></a>
+                    </li>
+                    <li class="navbar-lvl-3">
+                      <a href="./catalog.html"><span>Для нервной системы</span></a>
+                    </li>
+                    <li class="navbar-lvl-3">
+                      <a href="./catalog.html"><span>Для опорно-двигательной системы</span></a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <!-- Дублирование верхнего меню для маленькой диагонали -->
+          <ul class="navbar-lvl-1-list v-max-767">
+            <li class="navbar-lvl-1">
+              <a href="./promotions.html"><span>Акции</span></a>
+            </li>
+            <li class="navbar-lvl-1">
+              <a href="./reviews.html"><span>Отзывы</span></a>
+            </li>
+            <li class="navbar-lvl-1">
+              <a href="./shipping.html"><span>Оплата и доставка</span></a>
+            </li>
+            <li class="navbar-lvl-1">
+              <a href="./contacts.html"><span>Контакты</span></a>
+            </li>
+            <li class="navbar-lvl-1">
+              <a href="./brands.html"><span>Бренды</span></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+  </header>
+  <main>
+    <section id="content-error">
+      <div class="layout">
+        <h1>503</h1>
+        <h2>Страница временно недоступна :(</h2>
+        <h3>Проводятся технические работы</h3>
+      </div>
+    </section>
+  </main>
+  <footer id="footer">
+    <div class="layout">
+      <section class="top">
+        <div class="left">
+          <a href="./index.html" class="logo">
+            <picture>
+              <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                      data-srcset="./images/footer-logo.webp"
+                      type="image/webp"
+              />
+              <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                   data-src="./images/footer-logo.png"
+                   class="lazyload"
+                   alt="лого"
+                   width="147"
+                   height="64"
+              />
+            </picture>
+          </a>
+          <div class="social">
+            <!-- Ссылки на соцсети -->
+            <a href="#" class="facebook">
+              <!-- SVG facebook -->
+              <svg height="20" viewBox="0 0 12 20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M3.47219 6.99288H1.87906C1.33973 6.99288 0.9 7.42868 0.9 7.96602V10.752C0.9 11.2892 1.33972 11.7252 1.87906 11.7252H3.47219V18.1269C3.47219 18.6642 3.91192 19.1 4.45125 19.1H7.35332C7.89263 19.1 8.33252 18.6642 8.33252 18.1269V11.725H10.302C10.8413 11.725 11.281 11.2893 11.2811 10.7522C11.2811 10.7522 11.2811 10.7522 11.2811 10.7522L11.2822 7.9662V7.96616C11.2822 7.61315 11.0887 7.28723 10.7784 7.11503L10.7784 7.11502C10.6336 7.03471 10.4664 6.99274 10.2949 6.99274H8.32737C8.32729 6.99103 8.32721 6.9893 8.32712 6.98755C8.32422 6.92466 8.32072 6.83546 8.31839 6.73047C8.31372 6.52001 8.31378 6.24806 8.33225 5.9979C8.3512 5.74115 8.36299 5.62553 8.37414 5.56827C8.37812 5.54782 8.38117 5.53979 8.38209 5.53767C8.38226 5.53747 8.38249 5.5372 8.3828 5.53686L8.38772 5.5315L8.39646 5.52194C8.39629 5.52213 8.3962 5.52222 8.3962 5.52223C8.3963 5.52233 8.48222 5.43713 8.91677 5.43713H8.9168L10.4069 5.43658C10.4069 5.43658 10.407 5.43658 10.407 5.43658C10.9462 5.43656 11.3857 5.00074 11.3857 4.46344V1.87671C11.3857 1.34026 10.9468 0.904488 10.4083 0.903571L10.4083 0.903571L8.19507 0.9H8.19491C6.79931 0.9 5.62182 1.50164 4.77225 2.21802C3.90382 2.9503 3.47219 4.29958 3.47219 5.69775V6.99288ZM7.06999 11.1527V17.8448H4.73458V11.1527C4.73458 10.7754 4.42594 10.4698 4.0478 10.4698H2.16239V8.24812H4.0478C4.42595 8.24812 4.73458 7.94234 4.73458 7.56516V5.69775C4.73458 4.59469 5.06912 3.71118 5.66262 3.10387C6.25584 2.49684 7.11801 2.15526 8.19399 2.15524C8.19402 2.15524 8.19405 2.15524 8.19408 2.15524L10.1233 2.15837V4.18138L8.91649 4.18189C8.91648 4.18189 8.91646 4.18189 8.91645 4.18189C8.50027 4.18189 7.86119 4.2287 7.45071 4.69062C7.11073 5.07304 7.06999 5.57619 7.06999 5.99054V7.56516C7.06999 7.94249 7.37863 8.24812 7.75677 8.24812H10.0196L10.0187 10.4698H7.7569C7.3788 10.4698 7.06999 10.7754 7.06999 11.1527Z"
+                    fill="currentColor" stroke="currentColor" stroke-width="0.2"></path>
+              </svg>
+            </a>
+            <a href="#" class="instagram">
+              <!-- SVG instagram -->
+              <svg height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M14.2276 0.90099V0.9H14.1276H5.87244C3.1305 0.9 0.9 3.1305 0.9 5.87244V14.1277C0.9 16.8695 3.1305 19.1 5.87244 19.1H14.1277C16.8695 19.1 19.1 16.8695 19.1 14.1277V5.87244C19.1 3.16391 16.9235 0.954433 14.2276 0.90099ZM17.8448 14.1277C17.8448 16.1772 16.1772 17.8448 14.1276 17.8448H5.87244C3.82282 17.8448 2.15524 16.1772 2.15524 14.1277V5.87244C2.15524 3.82282 3.82282 2.15524 5.87244 2.15524H14.1277C16.1772 2.15524 17.8448 3.82282 17.8448 5.87244V14.1277Z"
+                    fill="currentColor" stroke="currentColor" stroke-width="0.2"></path>
+                <path
+                    d="M9.99986 4.97812C7.23074 4.97812 4.97812 7.23074 4.97812 9.99986C4.97812 12.769 7.23074 15.0216 9.99986 15.0216C12.769 15.0216 15.0216 12.769 15.0216 9.99986C15.0216 7.23074 12.769 4.97812 9.99986 4.97812ZM9.99986 13.7664C7.92319 13.7664 6.23336 12.0767 6.23336 9.99986C6.23336 7.92319 7.92319 6.23336 9.99986 6.23336C12.0767 6.23336 13.7664 7.92319 13.7664 9.99986C13.7664 12.0767 12.0767 13.7664 9.99986 13.7664Z"
+                    fill="currentColor" stroke="currentColor" stroke-width="0.2"></path>
+                <path
+                    d="M15.0393 3.23057C14.182 3.23057 13.485 3.92779 13.485 4.78488C13.485 5.6421 14.182 6.33933 15.0393 6.33933C15.8965 6.33933 16.5937 5.64211 16.5937 4.78488C16.5937 3.92764 15.8965 3.23057 15.0393 3.23057ZM15.0393 5.08396C14.8745 5.08396 14.7402 4.94965 14.7402 4.78488C14.7402 4.61999 14.8745 4.4858 15.0393 4.4858C15.2042 4.4858 15.3385 4.62002 15.3385 4.78488C15.3385 4.94963 15.2042 5.08396 15.0393 5.08396Z"
+                    fill="currentColor" stroke="currentColor" stroke-width="0.2"></path>
+              </svg>
+            </a>
+            <a href="#" class="youtube">
+              <!-- SVG youtube -->
+              <svg height="17" viewBox="0 0 22 17" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M14.3857 7.34678L9.52538 4.68744C9.24592 4.53453 8.9156 4.54024 8.64167 4.70255C8.36758 4.86502 8.2041 5.15204 8.2041 5.47061V10.7436C8.2041 11.0607 8.36658 11.3472 8.63882 11.5099C8.78099 11.5948 8.93859 11.6374 9.09654 11.6374C9.24122 11.6374 9.38624 11.6017 9.51967 11.5298L14.3801 8.91631C14.6687 8.76105 14.8488 8.46111 14.8501 8.13331C14.8513 7.80551 14.6734 7.50422 14.3857 7.34678ZM9.49332 10.0803V6.1393L13.1258 8.12693L9.49332 10.0803Z"
+                    fill="currentColor"></path>
+                <path
+                    d="M21.838 3.93279L21.837 3.92271C21.8184 3.74564 21.6329 2.17058 20.8672 1.36945C19.9822 0.427167 18.9788 0.312696 18.4962 0.257811C18.4563 0.253279 18.4197 0.249083 18.387 0.244719L18.3485 0.24069C15.4401 0.0292051 11.0478 0.000335691 11.0038 0.000167845L10.9999 0L10.9961 0.000167845C10.9521 0.000335691 6.55973 0.0292051 3.62512 0.24069L3.58635 0.244719C3.55513 0.248915 3.52073 0.252775 3.4833 0.257139C3.00628 0.312192 2.01364 0.426831 1.12607 1.40319C0.396787 2.19575 0.185973 3.73708 0.164321 3.91029L0.161803 3.93279C0.155257 4.00647 0 5.76062 0 7.52166V9.16788C0 10.9289 0.155257 12.6831 0.161803 12.7569L0.162978 12.768C0.181609 12.9422 0.36691 14.4884 1.1291 15.2899C1.96127 16.2006 3.0135 16.3211 3.57947 16.3859C3.66893 16.3961 3.74597 16.4049 3.79851 16.4141L3.84937 16.4212C5.52866 16.5809 10.7938 16.6597 11.017 16.6629L11.0238 16.663L11.0305 16.6629C11.0744 16.6627 15.4666 16.6338 18.375 16.4223L18.4135 16.4183C18.4502 16.4134 18.4915 16.4091 18.5368 16.4044C19.0112 16.354 19.9984 16.2494 20.8738 15.2864C21.603 14.4936 21.814 12.9523 21.8355 12.7792L21.838 12.7568C21.8446 12.6829 22 10.9289 22 9.16788V7.52166C21.9998 5.76062 21.8446 4.00664 21.838 3.93279ZM20.7106 9.16788C20.7106 10.7978 20.5683 12.4765 20.5549 12.6305C20.5001 13.055 20.2777 14.0302 19.9224 14.4164C19.3746 15.0191 18.8118 15.0789 18.4009 15.1224C18.3512 15.1276 18.3052 15.1326 18.2636 15.1378C15.4505 15.3412 11.224 15.3725 11.0293 15.3736C10.8109 15.3704 5.62282 15.2911 3.99472 15.1398C3.9113 15.1262 3.82117 15.1158 3.72617 15.1051C3.24428 15.0499 2.58465 14.9743 2.07742 14.4164L2.06551 14.4037C1.71639 14.0399 1.50037 13.128 1.44548 12.6356C1.43525 12.5191 1.28922 10.8207 1.28922 9.16788V7.52166C1.28922 5.89356 1.43122 4.21678 1.44498 4.05951C1.51027 3.5595 1.73686 2.6434 2.07742 2.27313C2.64205 1.6521 3.2374 1.58329 3.63117 1.5378C3.66876 1.53344 3.70384 1.52941 3.73624 1.52521C6.59028 1.32078 10.8472 1.2904 10.9999 1.28922C11.1527 1.29023 15.408 1.32078 18.2367 1.52521C18.2715 1.52958 18.3094 1.53394 18.3502 1.53864C18.7552 1.5848 19.3673 1.65462 19.9291 2.25383L19.9343 2.25937C20.2834 2.62309 20.4995 3.55094 20.5543 4.0533C20.5641 4.16324 20.7106 5.86536 20.7106 7.52166V9.16788Z"
+                    fill="currentColor"></path>
+              </svg>
+            </a>
+          </div>
+          <div class="lang">
+            <a href="#">Українською</a>
+          </div>
+        </div>
+        <!-- Нижнее меню -->
+        <div class="center">
+          <h3>Категории</h3>
+          <ul>
+            <li>
+              <a href="./catalog.html">Бады</a>
+            </li>
+            <li>
+              <a href="./catalog.html">Девушкам</a>
+            </li>
+            <li>
+              <a href="./catalog.html">Мужчинам</a>
+            </li>
+            <li>
+              <a href="./catalog.html">Детям</a>
+            </li>
+            <li>
+              <a href="./catalog.html">Здоровое питание</a>
+            </li>
+            <li>
+              <a href="./catalog.html">Дом</a>
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <h3>Дополнительно</h3>
+          <ul>
+            <li>
+              <a href="./reviews.html">Отзывы</a>
+            </li>
+            <li>
+              <a href="./shipping.html">Оплата и доставка</a>
+            </li>
+            <li>
+              <a href="./contacts.html">Контакты</a>
+            </li>
+            <li>
+              <a href="./promotions.html">Акции</a>
+            </li>
+            <li>
+              <a href="./brands.html">Бренды</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="bottom">
+        &copy; 2020 Organic Chest
+      </section>
+    </div>
+  </footer>
 </div>
 <div id="cookie">
-    <!-- Сообщение о cookie -->
-    <div class="cookie-head">
-        <a href="#" class="cookie-close">
-            <!-- SVG close-1 -->
-            <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                      fill="currentColor"></path>
-            </svg>
-        </a>
-    </div>
-    <div class="cookie-body">
-        На сайте используются cookie-файлы и другие аналогичные технологии. Если, прочитав это сообщение, вы остаетесь
-        на сайте, это означает, что вы не возражаете против использования этих технологий.
-    </div>
+  <!-- Сообщение о cookie -->
+  <div class="cookie-head">
+    <a href="#" class="cookie-close">
+      <!-- SVG close-1 -->
+      <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+        <path
+            d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+            fill="currentColor"></path>
+      </svg>
+    </a>
+  </div>
+  <div class="cookie-body">
+    На сайте используются cookie-файлы и другие аналогичные технологии. Если, прочитав это сообщение, вы остаетесь
+    на сайте, это означает, что вы не возражаете против использования этих технологий.
+  </div>
 </div>
 <div id="shadow">
-    <div class="modal-wrapper">
-        <section class="modal modal-auth modal-important modal-login">
-            <div class="modal-head">
-                <a href="#" class="modal-close">
-                    <!-- SVG close-1 -->
-                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                              fill="currentColor"></path>
-                    </svg>
-                </a>
-            </div>
-            <div class="title-wrap">
-                <div class="title">Вход</div>
-                <div class="leaf leaf-sm">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                         data-src="./images/modal-leaf.svg"
-                         class="lazyload"
-                         alt=""
-                         width="226"
-                         height="158"
-                    />
-                </div>
-            </div>
-            <form action="#" class="form form-login" method="post" autocomplete="off">
-                <div class="row" data-txt="Телефон должен иметь формат +380 ХХ ХХХ ХХ ХХ" data-error="">
-                    <input type="tel" id="login-login" name="login-login" class="input"/>
-                    <label for="login-login" class="label">Логин</label>
-                </div>
-                <div class="row" data-txt="Длина пароля минимум 6 символов" data-error="">
-                    <input type="password" id="login-password" name="login-password" class="input pwd-input"/>
-                    <label for="login-password" class="label">Пароль</label>
-                    <button type="button" class="btn-pwd pwd-show">
-                        <!-- SVG eye -->
-                        <svg height="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                            <path d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"
-                                  fill="currentColor"></path>
-                        </svg>
-                    </button>
-                    <button type="button" class="btn-pwd pwd-hide d-none">
-                        <!-- SVG eye-slash -->
-                        <svg height="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-                            <path d="M634 471L36 3.51A16 16 0 0 0 13.51 6l-10 12.49A16 16 0 0 0 6 41l598 467.49a16 16 0 0 0 22.49-2.49l10-12.49A16 16 0 0 0 634 471zM296.79 146.47l134.79 105.38C429.36 191.91 380.48 144 320 144a112.26 112.26 0 0 0-23.21 2.47zm46.42 219.07L208.42 260.16C210.65 320.09 259.53 368 320 368a113 113 0 0 0 23.21-2.46zM320 112c98.65 0 189.09 55 237.93 144a285.53 285.53 0 0 1-44 60.2l37.74 29.5a333.7 333.7 0 0 0 52.9-75.11 32.35 32.35 0 0 0 0-29.19C550.29 135.59 442.93 64 320 64c-36.7 0-71.71 7-104.63 18.81l46.41 36.29c18.94-4.3 38.34-7.1 58.22-7.1zm0 288c-98.65 0-189.08-55-237.93-144a285.47 285.47 0 0 1 44.05-60.19l-37.74-29.5a333.6 333.6 0 0 0-52.89 75.1 32.35 32.35 0 0 0 0 29.19C89.72 376.41 197.08 448 320 448c36.7 0 71.71-7.05 104.63-18.81l-46.41-36.28C359.28 397.2 339.89 400 320 400z"
-                                  fill="currentColor"></path>
-                        </svg>
-                    </button>
-                </div>
-                <button type="submit" class="btn btn-primary-fill submit">
-                    <span>Войти</span>
-                </button>
-            </form>
-            <div class="modal-foot">
-                <a href="#" data-modal="register">Регистрация</a>
-                <a href="#" data-modal="reset">Забыли пароль?</a>
-            </div>
-        </section>
-        <section class="modal modal-auth modal-important modal-register">
-            <div class="modal-head">
-                <a href="#" class="modal-close">
-                    <!-- SVG close-1 -->
-                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                              fill="currentColor"></path>
-                    </svg>
-                </a>
-            </div>
-            <div class="title-wrap">
-                <div class="title">Регистрация</div>
-                <div class="leaf leaf-sm">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                         data-src="./images/modal-leaf.svg"
-                         class="lazyload"
-                         alt=""
-                         width="226"
-                         height="158"
-                    />
-                </div>
-            </div>
-            <form action="#" class="form form-register" method="post" autocomplete="off">
-                <div class="row" data-txt="Телефон должен иметь формат +380 ХХ ХХХ ХХ ХХ" data-error="">
-                    <input type="tel" id="register-login" name="register-login" class="input"/>
-                    <label for="register-login" class="label">Телефон</label>
-                </div>
-                <!-- Галочка для НЕ авторизированных, если авторизован - поле телефон заполнено блока checkbox-agree нету -->
-                <div class="checkbox checkbox-agree">
-                    <input type="checkbox" id="register-agree" name="register-agree" checked="checked"/>
-                    <label for="register-agree" class="non-select">Я согласен с&nbsp;</label>
-                    <a href="#" target="_blank">политикой конфиденциальности</a>
-                </div>
-                <button type="submit" class="btn btn-primary-fill submit" disabled="disabled">
-                    <span>Получить код</span>
-                </button>
-            </form>
-            <div class="modal-foot">
-                <a href="#" data-modal="reset">Забыли пароль?</a>
-                <a href="#" data-modal="login">Вход</a>
-            </div>
-        </section>
-        <section class="modal modal-auth modal-important modal-reset">
-            <div class="modal-head">
-                <a href="#" class="modal-close">
-                    <!-- SVG close-1 -->
-                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                              fill="currentColor"></path>
-                    </svg>
-                </a>
-            </div>
-            <div class="title-wrap">
-                <div class="title">Сброс пароля</div>
-                <div class="leaf leaf-sm">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                         data-src="./images/modal-leaf.svg"
-                         class="lazyload"
-                         alt=""
-                         width="226"
-                         height="158"
-                    />
-                </div>
-            </div>
-            <form action="#" class="form form-reset" method="post" autocomplete="off">
-                <div class="row" data-txt="Телефон должен иметь формат +380 ХХ ХХХ ХХ ХХ" data-error="">
-                    <input type="tel" id="reset-login" name="reset-login" class="input"/>
-                    <label for="reset-login" class="label">Телефон</label>
-                </div>
-                <!-- Галочка для НЕ авторизированных, если авторизован - поле телефон заполнено блока checkbox-agree нету -->
-                <div class="checkbox checkbox-agree">
-                    <input type="checkbox" id="reset-agree" name="reset-agree" checked="checked"/>
-                    <label for="reset-agree" class="non-select">Я согласен с&nbsp;</label>
-                    <a href="#" target="_blank">политикой конфиденциальности</a>
-                </div>
-                <button type="submit" class="btn btn-primary-fill submit" disabled="disabled">
-                    <span>Получить код</span>
-                </button>
-            </form>
-            <div class="modal-foot">
-                <a href="#" data-modal="register">Регистрация</a>
-                <a href="#" data-modal="login">Вход</a>
-            </div>
-        </section>
-        <section class="modal modal-auth modal-important modal-password">
-            <div class="modal-head">
-                <a href="#" class="modal-close">
-                    <!-- SVG close-1 -->
-                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                              fill="currentColor"></path>
-                    </svg>
-                </a>
-            </div>
-            <div class="title-wrap">
-                <div class="title">Завершение</div>
-                <div class="leaf leaf-sm">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                         data-src="./images/modal-leaf.svg"
-                         class="lazyload"
-                         alt=""
-                         width="226"
-                         height="158"
-                    />
-                </div>
-            </div>
-            <form action="#" class="form form-password" method="post" autocomplete="off">
-                <div class="row" data-txt="Код 6 цифр" data-error="">
-                    <input type="number" id="password-code" name="password-code" class="input"/>
-                    <label for="password-code" class="label">Код подтверждения из смс</label>
-                </div>
-                <div class="row" data-txt="Длина пароля минимум 6 символов" data-error="">
-                    <input type="password" id="password-password" name="password-password" class="input pwd-input"/>
-                    <label for="password-password" class="label">Пароль</label>
-                    <button type="button" class="btn-pwd pwd-show">
-                        <!-- SVG eye -->
-                        <svg height="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                            <path d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"
-                                  fill="currentColor"></path>
-                        </svg>
-                    </button>
-                    <button type="button" class="btn-pwd pwd-hide d-none">
-                        <!-- SVG eye-slash -->
-                        <svg height="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-                            <path d="M634 471L36 3.51A16 16 0 0 0 13.51 6l-10 12.49A16 16 0 0 0 6 41l598 467.49a16 16 0 0 0 22.49-2.49l10-12.49A16 16 0 0 0 634 471zM296.79 146.47l134.79 105.38C429.36 191.91 380.48 144 320 144a112.26 112.26 0 0 0-23.21 2.47zm46.42 219.07L208.42 260.16C210.65 320.09 259.53 368 320 368a113 113 0 0 0 23.21-2.46zM320 112c98.65 0 189.09 55 237.93 144a285.53 285.53 0 0 1-44 60.2l37.74 29.5a333.7 333.7 0 0 0 52.9-75.11 32.35 32.35 0 0 0 0-29.19C550.29 135.59 442.93 64 320 64c-36.7 0-71.71 7-104.63 18.81l46.41 36.29c18.94-4.3 38.34-7.1 58.22-7.1zm0 288c-98.65 0-189.08-55-237.93-144a285.47 285.47 0 0 1 44.05-60.19l-37.74-29.5a333.6 333.6 0 0 0-52.89 75.1 32.35 32.35 0 0 0 0 29.19C89.72 376.41 197.08 448 320 448c36.7 0 71.71-7.05 104.63-18.81l-46.41-36.28C359.28 397.2 339.89 400 320 400z"
-                                  fill="currentColor"></path>
-                        </svg>
-                    </button>
-                </div>
-                <div class="row" data-txt="Пароли не совпадают" data-error="">
-                    <input type="password" id="password-confirm" name="password-confirm" class="input pwd-input"/>
-                    <label for="password-confirm" class="label">Пароль</label>
-                </div>
-                <button type="submit" class="btn btn-primary-fill submit">
-                    <span>Завершить</span>
-                </button>
-            </form>
-            <div class="modal-foot">
-                <a href="#" data-modal="register">Назад</a>
-            </div>
-        </section>
+  <div class="modal-wrapper">
+    <section class="modal modal-auth modal-important modal-login">
+      <div class="modal-head">
+        <a href="#" class="modal-close">
+          <!-- SVG close-1 -->
+          <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                fill="currentColor"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="title-wrap">
+        <div class="title">Вход</div>
+        <div class="leaf leaf-sm">
+          <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+               data-src="./images/modal-leaf.svg"
+               class="lazyload"
+               alt=""
+               width="226"
+               height="158"
+          />
+        </div>
+      </div>
+      <form action="#" class="form form-login" method="post" autocomplete="off">
+        <div class="row" data-txt="Телефон должен иметь формат +380 ХХ ХХХ ХХ ХХ" data-error="">
+          <input type="tel" id="login-login" name="login-login" class="input"/>
+          <label for="login-login" class="label">Логин</label>
+        </div>
+        <div class="row" data-txt="Длина пароля минимум 6 символов" data-error="">
+          <input type="password" id="login-password" name="login-password" class="input pwd-input"/>
+          <label for="login-password" class="label">Пароль</label>
+          <button type="button" class="btn-pwd pwd-show">
+            <!-- SVG eye -->
+            <svg height="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+              <path
+                  d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"
+                  fill="currentColor"></path>
+            </svg>
+          </button>
+          <button type="button" class="btn-pwd pwd-hide d-none">
+            <!-- SVG eye-slash -->
+            <svg height="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+              <path
+                  d="M634 471L36 3.51A16 16 0 0 0 13.51 6l-10 12.49A16 16 0 0 0 6 41l598 467.49a16 16 0 0 0 22.49-2.49l10-12.49A16 16 0 0 0 634 471zM296.79 146.47l134.79 105.38C429.36 191.91 380.48 144 320 144a112.26 112.26 0 0 0-23.21 2.47zm46.42 219.07L208.42 260.16C210.65 320.09 259.53 368 320 368a113 113 0 0 0 23.21-2.46zM320 112c98.65 0 189.09 55 237.93 144a285.53 285.53 0 0 1-44 60.2l37.74 29.5a333.7 333.7 0 0 0 52.9-75.11 32.35 32.35 0 0 0 0-29.19C550.29 135.59 442.93 64 320 64c-36.7 0-71.71 7-104.63 18.81l46.41 36.29c18.94-4.3 38.34-7.1 58.22-7.1zm0 288c-98.65 0-189.08-55-237.93-144a285.47 285.47 0 0 1 44.05-60.19l-37.74-29.5a333.6 333.6 0 0 0-52.89 75.1 32.35 32.35 0 0 0 0 29.19C89.72 376.41 197.08 448 320 448c36.7 0 71.71-7.05 104.63-18.81l-46.41-36.28C359.28 397.2 339.89 400 320 400z"
+                  fill="currentColor"></path>
+            </svg>
+          </button>
+        </div>
+        <button type="submit" class="btn btn-primary-fill submit">
+          <span>Войти</span>
+        </button>
+      </form>
+      <div class="modal-foot">
+        <a href="#" data-modal="register">Регистрация</a>
+        <a href="#" data-modal="reset">Забыли пароль?</a>
+      </div>
+    </section>
+    <section class="modal modal-auth modal-important modal-register">
+      <div class="modal-head">
+        <a href="#" class="modal-close">
+          <!-- SVG close-1 -->
+          <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                fill="currentColor"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="title-wrap">
+        <div class="title">Регистрация</div>
+        <div class="leaf leaf-sm">
+          <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+               data-src="./images/modal-leaf.svg"
+               class="lazyload"
+               alt=""
+               width="226"
+               height="158"
+          />
+        </div>
+      </div>
+      <form action="#" class="form form-register" method="post" autocomplete="off">
+        <div class="row" data-txt="Телефон должен иметь формат +380 ХХ ХХХ ХХ ХХ" data-error="">
+          <input type="tel" id="register-login" name="register-login" class="input"/>
+          <label for="register-login" class="label">Телефон</label>
+        </div>
+        <!-- Галочка для НЕ авторизированных, если авторизован - поле телефон заполнено блока checkbox-agree нету -->
+        <div class="checkbox checkbox-agree">
+          <input type="checkbox" id="register-agree" name="register-agree" checked="checked"/>
+          <label for="register-agree" class="non-select">Я согласен с&nbsp;</label>
+          <a href="#" target="_blank">политикой конфиденциальности</a>
+        </div>
+        <button type="submit" class="btn btn-primary-fill submit" disabled="disabled">
+          <span>Получить код</span>
+        </button>
+      </form>
+      <div class="modal-foot">
+        <a href="#" data-modal="reset">Забыли пароль?</a>
+        <a href="#" data-modal="login">Вход</a>
+      </div>
+    </section>
+    <section class="modal modal-auth modal-important modal-reset">
+      <div class="modal-head">
+        <a href="#" class="modal-close">
+          <!-- SVG close-1 -->
+          <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                fill="currentColor"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="title-wrap">
+        <div class="title">Сброс пароля</div>
+        <div class="leaf leaf-sm">
+          <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+               data-src="./images/modal-leaf.svg"
+               class="lazyload"
+               alt=""
+               width="226"
+               height="158"
+          />
+        </div>
+      </div>
+      <form action="#" class="form form-reset" method="post" autocomplete="off">
+        <div class="row" data-txt="Телефон должен иметь формат +380 ХХ ХХХ ХХ ХХ" data-error="">
+          <input type="tel" id="reset-login" name="reset-login" class="input"/>
+          <label for="reset-login" class="label">Телефон</label>
+        </div>
+        <!-- Галочка для НЕ авторизированных, если авторизован - поле телефон заполнено блока checkbox-agree нету -->
+        <div class="checkbox checkbox-agree">
+          <input type="checkbox" id="reset-agree" name="reset-agree" checked="checked"/>
+          <label for="reset-agree" class="non-select">Я согласен с&nbsp;</label>
+          <a href="#" target="_blank">политикой конфиденциальности</a>
+        </div>
+        <button type="submit" class="btn btn-primary-fill submit" disabled="disabled">
+          <span>Получить код</span>
+        </button>
+      </form>
+      <div class="modal-foot">
+        <a href="#" data-modal="register">Регистрация</a>
+        <a href="#" data-modal="login">Вход</a>
+      </div>
+    </section>
+    <section class="modal modal-auth modal-important modal-password">
+      <div class="modal-head">
+        <a href="#" class="modal-close">
+          <!-- SVG close-1 -->
+          <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                fill="currentColor"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="title-wrap">
+        <div class="title">Завершение</div>
+        <div class="leaf leaf-sm">
+          <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+               data-src="./images/modal-leaf.svg"
+               class="lazyload"
+               alt=""
+               width="226"
+               height="158"
+          />
+        </div>
+      </div>
+      <form action="#" class="form form-password" method="post" autocomplete="off">
+        <div class="row" data-txt="Код 6 цифр" data-error="">
+          <input type="number" id="password-code" name="password-code" class="input"/>
+          <label for="password-code" class="label">Код подтверждения из смс</label>
+        </div>
+        <div class="row" data-txt="Длина пароля минимум 6 символов" data-error="">
+          <input type="password" id="password-password" name="password-password" class="input pwd-input"/>
+          <label for="password-password" class="label">Пароль</label>
+          <button type="button" class="btn-pwd pwd-show">
+            <!-- SVG eye -->
+            <svg height="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+              <path
+                  d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"
+                  fill="currentColor"></path>
+            </svg>
+          </button>
+          <button type="button" class="btn-pwd pwd-hide d-none">
+            <!-- SVG eye-slash -->
+            <svg height="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+              <path
+                  d="M634 471L36 3.51A16 16 0 0 0 13.51 6l-10 12.49A16 16 0 0 0 6 41l598 467.49a16 16 0 0 0 22.49-2.49l10-12.49A16 16 0 0 0 634 471zM296.79 146.47l134.79 105.38C429.36 191.91 380.48 144 320 144a112.26 112.26 0 0 0-23.21 2.47zm46.42 219.07L208.42 260.16C210.65 320.09 259.53 368 320 368a113 113 0 0 0 23.21-2.46zM320 112c98.65 0 189.09 55 237.93 144a285.53 285.53 0 0 1-44 60.2l37.74 29.5a333.7 333.7 0 0 0 52.9-75.11 32.35 32.35 0 0 0 0-29.19C550.29 135.59 442.93 64 320 64c-36.7 0-71.71 7-104.63 18.81l46.41 36.29c18.94-4.3 38.34-7.1 58.22-7.1zm0 288c-98.65 0-189.08-55-237.93-144a285.47 285.47 0 0 1 44.05-60.19l-37.74-29.5a333.6 333.6 0 0 0-52.89 75.1 32.35 32.35 0 0 0 0 29.19C89.72 376.41 197.08 448 320 448c36.7 0 71.71-7.05 104.63-18.81l-46.41-36.28C359.28 397.2 339.89 400 320 400z"
+                  fill="currentColor"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="row" data-txt="Пароли не совпадают" data-error="">
+          <input type="password" id="password-confirm" name="password-confirm" class="input pwd-input"/>
+          <label for="password-confirm" class="label">Пароль</label>
+        </div>
+        <button type="submit" class="btn btn-primary-fill submit">
+          <span>Завершить</span>
+        </button>
+      </form>
+      <div class="modal-foot">
+        <a href="#" data-modal="register">Назад</a>
+      </div>
+    </section>
 
-        <section class="modal modal-important modal-one_click">
-            <div class="modal-head">
-                <a href="#" class="modal-close">
-                    <!-- SVG close-1 -->
-                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                              fill="currentColor"></path>
-                    </svg>
-                </a>
-            </div>
-            <div class="title">
-                Быстрый заказ
-            </div>
-            <form action="#" class="form form-one_click" method="post" autocomplete="off">
-                <input type="tel" class="number" placeholder="+380 (99) 999 99 99" aria-label="Номер телефона"/>
-                <!-- Галочка для НЕ авторизированных, если авторизован - поле телефон заполнено блока checkbox-agree нету -->
-                <div class="checkbox checkbox-agree">
-                    <input type="checkbox" id="one_click-agree" name="one_click-agree" checked="checked"/>
-                    <label for="one_click-agree" class="non-select">Я согласен с&nbsp;</label>
-                    <a href="#" target="_blank">политикой конфиденциальности</a>
-                </div>
-                <button type="submit" class="btn btn-primary-fill submit">
-                    <span>Отправить заказ</span>
-                </button>
-            </form>
-            <div class="modal-foot">
-                <a href="#" class="modal-close">Вернуться к покупкам</a>
-            </div>
-        </section>
-        <section class="modal modal-important modal-buy">
-            <div class="modal-head">
-                <a href="#" class="modal-close">
-                    <!-- SVG close-1 -->
-                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                              fill="currentColor"></path>
-                    </svg>
-                </a>
-            </div>
-            <div class="title">
-                <!-- SVG check -->
-                <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14.0004 0C6.267 0 0 6.26847 0 14C0 21.7324 6.26778 28 14.0004 28C21.7322 28 28 21.7324 28 14C28 6.26935 21.7322 0 14.0004 0ZM14.0004 25.375C7.71778 25.375 2.62513 20.2825 2.62513 14C2.62513 7.71754 7.71866 2.62504 14.0004 2.62504C20.2822 2.62504 25.3749 7.71754 25.3749 14C25.3749 20.2825 20.2823 25.375 14.0004 25.375ZM19.5026 8.04476C18.9076 7.68954 18.1472 7.90038 17.8051 8.51725L13.1106 16.9496L10.496 13.7672C10.0226 13.2221 9.3935 12.9395 8.79933 13.2947C8.20428 13.6508 7.95838 14.5075 8.34347 15.057L11.9818 19.4854C12.2539 19.8389 12.5645 20.0507 12.8892 20.1111L12.8919 20.1164L12.9252 20.1181C12.9987 20.1295 14.0977 20.3325 14.5711 19.4855L19.9596 9.80716C20.3015 9.18922 20.0977 8.40086 19.5026 8.04476Z"
-                          fill="currentColor"></path>
-                </svg>
-                Товар добавлен в корзину
-            </div>
-            <picture class="photo">
+    <section class="modal modal-important modal-one_click">
+      <div class="modal-head">
+        <a href="#" class="modal-close">
+          <!-- SVG close-1 -->
+          <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                fill="currentColor"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="title">
+        Быстрый заказ
+      </div>
+      <form action="#" class="form form-one_click" method="post" autocomplete="off">
+        <input type="tel" class="number" placeholder="+380 (99) 999 99 99" aria-label="Номер телефона"/>
+        <!-- Галочка для НЕ авторизированных, если авторизован - поле телефон заполнено блока checkbox-agree нету -->
+        <div class="checkbox checkbox-agree">
+          <input type="checkbox" id="one_click-agree" name="one_click-agree" checked="checked"/>
+          <label for="one_click-agree" class="non-select">Я согласен с&nbsp;</label>
+          <a href="#" target="_blank">политикой конфиденциальности</a>
+        </div>
+        <button type="submit" class="btn btn-primary-fill submit">
+          <span>Отправить заказ</span>
+        </button>
+      </form>
+      <div class="modal-foot">
+        <a href="#" class="modal-close">Вернуться к покупкам</a>
+      </div>
+    </section>
+    <section class="modal modal-important modal-buy">
+      <div class="modal-head">
+        <a href="#" class="modal-close">
+          <!-- SVG close-1 -->
+          <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                fill="currentColor"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="title">
+        <!-- SVG check -->
+        <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+          <path
+              d="M14.0004 0C6.267 0 0 6.26847 0 14C0 21.7324 6.26778 28 14.0004 28C21.7322 28 28 21.7324 28 14C28 6.26935 21.7322 0 14.0004 0ZM14.0004 25.375C7.71778 25.375 2.62513 20.2825 2.62513 14C2.62513 7.71754 7.71866 2.62504 14.0004 2.62504C20.2822 2.62504 25.3749 7.71754 25.3749 14C25.3749 20.2825 20.2823 25.375 14.0004 25.375ZM19.5026 8.04476C18.9076 7.68954 18.1472 7.90038 17.8051 8.51725L13.1106 16.9496L10.496 13.7672C10.0226 13.2221 9.3935 12.9395 8.79933 13.2947C8.20428 13.6508 7.95838 14.5075 8.34347 15.057L11.9818 19.4854C12.2539 19.8389 12.5645 20.0507 12.8892 20.1111L12.8919 20.1164L12.9252 20.1181C12.9987 20.1295 14.0977 20.3325 14.5711 19.4855L19.9596 9.80716C20.3015 9.18922 20.0977 8.40086 19.5026 8.04476Z"
+              fill="currentColor"></path>
+        </svg>
+        Товар добавлен в корзину
+      </div>
+      <picture class="photo">
+        <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                type="image/webp"
+        />
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+             alt="Товар"
+             width="354"
+             height="354"
+        />
+      </picture>
+      <div class="buttons">
+        <a href="#" class="btn btn-primary-fill" data-modal="one_click"><span>Быстрый заказ</span></a>
+        <a href="./basket.html" class="btn btn-secondary-stroke"><span>В корзину</span></a>
+      </div>
+      <div class="modal-foot">
+        <a href="#" class="modal-close">Вернуться к покупкам</a>
+      </div>
+    </section>
+
+    <section class="modal modal-important modal-callback">
+      <div class="modal-head">
+        <a href="#" class="modal-close">
+          <!-- SVG close-1 -->
+          <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                fill="currentColor"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="title">Хотите, мы перезвоним Вам?</div>
+      <div class="subtitle">Выберете удобное время и мы обязательно свяжемся с Вами</div>
+      <form action="#" class="form form-callback" method="post" autocomplete="off">
+        <div class="time">
+          <div class="label">Связаться в</div>
+          <div class="timer hours">
+            <a href="#" class="change decrease" aria-label="Установить часы">10</a>
+            <input type="text" name="hours" readonly="readonly" aria-label="Часы" class="input" value="11"/>
+            <a href="#" class="change increase" aria-label="Установить часы">12</a>
+          </div>
+          <div class="timer minutes">
+            <a href="#" class="change decrease" aria-label="Установить минуты">20</a>
+            <input type="text" name="minutes" readonly="readonly" aria-label="Минуты" class="input" value="30"/>
+            <a href="#" class="change increase" aria-label="Установить минуты">40</a>
+          </div>
+        </div>
+        <div class="phone">
+          <input type="tel" class="number" placeholder="+380 (99) 999 99 99" aria-label="Номер телефона"/>
+          <button type="submit" class="btn btn-primary-fill submit">
+            <span>Позвонить мне</span>
+          </button>
+        </div>
+        <div class="checkbox-wrap">
+          <!-- Галочка для НЕ авторизированных, если авторизован - поле телефон заполнено блока checkbox-agree нету -->
+          <div class="checkbox checkbox-agree">
+            <input type="checkbox" id="callback-agree" name="callback-agree" checked="checked"/>
+            <label for="callback-agree" class="non-select">Я согласен с&nbsp;</label>
+            <a href="#" target="_blank">политикой конфиденциальности</a>
+          </div>
+        </div>
+      </form>
+      <div class="modal-foot">
+        <a href="#" class="modal-close">Вернуться к покупкам</a>
+      </div>
+    </section>
+
+    <section class="modal modal-favorite_del">
+      <div class="modal-head">
+        <a href="#" class="modal-close">
+          <!-- SVG close-1 -->
+          <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                fill="currentColor"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="title">
+        Вы уверены?
+      </div>
+      <form action="#" class="form form-favorite_del" method="post" autocomplete="off">
+        <input type="hidden" name="id" value="#"/>
+        <button type="submit" class="btn btn-danger-fill submit">
+          <span>Удалить</span>
+        </button>
+      </form>
+      <div class="modal-foot">
+        <a href="#" class="modal-close">Отмена</a>
+      </div>
+    </section>
+
+    <section class="modal modal-important modal-avatar_edit">
+      <div class="modal-head">
+        <label>
+          <span>Загрузить</span>
+          <input type="file" class="d-none" id="avatar-file"/>
+        </label>
+        <a href="#" class="modal-close">
+          <!-- SVG close-1 -->
+          <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                fill="currentColor"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="canvas unload">
+        <div id="avatar-upload"></div>
+      </div>
+      <div class="modal-foot">
+        <a href="#" class="avatar-save">Сохранить</a>
+        <a href="#" class="modal-close">Отмена</a>
+      </div>
+    </section>
+    <section class="modal modal-important modal-avatar_save">
+      <div class="modal-head">
+        <a href="#" class="modal-close">
+          <!-- SVG close-1 -->
+          <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                fill="currentColor"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="avatar">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+             alt=""
+        />
+      </div>
+      <form action="#" class="form form-avatar_save" method="post" autocomplete="off">
+        <button type="submit" class="btn btn-primary-fill submit">
+          <span>Сохранить</span>
+        </button>
+      </form>
+      <div class="modal-foot">
+        <a href="#" data-modal="avatar_edit">Назад</a>
+      </div>
+    </section>
+    <section class="modal modal-avatar_del">
+      <div class="modal-head">
+        <a href="#" class="modal-close">
+          <!-- SVG close-1 -->
+          <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                fill="currentColor"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="title">
+        Вы уверены?
+      </div>
+      <form action="#" class="form form-avatar_del" method="post" autocomplete="off">
+        <button type="submit" class="btn btn-danger-fill submit">
+          <span>Удалить</span>
+        </button>
+      </form>
+      <div class="modal-foot">
+        <a href="#" class="modal-close">Отмена</a>
+      </div>
+    </section>
+
+    <section class="modal modal-picture">
+      <div class="modal-head">
+        <a href="#" class="modal-close">
+          <!-- SVG close-1 -->
+          <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                fill="currentColor"></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Если картинка одна -->
+      <!--            <picture>-->
+      <!--                <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="-->
+      <!--                        type="image/webp"-->
+      <!--                        data-srcset="./contents/product-lg.webp"-->
+      <!--                />-->
+      <!--                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="-->
+      <!--                     class="lazyload"-->
+      <!--                     alt="Название товара"-->
+      <!--                     data-src="./contents/product-lg.jpg"-->
+      <!--                     width="700"-->
+      <!--                     height="700"-->
+      <!--                />-->
+      <!--            </picture>-->
+      <!-- Если картинок много -->
+      <div class="modal-slider-outer">
+        <div class="modal-slider-wrapper">
+          <div class="modal-slider slider-modal">
+            <div>
+              <picture class="slide" data-idx="0">
                 <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                         type="image/webp"
+                        data-srcset="./contents/product-lg.webp"
                 />
                 <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                     alt="Товар"
-                     width="354"
-                     height="354"
+                     class="lazyload"
+                     alt="Название товара"
+                     data-src="./contents/product-lg.jpg"
+                     width="700"
+                     height="700"
                 />
-            </picture>
-            <div class="buttons">
-                <a href="#" class="btn btn-primary-fill" data-modal="one_click"><span>Быстрый заказ</span></a>
-                <a href="./basket.html" class="btn btn-secondary-stroke"><span>В корзину</span></a>
+              </picture>
             </div>
-            <div class="modal-foot">
-                <a href="#" class="modal-close">Вернуться к покупкам</a>
-            </div>
-        </section>
-
-        <section class="modal modal-important modal-callback">
-            <div class="modal-head">
-                <a href="#" class="modal-close">
-                    <!-- SVG close-1 -->
-                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                              fill="currentColor"></path>
-                    </svg>
-                </a>
-            </div>
-            <div class="title">Хотите, мы перезвоним Вам?</div>
-            <div class="subtitle">Выберете удобное время и мы обязательно свяжемся с Вами</div>
-            <form action="#" class="form form-callback" method="post" autocomplete="off">
-                <div class="time">
-                    <div class="label">Связаться в</div>
-                    <div class="timer hours">
-                        <a href="#" class="change decrease" aria-label="Установить часы">10</a>
-                        <input type="text" name="hours" readonly="readonly" aria-label="Часы" class="input" value="11"/>
-                        <a href="#" class="change increase" aria-label="Установить часы">12</a>
-                    </div>
-                    <div class="timer minutes">
-                        <a href="#" class="change decrease" aria-label="Установить минуты">20</a>
-                        <input type="text" name="minutes" readonly="readonly" aria-label="Минуты" class="input" value="30"/>
-                        <a href="#" class="change increase" aria-label="Установить минуты">40</a>
-                    </div>
-                </div>
-                <div class="phone">
-                    <input type="tel" class="number" placeholder="+380 (99) 999 99 99" aria-label="Номер телефона"/>
-                    <button type="submit" class="btn btn-primary-fill submit">
-                        <span>Позвонить мне</span>
-                    </button>
-                </div>
-                <div class="checkbox-wrap">
-                    <!-- Галочка для НЕ авторизированных, если авторизован - поле телефон заполнено блока checkbox-agree нету -->
-                    <div class="checkbox checkbox-agree">
-                        <input type="checkbox" id="callback-agree" name="callback-agree" checked="checked"/>
-                        <label for="callback-agree" class="non-select">Я согласен с&nbsp;</label>
-                        <a href="#" target="_blank">политикой конфиденциальности</a>
-                    </div>
-                </div>
-            </form>
-            <div class="modal-foot">
-                <a href="#" class="modal-close">Вернуться к покупкам</a>
-            </div>
-        </section>
-
-        <section class="modal modal-favorite_del">
-            <div class="modal-head">
-                <a href="#" class="modal-close">
-                    <!-- SVG close-1 -->
-                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                              fill="currentColor"></path>
-                    </svg>
-                </a>
-            </div>
-            <div class="title">
-                Вы уверены?
-            </div>
-            <form action="#" class="form form-favorite_del" method="post" autocomplete="off">
-                <input type="hidden" name="id" value="#"/>
-                <button type="submit" class="btn btn-danger-fill submit">
-                    <span>Удалить</span>
-                </button>
-            </form>
-            <div class="modal-foot">
-                <a href="#" class="modal-close">Отмена</a>
-            </div>
-        </section>
-
-        <section class="modal modal-important modal-avatar_edit">
-            <div class="modal-head">
-                <label>
-                    <span>Загрузить</span>
-                    <input type="file" class="d-none" id="avatar-file"/>
-                </label>
-                <a href="#" class="modal-close">
-                    <!-- SVG close-1 -->
-                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                              fill="currentColor"></path>
-                    </svg>
-                </a>
-            </div>
-            <div class="canvas unload">
-                <div id="avatar-upload"></div>
-            </div>
-            <div class="modal-foot">
-                <a href="#" class="avatar-save">Сохранить</a>
-                <a href="#" class="modal-close">Отмена</a>
-            </div>
-        </section>
-        <section class="modal modal-important modal-avatar_save">
-            <div class="modal-head">
-                <a href="#" class="modal-close">
-                    <!-- SVG close-1 -->
-                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                              fill="currentColor"></path>
-                    </svg>
-                </a>
-            </div>
-            <div class="avatar">
+            <div>
+              <picture class="slide" data-idx="1">
+                <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                        type="image/webp"
+                        data-srcset="./contents/product-lg.webp"
+                />
                 <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                     alt=""
+                     class="lazyload"
+                     alt="Название товара"
+                     data-src="./contents/product-lg.jpg"
+                     width="700"
+                     height="700"
                 />
+              </picture>
             </div>
-            <form action="#" class="form form-avatar_save" method="post" autocomplete="off">
-                <button type="submit" class="btn btn-primary-fill submit">
-                    <span>Сохранить</span>
-                </button>
-            </form>
-            <div class="modal-foot">
-                <a href="#" data-modal="avatar_edit">Назад</a>
+            <div>
+              <picture class="slide" data-idx="2">
+                <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                        type="image/webp"
+                        data-srcset="./contents/product-lg.webp"
+                />
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     class="lazyload"
+                     alt="Название товара"
+                     data-src="./contents/product-lg.jpg"
+                     width="700"
+                     height="700"
+                />
+              </picture>
             </div>
-        </section>
-        <section class="modal modal-avatar_del">
-            <div class="modal-head">
-                <a href="#" class="modal-close">
-                    <!-- SVG close-1 -->
-                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                              fill="currentColor"></path>
-                    </svg>
-                </a>
+            <div>
+              <picture class="slide" data-idx="3">
+                <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                        type="image/webp"
+                        data-srcset="./contents/product-lg.webp"
+                />
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     class="lazyload"
+                     alt="Название товара"
+                     data-src="./contents/product-lg.jpg"
+                     width="700"
+                     height="700"
+                />
+              </picture>
             </div>
-            <div class="title">
-                Вы уверены?
+            <div>
+              <picture class="slide" data-idx="4">
+                <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                        type="image/webp"
+                        data-srcset="./contents/product-lg.webp"
+                />
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     class="lazyload"
+                     alt="Название товара"
+                     data-src="./contents/product-lg.jpg"
+                     width="700"
+                     height="700"
+                />
+              </picture>
             </div>
-            <form action="#" class="form form-avatar_del" method="post" autocomplete="off">
-                <button type="submit" class="btn btn-danger-fill submit">
-                    <span>Удалить</span>
-                </button>
-            </form>
-            <div class="modal-foot">
-                <a href="#" class="modal-close">Отмена</a>
+            <div>
+              <picture class="slide" data-idx="5">
+                <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                        type="image/webp"
+                        data-srcset="./contents/product-lg.webp"
+                />
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     class="lazyload"
+                     alt="Название товара"
+                     data-src="./contents/product-lg.jpg"
+                     width="700"
+                     height="700"
+                />
+              </picture>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
 
-        <section class="modal modal-review modal-review_company">
-            <div class="modal-head">
-                <a href="#" class="modal-close">
-                    <!-- SVG close-1 -->
-                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                              fill="currentColor"></path>
+      <div class="modal-foot"></div>
+    </section>
+
+    <section class="modal modal-review modal-review_company">
+      <div class="modal-head">
+        <a href="#" class="modal-close">
+          <!-- SVG close-1 -->
+          <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                fill="currentColor"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="review-wrap">
+        <div class="title">Оставить отзыв</div>
+        <form action="#" autocomplete="off" class="form form-review_company" method="post">
+          <fieldset>
+            <div class="row" data-txt="Укажите оценку" data-error="">
+              <ul class="rating">
+                <li>
+                  <label>
+                    <input type="radio" name="rating" class="star" value="1"/>
+                    <!-- SVG star -->
+                    <svg height="16" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                          d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                          fill="currentColor"></path>
                     </svg>
-                </a>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="rating" class="star" value="2"/>
+                    <!-- SVG star -->
+                    <svg height="16" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                          d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                          fill="currentColor"></path>
+                    </svg>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="rating" class="star" value="3"/>
+                    <!-- SVG star -->
+                    <svg height="16" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                          d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                          fill="currentColor"></path>
+                    </svg>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="rating" class="star" value="4"/>
+                    <!-- SVG star -->
+                    <svg height="16" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                          d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                          fill="currentColor"></path>
+                    </svg>
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="radio" name="rating" class="star" value="5"/>
+                    <!-- SVG star -->
+                    <svg height="16" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                          d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
+                          fill="currentColor"></path>
+                    </svg>
+                  </label>
+                </li>
+              </ul>
+              <div class="text">
+                Ваша оценка
+              </div>
             </div>
-            <div class="review-wrap">
-                <div class="title">Оставить отзыв</div>
-                <form action="#" autocomplete="off" class="form form-review_company" method="post">
-                    <fieldset>
-                        <div class="row" data-txt="Укажите оценку" data-error="">
-                            <ul class="rating">
-                                <li>
-                                    <label>
-                                        <input type="radio" name="rating" class="star" value="1"/>
-                                        <!-- SVG star -->
-                                        <svg height="16" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
-                                                  fill="currentColor"></path>
-                                        </svg>
-                                    </label>
-                                </li>
-                                <li>
-                                    <label>
-                                        <input type="radio" name="rating" class="star" value="2"/>
-                                        <!-- SVG star -->
-                                        <svg height="16" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
-                                                  fill="currentColor"></path>
-                                        </svg>
-                                    </label>
-                                </li>
-                                <li>
-                                    <label>
-                                        <input type="radio" name="rating" class="star" value="3"/>
-                                        <!-- SVG star -->
-                                        <svg height="16" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
-                                                  fill="currentColor"></path>
-                                        </svg>
-                                    </label>
-                                </li>
-                                <li>
-                                    <label>
-                                        <input type="radio" name="rating" class="star" value="4"/>
-                                        <!-- SVG star -->
-                                        <svg height="16" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
-                                                  fill="currentColor"></path>
-                                        </svg>
-                                    </label>
-                                </li>
-                                <li>
-                                    <label>
-                                        <input type="radio" name="rating" class="star" value="5"/>
-                                        <!-- SVG star -->
-                                        <svg height="16" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"
-                                                  fill="currentColor"></path>
-                                        </svg>
-                                    </label>
-                                </li>
-                            </ul>
-                            <div class="text">
-                                Ваша оценка
-                            </div>
-                        </div>
-                        <div class="row" data-txt="Минимум 6 символов" data-error="">
+            <div class="row" data-txt="Минимум 6 символов" data-error="">
                         <textarea class="textarea" name="review_company-message" id="review_company-message" rows="8"
                                   placeholder="Ваш отзыв" aria-label="Ваш отзыв"
                         ></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary-fill">
-                            <span>Оставить отзыв</span>
-                        </button>
-                    </fieldset>
-                </form>
             </div>
-            <div class="modal-foot"></div>
-        </section>
-        <section class="modal modal-review modal-review_product">
-            <div class="modal-head">
-                <a href="#" class="modal-close">
-                    <!-- SVG close-1 -->
-                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                              fill="currentColor"></path>
-                    </svg>
-                </a>
-            </div>
-            <div class="review-wrap">
-                <div class="title">Оставить отзыв</div>
-                <form action="#" autocomplete="off" class="form form-review_product" method="post">
-                    <fieldset>
-                        <div class="row" data-txt="Минимум 6 символов" data-error="">
+            <button type="submit" class="btn btn-primary-fill">
+              <span>Оставить отзыв</span>
+            </button>
+          </fieldset>
+        </form>
+      </div>
+      <div class="modal-foot"></div>
+    </section>
+    <section class="modal modal-review modal-review_product">
+      <div class="modal-head">
+        <a href="#" class="modal-close">
+          <!-- SVG close-1 -->
+          <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                fill="currentColor"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="review-wrap">
+        <div class="title">Оставить отзыв</div>
+        <form action="#" autocomplete="off" class="form form-review_product" method="post">
+          <fieldset>
+            <div class="row" data-txt="Минимум 6 символов" data-error="">
                         <textarea class="textarea" name="review_product-message" id="review_product-message" rows="8"
                                   placeholder="Ваш отзыв" aria-label="Ваш отзыв"
                         ></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary-fill">
-                            <span>Оставить отзыв</span>
-                        </button>
-                    </fieldset>
-                </form>
             </div>
-            <div class="modal-foot"></div>
-        </section>
+            <button type="submit" class="btn btn-primary-fill">
+              <span>Оставить отзыв</span>
+            </button>
+          </fieldset>
+        </form>
+      </div>
+      <div class="modal-foot"></div>
+    </section>
 
-        <section class="modal modal-message modal-review_auth">
-            <div class="modal-head">
-                <a href="#" class="modal-close">
-                    <!-- SVG close-1 -->
-                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                              fill="currentColor"></path>
-                    </svg>
-                </a>
-            </div>
-            <div class="title">Авторизуйтесь!</div>
-            <div class="subtitle">Чтобы оставить отзыв</div>
-            <div class="leaf leaf-lg">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                     data-src="./images/modal-leaf.svg"
-                     class="lazyload"
-                     alt=""
-                     width="400"
-                     height="280"
-                />
-            </div>
-            <div class="modal-foot">
-                <a href="#" data-modal="register">Регистрация</a>
-                <a href="#" data-modal="login">Вход</a>
-            </div>
-        </section>
-        <section class="modal modal-message modal-important modal-buy_done">
-            <div class="modal-head">
-                <a href="#" class="modal-close">
-                    <!-- SVG close-1 -->
-                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                              fill="currentColor"></path>
-                    </svg>
-                </a>
-            </div>
-            <div class="title">Спасибо за покупку! :)</div>
-            <div class="subtitle">Ваш заказ №<span></span> уже обрабатывается</div>
-            <div class="leaf leaf-lg">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                     data-src="./images/modal-leaf.svg"
-                     class="lazyload"
-                     alt=""
-                     width="400"
-                     height="280"
-                />
-            </div>
-            <div class="modal-foot">
-                <a href="./promotions.html">Посмотреть акции</a>
-                <a href="./subscribe.html">Подписаться</a>
-            </div>
-        </section>
-        <section class="modal modal-message modal-review_done">
-            <div class="modal-head">
-                <a href="#" class="modal-close">
-                    <!-- SVG close-1 -->
-                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                              fill="currentColor"></path>
-                    </svg>
-                </a>
-            </div>
-            <div class="title">Спасибо! :)</div>
-            <div class="subtitle">Ваш отзыв появится после проверки модератором</div>
-            <div class="leaf leaf-lg">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                     data-src="./images/modal-leaf.svg"
-                     class="lazyload"
-                     alt=""
-                     width="400"
-                     height="280"
-                />
-            </div>
-            <div class="modal-foot">
-                <a href="#" class="modal-close">Вернуться к покупкам</a>
-            </div>
-        </section>
-        <section class="modal modal-message modal-callback_done">
-            <div class="modal-head">
-                <a href="#" class="modal-close">
-                    <!-- SVG close-1 -->
-                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                              fill="currentColor"></path>
-                    </svg>
-                </a>
-            </div>
-            <div class="title">Спасибо за обращение! :)</div>
-            <div class="leaf leaf-lg">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                     data-src="./images/modal-leaf.svg"
-                     class="lazyload"
-                     alt=""
-                     width="400"
-                     height="280"
-                />
-            </div>
-            <div class="modal-foot">
-                <a href="#" class="modal-close">Вернуться к покупкам</a>
-            </div>
-        </section>
-        <section class="modal modal-message modal-feedback_done">
-            <div class="modal-head">
-                <a href="#" class="modal-close">
-                    <!-- SVG close-1 -->
-                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                              fill="currentColor"></path>
-                    </svg>
-                </a>
-            </div>
-            <div class="title">Спасибо за сообщение! :)</div>
-            <div class="leaf leaf-lg">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                     data-src="./images/modal-leaf.svg"
-                     class="lazyload"
-                     alt=""
-                     width="400"
-                     height="280"
-                />
-            </div>
-            <div class="modal-foot">
-                <a href="#" class="modal-close">Вернуться к покупкам</a>
-            </div>
-        </section>
-        <section class="modal modal-message modal-basket_empty">
-            <div class="modal-head">
-                <a href="#" class="modal-close">
-                    <!-- SVG close-1 -->
-                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                              fill="currentColor"></path>
-                    </svg>
-                </a>
-            </div>
-            <div class="title">Ваша корзина пуста :(</div>
-            <div class="leaf leaf-lg">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                     data-src="./images/modal-leaf.svg"
-                     class="lazyload"
-                     alt=""
-                     width="400"
-                     height="280"
-                />
-            </div>
-            <div class="modal-foot">
-                <a href="#" class="modal-close">Вернуться к покупкам</a>
-            </div>
-        </section>
-        <section class="modal modal-message modal-favorites">
-            <div class="modal-head">
-                <a href="#" class="modal-close">
-                    <!-- SVG close-1 -->
-                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                              fill="currentColor"></path>
-                    </svg>
-                </a>
-            </div>
-            <div class="title">Авторизуйтесь</div>
-            <div class="subtitle">Чтобы получить доступ к списку желаний</div>
-            <div class="leaf leaf-lg">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                     data-src="./images/modal-leaf.svg"
-                     class="lazyload"
-                     alt=""
-                     width="400"
-                     height="280"
-                />
-            </div>
-            <div class="modal-foot">
-                <a href="#" data-modal="register">Регистрация</a>
-                <a href="#" data-modal="login">Вход</a>
-            </div>
-        </section>
-        <section class="modal modal-message modal-subscribe_done">
-            <div class="modal-head">
-                <a href="#" class="modal-close">
-                    <!-- SVG close-1 -->
-                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                              fill="currentColor"></path>
-                    </svg>
-                </a>
-            </div>
-            <div class="title">Поздравляем! :)</div>
-            <div class="subtitle">Вы успешно подписались на рассылки</div>
-            <div class="leaf leaf-lg">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                     data-src="./images/modal-leaf.svg"
-                     class="lazyload"
-                     alt=""
-                     width="400"
-                     height="280"
-                />
-            </div>
-            <div class="modal-foot">
-                <a href="#" class="modal-close">Назад</a>
-            </div>
-        </section>
-        <section class="modal modal-message modal-unsubscribe_done">
-            <div class="modal-head">
-                <a href="#" class="modal-close">
-                    <!-- SVG close-1 -->
-                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                              fill="currentColor"></path>
-                    </svg>
-                </a>
-            </div>
-            <div class="title">Поздравляем! :)</div>
-            <div class="subtitle">Вы успешно отписались от рассылки</div>
-            <div class="leaf leaf-lg">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                     data-src="./images/modal-leaf.svg"
-                     class="lazyload"
-                     alt=""
-                     width="400"
-                     height="280"
-                />
-            </div>
-            <div class="modal-foot">
-                <a href="#" class="modal-close">Назад</a>
-            </div>
-        </section>
-        <section class="modal modal-message modal-profile_done">
-            <div class="modal-head">
-                <a href="#" class="modal-close">
-                    <!-- SVG close-1 -->
-                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                              fill="currentColor"></path>
-                    </svg>
-                </a>
-            </div>
-            <div class="title">Поздравляем! :)</div>
-            <div class="subtitle">Вы успешно изменили профиль</div>
-            <div class="leaf leaf-lg">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                     data-src="./images/modal-leaf.svg"
-                     class="lazyload"
-                     alt=""
-                     width="400"
-                     height="280"
-                />
-            </div>
-            <div class="modal-foot">
-                <a href="#" class="modal-close">Назад</a>
-            </div>
-        </section>
-        <section class="modal modal-message modal-error">
-            <div class="modal-head">
-                <a href="#" class="modal-close">
-                    <!-- SVG close-1 -->
-                    <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
-                              fill="currentColor"></path>
-                    </svg>
-                </a>
-            </div>
-            <div class="title">Ошибка соединения :(</div>
-            <div class="leaf leaf-lg">
-                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                     data-src="./images/modal-leaf-error.svg"
-                     class="lazyload"
-                     alt=""
-                     width="400"
-                     height="280"
-                />
-            </div>
-            <div class="subtitle">Попробуйте позже</div>
-            <div class="modal-foot">
-                <a href="#" class="modal-close">Закрыть</a>
-            </div>
-        </section>
-    </div>
+    <section class="modal modal-message modal-review_auth">
+      <div class="modal-head">
+        <a href="#" class="modal-close">
+          <!-- SVG close-1 -->
+          <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                fill="currentColor"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="title">Авторизуйтесь!</div>
+      <div class="subtitle">Чтобы оставить отзыв</div>
+      <div class="leaf leaf-lg">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+             data-src="./images/modal-leaf.svg"
+             class="lazyload"
+             alt=""
+             width="400"
+             height="280"
+        />
+      </div>
+      <div class="modal-foot">
+        <a href="#" data-modal="register">Регистрация</a>
+        <a href="#" data-modal="login">Вход</a>
+      </div>
+    </section>
+    <section class="modal modal-message modal-important modal-buy_done">
+      <div class="modal-head">
+        <a href="#" class="modal-close">
+          <!-- SVG close-1 -->
+          <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                fill="currentColor"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="title">Спасибо за покупку! :)</div>
+      <div class="subtitle">Ваш заказ №<span></span> уже обрабатывается</div>
+      <div class="leaf leaf-lg">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+             data-src="./images/modal-leaf.svg"
+             class="lazyload"
+             alt=""
+             width="400"
+             height="280"
+        />
+      </div>
+      <div class="modal-foot">
+        <a href="./promotions.html">Посмотреть акции</a>
+        <a href="./subscribe.html">Подписаться</a>
+      </div>
+    </section>
+    <section class="modal modal-message modal-review_done">
+      <div class="modal-head">
+        <a href="#" class="modal-close">
+          <!-- SVG close-1 -->
+          <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                fill="currentColor"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="title">Спасибо! :)</div>
+      <div class="subtitle">Ваш отзыв появится после проверки модератором</div>
+      <div class="leaf leaf-lg">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+             data-src="./images/modal-leaf.svg"
+             class="lazyload"
+             alt=""
+             width="400"
+             height="280"
+        />
+      </div>
+      <div class="modal-foot">
+        <a href="#" class="modal-close">Вернуться к покупкам</a>
+      </div>
+    </section>
+    <section class="modal modal-message modal-callback_done">
+      <div class="modal-head">
+        <a href="#" class="modal-close">
+          <!-- SVG close-1 -->
+          <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                fill="currentColor"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="title">Спасибо за обращение! :)</div>
+      <div class="leaf leaf-lg">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+             data-src="./images/modal-leaf.svg"
+             class="lazyload"
+             alt=""
+             width="400"
+             height="280"
+        />
+      </div>
+      <div class="modal-foot">
+        <a href="#" class="modal-close">Вернуться к покупкам</a>
+      </div>
+    </section>
+    <section class="modal modal-message modal-feedback_done">
+      <div class="modal-head">
+        <a href="#" class="modal-close">
+          <!-- SVG close-1 -->
+          <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                fill="currentColor"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="title">Спасибо за сообщение! :)</div>
+      <div class="leaf leaf-lg">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+             data-src="./images/modal-leaf.svg"
+             class="lazyload"
+             alt=""
+             width="400"
+             height="280"
+        />
+      </div>
+      <div class="modal-foot">
+        <a href="#" class="modal-close">Вернуться к покупкам</a>
+      </div>
+    </section>
+    <section class="modal modal-message modal-basket_empty">
+      <div class="modal-head">
+        <a href="#" class="modal-close">
+          <!-- SVG close-1 -->
+          <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                fill="currentColor"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="title">Ваша корзина пуста :(</div>
+      <div class="leaf leaf-lg">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+             data-src="./images/modal-leaf.svg"
+             class="lazyload"
+             alt=""
+             width="400"
+             height="280"
+        />
+      </div>
+      <div class="modal-foot">
+        <a href="#" class="modal-close">Вернуться к покупкам</a>
+      </div>
+    </section>
+    <section class="modal modal-message modal-favorites">
+      <div class="modal-head">
+        <a href="#" class="modal-close">
+          <!-- SVG close-1 -->
+          <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                fill="currentColor"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="title">Авторизуйтесь</div>
+      <div class="subtitle">Чтобы получить доступ к списку желаний</div>
+      <div class="leaf leaf-lg">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+             data-src="./images/modal-leaf.svg"
+             class="lazyload"
+             alt=""
+             width="400"
+             height="280"
+        />
+      </div>
+      <div class="modal-foot">
+        <a href="#" data-modal="register">Регистрация</a>
+        <a href="#" data-modal="login">Вход</a>
+      </div>
+    </section>
+    <section class="modal modal-message modal-subscribe_done">
+      <div class="modal-head">
+        <a href="#" class="modal-close">
+          <!-- SVG close-1 -->
+          <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                fill="currentColor"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="title">Поздравляем! :)</div>
+      <div class="subtitle">Вы успешно подписались на рассылки</div>
+      <div class="leaf leaf-lg">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+             data-src="./images/modal-leaf.svg"
+             class="lazyload"
+             alt=""
+             width="400"
+             height="280"
+        />
+      </div>
+      <div class="modal-foot">
+        <a href="#" class="modal-close">Назад</a>
+      </div>
+    </section>
+    <section class="modal modal-message modal-unsubscribe_done">
+      <div class="modal-head">
+        <a href="#" class="modal-close">
+          <!-- SVG close-1 -->
+          <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                fill="currentColor"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="title">Поздравляем! :)</div>
+      <div class="subtitle">Вы успешно отписались от рассылки</div>
+      <div class="leaf leaf-lg">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+             data-src="./images/modal-leaf.svg"
+             class="lazyload"
+             alt=""
+             width="400"
+             height="280"
+        />
+      </div>
+      <div class="modal-foot">
+        <a href="#" class="modal-close">Назад</a>
+      </div>
+    </section>
+    <section class="modal modal-message modal-profile_done">
+      <div class="modal-head">
+        <a href="#" class="modal-close">
+          <!-- SVG close-1 -->
+          <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                fill="currentColor"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="title">Поздравляем! :)</div>
+      <div class="subtitle">Вы успешно изменили профиль</div>
+      <div class="leaf leaf-lg">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+             data-src="./images/modal-leaf.svg"
+             class="lazyload"
+             alt=""
+             width="400"
+             height="280"
+        />
+      </div>
+      <div class="modal-foot">
+        <a href="#" class="modal-close">Назад</a>
+      </div>
+    </section>
+    <section class="modal modal-message modal-error">
+      <div class="modal-head">
+        <a href="#" class="modal-close">
+          <!-- SVG close-1 -->
+          <svg height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M16.4763 14.0003L27.4869 2.98918C28.171 2.30566 28.171 1.19661 27.4869 0.513081C26.8029 -0.171027 25.695 -0.171027 25.0109 0.513081L14.0003 11.5242L2.98906 0.513081C2.30498 -0.171027 1.19714 -0.171027 0.51306 0.513081C-0.17102 1.19661 -0.17102 2.30566 0.51306 2.98918L11.5243 14.0003L0.51306 25.0114C-0.17102 25.6949 -0.17102 26.804 0.51306 27.4875C0.8551 27.829 1.30337 28 1.75106 28C2.19875 28 2.64702 27.829 2.98906 27.4869L14.0003 16.4758L25.0109 27.4869C25.353 27.829 25.8013 28 26.2489 28C26.6966 28 27.1449 27.829 27.4869 27.4869C28.171 26.8034 28.171 25.6943 27.4869 25.0108L16.4763 14.0003Z"
+                fill="currentColor"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="title">Ошибка соединения :(</div>
+      <div class="leaf leaf-lg">
+        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+             data-src="./images/modal-leaf-error.svg"
+             class="lazyload"
+             alt=""
+             width="400"
+             height="280"
+        />
+      </div>
+      <div class="subtitle">Попробуйте позже</div>
+      <div class="modal-foot">
+        <a href="#" class="modal-close">Закрыть</a>
+      </div>
+    </section>
+  </div>
 </div>
 <script src="js/plugins/jquery-3.5.1.slim.min.js"></script>
 <script src="js/plugins/croppie.min.js"></script>
@@ -1356,16 +1533,17 @@
 <script src="js/product.js?ver=1597294270939"></script>
 <script src="js/reviews.js?ver=1597294270939"></script>
 <div class="d-none">
-    <!-- Спиннер -->
-    <div id="spinner">
-        <div class="spinner">
-            <!-- SVG spinner -->
-            <svg height="16" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                <path d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"
-                      fill="currentColor"></path>
-            </svg>
-        </div>
+  <!-- Спиннер -->
+  <div id="spinner">
+    <div class="spinner">
+      <!-- SVG spinner -->
+      <svg height="16" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+        <path
+            d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"
+            fill="currentColor"></path>
+      </svg>
     </div>
+  </div>
 </div>
 </body>
 </html>

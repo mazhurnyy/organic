@@ -189,4 +189,17 @@ $(function () {
             }
         }
     }
+
+    document.addEventListener('click', function (e) {
+        const picture = e.target.closest('[data-modal="product_tab_review"]');
+
+        if (!picture) return true;
+
+        const srcset = picture.querySelector('source').dataset.source;
+        const src = picture.querySelector('img').dataset.source;
+
+        document.querySelector('.modal-product_tab_review source').srcset = srcset;
+        document.querySelector('.modal-product_tab_review img').src = src;
+    });
+
 });
